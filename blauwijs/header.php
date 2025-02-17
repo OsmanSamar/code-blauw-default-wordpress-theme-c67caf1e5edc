@@ -266,7 +266,7 @@
                 </div>
 
                 <!-- Button on the Right side (visible only on large screens) -->
-                <div class="circle-border d-none d-lg-block ms-auto">
+                <div class="circle-border   d-none d-lg-block ms-auto" style="; background: #F29401;">
                     <div class="d-none d-lg-block ms-auto">
                         <a href="<?= esc_url(home_url('/contact')); ?>" class="btn btn-primary">Kennismaken</a>
                     </div>
