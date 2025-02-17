@@ -1,0 +1,24 @@
+header {
+  position: absolute;
+  top: 0;
+  //   left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+// font: normal normal 300 16px/22px Scala Sans Pro;
+
+/* NavBar Links */
+.navbar-nav .nav-link {
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0px;
+  opacity: 1;
+  font-size: 16px;
+  font-weight: 300;
+
+  // padding: 10px;
+  // margin: 0 10px;
+}
