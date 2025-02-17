@@ -1,50 +1,52 @@
 @import "variables";
 
 @import "~bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Richmond+Display&display=swap");
 
 /* General styling */
-html, body {
-    margin: 0 !important;
-    padding: 0;
-    width: 100%;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
+html,
+body {
+  margin: 0 !important;
+  padding: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 a:any-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 h1 {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 h2 {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 h3 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 h4 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .bg-contain {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .bg-cover {
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Imports */

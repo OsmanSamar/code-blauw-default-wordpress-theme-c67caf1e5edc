@@ -1,7 +1,6 @@
 header {
   position: absolute;
   top: 0;
-  //   left: 0;
   width: 100%;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.8);
@@ -12,7 +11,7 @@ header {
 
 /* NavBar Links */
 .navbar-nav .nav-link {
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   letter-spacing: 0px;
   opacity: 1;

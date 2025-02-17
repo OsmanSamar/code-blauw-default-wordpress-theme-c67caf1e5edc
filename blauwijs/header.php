@@ -4,8 +4,10 @@
 
 <head>
     <?php wp_head(); ?>
-    <title><?php wp_title() ?></title>
+    <title><?php wp_title() ?>Blauwijs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <?php wp_head(); ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body <?php body_class(); ?>>
@@ -50,7 +52,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light sans-serif"
             style="top: 26px;left: ;width: 1000px;height: 55px;border: 1px solid #FFFFFF;border-radius: 5px;opacity: 1;">
-            <div class="container  ">
+            <div class="container">
                 <!-- Logo -->
                 <a href="<?= esc_url(home_url('/')); ?>" class="navbar-brand">
                     <img src="<?= get_field("logo")['url'] ?>" alt="<?= get_field("logo")['title'] ?>"
@@ -58,13 +60,14 @@
                 </a>
 
                 <!-- Hamburger button for mobile -->
-                <div class="d-lg-none  " style="border-radius: 9999px; 
-                            height: 52px;
-                            border: 1px solid #ffffff;">
+                <div class="d-lg-none  " style="border-radius: 5px; 
+                            height: 38px; width:38px;
+                            border: 1px solid  #F29401;">
                     <button class="navbar-toggler collapsed " type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation"
-                        style=" width:40px; height:40px; border-radius:50%; padding:5px; margin:5px; color:#5b7d6c;  background-color:#f5a287;">
+                        aria-expanded="false" aria-label="Toggle navigation" style=" 
+                        width:38px; height:38px; border-radius:5px; padding:4px; margin:; opacity: 1;;  
+                        background-color:transparant;">
 
                         <span class="toggler-icon top-bar"></span>
                         <span class="toggler-icon middle-bar"></span>
@@ -89,11 +92,11 @@
                 /* X Icon */
                 .toggler-icon {
                     width: 28px;
-                    height: 2px;
-                    /* background-color: #5b7d6c; */
+                    height: 1px;
                     background-color: black;
                     display: block;
                     transition: all 0.2s;
+                    opacity: 1;
 
                 }
 
@@ -102,7 +105,6 @@
                 }
 
                 .navbar-toggler .top-bar {
-                    /* transform: rotate(45deg); */
                     transform: rotate(34deg);
                     transform-origin: 10% 10%;
                 }
@@ -113,7 +115,6 @@
                 }
 
                 .navbar-toggler .bottom-bar {
-                    /* transform: rotate(-45deg); */
                     transform: rotate(-40deg);
                     transform-origin: 10% 10%;
                 }
@@ -132,17 +133,75 @@
                 }
 
                 .navbar-toggler.collapsed .toggler-icon {
-
-                    background-color: #5b7d6c;
+                    background-color: #FFF;
                 }
 
 
                 @media (max-width: 991.98px) {
-
                     .ul-bg {
-                        background-color: #f5a287;
+                        background-color: #F29401;
                         border-radius: 8px;
+                        color: black;
+                        text-align: center;
                     }
+                }
+
+
+
+                /* Navbar  content */
+                .header {
+                    /* Ensure content is above the overlay */
+                    position: relative;
+                    /* Ensure the header is above other elements */
+                    z-index: 2;
+                }
+
+                .navbar {
+                    /* display: flex;
+                    align-items: center; */
+                    /* justify-content: end; */
+                    /* position: absolute;
+                    z-index: 10;
+                    top: 0;
+                    width: 100%;
+                    box-sizing: border-box; */
+                    margin-top: 26px;
+                }
+
+                .navbar-nav .nav-link {
+                    color: #fff;
+                    /* text-align: right; */
+                    letter-spacing: 0px;
+                    opacity: 1;
+                    font-size: 16px;
+                    font-weight: 300;
+                    padding: 10px;
+                    margin: 0 10px;
+                }
+
+                .navbar-nav .dropdown-item {
+                    color: #fff;
+                    padding: 8px 20px;
+                    border-bottom: 1px solid #FFF;
+                }
+
+                .navbar-nav .dropdown-menu {
+                    color: #fff;
+                    text-align: center;
+                    background-color: #F29401;
+                }
+
+                .btn-primary {
+                    background-color: #F29401;
+                    border-color: #F29401;
+
+                }
+
+                .btn-primary:hover,
+                .btn-primary:focus {
+                    background-color: #D87A01;
+                    /* Darker shade for hover and focus states */
+                    border-color: #D87A01;
                 }
                 </style>
 
@@ -151,16 +210,16 @@
 
 
                 <!-- Navigation Menu -->
-
                 <div class="collapse navbar-collapse  ul-bg " id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto justify-content-center flex-grow-1">
+                    <ul class="navbar-nav ms-auto justify-content-end flex-grow-1">
                         <li class="nav-item">
 
-                            <a class="nav-link" href="<?= esc_url(home_url('/sample-page')); ?>">Home</a>
+                            <a class="nav-link custom-nav-link"
+                                href="<?= esc_url(home_url('/sample-page')); ?>">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle custom-nav-link" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Diensten
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -185,37 +244,34 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " href="<?= esc_url(home_url('/over-ons')); ?>">Cases</a>
+                            <a class="nav-link custom-nav-link" href="<?= esc_url(home_url('/over-ons')); ?>">Cases</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="<?= esc_url(home_url('/tuinsoorten')); ?>">Overons</a>
+                            <a class="nav-link custom-nav-link"
+                                href="<?= esc_url(home_url('/tuinsoorten')); ?>">Overons</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="<?= esc_url(home_url('/projecten')); ?>">Contact</a>
-                            <!--  id="navlinkactive" -->
+                            <a class="nav-link custom-nav-link"
+                                href="<?= esc_url(home_url('/projecten')); ?>">Contact</a>
+
                         </li>
 
                         <!-- The button here for smaller screens -->
-                        <li><a class="d-block d-lg-none nav-link"
+                        <li><a class="d-block d-lg-none nav-link custom-nav-link"
                                 href="<?= esc_url(home_url('/contact')); ?>">Kennismaken</a>
                         </li>
                     </ul>
 
-                    <!-- Instagram icon for mobile -->
-                    <div class="instagram d-flex d-lg-none text-center">
-                        <a href="https://www.instagram.com" target="_blank" class=" ">
-                            <i class=" fab fa-instagram"></i>
-                        </a>
-                    </div>
+
                 </div>
 
                 <!-- Button on the Right side (visible only on large screens) -->
-                <div class="circle-border d-none d-lg-block ms-auto ">
-                    <div class="d-none d-lg-block ms-auto  ">
+                <div class="circle-border d-none d-lg-block ms-auto">
+                    <div class="d-none d-lg-block ms-auto">
                         <a href="<?= esc_url(home_url('/contact')); ?>" class="btn btn-primary">Kennismaken</a>
                     </div>
-
                 </div>
+
             </div>
         </nav>
 
