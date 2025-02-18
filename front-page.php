@@ -287,17 +287,31 @@
     }
 
     .container-img {
-        width: 1280px;
+        width: 100%;
+        max-width: 1700px;
         height: 449px;
         background-image: url("<?= get_template_directory_uri() ?>/images/mask-group.png");
         object-fit: cover;
         background: transparent linear-gradient(90deg, #132030 0%, #13203000 100%) 0% 0% no-repeat padding-box;
         background-repeat: no-repeat;
-
-
+        background: linear-gradient(90deg, rgba(6, 48, 101, 0.9) 0%, rgba(0, 85, 179, 0.1) 100%),
+            url("<?= get_template_directory_uri() ?>/images/mask-group.png") 50%/cover no-repeat
     }
 
+    .werken-swiper {
+        padding-top: 88px;
+    }
 
+    .werken-title {
+        text-align: left;
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 50px;
+        font-family: 'Richmond Display', serif;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+    }
 
 
 
@@ -633,7 +647,30 @@
 
 
         <div class="container-img">
+            <div class="container">
+                <div class="werken-swiper">
+                    <p class="werken-title">
+                        <?= get_field("werkentitle") ?>
+                    </p>
+                    <!-- <div class=" d-flex flex-row align-items-center justify-content-end gap-1 client-consultancy-link">
+                        <span style="background-color:white; height:30px; width:30px; border-radius:8px; "
+                            class="d-flex justify-content-center align-items-c
+                   e        nter ">
+
+                                               <img src="<?= get_field("prebtn")['url'] ?>" alt=" <?= get_field("prebtn")['alt'] ?>"
+                                style="width:12px; height:18px; margin:7px 0;" class="" />
+                        </span>
+                        <span style="background-color:white; height:30px; width:30px; border-radius:8px; "
+                            class="d-flex justify-content-center align-items-center ">
+                            <img src="<?= get_field("nextbtn")['url'] ?>" alt=" <?= get_field("nextbtn")['alt'] ?>"
+                                style="width:12px; height:18px; margin:7px 0;" class="" />
+                            </span>
+            </div> -->
+                </div>
+            </div>
         </div>
+
+
 </main>
 
 <?php get_footer() ?>
