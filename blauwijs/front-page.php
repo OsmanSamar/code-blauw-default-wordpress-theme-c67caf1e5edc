@@ -186,6 +186,35 @@
         opacity: 1;
     }
 
+    .logos-container {
+        flex-wrap: wrap !important;
+        gap: 17px;
+    }
+
+    .logos-container .col-auto {
+        flex: 1 1 calc(20% - 20px);
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    .testimonial-container {
+        padding: 10px;
+        max-width: 100%;
+
+    }
+
+    .testimonial-content {
+        gap: 5px;
+    }
+
+    .test-post-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
 
 
 
@@ -196,6 +225,9 @@
         .flexible-title {
             max-width: 100%;
         }
+
+
+
     }
 
 
@@ -246,6 +278,67 @@
         }
 
 
+        .logos-container {
+            flex-wrap: nowrap !important;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .logos-container .col-auto {
+            flex: 0 0 auto;
+
+        }
+
+        .testimonial-container {
+            box-shadow: 10px 10px 60px #2072BE1A;
+            width: 100%;
+            max-width: 305px;
+            height: auto;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+        }
+
+
+        .testimonial-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+        }
+
+
+        .test-post-title {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            color: #000000;
+            font-family: 'Scala Sans Pro', sans-serif;
+            flex: 1;
+            /* Allow text to take available space */
+            white-space: nowrap;
+            /* Prevents text from wrapping */
+            overflow: hidden;
+            /* text-overflow: ellipsis; */
+            /* Adds '...' if text is too long */
+        }
+
+
+        .testimonial-arrow {
+            width: 12px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+
+
 
 
     }
@@ -281,28 +374,22 @@
         <!-- End of hero Section -->
 
         <!-- logostestimonials Repeater -->
-        <div class="container">
-            <div class="row d-lg-flex align-items-center justify-content-between"
-                style="margin-top:40px; margin-bottom:14px; flex-wrap:nowrap;">
-                <?php
-                foreach (get_field("logostestimonials") as $sue) {
-                    ?>
-                <div class="col-auto partner-item">
-                    <a href=" <?= $sue['logosteslinks']['url'] ?>" target="_blank">
-                        <div class="d-flex flex-row align-items-center justify-content-evenly partner-container "
-                            style="  ">
+        <div class="container-xl px-lg-5">
+            <div class="row g-0 d-inline-flex align-items-anchor-center justify-content-center logos-container"
+                style="margin-top:40px; margin-bottom:14px; flex-wrap:nowrap; width: 100%; opacity: 1;">
+                <?php foreach (get_field("logostestimonials") as $sue) { ?>
+                <div class="col-auto">
+                    <a href="<?= $sue['logosteslinks']['url'] ?>" target=" _blank">
+                        <div class="d-flex flex-row align-items-center justify-content-center">
                             <img src="<?= $sue['logosimg']['url'] ?>" alt=" <?= $sue['logosimg']['alt'] ?>"
-                                class="sue-img" style="width:56px;height:45px;flex-shrink: 0; object-fit:content" />
-
+                                class="logos-img" style="max-width: 100%; height: auto; flex-shrink: 0;" />
                         </div>
                     </a>
                 </div>
-
-                <?php
-                }
-                ?>
+                <?php } ?>
             </div>
         </div>
+
 
         <!-- Flexible Content Field -->
         <div>
@@ -318,6 +405,7 @@
                         <span><?php the_sub_field('title'); ?></span>
                     </div>
                 </div>
+
                 <div class="row g-5">
                     <div class="col-lg-6 text-start mt-5 flexible-left-text" data-aos="fade-right" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -325,19 +413,71 @@
                         <p><?php the_sub_field('lefttext'); ?></p>
                     </div>
 
-                    <!-- <div class="d-none d-lg-block col-lg-2"></div> -->
                     <div class="col-lg-6 text-start mt-5 flexible-right-text" data-aos="fade-left" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
 
                         <p><?php the_sub_field('righttext'); ?></p>
                     </div>
                 </div>
+
                 <?php endif; ?>
                 <?php endwhile; ?>
             </div>
             <?php endif; ?>
         </div>
         <!-- End of Flexible Content Field -->
+
+        <!-- Onze_Expertises -->
+        <div class="container p-3 px-4 mt-5" id="testimonials" data-aos="fade-up" data-aos-offset="100"
+            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="row g-0 ">
+                <?php
+                $delay = 0;
+                $posts = get_posts([
+                    'post_type' => 'onze_expertises',
+                    'numberposts' => -1,
+                    "order" => 'asc'
+                ]);
+
+                foreach ($posts as $post) {
+                    $fields = get_fields($post->ID);
+                    $testimonial = get_field("expertisestestimonials");
+                    // Debugging: Check the values of $fields['nextarrow']
+                    // var_dump($fields['nextarrow']);
+                
+                    ?>
+
+                <div class="col-lg-4 col-md-4 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                    data-aos-duration="800">
+                    <a href="<?= get_permalink($post) ?>">
+                        <div class="testimonial-container">
+                            <div class="testimonial-content">
+                                <span class="test-post-title">
+                                    <?= $post->post_title ?>
+                                </span>
+                                <span
+                                    style="border: 1px solid #F29401;border-radius: 5px;opacity: 1; background:#FFFFFF;width:  38px;;height: 38px; display:flex; align-items: center; justify-content: center;">
+                                    <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                        alt="go onze expertises" class="testimonial-arrow" />
+
+
+                                </span>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <?php
+                    $delay += 300;
+                }
+                wp_reset_postdata();
+                ?>
+            </div>
+        </div>
+        <!--  -->
+        <div>
+
+        </div>
 
 
 

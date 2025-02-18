@@ -1,13 +1,12 @@
-header {
-  position: absolute;
-  top: 0;
-  width: 100%;
+.header {
+  width: 100vw;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  top: 4px;
 }
-
-// font: normal normal 300 16px/22px Scala Sans Pro;
 
 /* NavBar Links */
 .navbar-nav .nav-link {
@@ -21,4 +20,71 @@ header {
   // padding: 10px;
   // margin: 0 10px;
   //
+}
+
+.navbar-toggler {
+  border: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+/* X Icon */
+.toggler-icon {
+  width: 28px;
+  height: 1px;
+  background-color: black;
+  display: block;
+  transition: all 0.2s;
+  opacity: 1;
+}
+
+.middle-bar {
+  margin: 5px auto;
+}
+
+.navbar-toggler .top-bar {
+  transform: rotate(34deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  transform: rotate(-40deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .ul-bg {
+    background-color: #f29401;
+    border-radius: 8px;
+    color: black;
+    text-align: center;
+  }
 }

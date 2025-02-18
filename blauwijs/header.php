@@ -59,8 +59,7 @@
             </div>
         </nav>
     </header> -->
-    <header class="header position-absolute "
-        style="z-index:2;  width: 100vw;  display: flex; justify-content: center;top:4px; ">
+    <header class="header position-absolute d-flex justify-content-center " style=" z-index:2; width: 100vw; top:4px; ">
 
         <nav class="navbar navbar-expand-lg navbar-light sans-serif"
             style="top: 26px;left: ;width: 1000px;height: 55px;border: 1px solid #FFFFFF;border-radius: 5px;opacity: 1;">

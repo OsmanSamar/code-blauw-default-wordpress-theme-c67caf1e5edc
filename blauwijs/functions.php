@@ -66,6 +66,39 @@ function thumbnails()
 }
 add_action('init', 'thumbnails');
 
+
+// Our custom Events post type function
+function create_onze_expertises_post_type()
+{
+
+    register_post_type(
+        'onze_expertises',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __('Onze_Expertises'),
+                'singular_name' => __('Onze_Expertises')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'onze_expertises'),
+            'show_in_rest' => true,
+
+            'supports' => ['title', 'editor', 'thumbnail']
+        )
+    );
+
+
+}
+
+// Hooking up our function to theme setup
+add_action('init', 'create_onze_expertises_post_type');
+
+
+
+
+
+
 // Rename thumbnails
 function change_featured_image_labels($labels)
 {
