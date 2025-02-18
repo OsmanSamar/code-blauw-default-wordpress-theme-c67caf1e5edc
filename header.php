@@ -235,41 +235,35 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class=" dropdown-item" href="<?= esc_url(home_url('/dit-doen-wij')); ?>">Dit
-                                        doen
-                                        wij</a>
+                                    <a class=" dropdown-item" href="<?= esc_url(home_url('/')); ?>">X</a>
                                 </li>
-                                <li><a class="dropdown-item"
-                                        href="<?= esc_url(home_url('/tuinontwerp')); ?>">Tuinontwerp</a>
+                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">e</a>
                                 </li>
-                                <li><a class="dropdown-item"
-                                        href="<?= esc_url(home_url('/tuinaanleg')); ?>">Tuinaanleg</a>
+                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">g</a>
                                 </li>
-                                <li><a class="dropdown-item"
-                                        href="<?= esc_url(home_url('/tuinderhoud')); ?>">Tuinderhoud</a>
+                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">T</a>
                                 </li>
-                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/advies')); ?>">Advies</a>
+                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">A</a>
                                 </li>
 
                             </ul>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link custom-nav-link" href="<?= esc_url(home_url('/over-ons')); ?>">Cases</a>
+                            <a class="nav-link custom-nav-link" href="<?= esc_url(home_url('/cases')); ?>">Cases</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link custom-nav-link"
-                                href="<?= esc_url(home_url('/tuinsoorten')); ?>">Overons</a>
+                                href="<?= esc_url(home_url('/over-ons')); ?>">Overons</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link custom-nav-link"
-                                href="<?= esc_url(home_url('/projecten')); ?>">Contact</a>
+                            <a class="nav-link custom-nav-link" href="<?= esc_url(home_url('/contact')); ?>">Contact</a>
 
                         </li>
 
                         <!-- The button here for smaller screens -->
                         <li><a class="d-block d-lg-none nav-link custom-nav-link"
-                                href="<?= esc_url(home_url('/contact')); ?>">Kennismaken</a>
+                                href="<?= esc_url(home_url('/kennismaken')); ?>">Kennismaken</a>
                         </li>
                     </ul>
 
@@ -280,7 +274,7 @@
                 <div class="circle-border   d-none d-lg-inline-flex justify-content-center align-items-center ms-auto"
                     style="; background: #F29401;">
                     <div class="d-none d-lg-block ms-auto">
-                        <a href="<?= esc_url(home_url('/contact')); ?>" class="btn btn-primary">Kennismaken</a>
+                        <a href="<?= esc_url(home_url('/kennismaken')); ?>" class="btn btn-primary">Kennismaken</a>
                     </div>
                 </div>
 

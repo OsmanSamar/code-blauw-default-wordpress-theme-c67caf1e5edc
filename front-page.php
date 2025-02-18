@@ -17,9 +17,6 @@
         color: #1E73BE;
     }
 
-
-
-
     .hero-section {
         position: relative;
         background: url("<?= get_field('heroimage')['url'] ?>");
@@ -57,18 +54,6 @@
 
     }
 
-
-    /* .hero-content {
-        position: relative;
-        z-index: 2;
-        color: white;
-        text-align: center;
-        max-width: 80%;
-        text-align: left;
-        letter-spacing: 0px;
-
-
-    } */
     .hero-content {
         position: relative;
         /* z-index: 2; */
@@ -197,15 +182,23 @@
         justify-content: center;
     }
 
-
-
     .testimonial-container {
         padding: 10px;
         max-width: 100%;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        box-shadow: 10px 10px 60px #2072BE1A;
+        width: 350px;
+        height: 80px;
 
     }
 
+
     .testimonial-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
         gap: 5px;
     }
 
@@ -213,6 +206,101 @@
         font-size: 16px;
         line-height: 24px;
     }
+
+
+    .first-blue-block {
+        background: #CCE1F4;
+        /* height: 662px; */
+        height: 961px;
+
+        width: 100%;
+        max-width: 1700px;
+        /* margin-top: -322px; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        z-index: -1;
+        margin-top: -96px;
+    }
+
+
+    .verhaal-container {
+        height: 628px;
+        background-color: #FFFFFF;
+        /* background-color: #F29401; */
+        box-shadow: 10px 10px 60px #2072BE1A;
+        border-radius: 5px;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .first-blue-block img {
+        width: 100%;
+        height: 312px;
+        object-fit: cover;
+    }
+
+    .verhaal-title {
+        color: #132030;
+        text-align: left;
+        letter-spacing: 0px;
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 50px;
+        /* padding: 0 17px; */
+        font-family: 'Richmond Display', serif;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .verhaal-text {
+        color: #132030;
+        text-align: left;
+        letter-spacing: 0px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 30px;
+        /* padding: 0 17px; */
+        font-family: 'Richmond Display', serif;
+        display: block;
+        white-space: wrap;
+        overflow: hidden;
+
+    }
+
+    .left-container {
+        padding: 27px;
+    }
+
+    .letstalk-btn {
+        height: 50px;
+        width: 121px;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #F29401
+    }
+
+    .container-img {
+        width: 1280px;
+        height: 449px;
+        background-image: url("<?= get_template_directory_uri() ?>/images/mask-group.png");
+        object-fit: cover;
+        background: transparent linear-gradient(90deg, #132030 0%, #13203000 100%) 0% 0% no-repeat padding-box;
+        background-repeat: no-repeat;
+
+
+    }
+
+
+
+
+
 
 
 
@@ -225,8 +313,6 @@
         .flexible-title {
             max-width: 100%;
         }
-
-
 
     }
 
@@ -277,7 +363,6 @@
 
         }
 
-
         .logos-container {
             flex-wrap: nowrap !important;
             justify-content: center;
@@ -304,16 +389,6 @@
 
         }
 
-
-        .testimonial-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-
-        }
-
-
         .test-post-title {
             font-size: 18px;
             font-style: normal;
@@ -322,22 +397,63 @@
             color: #000000;
             font-family: 'Scala Sans Pro', sans-serif;
             flex: 1;
-            /* Allow text to take available space */
+            /* text to take available space */
             white-space: nowrap;
-            /* Prevents text from wrapping */
             overflow: hidden;
-            /* text-overflow: ellipsis; */
-            /* Adds '...' if text is too long */
+
         }
 
 
         .testimonial-arrow {
             width: 12px;
-            height: 18px;
+            height: 10.26px;
             flex-shrink: 0;
         }
 
 
+        .first-blue-block {
+            height: 662px;
+            margin-top: -96px;
+        }
+
+        .verhaal-container {
+
+            width: 1000px;
+            height: 378px;
+        }
+
+        .first-blue-block .container {
+            width: 100%;
+            max-width: 1000px;
+
+        }
+
+        .first-blue-block .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .first-blue-block .col-lg-6 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .first-blue-block img {
+            /* width: 500px; */
+            width: 100%;
+            height: 378px;
+            object-fit: cover;
+        }
+
+
+        .left-container {
+            padding: 0 70px;
+        }
 
 
 
@@ -428,9 +544,10 @@
         <!-- End of Flexible Content Field -->
 
         <!-- Onze_Expertises -->
-        <div class="container p-3 px-4 mt-5" id="testimonials" data-aos="fade-up" data-aos-offset="100"
-            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <div class="row g-0 ">
+        <div class="container p-3 px-4 mt-5" id="testimonials">
+            <!--  data-aos="fade-up" data-aos-offset="100"
+            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" -->
+            <div class="row g-0  mb-4">
                 <?php
                 $delay = 0;
                 $posts = get_posts([
@@ -447,10 +564,11 @@
                 
                     ?>
 
-                <div class="col-lg-4 col-md-4 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
-                    data-aos-duration="800">
+                <div class="col-lg-4 col-md-4 col-12 mb-4">
+                    <!-- data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                data-aos-duration="800" -->
                     <a href="<?= get_permalink($post) ?>">
-                        <div class="testimonial-container">
+                        <div class=" testimonial-container">
                             <div class="testimonial-content">
                                 <span class="test-post-title">
                                     <?= $post->post_title ?>
@@ -458,40 +576,64 @@
                                 <span
                                     style="border: 1px solid #F29401;border-radius: 5px;opacity: 1; background:#FFFFFF;width:  38px;;height: 38px; display:flex; align-items: center; justify-content: center;">
                                     <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                        alt="go onze expertises" class="testimonial-arrow" />
-
-
+                                        alt="go onze expertises" class="testimonial-arrow"
+                                        style="  width: 12px; height: 10.26px; flex-shrink: 0;" />
                                 </span>
-
                             </div>
                         </div>
                     </a>
                 </div>
                 <?php
-                    $delay += 300;
+                    // $delay += 300;
                 }
                 wp_reset_postdata();
                 ?>
             </div>
         </div>
         <!--  -->
-        <div>
 
+        <div class="first-blue-block position-relative" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+            data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="container">
+                <div class=" verhaal-container">
+                    <div class="row g-0 ">
+                        <div class="col-12  col-lg-6">
+                            <img src="<?= get_template_directory_uri() ?>/images/manager-leading.png"
+                                alt="go onze expertises" class="testimonial-arrow" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="d-flex justify-content-left flex-column text-left left-container" style="">
+                                <span class="verhaal-title">Ons verhaal</span>
+                                <span class="verhaal-text">Wij helpen organisaties om zich aan te passen aan
+                                    verandering
+                                    en
+                                    te
+                                    groeien. Ons doel?
+                                    Organisaties wendbaarder, efficiënter en toekomstbestendig maken.
+                                </span>
+                                <!-- Talk to an export btn -->
+                                <div
+                                    class="d-flex justify-content-flex-start align-items-center gap-2 mt-4 letstalk-btn">
+                                    <a href="<?= get_field("naaroverons")['url'] ?>"
+                                        style="color: #132030; font-family: Manrope;font-size: 16px;  font-family: 'Scala Sans Pro', sans-serif;font-weight: 700;line-height: 22px; display: flex; 
+                                                        align-items: center; gap:8px; text-decoration: none;  text-align: left; ">
+                                        <?= get_field("naaroverons")['title'] ?>
+                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                            alt="go onze expertises" class="testimonial-arrow"
+                                            style="  width: 12px; height: 10.26px; flex-shrink: 0;" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-    </div>
+        <div class="container-img">
+        </div>
 </main>
 
 <?php get_footer() ?>
