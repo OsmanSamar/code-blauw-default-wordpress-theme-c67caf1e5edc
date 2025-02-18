@@ -1,6 +1,7 @@
 <?php get_header()  //Template Name: frontpage  ?>
 
 <main class="front-page">
+
     <style>
     b,
     strong:first-of-type {
@@ -153,7 +154,58 @@
         border: none !important;
     }
 
+    .flexible-title {
+        color: #1e73be;
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 1.3;
+        font-family: 'Richmond Display', serif;
+        letter-spacing: 0px;
+        opacity: 1;
+        text-wrap: balance;
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+        text-align: left;
+        word-break: break-word;
+        white-space: normal;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .flexible-left-text p,
+    .flexible-right-text p {
+        max-width: 90%;
+        font-size: 16px;
+        text-align: justify;
+        font-weight: 300;
+        line-height: 26px;
+        font-family: 'Scala Sans Pro', sans-serif;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+    }
+
+
+
+
+
+
+
+    @media (max-width: 768px) {
+        .flexible-title {
+            max-width: 100%;
+        }
+    }
+
+
     @media (min-width: 992px) {
+
+        b,
+        strong {
+            font-size: inherit;
+        }
+
         .hero-content {
             text-align: left;
             /* left: 227px; */
@@ -178,13 +230,29 @@
             font-family: 'Libre Franklin', sans-serif;
         }
 
+        .flexible-title {
+            font-size: 46px;
+            max-width: 94%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .flexible-left-text,
+        .flexible-right-text {
+            min-height: 5em;
+
+        }
+
+
+
 
     }
     </style>
     <div>
 
         <div class="hero-section">
-
             <div class="hero-content">
                 <span class="hero-title">
                     <!-- <?= get_field("herotitle") ?> -->
@@ -209,11 +277,77 @@
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
+        <!-- End of hero Section -->
+
+        <!-- logostestimonials Repeater -->
+        <div class="container">
+            <div class="row d-lg-flex align-items-center justify-content-between"
+                style="margin-top:40px; margin-bottom:14px; flex-wrap:nowrap;">
+                <?php
+                foreach (get_field("logostestimonials") as $sue) {
+                    ?>
+                <div class="col-auto partner-item">
+                    <a href=" <?= $sue['logosteslinks']['url'] ?>" target="_blank">
+                        <div class="d-flex flex-row align-items-center justify-content-evenly partner-container "
+                            style="  ">
+                            <img src="<?= $sue['logosimg']['url'] ?>" alt=" <?= $sue['logosimg']['alt'] ?>"
+                                class="sue-img" style="width:56px;height:45px;flex-shrink: 0; object-fit:content" />
+
+                        </div>
+                    </a>
+                </div>
+
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+
+        <!-- Flexible Content Field -->
+        <div>
+            <?php if (have_rows('flexiblecontentfield')): ?>
+            <div class="container mt-5">
+                <?php while (have_rows('flexiblecontentfield')):
+                        the_row(); ?>
+                <?php if (get_row_layout() == 'text'): ?>
+                <div class="row">
+
+                    <div class="col-12  h-100 p-3 px-4 mt-5 flexible-title" data-aos="fade-up" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                        <span><?php the_sub_field('title'); ?></span>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-6 text-start mt-5 flexible-left-text" data-aos="fade-right" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+
+                        <p><?php the_sub_field('lefttext'); ?></p>
+                    </div>
+
+                    <!-- <div class="d-none d-lg-block col-lg-2"></div> -->
+                    <div class="col-lg-6 text-start mt-5 flexible-right-text" data-aos="fade-left" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+
+                        <p><?php the_sub_field('righttext'); ?></p>
+                    </div>
+                </div>
+                <?php endif; ?>
+                <?php endwhile; ?>
+            </div>
+            <?php endif; ?>
+        </div>
+        <!-- End of Flexible Content Field -->
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -8,10 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <?php wp_head(); ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS -->
 </head>
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+    AOS.init();
+    </script>
+    <!-- AOS -->
 
     <!-- <header class="header position-absolute "
         style="z-index:2;  width: 100vw;  display: flex; justify-content: center;top:4px; ">
