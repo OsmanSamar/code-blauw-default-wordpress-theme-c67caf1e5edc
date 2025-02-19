@@ -20,7 +20,10 @@
     .hero-section {
         position: relative;
         background: url("<?= get_field('heroimage')['url'] ?>");
-        width: 100vw;
+        /* width: 100vw; */
+        width: 100%;
+        max-width: 1700px;
+        margin: 0 auto;
         height: 676px;
         background-size: cover;
         background-position: center;
@@ -32,8 +35,10 @@
         justify-content: center;
         text-align: center;
         color: white;
-
     }
+
+
+
 
     .hero-section::before {
         content: "";
@@ -212,7 +217,6 @@
         background: #CCE1F4;
         /* height: 662px; */
         height: 961px;
-
         width: 100%;
         max-width: 1700px;
         /* margin-top: -322px; */
@@ -223,6 +227,7 @@
         position: absolute;
         z-index: -1;
         margin-top: -96px;
+        margin: 0 auto;
     }
 
 
@@ -288,6 +293,7 @@
     }
 
     .container-img {
+        margin: 0 auto;
         width: 100%;
         max-width: 1700px;
         height: 449px;
