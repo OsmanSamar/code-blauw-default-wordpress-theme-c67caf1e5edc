@@ -299,11 +299,8 @@
             url("<?= get_template_directory_uri() ?>/images/mask-group.png") 50%/cover no-repeat
     }
 
-    .werken-swiper {
-        padding-top: 88px;
-    }
 
-    .werken-title {
+    /* .werken-title {
         text-align: left;
         font-size: 36px;
         font-weight: 300;
@@ -312,11 +309,142 @@
         letter-spacing: 0px;
         color: #FFFFFF;
         opacity: 1;
+    } */
+
+
+
+    .testimonial-slide {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        padding: 30px;
+        box-shadow: 10px 10px 60px #2072BE1A;
+        text-align: left;
+        max-width: 400px;
+        margin: auto;
+        position: relative;
+        z-index: 3;
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 8px;
+        font-family: 'Scala Sans Pro', sans-serif;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+    }
+
+    .testimonial-naam {
+        font-family: 'Scala Sans Pro', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1e73be;
+        opacity: 1;
+        letter-spacing: 0px;
+    }
+
+    .swiper-container {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+
+
+    .swiper-container .swiper-pagination {
+        bottom: -50px !important;
+    }
+
+    .swiper-container .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: #FFFFFF;
+    }
+
+    .swiper-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+        position: absolute;
+        top: -70px;
+        right: 0;
+        width: 100%;
+        /* gap: 10px; */
+    }
+
+    .swiper-text {
+        font-size: 16px;
+        font-weight: 300;
+        white-space: nowrap;
+        text-align: left;
+        line-height: 50px;
+        font-family: 'Richmond Display', serif;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static !important;
+        width: 41px;
+        height: 41px;
+        border: 1px solid #FFFFFF;
+        color: #FFFFFF;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        cursor: pointer;
     }
 
 
 
 
+
+    /* .swiper-container .swiper-button-prev,
+    .swiper-container .swiper-button-next {
+        width: 41px;
+        height: 41px;
+        border: 1px solid #FFFFFF;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        z-index: 10;
+        cursor: pointer;
+    } */
+
+    .swiper-button-next::after,
+    .swiper-rtl .swiper-button-prev::after {
+        font-size: 16px;
+        font-weight: 900;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after,
+    .swiper-button-next::after,
+    .swiper-rtl .swiper-button-prev::after {
+        font-size: 16px;
+        font-weight: 900;
+    }
+
+
+    .swiper-container .swiper-button-prev {
+        position: absolute;
+        left: 82% !important;
+        top: -70px !important;
+    }
+
+    .swiper-container .swiper-button-next {
+        position: absolute;
+        right: -40px !important;
+        top: -70px !important;
+    }
 
 
 
@@ -329,9 +457,13 @@
             max-width: 100%;
         }
 
-        /* .verhaal-container {
-            width: unset;
-        } */
+        .swiper-container .swiper-button-prev {
+            position: absolute;
+            left: 90% !important;
+            top: -70px !important;
+        }
+
+
     }
 
 
@@ -474,9 +606,18 @@
             padding: 0 70px;
         }
 
+        .swiper-container .swiper-button-prev {
+            position: absolute;
+            left: 95% !important;
+            top: -70px !important;
+        }
+
+        .swiper-text {
+            font-size: 36px;
 
 
-    }
+
+        }
     </style>
     <div>
 
@@ -654,27 +795,118 @@
 
         <div class="container-img">
             <div class="container">
-                <div class="werken-swiper">
-                    <p class="werken-title">
-                        <?= get_field("werkentitle") ?>
-                    </p>
-                    <!-- <div class=" d-flex flex-row align-items-center justify-content-end gap-1 client-consultancy-link">
-                        <span style="background-color:white; height:30px; width:30px; border-radius:8px; "
-                            class="d-flex justify-content-center align-items-c
-                   e        nter ">
 
-                                               <img src="<?= get_field("prebtn")['url'] ?>" alt=" <?= get_field("prebtn")['alt'] ?>"
-                                style="width:12px; height:18px; margin:7px 0;" class="" />
-                        </span>
-                        <span style="background-color:white; height:30px; width:30px; border-radius:8px; "
-                            class="d-flex justify-content-center align-items-center ">
-                            <img src="<?= get_field("nextbtn")['url'] ?>" alt=" <?= get_field("nextbtn")['alt'] ?>"
-                                style="width:12px; height:18px; margin:7px 0;" class="" />
-                            </span>
-            </div> -->
+
+                <div class="container" style="padding-top:140px;">
+
+                    <div class="swiper-container">
+                        <div class="swiperwerken werk-swiper">
+                            <div class="swiper-wrapper">
+                                <?php
+                                $delay = 0;
+                                foreach (get_field("testimonials") as $testimonial) {
+                                    ?>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-slide">
+
+                                        <span class="testimonial-text"><?= $testimonial["testimonialtext"] ?></span>
+                                        <br>
+                                        <span class="testimonial-naam"><?= $testimonial["testimonialnaam"] ?></span>
+                                    </div>
+                                </div>
+                                <?php
+                                    $delay += 300;
+                                }
+                                ?>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-header">
+                            <div class="swiper-text">
+                                <?= get_field("werkentitle") ?>
+                            </div>
+                            <div class="d-flex align-items-anchor-center gap-2">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script>
+    let swiperwerken = new Swiper('.werk-swiper', {
+        slidesPerView: 2.5,
+        grabCursor: true,
+        spaceBetween: 24,
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+
+        breakpoints: {
+            360: {
+                slidesPerView: 1.3
+            },
+            540: {
+                slidesPerView: 2
+            },
+            768: {
+                slidesPerView: 2.5
+            },
+            992: {
+                slidesPerView: 3.2
+            },
+            1025: {
+                slidesPerView: 4
+            },
+        },
+
+        // R einitia li ze A O S after Swiper initialization
+        on: {
+            init: function() {
+                AOS.refresh();
+            },
+            slideChangeTransitionEnd: function() {
+                AOS.refresh();
+            }
+
+        }
+
+
+    });
+
+    // I nitialize AOS
+    AOS.init({
+        duration: 800, // Animation duration
+        once: true, // Only animate once
+    });
+    </script>
+
+
 
 
 </main>

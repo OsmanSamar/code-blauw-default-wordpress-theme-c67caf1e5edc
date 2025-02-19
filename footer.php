@@ -26,7 +26,6 @@
         width: 200vw;
         left: -50%;
         z-index: -1;
-
     }
 
     .left-cont {
@@ -47,11 +46,32 @@
     }
 
 
-    .bottom-under {
+    /* .bottom-under {
         padding-left: 160px;
-        padding-top: 20px;
-        color: white;
+        padding-top: 40px;
+        background-color: #F7F6F4;
+    } */
+
+    .bottom-under {
+        padding-top: 40px;
+        background-color: #F7F6F4;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
     }
+
+
+    .footer-codeblauw {
+        margin-left: auto;
+        padding: 60px 0;
+        background-color: #F7F6F4;
+
+    }
+
+
+
+
 
     .footer-text {
 
@@ -106,9 +126,8 @@
         line-height: 24px;
         letter-spacing: 0px;
         margin-bottom: 10px;
-        width: 280px;
+        width: 263px;
         display: block;
-
     }
 
     .footer-icon {
@@ -128,9 +147,8 @@
         height: 389px;
         right: -70px; */
         width: 176.46px;
-        height: 325px;
+        height: 268px;
         right: -34px;
-
         bottom: 0;
 
     }
@@ -178,13 +196,29 @@
             font-size: 16px;
         }
 
+        .img-jordi {
+            height: 325px;
+        }
+
+        .footer-text2 {
+            width: 280px;
+        }
+
+        .bottom-under {
+            padding-left: 40px;
+            padding-top: 20px;
+            gap: 80px;
+        }
+
+
+
 
     }
     </style>
 
     <div class="footer-section">
         <div class="container">
-            <div class="row">
+            <div class="row g-0">
                 <div class=" col-lg-6 left-cont">
                     <div class="bg-left"></div>
                     <div class=" d-flex align-items-center justify-content-between"
@@ -311,23 +345,21 @@
         </div>
 
 
+        <div class="bottom-under d-flex flex-row align-items-center justify-content-between text-nowrap">
+            <div class="d-flex flex-row flex-sm-row gap-3 gap-lg-5 text-center text-lg-start">
+                <span class="footer-privacy"><?= get_field("blauwijstext", 'option') ?></span>
+                <span class="footer-privacy"><?= get_field("algemenevoorwaarden", 'option') ?></span>
+                <span class="footer-privacy"><?= get_field("privacyverklaring", 'option') ?></span>
+                <span
+                    class="footer-privacy  d-none d-lg-block d-md-block"><?= get_field("door:codeblauw", 'option') ?></span>
+            </div>
+            <!-- <div class="footer-codeblauw text-center text-lg-start">
 
+            </div> -->
 
-
-
-
-
-        <div class="bottom-under d-flex align-items-center justify-content-between">
-
-
-            <span class="footer-privacy"><?= get_field("blauwijstext", 'option') ?></span>
-            <span class="footer-privacy"><?= get_field("algemenevoorwaarden", 'option') ?></span>
-            <span class="footer-privacy"><?= get_field(" privacyverklaring", 'option') ?></span>
-            <span class="footer-privacys"><?= get_field("door:codeblauw", 'option') ?></span>
-
-
-
-
+        </div>
+        <div class="footer-codeblauw text-center d-flex justify-content-center d-md-none d-lg-none">
+            <span class="footer-privacy"><?= get_field("door:codeblauw", 'option') ?></span>
         </div>
     </div>
     </div>
