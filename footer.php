@@ -1,8 +1,12 @@
 <footer class="footer">
     <style>
-    .footer-section {
-        width: 100%;
+    .footer {
         max-width: 1700px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-section {
         padding-bottom: 20px;
         overflow-x: clip;
         max-width: 100vw;
