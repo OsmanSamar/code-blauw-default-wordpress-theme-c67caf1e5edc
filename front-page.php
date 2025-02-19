@@ -237,6 +237,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        /* width: 92%; */
     }
 
     .first-blue-block img {
@@ -328,6 +329,9 @@
             max-width: 100%;
         }
 
+        /* .verhaal-container {
+            width: unset;
+        } */
     }
 
 
@@ -422,6 +426,7 @@
             width: 12px;
             height: 10.26px;
             flex-shrink: 0;
+            object-fit: cover;
         }
 
 
@@ -613,7 +618,7 @@
                     <div class="row g-0 ">
                         <div class="col-12  col-lg-6">
                             <img src="<?= get_template_directory_uri() ?>/images/manager-leading.png"
-                                alt="go onze expertises" class="testimonial-arrow" />
+                                alt="manager-leading" />
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="d-flex justify-content-left flex-column text-left left-container" style="">
@@ -634,13 +639,14 @@
                                         <?= get_field("naaroverons")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                             alt="go onze expertises" class="testimonial-arrow"
-                                            style="  width: 12px; height: 10.26px; flex-shrink: 0;" />
+                                            style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
