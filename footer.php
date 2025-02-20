@@ -4,6 +4,7 @@
         max-width: 1700px;
         width: 100%;
         margin: 0 auto;
+        background-color: #F7F6F4;
     }
 
     .footer-section {
@@ -46,7 +47,8 @@
         padding-right: 0;
         width: 100vw;
         position: absolute;
-        z-index: -1;
+        /* z-index: -1; */
+        z-index: 0;
     }
 
 
@@ -222,6 +224,7 @@
 
     <div class="footer-section">
         <div class="container">
+            <!-- container -->
             <div class="row g-0">
                 <div class=" col-lg-6 left-cont">
                     <div class="bg-left"></div>

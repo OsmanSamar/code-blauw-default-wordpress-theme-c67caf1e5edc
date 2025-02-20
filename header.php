@@ -69,10 +69,14 @@
         <nav class="navbar navbar-expand-lg navbar-light sans-serif"
             style="top: 26px;left: ;width: 1000px;height: 55px;border: 1px solid #FFFFFF;border-radius: 5px;opacity: 1;">
             <div class="container">
-                <!-- Logo -->
-                <a href="<?= esc_url(home_url('/')); ?>" class="navbar-brand">
-                    <img src="<?= get_field("logo")['url'] ?>" alt="<?= get_field("logo")['title'] ?>"
-                        style="width: 136px; height: 36px; top:30px" />
+                <!-- Logo  -->
+                <!-- <a href="<?= esc_url(home_url('/home')); ?>" class="navbar-brand">
+                    <img src="<?= get_template_directory_uri() ?>/images/logo-blauw-ijs.png" alt="go onze expertises"
+                        style="width: 136px; height: 36px; top:30px" alt="Blauw Ijs Logo" />
+                </a> -->
+                <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand">
+                    <img src="<?= get_template_directory_uri() ?>/images/logo-blauw-ijs.png" alt="Blauw Ijs Logo"
+                        style="width: 136px; height: 36px; top:30px"   />
                 </a>
 
                 <!-- Hamburger button for mobile -->
@@ -107,7 +111,9 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class=" dropdown-item" href="<?= esc_url(home_url('/')); ?>">X</a>
+                                    <a class=" dropdown-item"
+                                        href="<?= esc_url(home_url('/project-en-programmamanagement')); ?>">Project-en
+                                        programmamanagement</a>
                                 </li>
                                 <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">e</a>
                                 </li>
