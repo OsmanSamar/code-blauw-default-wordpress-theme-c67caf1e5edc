@@ -94,6 +94,33 @@ function create_onze_expertises_post_type()
 // Hooking up our function to theme setup
 add_action('init', 'create_onze_expertises_post_type');
 
+// Our custom Events post type function
+function create_werken_voor_post_type()
+{
+
+    register_post_type(
+        'werken_voor',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __('Werken_Voor'),
+                'singular_name' => __('Werken_Voor')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'werken_voor'),
+            'show_in_rest' => true,
+
+            'supports' => ['title', 'editor', 'thumbnail']
+        )
+    );
+
+
+}
+
+// Hooking up our function to theme setup
+add_action('init', 'create_werken_voor_post_type');
+
 
 
 
