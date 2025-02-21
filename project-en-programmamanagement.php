@@ -1,12 +1,16 @@
 <?php get_header()  //Template Name: project-en-programmamanagement  ?>
 
-<main class="front-page">
+<main class="project-en-programmamanagement">
     <style>
     .hero-section {
         background: url("<?= get_field('heroimage')['url'] ?> ");
         width: 100%;
         max-width: 1700px;
         margin: 0 auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
     }
 
     .pro-hero-title {
@@ -17,7 +21,6 @@
         text-align: center;
         letter-spacing: 0px;
         color: #feffff;
-
     }
 
     .pro-hero-text {
@@ -231,8 +234,10 @@
 
     .swiper-container .swiper-button-prev {
         position: absolute;
-        left: 82% !important;
-        top: -70px !important;
+        /* left: 82% !important;
+        top: -70px !important; */
+        left: -2% !important;
+        top: -13px !important;
     }
 
     .swiper-container .swiper-button-next {
@@ -247,6 +252,15 @@
         height: 28px;
         width: 28px;
     }
+
+    @media (min-width: 768px) {
+        .swiper-container .swiper-button-prev {
+            position: absolute;
+            left: -3% !important;
+            top: -13px !important;
+        }
+    }
+
 
 
     @media (min-width: 992px) {
@@ -266,6 +280,8 @@
             left: -12% !important;
             top: -12px !important;
         }
+
+
 
         .swiper-text {
             font-size: 36px;
@@ -467,17 +483,17 @@
         grabCursor: true,
         spaceBetween: 20,
 
-        pagination: {
+        pagi nation: {
             el: '.swiper-pagination',
             clickable: true,
         },
-        navigation: {
+        navi gation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
 
 
-        breakpoints: {
+        brea kpoints: {
             360: {
                 slidesPerView: 1.3
             },
@@ -500,7 +516,7 @@
             init: function() {
                 AOS.refresh();
             },
-            slideChangeTransitionEnd: function() {
+            slid eChangeTransitionEnd: function() {
                 AOS.refresh();
             }
 

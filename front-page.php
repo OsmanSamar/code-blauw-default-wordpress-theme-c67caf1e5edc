@@ -56,6 +56,10 @@
         width: 100%;
         max-width: 1700px;
         margin: 0 auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
     }
 
     .container-img {
@@ -179,8 +183,10 @@
 
     .swiper-container .swiper-button-prev {
         position: absolute;
-        left: 82% !important;
-        top: -70px !important;
+        /* left: 82% !important;
+        top: -70px !important; */
+        left: -2% !important;
+        top: -13px !important;
     }
 
     .swiper-container .swiper-button-next {
@@ -250,6 +256,8 @@
             top: -12px !important;
         }
 
+
+
         .swiper-text {
             font-size: 36px;
         }
@@ -295,10 +303,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
 
         <!-- Flexible Content Field -->
         <div>
@@ -400,7 +404,7 @@
                         </div>
                     </div>
 
-                    <div class="swiperwerken werk-swiper ">
+                    <div class="swiperwerken werk-swiper">
                         <div class="swiper-wrapper">
                             <?php
                             $delay = 0;
