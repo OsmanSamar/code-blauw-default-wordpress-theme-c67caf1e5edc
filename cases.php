@@ -14,7 +14,7 @@
         object-fit: cover;
     }
 
-    .pro-hero-title {
+    .case-hero-title {
         font-size: 25px;
         line-height: 76px;
         font-weight: 500;
@@ -22,21 +22,77 @@
         text-align: center;
         letter-spacing: 0px;
         color: #feffff;
-
     }
 
-    .pro-hero-text {
+    .case-hero-text {
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 24px;
         font-weight: 300;
         font-family: "Libre Franklin", sans-serif;
         letter-spacing: 0px;
         color: #ffffff;
         opacity: 1;
-        width: 505px;
-        display: block;
+        /* width: 505px; */
+        /* display: block; */
         margin-bottom: 10px;
+    }
+
+    .button-container {
+        border: 1px solid #f29401;
+        border-radius: 5px;
+        width: 250px;
+        height: 51px;
+        padding: 10px;
+        background-color: #f29401;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .button-text {
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+    }
+
+    /* End of style Hero */
+
+    .testimonial-slide {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        padding: 18px;
+        box-shadow: 10px 10px 60px #2072BE1A;
+        text-align: left;
+        max-width: 400px;
+        margin: auto;
+        position: relative;
+        z-index: 3;
+
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 8px;
+        font-family: 'Scala Sans Pro', sans-serif;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+    }
+
+    .testimonial-naam {
+        font-family: 'Scala Sans Pro', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1e73be;
+        opacity: 1;
+        letter-spacing: 0px;
     }
 
     .swiper-container {
@@ -119,13 +175,13 @@
         top: -13px !important;
     }
 
-
     .swiper-container .swiper-button-next {
         position: absolute;
         right: 5px !important;
         top: -12px !important;
     }
 
+    /* End of Swiper */
     .arrow {
         background-color: #1E73BE;
         border-radius: 50px;
@@ -166,52 +222,11 @@
         opacity: 1;
     }
 
-    .button-container {
-        border: 1px solid #f29401;
-        border-radius: 5px;
-        width: 250px;
-        height: 51px;
-        padding: 10px;
-        background-color: #f29401;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-    }
 
-    .button-text {
-        text-align: center;
-        font-size: 14px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #FFFFFF;
-    }
 
-    .case-hero-title {
-        font-size: 25px;
-        line-height: 76px;
-        font-weight: 500;
-        font-family: "Richmond Display", serif;
-        text-align: center;
-        letter-spacing: 0px;
-        color: #feffff;
-    }
 
-    .case-hero-text {
-        text-align: center;
-        font-size: 14px;
-        line-height: 24px;
-        font-weight: 300;
-        font-family: "Libre Franklin", sans-serif;
-        letter-spacing: 0px;
-        color: #ffffff;
-        opacity: 1;
-        /* width: 505px; */
-        /* display: block; */
-        margin-bottom: 10px;
-    }
+
+
 
 
 
@@ -226,6 +241,9 @@
         .case-hero-text {
             width: 505px;
             display: block;
+            font-size: 18px;
+            line-height: 30px;
+
         }
     }
 
@@ -278,6 +296,10 @@
             height: 131px;
         }
 
+        .first-blue-block {
+            margin-top: unset;
+        }
+
     }
     </style>
 
@@ -310,7 +332,6 @@
         </div>
         <!-- End of Hero Section -->
 
-
         <!--first-blue-block  -->
         <div class="first-blue-block position-relative">
             <div class="container blue-container">
@@ -318,7 +339,7 @@
 
                     <div class="swiper-header">
                         <div class="swiper-text">
-                            <?= get_field("klantcases") ?>
+                            <?= get_field("werkentitle") ?>
                         </div>
                         <div class="d-flex align-items-center gap-2">
                             <div class="swiper-button-prev"></div>
@@ -326,7 +347,7 @@
                         </div>
                     </div>
 
-                    <div class="swiperklant klant-swiper">
+                    <div class="swiperwerken3 werk-swiper3">
                         <div class="swiper-wrapper">
                             <?php
                             $delay = 0;
@@ -348,10 +369,12 @@
 
                                         <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <span class="card-text"><?= $post->post_title ?></span>
+                                                <span class="card-text">
+                                                    <?= $post->post_title ?></span>
                                                 <span class="d-flex justify-content-center align-items-center arrow">
-                                                    <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
-                                                        alt="go to article" class="icon" />
+                                                    <img src="<?= $fields["white_arrow"]['url'] ?>"
+                                                        alt=" <?= $fields['white_arrow']['alt'] ?>" class="card-img-top"
+                                                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
                                                 </span>
                                             </div>
                                             <span class="card-title mt-auto">
@@ -370,7 +393,6 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-
         </div>
         <!--End of first-blue-block  -->
 
@@ -381,13 +403,22 @@
                     <span class="organ-title">
                         Ook de volgende stap zetten met jouw organisatie?
                         <?= get_field("organisatietext") ?>
+                        <!-- 
+                         <?php
+                         $organisatietext = get_field("organisatietext");
+                         echo '<pre>';
+                         print_r($organisatietext);
+                         echo '</pre>';
+                         ?> -->
+
                     </span>
 
-                    <div class="d-inline-flex justify-content-center align-items-center"
-                        style="border: 1px solid #f29401; border-radius: 5px; width:250px; height: 51px; background-color: #f29401;">
-                        <a href="<?= get_field("ontdekbtn")['url'] ?>" class="text-white">
-                            <?= get_field("ontdekbtn")['title'] ?>
-                            <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>" />
+                    <div class="d-inline-flex justify-content-center align-items-center" style="border: 1px solid #f29401; border-radius:
+                                                        5px; width:250px; height: 51px; background-color: #f29401;">
+                        <a h ref="<?= get_field("vraageenbtn")['url'] ?>" class="button-text">
+                            <?= get_field("vraageenbtn")['title'] ?>
+                            <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
+                                alt="go to article" />
                         </a>
                     </div>
                 </div>
@@ -400,7 +431,7 @@
 
 
     <script>
-    let swiperklant = new Swiper('.klant-swiper', {
+    let swiperwerken3 = new Swiper('.werk-swiper3', {
         slidesPerView: 2.5,
         grabCursor: true,
         spaceBetween: 20,
@@ -433,10 +464,10 @@
             },
         },
 
-        // Reinitialize AOS after Swiper initialization
+        // R ein itia li ze A O S after Swiper initialization
         on: {
             init: function() {
-                AOS.refres h();
+                AOS.refresh();
             },
             slideChangeTransitionEnd: function() {
                 AOS.refresh();

@@ -231,14 +231,15 @@ strong:nth-of-type(2) {
 .circle-border {
   display: inline-flex;
   justify-content: center;
-  align-items: anchor-center;
+  align-items: center;
+  gap: 7px;
   border: 1px solid #f29401;
   border-radius: 5px;
   opacity: 1;
   position: relative;
   overflow: hidden;
   margin: 8px;
-  padding: 6px 14px;
+  padding: 6px 8px;
   height: 50px;
   color: #fff;
 }

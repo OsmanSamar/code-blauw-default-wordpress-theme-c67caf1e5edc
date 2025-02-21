@@ -13,7 +13,7 @@
         object-fit: cover;
     }
 
-    .pro-hero-title {
+    .case-hero-title {
         font-size: 25px;
         line-height: 76px;
         font-weight: 500;
@@ -21,21 +21,176 @@
         text-align: center;
         letter-spacing: 0px;
         color: #feffff;
-
     }
 
-    .pro-hero-text {
+    .case-hero-text {
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 24px;
         font-weight: 300;
         font-family: "Libre Franklin", sans-serif;
         letter-spacing: 0px;
         color: #ffffff;
         opacity: 1;
-        width: 505px;
-        display: block;
+        /* width: 505px; */
+        /* display: block; */
         margin-bottom: 10px;
+    }
+
+    .button-container {
+        border: 1px solid #f29401;
+        border-radius: 5px;
+        width: 250px;
+        height: 51px;
+        padding: 10px;
+        background-color: #f29401;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 30px;
+    }
+
+    .button-text {
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+    }
+
+    /* End of style Hero */
+
+    /* Second Section */
+
+    .onzevisie-title {
+        text-align: left;
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: 300;
+        font-family: "Richmond Display", serif;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+    }
+
+    .left-text,
+    .right-text {
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 300;
+        font-family: 'Scala Sans Pro', sans-serif;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+        text-wrap: balance;
+    }
+
+    .right-text {
+        margin-top: 8px;
+
+    }
+
+    .baluwtext {
+        padding-top: 80px;
+        padding-bottom: 46px;
+    }
+
+    .center-title {
+        font-size: 36px;
+        line-height: 46px;
+        font-weight: 300;
+        font-family: "Richmond Display", serif;
+        text-align: center;
+        letter-spacing: 0px;
+        color: #1E73BE;
+    }
+
+
+
+    .secleft-text,
+    .fleft-text {
+        text-align: left;
+        font-size: 16px;
+        line-height: 26px;
+        font-family: 'Scala Sans Pro', sans-serif;
+        letter-spacing: 0px;
+        letter-spacing: 0px;
+        color: #132030;
+    }
+
+    .secleft-text,
+        {
+        font-weight: 300;
+    }
+
+    .fleft-text {
+        font-weight: bold;
+    }
+
+
+
+    .medium-img {
+        width: 100%;
+        height: 367px;
+        background: transparent 0% 0% no-repeat padding-box;
+        border-radius: 5px 0px 0px 5px;
+        opacity: 1;
+        object-fit: contain;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*  */
+
+
+    .testimonial-slide {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        padding: 18px;
+        box-shadow: 10px 10px 60px #2072BE1A;
+        text-align: left;
+        max-width: 400px;
+        margin: auto;
+        position: relative;
+        z-index: 3;
+
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 8px;
+        font-family: 'Scala Sans Pro', sans-serif;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+    }
+
+    .testimonial-naam {
+        font-family: 'Scala Sans Pro', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1e73be;
+        opacity: 1;
+        letter-spacing: 0px;
     }
 
     .swiper-container {
@@ -112,8 +267,10 @@
 
     .swiper-container .swiper-button-prev {
         position: absolute;
-        left: 82% !important;
-        top: -70px !important;
+        /* left: 82% !important;
+        top: -70px !important; */
+        left: -2% !important;
+        top: -13px !important;
     }
 
     .swiper-container .swiper-button-next {
@@ -122,6 +279,7 @@
         top: -12px !important;
     }
 
+    /* End of Swiper */
     .arrow {
         background-color: #1E73BE;
         border-radius: 50px;
@@ -164,10 +322,32 @@
             left: -3% !important;
             top: -13px !important;
         }
+
+        .case-hero-text {
+            width: 505px;
+            display: block;
+            font-size: 18px;
+            line-height: 30px;
+
+        }
+
     }
 
 
     @media (min-width: 992px) {
+
+        .case-hero-title {
+            font-size: 50px;
+            text-align: left;
+            line-height: 80px;
+        }
+
+
+        .case-hero-text {
+            width: 505px;
+            display: block;
+        }
+
 
 
         .swiper-container .swiper-button-prev {
@@ -179,8 +359,322 @@
         .swiper-text {
             font-size: 36px;
         }
+
+        .content-wrapper {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left-text,
+        .right-text {
+            text-align: left;
+        }
+
+        .medium-container {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .first-blue-block {
+
+            margin-top: unset;
+
+        }
+
+
+
     }
     </style>
+    <div>
+        <!-- Hero Section -->
+        <div class="hero-section flex-column">
+            <div class="hero-content">
+                <div class="col-12  col-lg-12  pe-0 pe-lg-5">
+                    <span class="case-hero-title fadeIn  " data-side="right" style="transition-delay: .25s;">
+                        <span class="d-block">
+                            <?= get_field("herotitle") ?>
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <span class="case-hero-text ">
+                <span class="d-block">
+                    <?= get_field("herotext") ?>
+                </span>
+            </span>
+            <div class="button-container gap-2">
+                <a href="<?= get_field("kennismakenbtn")['url'] ?>"
+                    class="button-text d-flex align-items-center flex-row">
+                    <?= get_field("kennismakenbtn")['title'] ?>
+                    <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
+                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; margin-left: 5px;" />
+                </a>
+            </div>
+
+        </div>
+        <!-- End of Hero Section -->
+
+        <!-- Onze Visie -->
+        <div class="container">
+            <div class="row">
+                <div class="d-flex my-4 ">
+                    <span class="onzevisie-title"><?= get_field("onzevisietitle") ?></span>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <span class="left-text"> <?= get_field("lefttext") ?></span>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <span class="right-text pt-2"> <?= get_field("righttext") ?></span>
+                </div>
+            </div>
+
+            <div class="baluwtext">
+                <div class="col-12  col-lg-7  max-auto text-center d-flex flex-column align-items-center justify-content-center "
+                    style="margin:0 auto">
+                    <span class="center-title fadeIn  " data-side="right" style="transition-delay: .25s;">
+                        <span class="d-block">
+                            <?= get_field("blauwijscentertext") ?>
+                        </span>
+                    </span>
+
+                    <div class="button-group">
+                        <div class="circle-border gap-2 " style="width: 198px;">
+                            <a href="<?= get_field("neemcontactopbtn")['url'] ?>" class="btn-custom"
+                                style="color: #132030;">
+                                <?= get_field("neemcontactopbtn")['title'] ?>
+                            </a>
+                            <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg" alt="go onze expertises"
+                                class="testimonial-arrow"
+                                style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
+                        </div>
+                        <div class="circle-border gap-2 " style="width: 198px; ">
+                            <a href="<?= get_field("onzewerkwijzebtn")['url'] ?>" class="btn-custom"
+                                style="color: #132030;">
+                                <?= get_field("onzewerkwijzebtn")['title'] ?>
+                            </a>
+                            <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg" alt="go onze expertises"
+                                class="testimonial-arrow"
+                                style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of  Onze Visie -->
+
+        <!--New Section -->
+        <div class="container medium-container">
+            <div class="row">
+                <div class="col-12  col-lg-6 d-flex flex-column  text-left gap-4" style="align-items: flex-start;">
+                    <span class="fleft-text">
+                        <?= get_field("flefttext") ?>
+                    </span>
+                    <span class="secleft-text">
+                        <?= get_field("seclefttext") ?>
+                    </span>
+                    <div class="button-group">
+                        <div class="circle-border  btn-primary-custom " style="width:110px ">
+                            <a href="<?= get_field("contactbtn")['url'] ?>" class="btn btn-primary">
+                                <?= get_field("contactbtn")['title'] ?>
+                            </a>
+                            <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
+                                style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
+                        </div>
+                        <div class="circle-border  btn-custom-container " style="width:190px  ">
+                            <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="btn-custom"
+                                style="color: #132030;">
+                                <?= get_field("veelgesteldevragenbtn")['title'] ?>
+                            </a>
+                            <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg" alt="go onze expertises"
+                                class="testimonial-arrow"
+                                style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 offset-lg-1">
+                    <img src="<?= get_field("mediumimg")['url'] ?>" alt="<?= get_field("")['alt'] ?>"
+                        class="medium-img" />
+                </div>
+            </div>
+        </div>
+        <!--End of new Section -->
+
+        <!--first-blue-block  -->
+        <div class="first-blue-block position-relative">
+            <div class="container blue-container">
+                <div class="swiper-container swiper position-relative ">
+
+                    <div class="swiper-header">
+                        <div class="swiper-text">
+                            <?= get_field("werkentitle") ?>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+
+                    <div class="newswiper werk-swiper2">
+                        <div class="swiper-wrapper">
+                            <?php
+                            $delay = 0;
+                            $posts = get_posts([
+                                'post_type' => 'werken_voor',
+                                'numberposts' => -1,
+                                "order" => 'asc'
+                            ]);
+
+                            foreach ($posts as $post) {
+                                $fields = get_fields($post->ID);
+                                ?>
+                            <div class="swiper-slide d-flex flex-column h-100">
+                                <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column h-100">
+                                    <div class="testimonial-slide d-flex flex-column h-100">
+                                        <img src="<?= $fields["backimg"]['url'] ?>"
+                                            alt=" <?= $fields['backimg']['alt'] ?>" class="card-img-top"
+                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
+
+                                        <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="card-text">
+                                                    <?= $post->post_title ?></span>
+                                                <span class="d-flex justify-content-center align-items-center arrow">
+                                                    <!-- <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
+                                                        alt="go to article" class="icon" /> -->
+                                                    <img src="<?= $fields["white_arrow"]['url'] ?>"
+                                                        alt=" <?= $fields['white_arrow']['alt'] ?>" class="card-img-top"
+                                                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
+                                                </span>
+                                            </div>
+                                            <span class="card-title mt-auto">
+                                                <span><?= $fields["text"] ?></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <?php
+                                $delay += 300;
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
+                <!--White-containe-->
+                <div class="" style="    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    height: 192px;
+    text-align: center;
+    gap: 4px;
+    flex-direction: row;">
+                    <div class="whi-container d-flex align-items-center justify-content-around" style="top:105px">
+                        <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
+                            <span class="organ-title">
+                                Ook de volgende stap zetten met jouw organisatie?
+                                <?= get_field("organisatietext") ?>
+                                <!-- 
+                         <?php
+                         $organisatietext = get_field("organisatietext");
+                         echo '<pre>';
+                         print_r($organisatietext);
+                         echo '</pre>';
+                         ?> -->
+                            </span>
+                            <div class="d-inline-flex justify-content-center align-items-center"
+                                style="border: 1px solid #f29401; border-radius:5px; width:250px; height:51px; background-color: #29401;">
+                                <a h ref="<?= get_field("vraageenbtn")['url'] ?>" class="button-text">
+                                    <?= get_field("vraageenbtn")['title'] ?>
+                                    <!-- <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
+                                                                                alt="go to article" /> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of wshite-containe-->
+
+
+            </div>
+
+
+
+
+        </div>
+        <!--first-blue-block  -->
+
+
+
+    </div>
+
+
+
+
+
+    <script>
+    let newswiper = new Swiper('.werk-swiper2', {
+        slidesPerView: 2.5,
+        grabCursor: true,
+        spaceBetween: 20,
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+
+        breakpoints: {
+            360: {
+                slidesPerView: 1.3
+            },
+            540: {
+                slidesPerView: 2
+            },
+            768: {
+                slidesPerView: 2.5
+            },
+            992: {
+                slidesPerView: 3.2
+            },
+            1025: {
+                slidesPerView: 4
+            },
+        },
+
+        // R ein itia li ze A O S after Swiper initialization
+        on: {
+            init: function() {
+                AOS.refresh();
+            },
+            slideChangeTransitionEnd: function() {
+                AOS.refresh();
+            }
+
+        }
+
+
+    });
+
+    // I nitialize AOS
+    AOS.init({
+        duration: 800, // Animation duration
+        once: true, // Only animate once
+    });
+    </script>
 
 </main>
 

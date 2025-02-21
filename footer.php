@@ -230,8 +230,12 @@
                     <div class="bg-left"></div>
                     <div class=" d-flex align-items-center justify-content-between"
                         style="max-width:405px; margin-top:70px;">
-                        <img src="<?= get_field("footerlogo", 'option')['url'] ?>"
-                            alt="<?= get_field("footerlogo", 'option')['alt'] ?>" style="width:150px; height:41px;" />
+                        <!-- <img src="<?= get_field("footerlogo", 'option')['url'] ?>"
+                            alt="<?= get_field("footerlogo", 'option')['alt'] ?>" style="width:150px; height:41px;" /> -->
+                        <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand">
+                            <img src="<?= get_template_directory_uri() ?>/images/logo-blauw-ijs.png"
+                                alt="Blauw Ijs Logo" style="width: 136px; height: 36px; top:30px"   />
+                        </a>
                         <img src="<?= get_field("footerlinked", 'option')['url'] ?>"
                             alt="<?= get_field("footerlinked", 'option')['alt'] ?>"
                             style="width:25.79px; height:25.8px;" />

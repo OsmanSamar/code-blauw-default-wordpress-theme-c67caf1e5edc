@@ -483,17 +483,17 @@
         grabCursor: true,
         spaceBetween: 20,
 
-        pagi nation: {
+        pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
-        navi gation: {
+        navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
 
 
-        brea kpoints: {
+        breakpoints: {
             360: {
                 slidesPerView: 1.3
             },
@@ -516,7 +516,7 @@
             init: function() {
                 AOS.refresh();
             },
-            slid eChangeTransitionEnd: function() {
+            slideChangeTransitionEnd: function() {
                 AOS.refresh();
             }
 
