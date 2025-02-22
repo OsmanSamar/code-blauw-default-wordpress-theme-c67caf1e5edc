@@ -67,14 +67,14 @@
     <header class="header position-absolute d-flex justify-content-center " style=" z-index:2; width: 100vw; top:4px; ">
 
         <nav class="navbar navbar-expand-lg navbar-light sans-serif"
-            style="top: 26px;left: ;width: 1000px;height: 55px;border: 1px solid #FFFFFF;border-radius: 5px;opacity: 1;">
-            <div class="container">
+            style="top: 26px;width: 1000px;height: 55px;border: 1px solid #FFFFFF;border-radius: 5px;opacity: 1;">
+            <div class="container-fluid p-0 m-0">
                 <!-- Logo  -->
                 <!-- <a href="<?= esc_url(home_url('/home')); ?>" class="navbar-brand">
                     <img src="<?= get_template_directory_uri() ?>/images/logo-blauw-ijs.png" alt="go onze expertises"
                         style="width: 136px; height: 36px; top:30px" alt="Blauw Ijs Logo" />
                 </a> -->
-                <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand">
+                <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand ps-2">
                     <img src="<?= get_template_directory_uri() ?>/images/logo-blauw-ijs.png" alt="Blauw Ijs Logo"
                         style="width: 136px; height: 36px; top:30px"   />
                 </a>
@@ -83,7 +83,7 @@
                 <div class="d-lg-none  " style="border-radius: 5px; 
                             height: 38px; width:38px;
                             border: 1px solid  #F29401;">
-                    <button class="navbar-toggler collapsed " type="button" data-bs-toggle="collapse"
+                    <button class="navbar-toggler collapsed ms-auto" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation" style=" 
                         width:38px; height:38px; border-radius:5px; padding:4px; margin:; opacity: 1;;  
@@ -152,9 +152,9 @@
                 </div>
 
                 <!-- Button on the Right side (visible only on large screens) -->
-                <div class="circle-border   d-none d-lg-inline-flex justify-content-center align-items-center ms-auto"
+                <div class="circle-border   d-none d-lg-inline-flex justify-content-center align-items-center me-auto"
                     style="; background: #F29401;">
-                    <div class="d-none d-lg-block ms-auto">
+                    <div class="d-none d-lg-block me-auto">
                         <a href="<?= esc_url(home_url('/kennismaken')); ?>" class="btn btn-primary">Kennismaken</a>
                     </div>
                 </div>
