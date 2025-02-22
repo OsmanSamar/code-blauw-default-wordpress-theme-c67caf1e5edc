@@ -13,7 +13,7 @@
         object-fit: cover;
     }
 
-    .case-hero-title {
+    .over-ons-hero-title {
         font-size: 25px;
         line-height: 76px;
         font-weight: 500;
@@ -23,13 +23,13 @@
         color: #feffff;
     }
 
-    .case-hero-text {
+    .over-ons-hero-text {
         text-align: center;
         font-size: 14px;
         line-height: 24px;
         font-weight: 300;
         font-family: "Libre Franklin", sans-serif;
-        letter-spacing: 0px;
+        letter-spacing: 1px;
         color: #ffffff;
         opacity: 1;
         /* width: 505px; */
@@ -83,10 +83,11 @@
         line-height: 30px;
         font-weight: 300;
         font-family: 'Scala Sans Pro', sans-serif;
-        letter-spacing: 0px;
+        letter-spacing: 1px;
         color: #132030;
         opacity: 1;
         text-wrap: balance;
+        white-space: break-spaces;
     }
 
     .right-text {
@@ -107,6 +108,7 @@
         text-align: center;
         letter-spacing: 0px;
         color: #1E73BE;
+        margin-bottom: 50px;
     }
 
 
@@ -142,6 +144,18 @@
         object-fit: contain;
     }
 
+    .small-whit-container {
+        width: 100%;
+        max-width: 1700px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 192px;
+        text-align: center;
+        gap: 4px;
+        flex-direction: row;
+    }
 
 
 
@@ -219,6 +233,7 @@
         top: -70px;
         right: 0;
         width: 100%;
+
     }
 
     .swiper-text {
@@ -299,18 +314,26 @@
         width: 1000px;
         position: relative;
         z-index: 1;
-        top: -60px;
+        /* top: -60px; */
+        top: 105px;
         height: 131px;
         border-radius: 5px;
         margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 250px;
     }
 
     .organ-title {
-        font-size: 32px;
+        /* font-size: 32px; 
         line-height: 50px;
+         text-align: left;*/
+        font-size: 26px;
+        line-height: 35px;
         font-weight: 300;
         font-family: "Richmond Display", serif;
-        text-align: left;
+        text-align: center;
         letter-spacing: 0px;
         color: #132030;
         opacity: 1;
@@ -336,14 +359,15 @@
 
     @media (min-width: 992px) {
 
-        .case-hero-title {
+        .over-ons-hero-title {
             font-size: 50px;
             text-align: left;
             line-height: 80px;
         }
 
 
-        .case-hero-text {
+        .over-ons-hero-text {
+            font-size: 16px;
             width: 505px;
             display: block;
         }
@@ -378,9 +402,19 @@
         }
 
         .first-blue-block {
-
+            height: 683px;
             margin-top: unset;
 
+        }
+
+        .whi-container {
+            height: 131px;
+        }
+
+        .organ-title {
+            font-size: 32px;
+            line-height: 50px;
+            text-align: left;
         }
 
 
@@ -388,37 +422,41 @@
     }
     </style>
     <div>
+
+
         <!-- Hero Section -->
         <div class="hero-section flex-column">
             <div class="hero-content">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <span class="case-hero-title fadeIn  " data-side="right" style="transition-delay: .25s;">
+                    <span class="over-ons-hero-title fadeIn  " data-side="right" style="transition-delay: .25s;">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
                         </span>
                     </span>
                 </div>
             </div>
-            <span class="case-hero-text ">
+            <span class="over-ons-hero-text ">
                 <span class="d-block">
                     <?= get_field("herotext") ?>
                 </span>
             </span>
-            <div class="button-container gap-2">
-                <a href="<?= get_field("kennismakenbtn")['url'] ?>"
-                    class="button-text d-flex align-items-center flex-row">
-                    <?= get_field("kennismakenbtn")['title'] ?>
+            <div class="button-container ">
+                <div class="circle-border btn-primary-custom " style="width: 182px;">
+                    <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn btn-primary">
+                        <?= get_field("kennismakenbtn")['title'] ?>
+                    </a>
                     <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
-                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; margin-left: 5px;" />
-                </a>
+                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
+                </div>
             </div>
+
 
         </div>
         <!-- End of Hero Section -->
 
         <!-- Onze Visie -->
         <div class="container">
-            <div class="row">
+            <div class="row mt-5">
                 <div class="d-flex my-4 ">
                     <span class="onzevisie-title"><?= get_field("onzevisietitle") ?></span>
                 </div>
@@ -441,7 +479,7 @@
                     </span>
 
                     <div class="button-group">
-                        <div class="circle-border gap-2 " style="width: 198px;">
+                        <div class="circle-border gap-1 " style="width: 182px;">
                             <a href="<?= get_field("neemcontactopbtn")['url'] ?>" class="btn-custom"
                                 style="color: #132030;">
                                 <?= get_field("neemcontactopbtn")['title'] ?>
@@ -450,7 +488,7 @@
                                 class="testimonial-arrow"
                                 style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
                         </div>
-                        <div class="circle-border gap-2 " style="width: 198px; ">
+                        <div class="circle-border gap-1 " style="width: 172px; ">
                             <a href="<?= get_field("onzewerkwijzebtn")['url'] ?>" class="btn-custom"
                                 style="color: #132030;">
                                 <?= get_field("onzewerkwijzebtn")['title'] ?>
@@ -483,7 +521,7 @@
                             <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
                                 style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
                         </div>
-                        <div class="circle-border  btn-custom-container " style="width:190px  ">
+                        <div class="circle-border gap-1  btn-custom-container " style="width:195px  ">
                             <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="btn-custom"
                                 style="color: #132030;">
                                 <?= get_field("veelgesteldevragenbtn")['title'] ?>
@@ -502,14 +540,16 @@
         </div>
         <!--End of new Section -->
 
+
+
         <!--first-blue-block  -->
         <div class="first-blue-block position-relative">
             <div class="container blue-container">
-                <div class="swiper-container swiper position-relative ">
+                <div class="swiper-container swiper position-relative  mt-5">
 
-                    <div class="swiper-header">
+                    <div class="swiper-header mb-5">
                         <div class="swiper-text">
-                            <?= get_field("werkentitle") ?>
+                            <?= get_field("organisatiesvoortitle") ?>
                         </div>
                         <div class="d-flex align-items-center gap-2">
                             <div class="swiper-button-prev"></div>
@@ -567,18 +607,8 @@
 
 
                 <!--White-containe-->
-                <div class="" style="    width: 100%;
-    max-width: 1700px;
-    margin: 0 auto;
-    display: flex
-;
-    justify-content: center;
-    align-items: center;
-    height: 192px;
-    text-align: center;
-    gap: 4px;
-    flex-direction: row;">
-                    <div class="whi-container d-flex align-items-center justify-content-around" style="top:105px">
+                <div class="small-whit-container">
+                    <div class="whi-container ">
                         <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
                             <span class="organ-title">
                                 Ook de volgende stap zetten met jouw organisatie?
@@ -589,29 +619,36 @@
                          echo '<pre>';
                          print_r($organisatietext);
                          echo '</pre>';
-                         ?> -->
+                         ?>              -->
                             </span>
-                            <div class="d-inline-flex justify-content-center align-items-center"
-                                style="border: 1px solid #f29401; border-radius:5px; width:250px; height:51px; background-color: #29401;">
-                                <a h ref="<?= get_field("vraageenbtn")['url'] ?>" class="button-text">
-                                    <?= get_field("vraageenbtn")['title'] ?>
-                                    <!-- <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
-                                                                                alt="go to article" /> -->
+
+                            <div class="circle-border gap-1  btn-primary-custom " style="width:195px">
+                                <a h ref="<?= get_field("vraagaanbtn")['url'] ?>" class="btn btn-primary">
+                                    <?= get_field("vraagaanbtn")['title'] ?>
                                 </a>
+                                <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                    alt="go onze expertises" class="testimonial-arrow"
+                                    style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                                <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
+                                    style="width: 9px; height: 7.69px; object-fit: cover; display: " />
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--End of wshite-containe-->
-
-
             </div>
-
-
-
-
         </div>
         <!--first-blue-block  -->
+
+
+
+
+
+
+
+
+
+
 
 
 

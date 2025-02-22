@@ -127,7 +127,7 @@
         font-size: 26px;
         font-weight: 300;
         white-space: nowrap;
-        text-align: left;
+        text-align: center;
         line-height: 50px;
         font-family: 'Richmond Display', serif;
         letter-spacing: 0px;
