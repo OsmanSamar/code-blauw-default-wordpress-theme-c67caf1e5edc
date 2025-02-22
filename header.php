@@ -9,13 +9,17 @@
     <?php wp_head(); ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+
+
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- AOS -->
 
     <!-- Swiper -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- Swiper -->
 </head>
 
@@ -137,7 +141,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link custom-nav-link text-white"
-                                href="<?= esc_url(home_url('/contact')); ?>">Contact</a>
+                                href="<?= esc_url(home_url('/werkwijze')); ?>">Werkwijze</a>
 
                         </li>
 
