@@ -115,11 +115,11 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class=" dropdown-item"
-                                        href="<?= esc_url(home_url('/project-en-programmamanagement')); ?>">Project-en
+                                    <a class=" dropdown-item" href="<?= esc_url(home_url('/project')); ?>">Project-en
                                         programmamanagement</a>
                                 </li>
-                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">e</a>
+                                <li><a class="dropdown-item"
+                                        href="<?= esc_url(home_url('/strategie')); ?>">Strategie</a>
                                 </li>
                                 <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">g</a>
                                 </li>

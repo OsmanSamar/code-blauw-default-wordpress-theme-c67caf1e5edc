@@ -416,12 +416,13 @@
 
                             foreach ($posts as $post) {
                                 $fields = get_fields($post->ID);
+                                $testimonial = get_field("testimonialwerkvoor");
                                 ?>
                             <div class="swiper-slide d-flex flex-column h-100">
                                 <a href="<?= get_permalink($post) ?>" class="d-flex flex-column h-100">
                                     <div class="testimonial-slide d-flex flex-column h-100">
-                                        <img src="<?= $fields["backimg"]['url'] ?>"
-                                            alt="<?= $fields['backimg']['alt'] ?>" class="card-img-top"
+                                        <img src="<?= $testimonial["logo"]['url'] ?>"
+                                            alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
                                             style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
 
                                         <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
@@ -433,7 +434,7 @@
                                                 </span>
                                             </div>
                                             <span class="card-title mt-auto">
-                                                <span><?= $fields["text"] ?></span>
+                                                <span><?= $testimonial["text"] ?></span>
                                             </span>
                                         </div>
 
@@ -531,6 +532,10 @@
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+        },
+        loop: true,
+        autoplay: { //added
+            delay: 2000, //added
         },
         navigation: {
             nextEl: ".swiper-button-next",
