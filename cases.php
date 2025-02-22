@@ -115,16 +115,16 @@
 
     .swiper-header {
         display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        position: absolute;
+        align-items: center;
+        justify-content: center;
+        /* position: absolute;
         top: -70px;
         right: 0;
-        width: 100%;
+        width: 100%; */
     }
 
     .swiper-text {
-        font-size: 16px;
+        font-size: 26px;
         font-weight: 300;
         white-space: nowrap;
         text-align: left;
@@ -332,19 +332,18 @@
         </div>
         <!-- End of Hero Section -->
 
+
+
         <!--first-blue-block  -->
         <div class="first-blue-block position-relative">
             <div class="container blue-container">
                 <div class="swiper-container swiper position-relative ">
 
-                    <div class="swiper-header">
+                    <div class="swiper-header mb-5">
                         <div class="swiper-text">
-                            <?= get_field("werkentitle") ?>
+                            <?= get_field("klantcases") ?>
                         </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
+
                     </div>
 
                     <div class="swiperwerken3 werk-swiper3">
