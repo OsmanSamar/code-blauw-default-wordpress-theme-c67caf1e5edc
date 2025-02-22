@@ -100,10 +100,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 192px;
+        /* height: 192px; */
         text-align: center;
         gap: 4px;
         flex-direction: row;
+        padding: 10px;
     }
 
     .whi-container {
@@ -165,6 +166,16 @@
     .right-text-bold {
         font-weight: bold;
 
+    }
+
+    .blue-block {
+        width: 100%;
+        max-width: 1700px;
+        margin: 0 auto;
+        background-color: #CCE1F4;
+        /* height: 41px; */
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
 
@@ -272,11 +283,11 @@
         <!--End of Hoe werkt Blauw IJs? Block -->
 
         <!--first-blue-block  -->
-        <div class="first-blue-block position-relative mt-5">
-            <div class="container blue-container">
+        <div class="blue-block ">
+            <div class="container ">
 
-                <div class="row mt-5 mb-3">
-                    <div class="col-12 col-lg-6 ">
+                <div class="row  mb-3">
+                    <div class="col-12 col-lg-6 mb-5">
                         <div class="d-flex flex-column gap-4 ">
                             <span class="waaromkiezenvoorblauw"><?= get_field("waaromkiezenvoorblauw") ?></span>
                             <span class="right-text-bold"><?= get_field("righttextbold") ?></span>
