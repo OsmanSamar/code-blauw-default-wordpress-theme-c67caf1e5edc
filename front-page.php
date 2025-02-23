@@ -253,6 +253,8 @@
             .verhaal-container {
                 /* top: 28%;
                 left: 3%; */
+                width: 1000px;
+
                 height: 378px;
             }
 
