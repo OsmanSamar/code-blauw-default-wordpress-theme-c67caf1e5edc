@@ -1,225 +1,269 @@
 <footer class="footer">
     <style>
-    .footer {
-        max-width: 1700px;
-        width: 100%;
-        margin: 0 auto;
-        background-color: #F7F6F4;
-    }
+        .footer {
+            max-width: 1700px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #F7F6F4;
+        }
 
-    .footer-section {
-        padding-bottom: 20px;
-        overflow-x: clip;
-        max-width: 100vw;
-    }
+        .footer-section {
+            padding-bottom: 20px;
+            overflow-x: clip;
+            max-width: 100vw;
+        }
 
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-    .left-cont,
-    .right-cont {
-        position: relative;
-    }
+        .left-cont,
+        .right-cont {
+            position: relative;
+        }
 
-    .left-cont .bg-left {
-        position: absolute;
-        background-color: #F7F6F4;
-        height: 100%;
-        padding-left: 10px;
-        width: 200vw;
-        left: -50%;
-        z-index: -1;
-    }
+        .left-cont .bg-left {
+            position: absolute;
+            background-color: #F7F6F4;
+            height: 100%;
+            padding-left: 10px;
+            width: 200vw;
+            left: -50%;
+            z-index: -1;
+        }
 
-    .left-cont {
-        order: 2;
-    }
+        .left-cont {
+            order: 2;
+        }
 
-    .right-cont {
-        order: 1;
-    }
+        .right-cont {
+            order: 1;
+        }
 
-    .right-cont .bg-right {
-        background: #F29401;
-        height: 100%;
-        padding-right: 0;
-        width: 100vw;
-        position: absolute;
-        /* z-index: -1; */
-        z-index: 0;
-    }
+        .right-cont .bg-right {
+            background: #F29401;
+            height: 100%;
+            padding-right: 0;
+            width: 200vw;
+            position: absolute;
+            z-index: 0;
+            left: -50%;
+        }
 
 
-    /* .bottom-under {
+
+
+
+
+        .bg-right {
+            left: 0;
+        }
+
+
+        /* .bottom-under {
         padding-left: 160px;
         padding-top: 40px;
         background-color: #F7F6F4;
     } */
 
-    .bottom-under {
-        padding-top: 40px;
-        background-color: #F7F6F4;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-    }
-
-
-    .footer-codeblauw {
-        margin-left: auto;
-        padding: 60px 0;
-        background-color: #F7F6F4;
-
-    }
-
-
-
-
-
-    .footer-text {
-
-        margin-top: 20px;
-        color: #132030;
-        text-align: left;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0px;
-        font-weight: 300;
-        font-family: 'Scala Sans Pro', sans-serif;
-        letter-spacing: 0px;
-    }
-
-    .footer-adres {
-        color: #132030;
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 24px;
-        letter-spacing: 0px;
-    }
-
-    .navbar-nav .nav-link {
-        text-align: left;
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 22px;
-        font-family: 'Scala Sans Pro', sans-serif;
-        color: #132030;
-        letter-spacing: 0px;
-    }
-
-    .footer-vraag {
-        color: #FFFFFF;
-        font-family: 'Richmond Display', serif;
-        font-size: 30px;
-        font-weight: 300;
-        line-height: 50px;
-        letter-spacing: 0px;
-        margin-bottom: 10px;
-        width: 280px;
-        display: block;
-
-    }
-
-    .footer-text2 {
-        color: #FFFFFF;
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 24px;
-        letter-spacing: 0px;
-        margin-bottom: 10px;
-        width: 263px;
-        display: block;
-    }
-
-    .footer-icon {
-        color: #FFFFFF;
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 30px;
-        letter-spacing: 0px;
-
-    }
-
-    .img-jordi {
-        position: absolute;
-        object-fit: cover;
-        /* width: 259.46px;
-        height: 389px;
-        right: -70px; */
-        width: 176.46px;
-        height: 268px;
-        right: -34px;
-        bottom: 0;
-
-    }
-
-    .footer-right-container {
-        margin-top: 70px;
-        padding-left: 20px;
-    }
-
-
-    .footer-privacy {
-        color: #132030;
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 24px;
-        letter-spacing: 0px;
-        opacity: 0.5;
-
-    }
-
-    @media (max-width: 768px) {}
-
-    @media (min-width: 992px) {
-
-        .left-cont {
-            order: 1;
+        .bottom-under {
+            padding-top: 40px;
+            background-color: #F7F6F4;
+            /* display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px; */
         }
 
-        .right-cont {
 
-            order: 2;
+        .footer-codeblauw {
+            margin-left: auto;
+            padding: 60px 0;
+            background-color: #F7F6F4;
+
         }
 
-        .right-cont .bg-right {
-            width: 50vw;
+
+
+
+
+        .footer-text {
+
+            margin-top: 20px;
+            color: #132030;
+            text-align: left;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0px;
+            font-weight: 300;
+            font-family: 'Scala Sans Pro', sans-serif;
+            letter-spacing: 0px;
+        }
+
+        .footer-adres {
+            color: #132030;
+            font-family: 'Scala Sans Pro', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0px;
         }
 
         .navbar-nav .nav-link {
             text-align: left;
-            font-size: 16px;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 22px;
+            font-family: 'Scala Sans Pro', sans-serif;
+            color: #132030;
+            letter-spacing: 0px;
         }
 
-        .footer-adres {
-            font-size: 16px;
-        }
+        .footer-vraag {
+            color: #FFFFFF;
+            font-family: 'Richmond Display', serif;
+            font-size: 30px;
+            font-weight: 300;
+            line-height: 50px;
+            letter-spacing: 0px;
+            margin-bottom: 10px;
+            width: 280px;
+            display: block;
 
-        .img-jordi {
-            height: 325px;
         }
 
         .footer-text2 {
-            width: 280px;
+            color: #FFFFFF;
+            font-family: 'Scala Sans Pro', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0px;
+            margin-bottom: 10px;
+            width: 263px;
+            display: block;
         }
 
-        .bottom-under {
-            padding-left: 40px;
-            padding-top: 20px;
-            gap: 80px;
+        .footer-icon {
+            color: #FFFFFF;
+            font-family: 'Scala Sans Pro', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 30px;
+            letter-spacing: 0px;
+
+        }
+
+        .img-jordi {
+            position: absolute;
+            object-fit: cover;
+            /* width: 259.46px;
+        height: 389px;
+        right: -70px; */
+            width: 176.46px;
+            height: 268px;
+            right: -34px;
+            bottom: 0;
+
+        }
+
+        .footer-right-container {
+            margin-top: 70px;
+            padding-left: 20px;
         }
 
 
+        .footer-privacy {
+            color: #132030;
+            font-family: 'Scala Sans Pro', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0px;
+            opacity: 0.5;
+
+        }
+
+        /* .gap-lg-custom {
+            gap: 1rem !important;
+        } */
+
+        /* New style of nav-link for footer */
 
 
-    }
+        .navbar-nav .nav-link {
+            text-align: left;
+            font-size: 12px;
+            font-weight: 300;
+            /* line-height: 22px; */
+            font-family: 'Scala Sans Pro', sans-serif;
+            color: #132030;
+            /* letter-spacing: 0px; */
+            padding: 0;
+
+            margin: 0;
+        }
+
+        /*  */
+
+        @media (max-width: 768px) {
+            /* .gap-lg-custom {
+                gap: 5rem !important;
+            } */
+
+        }
+
+        @media (min-width: 992px) {
+
+
+
+            .left-cont {
+                order: 1;
+            }
+
+            .right-cont {
+
+                order: 2;
+            }
+
+            .right-cont .bg-right {
+                width: 50vw;
+                left: unset;
+            }
+
+            .navbar-nav .nav-link {
+                text-align: left;
+                font-size: 16px;
+            }
+
+            .footer-adres {
+                font-size: 16px;
+            }
+
+            .img-jordi {
+                height: 325px;
+            }
+
+            .footer-text2 {
+                width: 280px;
+            }
+
+            .bottom-under {
+                padding-left: 15px;
+                padding-top: 20px;
+            }
+
+            .gap-lg-custom {
+                gap: 10rem !important;
+            }
+
+
+
+
+
+
+        }
     </style>
 
     <div class="footer-section">
@@ -247,9 +291,9 @@
 
                     <div class="row row-cols-auto " style="align-items: baseline;">
 
-                        <div class="col d-flex  flex-column gap-1 ">
+                        <div class="col d-flex  flex-column gap- ">
 
-                            <div class="d-flex flex-column gap-3 ">
+                            <div class="d-flex flex-column gap- ">
                                 <span class="footer-adres">
 
                                     <?= get_field("footercity", 'option') ?>
@@ -264,7 +308,7 @@
                         </div>
 
 
-                        <div class="col  d-flex flex-column gap-1">
+                        <div class="col  d-flex flex-column gap-">
                             <nav class="navbar navbar-light">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
@@ -299,7 +343,7 @@
                         </div>
 
 
-                        <div class="col  d-flex flex-column gap-">
+                        <div class="col  d-flex flex-column ">
                             <nav class="navbar navbar-light">
                                 <ul class="navbar-nav">
                                     <li class="nav-item"> <a class="nav-link custom-nav-link"
@@ -320,8 +364,8 @@
 
                 </div>
                 <div class="col-12 col-lg-6 right-cont">
-                    <div class="bg-right"></div>
-                    <div class="d-flex flex-column position-relative footer-right-container" style="">
+                    <div class="bg-right "></div>
+                    <div class="d-flex flex-column position-relative footer-right-container">
                         <div class="d-flex align-items-start justify-content-between">
                             <div>
                                 <span class="footer-vraag d-block d-md-none d-lg-none">
@@ -356,22 +400,30 @@
         </div>
 
 
-        <div class="bottom-under d-flex flex-row align-items-center justify-content-between text-nowrap">
-            <div class="d-flex flex-row flex-sm-row gap-3 gap-lg-5 text-center text-lg-start">
-                <span class="footer-privacy"><?= get_field("blauwijstext", 'option') ?></span>
-                <span class="footer-privacy"><?= get_field("algemenevoorwaarden", 'option') ?></span>
-                <span class="footer-privacy"><?= get_field("privacyverklaring", 'option') ?></span>
-                <span
-                    class="footer-privacy  d-none d-lg-block d-md-block"><?= get_field("door:codeblauw", 'option') ?></span>
+
+
+
+
+        <!--  -->
+        <div class="container">
+            <div class="row">
+                <div class="bottom-under">
+                    <div class="d-flex flex-row flex-sm-row gap-3 gap-md-5 text-center text-lg-start gap-lg-custom">
+                        <span class="footer-privacy"><?= get_field("blauwijstext", 'option') ?></span>
+                        <span class="footer-privacy"><?= get_field("algemenevoorwaarden", 'option') ?></span>
+                        <span class="footer-privacy"><?= get_field("privacyverklaring", 'option') ?></span>
+                        <span
+                            class="footer-privacy  d-none d-lg-block d-md-block"><?= get_field("door:codeblauw", 'option') ?></span>
+                    </div>
+                </div>
+
+                <div class="footer-codeblauw text-center d-flex justify-content-center d-md-none d-lg-none">
+                    <span class="footer-privacy"><?= get_field("door:codeblauw", 'option') ?></span>
+                </div>
             </div>
-            <!-- <div class="footer-codeblauw text-center text-lg-start">
-
-            </div> -->
-
         </div>
-        <div class="footer-codeblauw text-center d-flex justify-content-center d-md-none d-lg-none">
-            <span class="footer-privacy"><?= get_field("door:codeblauw", 'option') ?></span>
-        </div>
+
+
     </div>
     </div>
 </footer>
