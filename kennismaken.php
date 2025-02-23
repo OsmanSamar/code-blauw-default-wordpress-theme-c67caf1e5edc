@@ -51,6 +51,17 @@
         }
 
 
+        .blue-block {
+            width: 100%;
+            max-width: 1700px;
+            margin: 0 auto;
+            background-color: #CCE1F4;
+            /* height: 41px; */
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+
         @media (min-width: 992px) {
 
             .werkwijze-hero-title {
@@ -88,6 +99,54 @@
             </span>
         </div>
         <!-- End of Hero Section -->
+        <div class="blue-block ">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="d-flex flex-column text-align-flex-start gap-3">
+                            <span>
+                                <?= get_field("waarkunnenwemeehelpen") ?>
+                            </span>
+                            <span>
+                                <?= get_field("text") ?>
+                            </span>
+
+                            <div class="d-flex flex-column text-align-flex-start gap-2 ">
+
+                                <span>
+                                    <?= get_field("contactmetblauw_ijs") ?>
+                                </span>
+                                <div class="d-flex flex-column ">
+
+                                    <a href="tel:<?= get_field("contact_number", 'options') ?>"
+                                        style=" white-space: nowrap;" class="d-flex flex-row align-items-center gap-1 ">
+                                        <img src="<?= get_template_directory_uri() ?>/images/tele-icon.svg"
+                                            alt="go onze expertises" class="testimonial-arrow"
+                                            style="  width: 15px; height:15px; flex-shrink: 0; object-fit: cover;" />
+                                        <?= get_field("contact_number", 'options') ?>
+                                    </a>
+
+
+                                    <a href="mailto:<?= get_field("contact_mail", 'options') ?>"
+                                        class="d-flex flex-row align-items-center gap-1 ">
+                                        <img src="<?= get_template_directory_uri() ?>/images/mai-icon.svg" alt="go mail"
+                                            style="  width: 15px; height:15px; flex-shrink: 0; object-fit: cover;" />
+                                        <?= get_field("contact_mail", 'options') ?>
+                                    </a>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
