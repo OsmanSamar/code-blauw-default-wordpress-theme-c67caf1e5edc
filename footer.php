@@ -52,28 +52,13 @@
         }
 
 
-
-
-
-
         .bg-right {
             left: 0;
         }
 
-
-        /* .bottom-under {
-        padding-left: 160px;
-        padding-top: 40px;
-        background-color: #F7F6F4;
-    } */
-
         .bottom-under {
             padding-top: 40px;
             background-color: #F7F6F4;
-            /* display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 10px; */
         }
 
 
