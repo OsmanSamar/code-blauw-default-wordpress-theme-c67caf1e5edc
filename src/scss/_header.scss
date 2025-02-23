@@ -141,7 +141,8 @@
 
 b,
 strong:first-of-type {
-  color: #f29401;
+  color: #1e73be;
+  // color: #f29401;
   font-family: inherit;
   font-size: inherit;
   font-style: inherit;
@@ -150,7 +151,8 @@ strong:first-of-type {
 
 b,
 strong:nth-of-type(2) {
-  color: #1e73be;
+  // color: #1e73be;
+  color: #f29401;
 }
 
 .hero-section {
@@ -208,12 +210,12 @@ strong:nth-of-type(2) {
 }
 
 .hero-title {
-  font-size: 60px;
-  line-height: 65px;
+  font-size: 46px;
+  line-height: 48px;
   font-weight: 500;
   font-family: "Richmond Display", serif;
   text-align: center;
-  letter-spacing: 0px;
+  letter-spacing: 1px;
   opacity: 1;
 }
 
