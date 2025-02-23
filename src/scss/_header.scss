@@ -321,6 +321,8 @@ strong:nth-of-type(2) {
   white-space: nowrap !important;
   background-color: transparent !important;
   border: none !important;
+  pointer-events: auto !important;
+  z-index: 1000 !important;
 }
 
 .flexible-title {
