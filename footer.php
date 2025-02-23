@@ -81,9 +81,17 @@
             margin-left: auto;
             padding: 60px 0;
             background-color: #F7F6F4;
-
         }
 
+        .door-code-blauw {
+            color: #132030;
+            font-family: 'Scala Sans Pro', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0px;
+            opacity: 0.5;
+        }
 
 
 
@@ -177,35 +185,29 @@
         .footer-privacy {
             color: #132030;
             font-family: 'Scala Sans Pro', sans-serif;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 300;
             line-height: 24px;
             letter-spacing: 0px;
             opacity: 0.5;
-
         }
 
-        /* .gap-lg-custom {
-            gap: 1rem !important;
-        } */
 
-        /* New style of nav-link for footer */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
 
-
-        .navbar-nav .nav-link {
-            text-align: left;
+        li {
+            margin-bottom: 0.25rem;
+            /* color: #132030;
+            font-family: 'Scala Sans Pro', sans-serif;
             font-size: 12px;
             font-weight: 300;
-            /* line-height: 22px; */
-            font-family: 'Scala Sans Pro', sans-serif;
-            color: #132030;
-            /* letter-spacing: 0px; */
-            padding: 0;
-
-            margin: 0;
+            line-height: 24px;
+            letter-spacing: 0px; */
         }
-
-        /*  */
 
         @media (max-width: 768px) {
             /* .gap-lg-custom {
@@ -258,6 +260,11 @@
                 gap: 10rem !important;
             }
 
+            .footer-privacy {
+                font-size: 14px;
+
+            }
+
 
 
 
@@ -289,11 +296,11 @@
                         <?= get_field("footertext", 'option') ?>
                     </div>
 
-                    <div class="row row-cols-auto " style="align-items: baseline;">
+                    <div class="row row-cols-auto  mt-3" style="align-items: baseline;">
 
-                        <div class="col d-flex  flex-column gap- ">
+                        <div class="col d-flex  flex-column  ">
 
-                            <div class="d-flex flex-column gap- ">
+                            <div class="d-flex flex-column gap-1 ">
                                 <span class="footer-adres">
 
                                     <?= get_field("footercity", 'option') ?>
@@ -308,58 +315,62 @@
                         </div>
 
 
-                        <div class="col  d-flex flex-column gap-">
-                            <nav class="navbar navbar-light">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link custom-nav-link"
-                                            href="<?= esc_url(home_url('/sample-page')); ?>">Home</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle custom-nav-link" href="#" id="navbarDropdown"
-                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            Diensten
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li>
-                                                <a class=" dropdown-item" href="<?= esc_url(home_url('/')); ?>">X</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">e</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">g</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">T</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">A</a>
-                                            </li>
 
-                                        </ul>
-                                    </li>
+
+
+                        <div class="col d-flex flex-column ">
+                            <ul class="footer-nav">
+                                <li class="footer-nav-item footer-adres">
+                                    <a class="footer-nav-link" href="<?= esc_url(home_url('/sample-page')); ?>">Home</a>
+                                </li>
+                                <li class="footer-nav-item dropdown footer-adres">
+                                    <a class="footer-nav-link dropdown-toggle" href="#" id="footerDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Diensten
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="footerDropdown">
+                                        <li><a class="dropdown-item footer-adres"
+                                                href="<?= esc_url(home_url('/')); ?>">X</a></li>
+                                        <li><a class="dropdown-item footer-adres"
+                                                href="<?= esc_url(home_url('/')); ?>">e</a></li>
+                                        <li><a class="dropdown-item footer-adres"
+                                                href="<?= esc_url(home_url('/')); ?>">g</a></li>
+                                        <li><a class="dropdown-item footer-adres"
+                                                href="<?= esc_url(home_url('/')); ?>">T</a></li>
+                                        <li><a class="dropdown-item footer-adres"
+                                                href="<?= esc_url(home_url('/')); ?>">A</a></li>
+                                    </ul>
+                                </li>
+                                <li class="footer-nav-item footer-adres">
+                                    <a class="footer-nav-link" href="<?= esc_url(home_url('/cases')); ?>">Cases</a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+
+
+                        <div class="col d-flex flex-column gap-">
+                            <ul class="footer-nav">
+                                <li class="footer-nav-item footer-adres">
                                     <a class="nav-link custom-nav-link"
-                                        href="<?= esc_url(home_url('/cases')); ?>">Cases</a>
-                                </ul>
-                            </nav>
+                                        href="<?= esc_url(home_url('/over-ons')); ?>">Overons</a>
+                                </li>
+                                <li class="footer-nav-item footer-adres">
+                                    <a class=" nav-link custom-nav-link"
+                                        href="<?= esc_url(home_url('/werkwijze')); ?>">Werkwijze</a>
+                                </li>
+                                </li>
+                                <li class="footer-nav-item footer-adres ">
+                                    <a class=" nav-link custom-nav-link"
+                                        href="<?= esc_url(home_url('/kennismaken')); ?>">Kennismaken</a>
+                                </li>
+                            </ul>
                         </div>
 
 
-                        <div class="col  d-flex flex-column ">
-                            <nav class="navbar navbar-light">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item"> <a class="nav-link custom-nav-link"
-                                            href="<?= esc_url(home_url('/over-ons')); ?>">Overons</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link custom-nav-link"
-                                            href="<?= esc_url(home_url('/contact')); ?>">Contact</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class=" nav-link custom-nav-link"
-                                            href="<?= esc_url(home_url('/kennismaken')); ?>">Kennismaken</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
                     </div>
 
                 </div>
@@ -412,13 +423,23 @@
                         <span class="footer-privacy"><?= get_field("blauwijstext", 'option') ?></span>
                         <span class="footer-privacy"><?= get_field("algemenevoorwaarden", 'option') ?></span>
                         <span class="footer-privacy"><?= get_field("privacyverklaring", 'option') ?></span>
-                        <span
-                            class="footer-privacy  d-none d-lg-block d-md-block"><?= get_field("door:codeblauw", 'option') ?></span>
+                        <span class="footer-privacy  d-none d-lg-block d-md-block">
+                            <!-- <?= get_field("door:codeblauw", 'option') ?> -->
+                            <a target="_blank" href="https://code-blauw.nl/">
+                                <?= get_field("door:codeblauw", 'option') ?>
+                            </a>
+                        </span>
+
+
                     </div>
                 </div>
 
                 <div class="footer-codeblauw text-center d-flex justify-content-center d-md-none d-lg-none">
-                    <span class="footer-privacy"><?= get_field("door:codeblauw", 'option') ?></span>
+                    <span class="door-code-blauw">
+                        <a target="_blank" href="https://code-blauw.nl/">
+                            <?= get_field("door:codeblauw", 'option') ?>
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
