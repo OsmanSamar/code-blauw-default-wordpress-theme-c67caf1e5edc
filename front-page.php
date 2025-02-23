@@ -32,15 +32,20 @@
         }
 
         .verhaal-container {
+            /* width: 100%;
+            max-width: 950%; */
 
             background-color: #ffffff;
             box-shadow: 10px 10px 60px #2072be1a;
             border-radius: 5px;
             opacity: 1;
             position: absolute;
+            /* top: 12%;
+            left: 4%; */
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+
             /* width: 78%; */
         }
 
@@ -246,7 +251,8 @@
 
         @media (min-width: 992px) {
             .verhaal-container {
-                width: 1000px;
+                /* top: 28%;
+                left: 3%; */
                 height: 378px;
             }
 
@@ -276,7 +282,8 @@
         <div class="hero-section">
             <div class="hero-content">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="hero-title fadeIn " data-side="right" style="transition-delay: .25s;">
+                    <h1 class="hero-title " style="transition-delay: .25s;" data-aos="fade-up" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitlegekleuredtext") ?>
                         </span>
@@ -285,7 +292,7 @@
                     <span class="hero-text">
                         <?= get_field("herotext") ?>
                     </span>
-                    <div class="button-group">
+                    <div class="button-group mt-4">
                         <div class="circle-border btn-primary-custom">
                             <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn btn-primary">
                                 <?= get_field("meerwetenbtn")['title'] ?>
@@ -477,6 +484,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="verhaal-container">
+                            <!-- data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                            data-aos-duration="400" data-aos-easing="ease-in-out" -->
                             <div class="row g-0 ">
                                 <div class="col-12  col-lg-6">
                                     <img src="<?= get_template_directory_uri() ?>/images/manager-leading.png"
