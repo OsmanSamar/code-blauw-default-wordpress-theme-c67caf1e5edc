@@ -309,11 +309,12 @@
         <div class="hero-section flex-column">
             <div class="hero-content">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <span class="case-hero-title fadeIn  " data-side="right" style="transition-delay: .25s;">
+                    <h1 class="case-hero-title fadeIn  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
                         </span>
-                    </span>
+                    </h1>
                 </div>
             </div>
             <span class="case-hero-text ">
@@ -398,7 +399,8 @@
         <!--End of first-blue-block  -->
 
         <!--White-containe-->
-        <div class="container-block">
+        <div class="container-block" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+            data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="whi-container d-flex align-items-center justify-content-around">
                 <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
                     <span class="organ-title">

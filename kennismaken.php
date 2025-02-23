@@ -135,11 +135,12 @@
         <div class="hero-section flex-column">
             <div class="hero-content">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <span class="kennis-hero-title fadeIn  " data-side="right" style="transition-delay: .25s;">
+                    <h1 class="kennis-hero-title fadeIn  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
                         </span>
-                    </span>
+                    </h1>
                 </div>
             </div>
             <span class="kennis-hero-text ">
@@ -149,10 +150,12 @@
             </span>
         </div>
         <!-- End of Hero Section -->
+
         <div class="blue-block ">
             <div class="container ">
                 <div class="row">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column text-align-flex-start gap-3">
                             <span class="waar-kunnen-helpen-title">
                                 <?= get_field("waarkunnenwemeehelpen") ?>
@@ -166,14 +169,14 @@
                                 </span>
                                 <div class="d-flex flex-column mb-5 ">
                                     <a href="tel:<?= get_field("contact_number", 'options') ?>" style=" "
-                                        class="d-flex flex-row align-items-center gap-1 contact-info ">
+                                        class="d-flex flex-row align-items-center gap-2 contact-info ">
                                         <img src="<?= get_template_directory_uri() ?>/images/tele-icon.svg"
                                             alt="go onze expertises" class="testimonial-arrow"
                                             style="  width: 15px; height:15px; flex-shrink: 0; object-fit: cover;" />
                                         <?= get_field("contact_number", 'options') ?>
                                     </a>
                                     <a href="mailto:<?= get_field("contact_mail", 'options') ?>"
-                                        class="d-flex flex-row align-items-center gap-1 contact-info ">
+                                        class="d-flex flex-row align-items-center gap-2 contact-info ">
                                         <img src="<?= get_template_directory_uri() ?>/images/mai-icon.svg" alt="go mail"
                                             style="  width: 15px; height:15px; flex-shrink: 0; object-fit: cover;" />
                                         <?= get_field("contact_mail", 'options') ?>
@@ -183,7 +186,8 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column contact-form"></div>
 
 

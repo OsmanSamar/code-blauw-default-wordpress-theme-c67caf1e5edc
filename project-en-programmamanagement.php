@@ -297,11 +297,12 @@
         <div class="hero-section flex-column">
             <div class="hero-content">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <span class="pro-hero-title fadeIn  " data-side="right" style="transition-delay: .25s;">
+                    <h1 class="pro-hero-title" style="transition-delay: .25s;" data-aos="fade-up" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
                         </span>
-                    </span>
+                    </h1>
                 </div>
             </div>
             <span class="pro-hero-text">
@@ -328,11 +329,14 @@
 
         <!--Testimonials Section on All Screens -->
         <div class="testi-container">
-            <div class="container pt-5 pb-5 ">
+            <div class="container pt-5 pb-5" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="row gy-2">
                     <?php
+                    $delay = 0;
                     foreach (get_field("testimonials") as $testimonial) { ?>
-                        <div class="col-12 col-md-6 col-lg-4">
+                        <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                            data-aos-duration="800">
 
                             <div class="d-flex flex-column text-left gap-3">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -353,7 +357,9 @@
                                 </span>
                             </div>
                         </div>
-                    <?php } ?>
+                        <?php
+                        $delay += 300;
+                    } ?>
                 </div>
             </div>
         </div>
@@ -363,11 +369,13 @@
         <div class="white-contianer">
             <div class="container pt-5 pb-5">
                 <div class="row">
-                    <div class="col-12 col-lg-5 left-text">
+                    <div class="col-12 col-lg-5 left-text" data-aos="fade-right" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <?= get_field("lefttext") ?>
                     </div>
 
-                    <div class="col-12 col-lg-5  offset-md-1 right-text">
+                    <div class="col-12 col-lg-5  offset-md-1 right-text" data-aos="fade-left" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column">
                             <?= get_field("righttext") ?>
 

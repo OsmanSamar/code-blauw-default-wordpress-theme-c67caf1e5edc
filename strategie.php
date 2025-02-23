@@ -229,11 +229,12 @@
         <div class="hero-section flex-column">
             <div class="hero-content">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <span class="strategie-hero-title fadeIn  " data-side="right" style="transition-delay: .25s;">
+                    <h1 class="strategie-hero-title fadeIn  " data-aos="fade-up" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
                         </span>
-                    </span>
+                    </h1>
                 </div>
             </div>
             <span class="strategie-hero-text ">
@@ -242,7 +243,8 @@
                 </span>
             </span>
             <div class="button-container ">
-                <div class="circle-border btn-primary-custom " style="width: 182px;">
+                <div class="circle-border btn-primary-custom "
+                    style="width: 182px;  pointer-events: auto ;z-index: 1000 ;">
                     <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn btn-primary">
                         <?= get_field("meerwetenbtn")['title'] ?>
                     </a>
@@ -258,10 +260,12 @@
         <!-- Hoe werkt Blauw IJs? Block -->
         <div class="container mb-5">
             <div class="row" style="margin-top:5rem; margin-bottom: 5rem;">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <span class="werk-blauwijs-title"><?= get_field("voorwieisblauwijs") ?></span>
                 </div>
-                <div class="col-12 col-lg-6 ">
+                <div class="col-12 col-lg-6 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="d-flex flex-column ">
                         <div class="right-text-bold pt-2"> <?= get_field("righttext") ?></div>
                         <div class="right-text pt-2 "> <?= get_field("secrighttext") ?></div>
@@ -287,14 +291,16 @@
             <div class="container ">
 
                 <div class="row  mb-3">
-                    <div class="col-12 col-lg-6 mb-5">
+                    <div class="col-12 col-lg-6 mb-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column gap-4 ">
                             <span class="waaromkiezenvoorblauw"><?= get_field("waaromkiezenvoorblauw") ?></span>
                             <span class="right-text-bold"><?= get_field("righttextbold") ?></span>
                             <span class="right-text-notbold"><?= get_field("righttextnotbold") ?></span>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-5 offset-lg-1">
+                    <div class="col-12 col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <img src="<?= get_field("businesswomen")['url'] ?>"
                             alt="<?= get_field("businesswomen")['alt'] ?>"
                             style="border-radius: 5px 0px 0px 5px; object-fit: cover;" />
@@ -303,7 +309,8 @@
 
 
                 <!--White-containe-->
-                <div class="small-whit-container">
+                <div class="small-whit-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="whi-container ">
                         <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
                             <span class="organ-title">

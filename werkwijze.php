@@ -439,11 +439,12 @@
         <div class="hero-section flex-column">
             <div class="hero-content">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <span class="werkwijze-hero-title fadeIn  " data-side="right" style="transition-delay: .25s;">
+                    <h1 class="werkwijze-hero-title fadeIn  " data-aos="fade-up" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
                         </span>
-                    </span>
+                    </h1>
                 </div>
             </div>
             <span class="werkwijze-hero-text ">
@@ -458,10 +459,12 @@
         <!-- Hoe werkt Blauw IJs? Block -->
         <div class="container">
             <div class="row" style="margin-top:5rem; margin-bottom: 5rem;">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <span class="werk-blauwijs-title"><?= get_field("hoewerktblauwijstitle") ?></span>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="right-text-bold pt-2"> <?= get_field("righttext") ?></div>
                     <div class="right-text pt-2 mt-3"> <?= get_field("secrighttext") ?></div>
 
@@ -492,7 +495,8 @@
 
         <!--Onze werkwijze Block  -->
         <div class="werkwijze-block">
-            <div class="container">
+            <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
                 <div class="row">
                     <div class="col-12  col-lg-7  max-auto text-center d-flex flex-column align-items-center justify-content-center "
                         style="margin:0 auto">
@@ -506,9 +510,11 @@
                 </div>
                 <div class="row mt-5 mb-5">
                     <?php
+                    $delay = 0;
                     foreach (get_field("onzewerkwijzetestemonials") as $testimonails) {
                         ?>
-                        <div class="col-12 col-md-4 col-lg-3 d-flex  justify-content-center mb-4">
+                        <div class="col-12 col-md-4 col-lg-3 d-flex  justify-content-center mb-4" data-aos="fade-up"
+                            data-aos-delay="<?= $delay ?>" data-aos-duration="800">
                             <div>
 
                                 <div class="d-flex flex-column ">
@@ -527,6 +533,7 @@
                             </div>
                         </div>
                         <?php
+                        $delay += 300;
                     }
                     ?>
                 </div>
@@ -539,7 +546,8 @@
             <div class="container-fluid mt-5 mb-5">
                 <div class="position-relative">
                     <div class="swiper-title mb-5">
-                        <div class="title-container">
+                        <div class="title-container" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                            data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <?= get_field("titleoflogos") ?>
                         </div>
                     </div>
@@ -631,7 +639,8 @@
 
                 <!--White-containe-->
                 <div class="small-whit-container">
-                    <div class="whi-container ">
+                    <div class="whi-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
                             <span class="organ-title">
                                 Ook de volgende stap zetten met jouw organisatie?

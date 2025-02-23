@@ -33,8 +33,15 @@
             z-index: -1;
         }
 
+        .under-bottom {
+            /* border-bottom: 1px solid #132030;
+            opacity: 0.25; */
+            border-bottom: 1px solid rgba(19, 32, 48, 0.25);
+        }
+
         .left-cont {
             order: 2;
+
         }
 
         .right-cont {
@@ -262,7 +269,7 @@
         <div class="container">
             <!-- container -->
             <div class="row g-0">
-                <div class=" col-lg-6 left-cont">
+                <div class=" col-lg-6 left-cont under-bottom">
                     <div class="bg-left"></div>
                     <div class=" d-flex align-items-center justify-content-between"
                         style="max-width:405px; margin-top:70px;">
@@ -281,7 +288,7 @@
                         <?= get_field("footertext", 'option') ?>
                     </div>
 
-                    <div class="row row-cols-auto  mt-3" style="align-items: baseline;">
+                    <div class="row row-cols-auto  mt-3 mb-4" style="align-items: baseline;">
 
                         <div class="col d-flex  flex-column  ">
 
@@ -378,17 +385,35 @@
                                 alt="<?= get_field("footeriemandimg", 'option')['alt'] ?>" class="img-jordi" />
                         </div>
 
-                        <div class="d-flex flex-row align-items-center gap-3">
+
+                        <a href="tel:<?= get_field("contact_number", 'options') ?>" style=" "
+                            class="footer-icon d-flex flex-row align-items-center gap-3">
                             <img src="<?= get_field("footertelicon", 'option')['url'] ?>"
                                 alt="<?= get_field("footertelicon", 'option')['alt'] ?>"
                                 style="width:15.4px; height:15.41px;" />
-                            <span class="footer-icon"><?= get_field("footertel", 'option') ?></span>
-                        </div>
-                        <div class="d-flex flex-row align-items-center gap-3">
+                            <?= get_field("footertel", 'options') ?>
+                        </a>
+
+
+                        <a href="mailto:<?= get_field("footeremail", 'options') ?>"
+                            class="footer-icon d-flex flex-row align-items-center gap-3">
                             <img src="<?= get_field("footeremailicon", 'option')['url'] ?>"
                                 alt="<?= get_field("footertelicon", 'option')['alt'] ?>"
                                 style="width:15.4px; height:15.41px;" />
-                            <span class="footer-icon"><?= get_field("footeremail", 'option') ?></span>
+                            <?= get_field("footeremail", 'options') ?>
+                        </a>
+
+
+                        <div class="mt-4 mb-4"
+                            style=" width:110px; border: 1px solid #FFFFFF; border-radius: 5px; color: #FFFFFF; padding: 4px 8px;;">
+                            <a href=" <?= get_field("contactbtn", 'option')['url'] ?>"
+                                class=" d-flex align-items-center gap-3 text-white">
+                                <?= get_field("contactbtn", 'option')['title'] ?>
+
+                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                    alt="go onze expertises" class="testimonial-arrow"
+                                    style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -404,7 +429,8 @@
         <div class="container">
             <div class="row">
                 <div class="bottom-under">
-                    <div class="d-flex flex-row flex-sm-row gap-3 gap-md-5 text-center text-lg-start gap-lg-custom">
+                    <div
+                        class="d-flex flex-row align-items-center justify-content-center flex-sm-row gap-3 gap-md-5 text-lg-start gap-lg-custom">
                         <span class="footer-privacy"><?= get_field("blauwijstext", 'option') ?></span>
                         <span class="footer-privacy"><?= get_field("algemenevoorwaarden", 'option') ?></span>
                         <span class="footer-privacy"><?= get_field("privacyverklaring", 'option') ?></span>
