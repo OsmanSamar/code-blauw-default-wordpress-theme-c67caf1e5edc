@@ -309,7 +309,7 @@
         <div class="hero-section flex-column">
             <div class="hero-content">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="case-hero-title fadeIn  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                    <h1 class="case-hero-title  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>

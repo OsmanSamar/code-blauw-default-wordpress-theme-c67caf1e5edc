@@ -145,7 +145,7 @@
             object-fit: contain;
         }
 
-        .small-whit-container {
+        /* .small-whit-container {
             width: 100%;
             max-width: 1700px;
             margin: 0 auto;
@@ -156,7 +156,7 @@
             text-align: center;
             gap: 4px;
             flex-direction: row;
-        }
+        } */
 
 
 
@@ -316,7 +316,8 @@
             position: relative;
             z-index: 1;
             /* top: -60px; */
-            top: 105px;
+            /* top: 105px; */
+            top: 45px;
             height: 131px;
             border-radius: 5px;
             margin: 0 auto;
@@ -324,6 +325,9 @@
             align-items: center;
             justify-content: space-around;
             height: 250px;
+            width: 100%;
+            max-width: 1700px;
+            margin: 0 auto;
         }
 
         .organ-title {
@@ -429,11 +433,12 @@
         <div class="hero-section flex-column">
             <div class="hero-content">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <span class="over-ons-hero-title fadeIn  " data-side="right" style="transition-delay: .25s;">
+                    <h1 class="over-ons-hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
                         </span>
-                    </span>
+                    </h1>
                 </div>
             </div>
             <span class="over-ons-hero-text ">
@@ -459,21 +464,25 @@
         <!-- Onze Visie -->
         <div class="container">
             <div class="row mt-5">
-                <div class="d-flex my-4 ">
+                <div class="d-flex my-4" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <span class="onzevisie-title"><?= get_field("onzevisietitle") ?></span>
                 </div>
 
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <span class="left-text"> <?= get_field("lefttext") ?></span>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <span class="right-text pt-2"> <?= get_field("righttext") ?></span>
                 </div>
             </div>
 
             <div class="baluwtext">
                 <div class="col-12  col-lg-7  max-auto text-center d-flex flex-column align-items-center justify-content-center "
-                    style="margin:0 auto">
+                    data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out" style="margin:0 auto">
                     <span class="center-title fadeIn  " data-side="right" style="transition-delay: .25s;">
                         <span class="d-block">
                             <?= get_field("blauwijscentertext") ?>
@@ -508,7 +517,8 @@
         <!--New Section -->
         <div class="container medium-container">
             <div class="row">
-                <div class="col-12  col-lg-5 ">
+                <div class="col-12 col-lg-5 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="d-flex flex-column  text-left gap-4">
                         <span class="fleft-text">
                             <?= get_field("flefttext") ?>
@@ -537,8 +547,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-1 d-none d-lg-block"></div> -->
-                <div class="col-12 col-lg-5 offset-lg-1">
+
+                <div class="col-12 col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <img src="<?= get_field("mediumimg")['url'] ?>" alt="<?= get_field("")['alt'] ?>"
                         class="medium-img" />
                 </div>
@@ -551,9 +562,9 @@
         <!--first-blue-block  -->
         <div class="first-blue-block position-relative">
             <div class="container blue-container">
-                <div class="swiper-container swiper position-relative  mt-5">
+                <div class="swiper-container swiper position-relative  mt-5 mb-5">
 
-                    <div class="swiper-header mb-5">
+                    <div class="swiper-header ">
                         <div class="swiper-text">
                             <?= get_field("organisatiesvoortitle") ?>
                         </div>
@@ -615,8 +626,9 @@
 
 
                 <!--White-containe-->
-                <div class="small-whit-container">
-                    <div class="whi-container ">
+                <div class="small-whit-container ">
+                    <div class="whi-container  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
                             <span class="organ-title">
                                 Ook de volgende stap zetten met jouw organisatie?
