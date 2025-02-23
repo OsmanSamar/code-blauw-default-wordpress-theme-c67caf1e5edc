@@ -99,10 +99,9 @@
 
 
                 <!-- Navigation Menu -->
-                <div class="collapse navbar-collapse  ul-bg " id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto justify-content-end flex-grow-1">
+                <div class="collapse navbar-collapse ul-bg" id="navbarSupportedContent">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 nav-gap">
                         <li class="nav-item">
-
                             <a class="nav-link custom-nav-link text-white"
                                 href="<?= esc_url(home_url('/home')); ?>">Home</a>
                         </li>
@@ -112,46 +111,34 @@
                                 Diensten
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li>
-                                    <a class=" dropdown-item" href="<?= esc_url(home_url('/project')); ?>">Project-en
-                                        programmamanagement</a>
-                                </li>
+                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/project')); ?>">Project-en
+                                        programmamanagement</a></li>
                                 <li><a class="dropdown-item"
-                                        href="<?= esc_url(home_url('/strategie')); ?>">Strategie</a>
-                                </li>
-                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">g</a>
-                                </li>
-                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">T</a>
-                                </li>
-                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">A</a>
-                                </li>
-
+                                        href="<?= esc_url(home_url('/strategie')); ?>">Strategie</a></li>
+                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">g</a></li>
+                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">T</a></li>
+                                <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">A</a></li>
                             </ul>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link custom-nav-link text-white"
                                 href="<?= esc_url(home_url('/cases')); ?>">Cases</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link custom-nav-link text-white"
-                                href="<?= esc_url(home_url('/over-ons')); ?>">Overons</a>
+                                href="<?= esc_url(home_url('/over-ons')); ?>">Over ons</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link custom-nav-link text-white"
                                 href="<?= esc_url(home_url('/werkwijze')); ?>">Werkwijze</a>
-
                         </li>
-
-                        <!-- The button here for smaller screens -->
                         <li>
                             <a class="d-block d-lg-none nav-link custom-nav-link text-white"
                                 href="<?= esc_url(home_url('/kennismaken')); ?>">Kennismaken</a>
                         </li>
                     </ul>
-
-
                 </div>
+
 
                 <!-- Button on the Right side (visible only on large screens) -->
                 <div class="circle-border   d-none d-lg-inline-flex justify-content-center align-items-center me-auto"
