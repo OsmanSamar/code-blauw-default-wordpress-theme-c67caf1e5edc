@@ -188,7 +188,9 @@
 
                     <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <div class="d-flex flex-column contact-form"></div>
+                        <div class="d-flex flex-column contact-form">
+                            gravity forms
+                        </div>
 
 
 
