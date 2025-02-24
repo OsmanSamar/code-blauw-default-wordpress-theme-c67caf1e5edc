@@ -316,11 +316,11 @@
         </div>
         <!--End of  Onze Visie -->
 
-        <!--New Section -->
+        <!--3New Section -->
         <div class="white-medium-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-5 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    <div class="col-12 col-lg-6 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column  text-left gap-4">
                             <span class="fleft-text">
@@ -427,7 +427,7 @@
                             ?>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
                 </div>
 
 
@@ -494,9 +494,9 @@
                 clickable: true,
             },
             loop: true,
-            autoplay: { //added
-                delay: 2000, //added
-            },
+            //  autoplay: { //added
+            //      delay: 2000, //added
+            //  },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
