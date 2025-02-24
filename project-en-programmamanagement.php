@@ -94,7 +94,7 @@
             opacity: 1;
         }
 
-        .left-text {
+        .blauw-left-text {
             text-align: left;
             font-size: 38px;
             line-height: 46px;
@@ -105,7 +105,7 @@
             opacity: 1;
         }
 
-        .right-text {
+        .blauw-right-text {
             font-family: 'Scala Sans Pro', sans-serif;
             font-size: 16px;
             line-height: 26px;
@@ -264,6 +264,12 @@
 
 
         @media (min-width: 992px) {
+            .first-blue-block {
+                height: 662px;
+                margin-top: -26px;
+            }
+
+
             .pro-hero-title {
                 font-size: 50px;
                 text-align: left;
@@ -367,15 +373,16 @@
 
 
         <div class="white-contianer">
-            <div class="container pt-5 pb-5">
-                <div class="row">
-                    <div class="col-12 col-lg-5 left-text" data-aos="fade-right" data-aos-offset="100"
+            <div class="container mb-5 ">
+                <div class="row pt-5 pb-5 mb-5 ">
+                    <div class="col-12 col-lg-5 col-md-6 blauw-left-text" data-aos="fade-right" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <?= get_field("lefttext") ?>
                     </div>
 
-                    <div class="col-12 col-lg-5  offset-md-1 right-text" data-aos="fade-left" data-aos-offset="100"
-                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="col-12 col-lg-5 col-md-6  offset-lg-1 blauw-right-text" data-aos="fade-left"
+                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column">
                             <?= get_field("righttext") ?>
 

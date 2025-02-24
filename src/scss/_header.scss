@@ -259,7 +259,6 @@ strong:nth-of-type(2) {
 
 .btn-s {
   color: #132030;
-  font-family: Manrope;
   font-size: 16px;
   font-family: "Scala Sans Pro", sans-serif;
   font-weight: 700;
@@ -269,6 +268,16 @@ strong:nth-of-type(2) {
   gap: 8px;
   text-decoration: none;
   text-align: left;
+  // Added new
+  border: 1px solid #f29401;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+  margin: 8px;
+  padding: 6px 14px;
+  height: 50px;
+  width: 121px;
+  border-radius: 5px;
 }
 
 /* Style for the first button */
@@ -457,33 +466,33 @@ strong:nth-of-type(2) {
   // width: 78%;
 }
 
-.btn-s {
-  color: #132030;
-  font-size: 16px;
-  font-family: "Scala Sans Pro", sans-serif;
-  font-weight: 700;
-  line-height: 22px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  text-align: left;
-  display: inline-flex;
-  /* justify-content: center; */
-  align-items: anchor-center;
-  border: 1px solid #f29401;
-  opacity: 1;
-  position: relative;
-  overflow: hidden;
-  margin: 8px;
-  padding: 6px 14px;
-  height: 50px;
-  color: #fff;
-  height: 50px;
-  width: 121px;
-  padding: 12px 15px;
-  border-radius: 8px;
-}
+// .btn-s {
+//   color: #132030;
+//   font-size: 16px;
+//   font-family: "Scala Sans Pro", sans-serif;
+//   font-weight: 700;
+//   line-height: 22px;
+//   display: flex;
+//   align-items: center;
+//   gap: 8px;
+//   text-decoration: none;
+//   text-align: left;
+//   display: inline-flex;
+//   // /* justify-content: center; */
+//   align-items: anchor-center;
+//   border: 1px solid #f29401;
+//   opacity: 1;
+//   position: relative;
+//   overflow: hidden;
+//   margin: 8px;
+//   padding: 6px 14px;
+//   height: 50px;
+//   color: #fff;
+//   height: 50px;
+//   width: 121px;
+//   padding: 12px 15px;
+//   border-radius: 8px;
+// }
 
 .verhaal-title {
   color: #132030;
