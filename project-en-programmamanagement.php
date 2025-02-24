@@ -96,11 +96,11 @@
 
         .blauw-left-text {
             text-align: left;
-            font-size: 38px;
+            font-size: 44px;
             line-height: 46px;
             font-weight: 300;
             font-family: "Richmond Display", serif;
-            letter-spacing: 0px;
+            letter-spacing: 1px;
             color: #1E73BE;
             opacity: 1;
         }
@@ -375,14 +375,13 @@
         <div class="white-contianer">
             <div class="container  ">
                 <div class="row pt-5 pb-5  ">
-                    <div class="col-12 col-lg-5 col-md-6 blauw-left-text" data-aos="fade-right" data-aos-offset="100"
+                    <div class="col-12 col-lg-6 col-md-6 blauw-left-text" data-aos="fade-right" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <?= get_field("lefttext") ?>
                     </div>
-
-                    <div class="col-12 col-lg-5 col-md-6  offset-lg-1 blauw-right-text" data-aos="fade-left"
-                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-                        data-aos-easing="ease-in-out">
+                    <!-- offset-lg-1 -->
+                    <div class="col-12 col-lg-6 col-md-6   blauw-right-text" data-aos="fade-left" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column">
                             <?= get_field("righttext") ?>
 
