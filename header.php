@@ -68,8 +68,9 @@
     </header> -->
     <header class="header position-absolute d-flex justify-content-center " style=" z-index:2; width: 100vw; top:4px; ">
 
-        <nav class="navbar navbar-expand-lg navbar-light sans-serif container"
-            style="top: 21px;width: ;height: 55px;border: 1px solid #FFFFFF;border-radius: 5px;opacity: 1; ">
+
+        <nav class="navbar navbar-expand-lg navbar-light sans-serif container "
+            style="top: 21px;width: ;height: 55px;border: 1px solid #FFFFFF;border-radius: 5px;opacity: 1; margin-left:102px">
             <div class="container p-lg-0 m-0">
                 <!-- Logo  -->
                 <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand ps-2">
@@ -148,6 +149,7 @@
 
             </div>
         </nav>
+
 
 
 

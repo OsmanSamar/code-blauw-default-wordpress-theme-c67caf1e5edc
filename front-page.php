@@ -240,13 +240,13 @@
                                 <div class="col-lg-6 text-start mt-5 flexible-left-text" data-aos="fade-right" data-aos-offset="100"
                                     data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
 
-                                    <p><?php the_sub_field('lefttext'); ?></p>
+                                    <span class="left-text"><?php the_sub_field('lefttext'); ?></span>
                                 </div>
 
                                 <div class="col-lg-6 text-start mt-5 flexible-right-text" data-aos="fade-left" data-aos-offset="100"
                                     data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
 
-                                    <p><?php the_sub_field('righttext'); ?></p>
+                                    <span class="right-text"><?php the_sub_field('righttext'); ?></span>
                                 </div>
                             </div>
 
