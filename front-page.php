@@ -181,7 +181,7 @@
             }
 
             .pe-lg-5 {
-                padding-right: 14rem !important;
+                padding-right: 30rem !important;
             }
 
         }
@@ -191,17 +191,17 @@
         <!-- Hero Section -->
         <div class="hero-section">
             <div class="hero-content">
-                <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="hero-title " style="transition-delay: .25s;" data-aos="fade-up" data-aos-offset="100"
-                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="col-12   col-lg-12  pe-0 pe-lg-5">
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitlegekleuredtext") ?>
                         </span>
 
                     </h1>
-                    <span class="hero-text">
-                        <?= get_field("herotext") ?>
-                    </span>
+                    <h4 class="hero-text">
+                        <span class="d-block"> <?= get_field("herotext") ?></span>
+                    </h4>
                     <div class="button-group mt-4">
                         <div class="circle-border btn-primary-custom">
                             <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn btn-primary">
@@ -221,7 +221,7 @@
             </div>
         </div>
 
-        <!-- Flexible Content Field -->
+        <!--2 Flexible Content Field -->
         <div>
             <?php if (have_rows('flexiblecontentfield')): ?>
                 <div class="container mt-4">
@@ -230,9 +230,9 @@
                         <?php if (get_row_layout() == 'text'): ?>
                             <div class="row">
 
-                                <div class="col-12  h-100 p-3 px-4 mt-5 flexible-title" data-aos="fade-up" data-aos-offset="100"
+                                <div class="col-12   h-100 p-3 px-4 mt-5 " data-aos="fade-up" data-aos-offset="100"
                                     data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                                    <span><?php the_sub_field('title'); ?></span>
+                                    <h1 class="flexible-title"><?php the_sub_field('title'); ?></h1>
                                 </div>
                             </div>
 
@@ -261,7 +261,7 @@
 
 
         <!-- Onze_Expertises -->
-        <div class="container p-3 px-4 mt-5 position-relative" id="testimonials" style=" z-index: 2;">
+        <div class="container p-3 px-1 mt-5 position-relative" id="testimonials" style=" z-index: 2;">
             <div class="row mb-4">
                 <?php
                 $delay = 0;
@@ -282,8 +282,19 @@
                     <div class="col-lg-4 col-md-4 col-12 mb-4">
 
                         <a href="<?= get_permalink($post) ?>">
-                            <div class=" testimonial-container h-100">
+                            <!-- <div class=" testimonial-container h-100 d-flex align-items-center justify-content-between">
                                 <div class="testimonial-content">
+                                    <span class="test-post-title">
+                                        <?= $post->post_title ?>
+                                    </span>
+                                    <span class="test-img-border">
+                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                            alt="go onze expertises" class="testimonial-arrow" />
+                                    </span>
+                                </div>
+                            </div> -->
+                            <div class="testimonial-container  h-100 ">
+                                <div class=" d-flex flex-row align-items-center justify-content-between p-4">
                                     <span class="test-post-title">
                                         <?= $post->post_title ?>
                                     </span>
@@ -333,25 +344,12 @@
                                 $fields = get_fields($post->ID);
                                 $testimonial = get_field("testimonialwerkvoor");
                                 ?>
-                                <div class="swiper-slide d-flex flex-column h-100">
+                                <div class="swiper-slide d-flex flex-column h-100  ">
                                     <a href="<?= get_permalink($post) ?>" class="d-flex flex-column h-100">
                                         <div class="testimonial-slide d-flex flex-column h-100">
                                             <img src="<?= $testimonial["logo"]['url'] ?>"
                                                 alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
                                                 style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
-
-                                            <!-- <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span class="card-text"><?= $post->post_title ?></span>
-                                                    <span class="d-flex justify-content-center align-items-center arrow">
-                                                        <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
-                                                            alt="go to article" class="icon" />
-                                                    </span>
-                                                </div>
-                                                <span class="card-title mt-auto">
-                                                    <span><?= $testimonial["text"] ?></span>
-                                                </span>
-                                            </div> -->
                                             <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     <span class="card-text">
@@ -370,6 +368,7 @@
 
 
                                         </div>
+
                                     </a>
                                 </div>
                                 <?php
@@ -379,7 +378,7 @@
                         </div>
                     </div>
 
-                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
 
                 </div>
             </div>
@@ -390,10 +389,9 @@
         <div class="container-img position-relative">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <div class="verhaal-container">
-                            <!-- data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                            data-aos-duration="400" data-aos-easing="ease-in-out" -->
+                    <div class="col-12 col-lg-12">
+                        <div class="verhaal-container col-12 col-lg-12">
+
                             <div class="row g-0 ">
                                 <div class="col-12  col-lg-6">
                                     <img src="<?= get_template_directory_uri() ?>/images/manager-leading.png"

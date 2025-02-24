@@ -70,12 +70,13 @@
 
 
         <nav class="navbar navbar-expand-lg navbar-light sans-serif container "
-            style="top: 21px;width: ;height: 55px;border: 1px solid #FFFFFF;border-radius: 5px;opacity: 1; margin-left:102px">
+            style="top: 21px;width: ;height: 55px;border: 1px solid #FFFFFF;border-radius: 5px;opacity: 1; ">
+            <!-- margin-left:102px -->
             <div class="container p-lg-0 m-0">
                 <!-- Logo  -->
                 <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand ps-2">
                     <img src="<?= get_template_directory_uri() ?>/images/logo-blauw-ijs.png" alt="Blauw Ijs Logo"
-                        style="width: 136px; height: 36px; top:30px"   />
+                        style="width: 196px; height: 36px; top:30px; object-fit: contain;"   />
                 </a>
 
                 <!-- Hamburger button for mobile -->
