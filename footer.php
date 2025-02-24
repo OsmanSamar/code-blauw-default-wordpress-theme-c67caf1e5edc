@@ -4,7 +4,7 @@
             max-width: 1700px;
             width: 100%;
             margin: 0 auto;
-            background-color: #F7F6F4;
+            /* background-color: #F7F6F4; */
         }
 
         .footer-section {
@@ -65,14 +65,14 @@
 
         .bottom-under {
             padding-top: 40px;
-            background-color: #F7F6F4;
+            /* background-color: #F7F6F4; */
         }
 
 
         .footer-codeblauw {
             margin-left: auto;
             padding: 60px 0;
-            background-color: #F7F6F4;
+            /* background-color: #F7F6F4; */
         }
 
         .door-code-blauw {

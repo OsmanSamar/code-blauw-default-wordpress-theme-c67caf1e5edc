@@ -135,14 +135,15 @@
         /* End of Swiper */
 
 
+
         .container-block {
-            background-color: #F7F6F4;
+            /* background-color: #F7F6F4; */
             width: 100%;
             max-width: 1700px;
             margin: 0 auto;
         }
 
-        .whi-container {
+        /* .whi-container {
             background: #FFFFFF 0% 0% no-repeat padding-box;
             width: 1000px;
             position: relative;
@@ -158,9 +159,9 @@
             width: 100%;
             max-width: 1700px;
             margin: 0 auto;
-        }
+        } */
 
-        .organ-title {
+        /* .organ-title {
             font-size: 26px;
             line-height: 35px;
             font-weight: 300;
@@ -169,7 +170,7 @@
             letter-spacing: 0px;
             color: #132030;
             opacity: 1;
-        }
+        } */
 
         @media (min-width: 768px) {
             .swiper-container .swiper-button-prev {
@@ -206,7 +207,7 @@
                 margin-top: unset;
             }
 
-            .whi-container {
+            /* .whi-container {
                 height: 131px;
             }
 
@@ -214,7 +215,7 @@
                 font-size: 32px;
                 line-height: 50px;
                 text-align: left;
-            }
+            } */
 
 
 
@@ -316,45 +317,47 @@
         <!--End of  Onze Visie -->
 
         <!--New Section -->
-        <div class="container medium-container">
-            <div class="row">
-                <div class="col-12 col-lg-5 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                    data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <div class="d-flex flex-column  text-left gap-4">
-                        <span class="fleft-text">
-                            <?= get_field("flefttext") ?>
-                        </span>
-                        <span class="secleft-text">
-                            <?= get_field("seclefttext") ?>
-                        </span>
-                        <div class="button-group">
-                            <div class="circle-border  btn-primary-custom " style="  width: fit-content;">
-                                <!-- width:110px -->
-                                <a href="<?= get_field("contactbtn")['url'] ?>" class="btn btn-primary">
-                                    <?= get_field("contactbtn")['title'] ?>
-                                </a>
-                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                    alt="go onze expertises" class="testimonial-arrow"
-                                    style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
-                            </div>
-                            <div class="circle-border gap-1  btn-custom-container " style=" width: fit-content;  ">
-                                <!-- width:195px  -->
-                                <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="btn-custom"
-                                    style="color: #132030;">
-                                    <?= get_field("veelgesteldevragenbtn")['title'] ?>
-                                </a>
-                                <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                    alt="go onze expertises" class="testimonial-arrow"
-                                    style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+        <div class="white-medium-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-5 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
+                        <div class="d-flex flex-column  text-left gap-4">
+                            <span class="fleft-text">
+                                <?= get_field("flefttext") ?>
+                            </span>
+                            <span class="secleft-text">
+                                <?= get_field("seclefttext") ?>
+                            </span>
+                            <div class="button-group">
+                                <div class="circle-border  btn-primary-custom " style="  width: fit-content;">
+                                    <!-- width:110px -->
+                                    <a href="<?= get_field("contactbtn")['url'] ?>" class="btn btn-primary">
+                                        <?= get_field("contactbtn")['title'] ?>
+                                    </a>
+                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                        alt="go onze expertises" class="testimonial-arrow"
+                                        style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                                </div>
+                                <div class="circle-border gap-1  btn-custom-container " style=" width: fit-content;  ">
+                                    <!-- width:195px  -->
+                                    <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="btn-custom"
+                                        style="color: #132030;">
+                                        <?= get_field("veelgesteldevragenbtn")['title'] ?>
+                                    </a>
+                                    <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                        alt="go onze expertises" class="testimonial-arrow"
+                                        style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
-                    data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <img src="<?= get_field("mediumimg")['url'] ?>" alt="<?= get_field("")['alt'] ?>"
-                        class="medium-img" />
+                    <div class="col-12 col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                        <img src="<?= get_field("mediumimg")['url'] ?>" alt="<?= get_field("")['alt'] ?>"
+                            class="medium-img" />
+                    </div>
                 </div>
             </div>
         </div>

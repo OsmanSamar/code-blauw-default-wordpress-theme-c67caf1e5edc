@@ -164,7 +164,7 @@
 
 
         .container-block {
-            background-color: #F7F6F4;
+            /* background-color: #F7F6F4; */
             width: 100%;
             max-width: 1700px;
             margin: 0 auto;

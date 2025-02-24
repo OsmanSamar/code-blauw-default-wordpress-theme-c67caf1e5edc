@@ -373,8 +373,8 @@
 
 
         <div class="white-contianer">
-            <div class="container mb-5 ">
-                <div class="row pt-5 pb-5 mb-5 ">
+            <div class="container  ">
+                <div class="row pt-5 pb-5  ">
                     <div class="col-12 col-lg-5 col-md-6 blauw-left-text" data-aos="fade-right" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <?= get_field("lefttext") ?>
