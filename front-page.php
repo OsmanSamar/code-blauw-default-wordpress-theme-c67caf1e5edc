@@ -3,10 +3,24 @@
 <main class="front-page">
 
     <style>
-        /* .first-blue-block {
-        height: 512px;
-    } */
-
+        .White-container-front-page {
+            position: relative;
+            z-index: 1;
+            top: 70px;
+            height: 131px;
+            border-radius: 5px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 250px;
+            width: 100%;
+            max-width: 1700px;
+            margin: 0 auto;
+            box-shadow: 10px 10px 60px #2072BE1A;
+            border-radius: 5px;
+            opacity: 1;
+        }
 
         /*  */
 
@@ -387,64 +401,67 @@
 
 
         <div class="container-img position-relative">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-12">
-                        <div class="verhaal-container col-12 col-lg-12">
+            <!--White-containe-->
+            <div class="White-container-front-page   " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out" style="height: 378px;">
+                <div class="container">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <img src="<?= get_template_directory_uri() ?>/images/manager-leading.png"
+                                alt="manager-leading" class="w-100 h-" style="object-fit:cover" />
 
-                            <div class="row g-0 ">
-                                <div class="col-12  col-lg-6">
-                                    <img src="<?= get_template_directory_uri() ?>/images/manager-leading.png"
-                                        alt="manager-leading" />
-                                </div>
-                                <div class="col-12 col-lg-6 d-flex align-items-center" style=" text-wrap: balance;">
-                                    <div class="d-flex justify-content-left flex-column text-left left-container"
-                                        style="">
-                                        <span class="verhaal-title">
-                                            Ons verhaal
-                                            <?= get_field("onsverhaaltitle") ?>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center"
+                            style="background: #ffffff 0% 0% no-repeat padding-box;">
 
-                                        </span>
-                                        <span class="verhaal-text">
-                                            Met onze veelzijdige aanpak helpen we organisaties met veranderprocessen en
-                                            ontwikkeling, om ze mooier, wendbaarder, toekomstbestendiger én krachtiger
-                                            te maken.
-                                            <?= get_field("verhaaltext") ?>
-                                        </span>
+                            <div class="d-flex justify-content-left flex-column text-left left-container" style="">
+                                <span class="verhaal-title">
+                                    Ons verhaal
+                                    <?= get_field("onsverhaaltitle") ?>
 
-                                        <!-- BTN -->
-                                        <div class="d-flex justify-content-flex-start align-items-center gap-1 mt-4">
+                                </span>
+                                <span class="verhaal-text">
+                                    Met onze veelzijdige aanpak helpen we organisaties met veranderprocessen en
+                                    ontwikkeling, om ze mooier, wendbaarder, toekomstbestendiger én krachtiger
+                                    te maken.
+                                    <?= get_field("verhaaltext") ?>
+                                </span>
 
-                                            <div class="circle-border btn-custom-container">
-                                                <a href="<?= get_field("overonsbtn")['url'] ?>" class="btn-custom">
-                                                    <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                                        alt="go onze expertises" class="testimonial-arrow"
-                                                        style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
-                                                    <?= get_field("overonsbtn")['title'] ?>
-                                                </a>
+                                <!-- BTN -->
+                                <div class="d-flex justify-content-flex-start align-items-center gap-1 mt-4">
 
-                                            </div>
+                                    <div class="circle-border btn-custom-container">
+                                        <a href="<?= get_field("overonsbtn")['url'] ?>" class="btn-custom">
+                                            <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                                alt="go onze expertises" class="testimonial-arrow"
+                                                style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
+                                            <?= get_field("overonsbtn")['title'] ?>
+                                        </a>
 
-                                            <a href="<?= get_field("werkwijzebtn")['url'] ?>" class="btn-s"
-                                                style="color:#132030">
-                                                <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                                    alt="go onze expertises" class="testimonial-arrow"
-                                                    style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
-                                                <?= get_field("werkwijzebtn")['title'] ?>
-                                                Werkwijze
-                                            </a>
-                                        </div>
                                     </div>
+
+                                    <a href="<?= get_field("werkwijzebtn")['url'] ?>" class="btn-s"
+                                        style="color:#132030">
+                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                            alt="go onze expertises" class="testimonial-arrow"
+                                            style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
+                                        <?= get_field("werkwijzebtn")['title'] ?>
+                                        Werkwijze
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
+
+            <!--End of wshite-containe-->
+
+
         </div>
 
-        <!-- End of -->
+        <!-- End of Page -->
     </div>
 
     <script>
