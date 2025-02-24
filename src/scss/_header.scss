@@ -640,7 +640,7 @@ strong:nth-of-type(2) {
 .medium-img {
   width: 100%;
   height: 100%;
-  // max-height: 367px;
+  // max-height: 378px;
   // height: 367px;
   background: transparent 0% 0% no-repeat padding-box;
   border-radius: 5px 0px 0px 5px;
@@ -744,6 +744,47 @@ strong:nth-of-type(2) {
   letter-spacing: 0px;
   color: #132030;
   opacity: 1;
+}
+
+.post-werk-title {
+  text-align: left;
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 300;
+  font-family: "Richmond Display", serif;
+  letter-spacing: 0px;
+  color: #132030;
+  opacity: 1;
+  margin-bottom: 10px;
+}
+.post-werk-left {
+  opacity: 1;
+
+  text-align: left;
+  font-family: "Scala Sans Pro", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  color: #132030;
+}
+
+.whitecontainertext-right,
+.whitecontainertext-left {
+  text-align: left;
+  font-family: "Scala Sans Pro", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #132030;
+  opacity: 1;
+}
+.whitecontainertext-right {
+  line-height: 30px;
+}
+.whitecontainertext-left {
+  line-height: 26px;
 }
 
 @media (min-width: 768px) {
