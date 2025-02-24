@@ -554,9 +554,9 @@
                 clickable: true,
             },
             loop: true,
-            autoplay: { //added
-                delay: 2000, //added
-            },
+            //  autoplay: {
+            //       delay: 2000,
+            //  },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
