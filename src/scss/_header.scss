@@ -310,11 +310,15 @@ strong:nth-of-type(2) {
 }
 
 .btn-primary {
-  white-space: nowrap !important;
+  // white-space: nowrap !important;
   background-color: transparent !important;
   border: none !important;
   pointer-events: auto !important;
   z-index: 1000 !important;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flexible-title {
