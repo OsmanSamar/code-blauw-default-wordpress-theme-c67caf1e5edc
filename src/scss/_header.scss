@@ -106,15 +106,23 @@
 }
 
 // Added new
-.navbar-nav.nav-gap {
-  gap: 15px;
-}
+// .navbar-nav.nav-gap {
+//   gap: 15px;
+// }
 
-.nav-item {
-  margin-right: 10px;
-}
+// .nav-item {
+//   margin-right: 10px;
+// }
 
 // Added new
+
+.navbar-nav .nav-item {
+  color: #fff;
+  // border-bottom: 1px solid #fff;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
 .navbar-nav .dropdown-item {
   color: #fff;
   padding: 8px 20px;
