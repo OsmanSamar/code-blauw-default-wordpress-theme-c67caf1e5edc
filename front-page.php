@@ -3,55 +3,9 @@
 <main class="front-page">
 
     <style>
-        .btn-s {
-            color: #132030;
-            font-size: 16px;
-            font-family: "Scala Sans Pro", sans-serif;
-            font-weight: 700;
-            line-height: 22px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            text-align: left;
-            display: inline-flex;
-            /* justify-content: center; */
-            align-items: anchor-center;
-            border: 1px solid #f29401;
-            opacity: 1;
-            position: relative;
-            overflow: hidden;
-            margin: 8px;
-            padding: 6px 14px;
-            height: 50px;
-            color: #fff;
-            height: 50px;
-            width: 121px;
-            padding: 12px 15px;
-            border-radius: 8px;
-        }
-
-        .verhaal-container {
-            /* width: 100%;
-            max-width: 950%; */
-
-            background-color: #ffffff;
-            box-shadow: 10px 10px 60px #2072be1a;
-            border-radius: 5px;
-            opacity: 1;
-            position: absolute;
-            /* top: 12%;
-            left: 4%; */
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            /* width: 78%; */
-        }
-
-        .first-blue-block {
-            height: 512px;
-        }
+        /* .first-blue-block {
+        height: 512px;
+    } */
 
 
         /*  */
@@ -143,7 +97,7 @@
         }
 
         .swiper-text {
-            font-size: 16px;
+            font-size: 26px;
             font-weight: 300;
             white-space: nowrap;
             text-align: left;
@@ -152,11 +106,13 @@
             letter-spacing: 0px;
             color: #132030;
             opacity: 1;
+            position: relative !important;
+            top: -13px;
+            left: 8px;
         }
 
         .swiper-button-prev,
         .swiper-button-next {
-            /* position: static !important; */
             position: relative !important;
             width: 41px;
             height: 41px;
@@ -190,73 +146,28 @@
             position: absolute;
             /* left: 82% !important;
         top: -70px !important; */
-            left: -2% !important;
+            left: -8% !important;
             top: -13px !important;
         }
 
         .swiper-container .swiper-button-next {
             position: absolute;
-            right: 5px !important;
+            right: 9px !important;
             top: -12px !important;
         }
-
-
-
-
-        .card-title {
-            text-align: left;
-            font-size: 16px;
-            font-weight: 300;
-            font-family: "Scala Sans Pro", sans-serif;
-            line-height: 20px;
-            letter-spacing: 0px;
-            color: #132030;
-            opacity: 1;
-            /* padding-left: 16px; */
-        }
-
-        .card-text {
-            text-align: left;
-            font-size: 15px;
-            font-weight: 500;
-            font-family: "Scala Sans Pro", sans-serif;
-            line-height: 27px;
-            letter-spacing: 0px;
-            color: #132030;
-            opacity: 1;
-        }
-
-        .arrow {
-            background-color: #1E73BE;
-            border-radius: 50px;
-            height: 28px;
-            width: 28px;
-        }
-
 
 
         @media (min-width: 768px) {
             .swiper-container .swiper-button-prev {
                 position: absolute;
-                left: -3% !important;
+                left: -8% !important;
                 top: -13px !important;
-            }
-
-            .verhaal-container {
-                width: unset;
             }
 
         }
 
 
         @media (min-width: 992px) {
-            .verhaal-container {
-                /* top: 28%;
-                left: 3%; */
-                width: 1000px;
-
-                height: 378px;
-            }
 
             .swiper-container .swiper-button-prev {
                 position: absolute;
@@ -264,13 +175,10 @@
                 top: -12px !important;
             }
 
-
-
             .swiper-text {
                 font-size: 36px;
+                top: -12px !important;
             }
-
-
 
             .pe-lg-5 {
                 padding-right: 14rem !important;
@@ -353,8 +261,8 @@
 
 
         <!-- Onze_Expertises -->
-        <div class="container p-3 px-4 mt-5" id="testimonials">
-            <div class="row g-0  mb-4">
+        <div class="container p-3 px-4 mt-5 position-relative" id="testimonials" style=" z-index: 2;">
+            <div class="row mb-4">
                 <?php
                 $delay = 0;
                 $posts = get_posts([
@@ -379,11 +287,9 @@
                                     <span class="test-post-title">
                                         <?= $post->post_title ?>
                                     </span>
-                                    <span
-                                        style="border: 1px solid #F29401;border-radius: 5px;opacity: 1; background:#FFFFFF;width:  38px;;height: 38px; display:flex; align-items: center; justify-content: center;">
+                                    <span class="test-img-border">
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                            alt="go onze expertises" class="testimonial-arrow"
-                                            style="  width: 12px; height: 10.26px; flex-shrink: 0;" />
+                                            alt="go onze expertises" class="testimonial-arrow" />
                                     </span>
                                 </div>
                             </div>
