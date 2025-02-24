@@ -14,52 +14,30 @@
             object-fit: cover;
         }
 
-        .case-hero-title {
-            font-size: 25px;
-            line-height: 76px;
-            font-weight: 500;
-            font-family: "Richmond Display", serif;
-            text-align: center;
-            letter-spacing: 0px;
-            color: #feffff;
-        }
 
-        .case-hero-text {
-            text-align: center;
-            font-size: 14px;
-            line-height: 24px;
-            font-weight: 300;
-            font-family: "Libre Franklin", sans-serif;
-            letter-spacing: 0px;
-            color: #ffffff;
-            opacity: 1;
-            /* width: 505px; */
-            /* display: block; */
-            margin-bottom: 10px;
-        }
 
-        .button-container {
-            border: 1px solid #f29401;
-            border-radius: 5px;
-            width: 250px;
-            height: 51px;
-            padding: 10px;
-            background-color: #f29401;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 30px;
-        }
+        /* .button-container {
+        border: 1px solid #f29401;
+        border-radius: 5px;
+        width: 250px;
+        height: 51px;
+        padding: 10px;
+        background-color: #f29401;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
 
-        .button-text {
-            text-align: center;
-            font-size: 14px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #FFFFFF;
-        }
+    .button-text {
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+    } */
 
         /* End of style Hero */
 
@@ -182,12 +160,6 @@
         }
 
         /* End of Swiper */
-        .arrow {
-            background-color: #1E73BE;
-            border-radius: 50px;
-            height: 28px;
-            width: 28px;
-        }
 
 
 
@@ -204,7 +176,7 @@
             width: 100%;
             max-width: 1000px;
             position: relative;
-            z-index: 1;
+            /* z-index: 1; */
             top: -60px;
             height: 182px;
             border-radius: 5px;
@@ -238,30 +210,14 @@
                 top: -13px !important;
             }
 
-            .case-hero-text {
-                width: 505px;
-                display: block;
-                font-size: 18px;
-                line-height: 30px;
 
-            }
         }
 
 
         @media (min-width: 992px) {
 
-            .case-hero-title {
-                font-size: 50px;
-                text-align: left;
-                line-height: 80px;
-            }
 
-
-            .case-hero-text {
-                width: 505px;
-                display: block;
-            }
-
+            /* 
             .button-container {
                 width: 436px;
             }
@@ -269,7 +225,7 @@
             .button-text {
                 text-align: left;
                 font-size: 16px;
-            }
+            } */
 
 
 
@@ -323,11 +279,13 @@
                 </span>
             </span>
 
-            <div class=" button-container">
-                <a href="<?= get_field("ontdekbtn")['url'] ?>" class=" button-text">
+            <div class="circle-border btn-primary-custom width-fit-content" style="width: fit-content;">
+                <a href="<?= get_field("ontdekbtn")['url'] ?>" class="btn btn-primary">
                     <?= get_field("ontdekbtn")['title'] ?>
-                    <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>" />
                 </a>
+                <!-- <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact Page"
+                    class="testimonial-arrow" /> -->
+                <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go to article" />
             </div>
 
         </div>
@@ -416,14 +374,22 @@
 
                     </span>
 
-                    <div class="d-inline-flex justify-content-center align-items-center" style="border: 1px solid #f29401; border-radius:
+                    <!-- <div class="d-inline-flex justify-content-center align-items-center" style="border: 1px solid #f29401; border-radius:
                                                         5px; width:250px; height: 51px; background-color: #f29401;">
                         <a h ref="<?= get_field("vraageenbtn")['url'] ?>" class="button-text">
                             <?= get_field("vraageenbtn")['title'] ?>
                             <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
                                 alt="go to article" />
                         </a>
+                    </div> -->
+                    <div class="circle-border btn-primary-custom " style="width: fit-content;">
+                        <a href="<?= get_field("vraageenbtn")['url'] ?>" class="btn btn-primary">
+                            <?= get_field("vraageenbtn")['title'] ?>
+                        </a>
+                        <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
+                            alt="go Contact page" />
                     </div>
+
                 </div>
             </div>
         </div>

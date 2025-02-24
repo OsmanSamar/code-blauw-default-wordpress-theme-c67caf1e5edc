@@ -545,7 +545,6 @@ strong:nth-of-type(2) {
 }
 
 // Styleing for Project Page
-
 .pro-hero-title {
   font-size: 30px;
   line-height: 85px;
@@ -568,12 +567,43 @@ strong:nth-of-type(2) {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
+// Cases Page Style
+
+.case-hero-title {
+  font-size: 50px;
+  line-height: 76px;
+  font-weight: 500;
+  font-family: "Richmond Display", serif;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #feffff;
+}
+
+.case-hero-text {
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  font-family: "Libre Franklin", sans-serif;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 1;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
   .flexible-title {
     max-width: 100%;
   }
   .verhaal-container {
     width: unset;
+  }
+
+  .case-hero-text {
+    width: 505px;
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 
@@ -585,8 +615,6 @@ strong:nth-of-type(2) {
 
   .hero-content {
     text-align: left;
-    /* left: 227px; */
-    // max-width: 80%;
   }
 
   .hero-title {
@@ -695,5 +723,15 @@ strong:nth-of-type(2) {
   .pro-hero-title {
     font-size: 50px;
     text-align: left;
+  }
+
+  .case-hero-title {
+    text-align: left;
+    line-height: 80px;
+  }
+
+  .case-hero-text {
+    width: 505px;
+    display: block;
   }
 }
