@@ -13,169 +13,7 @@
             object-fit: cover;
         }
 
-        .over-ons-hero-title {
-            font-size: 25px;
-            line-height: 76px;
-            font-weight: 500;
-            font-family: "Richmond Display", serif;
-            text-align: center;
-            letter-spacing: 0px;
-            color: #feffff;
-        }
-
-        .over-ons-hero-text {
-            text-align: center;
-            font-size: 14px;
-            line-height: 24px;
-            font-weight: 300;
-            font-family: "Libre Franklin", sans-serif;
-            letter-spacing: 1px;
-            color: #ffffff;
-            opacity: 1;
-            /* width: 505px; */
-            /* display: block; */
-            margin-bottom: 10px;
-        }
-
-        .button-container {
-            border: 1px solid #f29401;
-            border-radius: 5px;
-            width: 250px;
-            height: 51px;
-            padding: 10px;
-            background-color: #f29401;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            margin-top: 30px;
-        }
-
-        .button-text {
-            text-align: center;
-            font-size: 14px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #FFFFFF;
-        }
-
-        /* End of style Hero */
-
-        /* Second Section */
-
-        .onzevisie-title {
-            text-align: left;
-            font-size: 36px;
-            line-height: 50px;
-            font-weight: 300;
-            font-family: "Richmond Display", serif;
-            letter-spacing: 0px;
-            color: #132030;
-            opacity: 1;
-        }
-
-        .left-text,
-        .right-text {
-            text-align: center;
-            font-size: 16px;
-            line-height: 30px;
-            font-weight: 300;
-            font-family: 'Scala Sans Pro', sans-serif;
-            letter-spacing: 1px;
-            color: #132030;
-            opacity: 1;
-            text-wrap: balance;
-            white-space: break-spaces;
-        }
-
-        .right-text {
-            margin-top: 8px;
-
-        }
-
-        .baluwtext {
-            padding-top: 80px;
-            padding-bottom: 46px;
-        }
-
-        .center-title {
-            font-size: 36px;
-            line-height: 46px;
-            font-weight: 300;
-            font-family: "Richmond Display", serif;
-            text-align: center;
-            letter-spacing: 0px;
-            color: #1E73BE;
-            margin-bottom: 50px;
-            opacity: 1;
-        }
-
-
-
-        .secleft-text,
-        .fleft-text {
-            text-align: left;
-            font-size: 16px;
-            line-height: 26px;
-            font-family: 'Scala Sans Pro', sans-serif;
-            letter-spacing: 0px;
-            letter-spacing: 0px;
-            color: #132030;
-        }
-
-        .secleft-text,
-        {
-        font-weight: 300;
-        }
-
-        .fleft-text {
-            font-weight: bold;
-        }
-
-
-
-        .medium-img {
-            width: 100%;
-            height: 367px;
-            background: transparent 0% 0% no-repeat padding-box;
-            border-radius: 5px 0px 0px 5px;
-            opacity: 1;
-            object-fit: contain;
-        }
-
-        /* .small-whit-container {
-            width: 100%;
-            max-width: 1700px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 192px;
-            text-align: center;
-            gap: 4px;
-            flex-direction: row;
-        } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         /*  */
-
-
         .testimonial-slide {
             background: #FFFFFF 0% 0% no-repeat padding-box;
             border-radius: 5px;
@@ -251,7 +89,6 @@
 
         .swiper-button-prev,
         .swiper-button-next {
-            /* position: static !important; */
             position: relative !important;
             width: 41px;
             height: 41px;
@@ -296,12 +133,7 @@
         }
 
         /* End of Swiper */
-        .arrow {
-            background-color: #1E73BE;
-            border-radius: 50px;
-            height: 28px;
-            width: 28px;
-        }
+
 
         .container-block {
             background-color: #F7F6F4;
@@ -315,8 +147,6 @@
             width: 1000px;
             position: relative;
             z-index: 1;
-            /* top: -60px; */
-            /* top: 105px; */
             top: 45px;
             height: 131px;
             border-radius: 5px;
@@ -331,9 +161,6 @@
         }
 
         .organ-title {
-            /* font-size: 32px; 
-        line-height: 50px;
-         text-align: left;*/
             font-size: 26px;
             line-height: 35px;
             font-weight: 300;
@@ -351,33 +178,10 @@
                 top: -13px !important;
             }
 
-            .case-hero-text {
-                width: 505px;
-                display: block;
-                font-size: 18px;
-                line-height: 30px;
-
-            }
-
         }
 
 
         @media (min-width: 992px) {
-
-            .over-ons-hero-title {
-                font-size: 50px;
-                text-align: left;
-                line-height: 80px;
-            }
-
-
-            .over-ons-hero-text {
-                font-size: 16px;
-                width: 505px;
-                display: block;
-            }
-
-
 
             .swiper-container .swiper-button-prev {
                 position: absolute;
@@ -396,20 +200,10 @@
                 justify-content: center;
             }
 
-            .left-text,
-            .right-text {
-                text-align: left;
-            }
-
-            .medium-container {
-                margin-top: 50px;
-                margin-bottom: 50px;
-            }
 
             .first-blue-block {
                 height: 683px;
                 margin-top: unset;
-
             }
 
             .whi-container {
@@ -433,7 +227,7 @@
         <div class="hero-section flex-column">
             <div class="hero-content">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="over-ons-hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                    <h1 class="case-hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
@@ -441,20 +235,27 @@
                     </h1>
                 </div>
             </div>
-            <span class="over-ons-hero-text ">
+            <span class="case-hero-text ">
                 <span class="d-block">
                     <?= get_field("herotext") ?>
                 </span>
             </span>
-            <div class="button-container ">
+            <!-- <div class="button-container ">
                 <div class="circle-border btn-primary-custom "
                     style="width: 182px; pointer-events: auto ;z-index: 1000 ;">
                     <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn btn-primary">
                         <?= get_field("kennismakenbtn")['title'] ?>
                     </a>
-                    <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
-                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
+                  
                 </div>
+            </div> -->
+            <!-- pointer-events: auto ;z-index: 1000 ; -->
+            <div class="circle-border btn-primary-custom width-fit-content" style="width: fit-content;">
+                <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn btn-primary">
+                    <?= get_field("kennismakenbtn")['title'] ?>
+                </a>
+                <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
+                    style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
             </div>
 
 
@@ -527,7 +328,8 @@
                             <?= get_field("seclefttext") ?>
                         </span>
                         <div class="button-group">
-                            <div class="circle-border  btn-primary-custom " style="width:110px ">
+                            <div class="circle-border  btn-primary-custom " style="  width: fit-content;">
+                                <!-- width:110px -->
                                 <a href="<?= get_field("contactbtn")['url'] ?>" class="btn btn-primary">
                                     <?= get_field("contactbtn")['title'] ?>
                                 </a>
@@ -535,7 +337,8 @@
                                     alt="go onze expertises" class="testimonial-arrow"
                                     style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
                             </div>
-                            <div class="circle-border gap-1  btn-custom-container " style="width:195px  ">
+                            <div class="circle-border gap-1  btn-custom-container " style=" width: fit-content;  ">
+                                <!-- width:195px  -->
                                 <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="btn-custom"
                                     style="color: #132030;">
                                     <?= get_field("veelgesteldevragenbtn")['title'] ?>
@@ -643,15 +446,13 @@
                             </span>
 
 
-                            <div class="circle-border gap-1  btn-primary-custom " style="width:195px">
+                            <div class="circle-border gap-1  btn-primary-custom " style=" width: fit-content;">
+                                <!-- width:195px -->
                                 <a h ref="<?= get_field("vraagaanbtn")['url'] ?>" class="btn btn-primary">
                                     <?= get_field("vraagaanbtn")['title'] ?>
                                 </a>
-                                <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                    alt="go onze expertises" class="testimonial-arrow" style="  width: 9px; height: 7.69px; ob
-                                                       ject-fit: cover; display: block;" />
-                                <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
-                                    style="width: 9px; height: 7.69px; object-fit: cover; display: " />
+                                <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
+                                    alt="go to article" class="testimonial-arrow" />
                             </div>
                         </div>
                     </div>
