@@ -102,15 +102,42 @@
         }
 
         .contact-form {
-            height: 518px;
+            /* height: 518px; */
             /* width: 490px; */
             width: 100%;
             max-width: 490px;
             background: #FFFFFF 0% 0% no-repeat padding-box;
             border-radius: 5px;
             opacity: 1;
+            padding: 40px;
         }
 
+        /* .form-1 {} */
+        /* Custom styles for Form 1 */
+        .form-1 .gform_wrapper .gform_body .gform_fields .gfield {
+            width: 100%;
+        }
+
+        /* Input field */
+        .gform-theme--foundation .gfield input,
+        .gform-theme--foundation .gfield textarea,
+        .gform-theme--foundation .gfield select {
+            inline-size: 100% !important;
+            box-sizing: border-box !important;
+            border-radius: 8px !important;
+            margin-bottom: 8px !important;
+        }
+
+        .gform_wrapper .gform_footer .gform_button {
+            padding: 12px 15px !important;
+            align-items: center;
+            border-radius: 8px !important;
+            background-color: #F29401 !important;
+            color: #fff !important;
+            border: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+        }
 
         @media (min-width: 992px) {
 
@@ -188,9 +215,13 @@
 
                     <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <div class="d-flex flex-column contact-form">
-                            gravity forms
+                        <div class="d-flex flex-column contact-form form-1">
+                            <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="1" title="false" description="true"   cssClass="form-1"]')) ?>
                         </div>
+
+
+
+
 
 
 
