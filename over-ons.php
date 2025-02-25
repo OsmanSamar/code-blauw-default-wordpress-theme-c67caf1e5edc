@@ -5,7 +5,7 @@
     .hero-section {
         background: url("<?= get_field('heroimage')['url'] ?> ");
         width: 100%;
-        max-width: 1700px;
+        /* max-width: 1700px; */
         margin: 0 auto;
         background-size: cover;
         background-position: center;
@@ -207,60 +207,37 @@
             margin-top: unset;
         }
 
-        /* .whi-container {
-                height: 131px;
-            }
-
-            .organ-title {
-                font-size: 32px;
-                line-height: 50px;
-                text-align: left;
-            } */
-
 
 
     }
     </style>
     <div>
 
-
         <!-- Hero Section -->
-        <div class="hero-section flex-column">
-            <div class="hero-content">
+        <div class="hero-section flex-column ">
+            <div class="hero-content text-center">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="case-hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                    <h1 class="case-hero-title text-center" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
                         </span>
                     </h1>
                 </div>
-            </div>
-            <span class="case-hero-text ">
-                <span class="d-block">
-                    <?= get_field("herotext") ?>
+                <span class="case-hero-text ">
+                    <span class="d-block">
+                        <?= get_field("herotext") ?>
+                    </span>
                 </span>
-            </span>
-            <!-- <div class="button-container ">
-                <div class="circle-border btn-primary-custom "
-                    style="width: 182px; pointer-events: auto ;z-index: 1000 ;">
-                    <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn btn-primary">
+
+                <div class="circle-border btn-primary-custom mt-4">
+                    <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn-custom">
                         <?= get_field("kennismakenbtn")['title'] ?>
                     </a>
-                  
+                    <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
+                        style="pointer-events: auto ;z-index: 1000 " />
                 </div>
-            </div> -->
-            <!-- pointer-events: auto ;z-index: 1000 ; -->
-            <div class="circle-border btn-primary-custom">
-                <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn btn-primary">
-                    <?= get_field("kennismakenbtn")['title'] ?>
-                </a>
-                <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
-                    style="pointer-events: auto ;z-index: 1000 " />
             </div>
-
-
-
         </div>
         <!-- End of Hero Section -->
 
@@ -450,8 +427,10 @@
                             </span>
 
 
+
                             <div class="circle-border gap-1  btn-primary-custom " style=" width: fit-content;">
                                 <!-- width:195px -->
+
                                 <a h ref="<?= get_field("vraagaanbtn")['url'] ?>" class="btn btn-primary">
                                     <?= get_field("vraagaanbtn")['title'] ?>
                                 </a>
@@ -490,7 +469,7 @@
         grabCursor: true,
         spaceBetween: 20,
 
-        pagination: {
+        pagi nation: {
             el: '.swiper-pagination',
             clickable: true,
         },
@@ -498,13 +477,13 @@
         //  autoplay: { //added
         //      delay: 2000, //added
         //  },
-        navigation: {
+        navi gation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
 
 
-        breakpoints: {
+        brea kpoints: {
             360: {
                 slidesPerView: 1.3
             },
@@ -527,7 +506,7 @@
             init: function() {
                 AOS.refresh();
             },
-            slideChangeTransitionEnd: function() {
+            slid eChangeTransitionEnd: function() {
                 AOS.refresh();
             }
 
