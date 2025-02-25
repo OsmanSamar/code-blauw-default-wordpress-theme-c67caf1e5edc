@@ -103,11 +103,11 @@
                     </div>
 
                     <!-- Button on the Right side (visible only on large screens) -->
-                    <div class="circle-border d-none d-lg-inline-flex justify-content-center align-items-center me-auto"
-                        style="background: #F29401;">
-                        <div class="d-none d-lg-block me-auto">
-                            <a href="<?= esc_url(home_url('/kennismaken')); ?>" class="btn btn-primary">Kennismaken</a>
-                        </div>
+                    <div
+                        class="circle-border btn-primary-custom d-none d-lg-inline-flex justify-content-center align-items-center me-auto">
+                        <a href="<?= esc_url(home_url('/kennismaken')); ?>" class="btn-custom">Kennismaken</a>
+                        <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
+                            class="go-arrow" style="  " />
                     </div>
                 </div>
             </nav>

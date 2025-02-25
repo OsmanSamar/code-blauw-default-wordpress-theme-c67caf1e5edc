@@ -477,7 +477,7 @@
                             <a href="<?= get_field("wetenbtn")['url'] ?>" class="btn-custom">
                                 <?= get_field("wetenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
-                                    alt="go to article" class="testimonial-arrow" />
+                                    alt="go to article" class="go-arrow" />
                             </a>
                         </div>
                         <div class="circle-border gap-1  " style="width: fit-content; ">
@@ -485,8 +485,7 @@
                                 style="color: #132030;">
                                 <?= get_field("veelgesteldevragenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                    alt="go onze expertises" class="testimonial-arrow"
-                                    style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
+                                    alt="go onze expertises" class="go-arrow" />
                             </a>
 
                         </div>
@@ -667,10 +666,9 @@
                                         <?= get_field("vraagaanbtn")['title'] ?>
                                     </a>
                                     <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                        alt="go onze expertises" class="testimonial-arrow"
-                                        style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                                        alt="go onze expertises" class="go-arrow" />
                                     <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
-                                        style="width: 9px; height: 7.69px; object-fit: cover; display: " />
+                                        class="go-arrow" />
                                 </div>
                         </div>
                     </div>

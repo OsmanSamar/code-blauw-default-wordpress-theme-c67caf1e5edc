@@ -14,7 +14,7 @@
         }
 
         .strategie-hero-title {
-            font-size: 25px;
+            font-size: 54px;
             line-height: 76px;
             font-weight: 500;
             font-family: "Richmond Display", serif;
@@ -76,7 +76,7 @@
 
         .right-text,
         .right-text-bold {
-            text-align: center;
+            text-align: left;
             font-size: 16px;
             line-height: 30px;
             font-weight: 300;
@@ -93,27 +93,11 @@
         }
 
 
-        .small-whit-container {
-            width: 100%;
-            max-width: 1700px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* height: 192px; */
-            text-align: center;
-            gap: 4px;
-            flex-direction: row;
-            padding: 10px;
-        }
 
-        .whi-container {
+        /* .whi-container {
             background: #FFFFFF 0% 0% no-repeat padding-box;
             width: 1000px;
-            /* position: relative; */
             z-index: 1;
-            /* top: -60px; */
-            /* top: 105px; */
             height: 131px;
             border-radius: 5px;
             margin: 0 auto;
@@ -122,19 +106,9 @@
             justify-content: space-around;
             height: 250px;
             margin-top: 50px;
-        }
+        } */
 
-        .organ-title {
 
-            font-size: 26px;
-            line-height: 35px;
-            font-weight: 300;
-            font-family: "Richmond Display", serif;
-            text-align: center;
-            letter-spacing: 0px;
-            color: #132030;
-            opacity: 1;
-        }
 
         .waaromkiezenvoorblauw {
             text-align: left;
@@ -192,7 +166,7 @@
         @media (min-width: 992px) {
 
             .strategie-hero-title {
-                font-size: 50px;
+
                 text-align: left;
                 line-height: 80px;
             }
@@ -227,29 +201,28 @@
     <div>
         <!-- Hero Section -->
         <div class="hero-section flex-column">
-            <div class="hero-content">
+            <div class="hero-content text-center">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="strategie-hero-title fadeIn  " data-aos="fade-up" data-aos-offset="100"
+                    <h1 class="strategie-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
                         </span>
                     </h1>
                 </div>
-            </div>
-            <span class="strategie-hero-text ">
-                <span class="d-block">
-                    <?= get_field("herotext") ?>
+
+                <span class="strategie-hero-text ">
+                    <span class="d-block">
+                        <?= genisield("herotext") ?>
+                    </span>
                 </span>
-            </span>
-            <div class="button-container ">
-                <div class="circle-border btn-primary-custom "
-                    style="width: 182px;  pointer-events: auto ;z-index: 1000 ;">
-                    <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn btn-primary">
+
+                <div class="circle-border  btn-primary-custom mt-4" style="width: fit-content;">
+                    <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn-custom">
                         <?= get_field("meerwetenbtn")['title'] ?>
+                        <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go kennismaken"
+                            class="go-arrow" />
                     </a>
-                    <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
-                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
                 </div>
             </div>
         </div>
@@ -309,31 +282,43 @@
 
 
                 <!--White-containe-->
-                <div class="small-whit-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                <!-- <div class="small-whit-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="whi-container ">
                         <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
                             <span class="organ-title">
                                 <?= get_field("organisatietext") ?>
-                                <!-- <?php
-                                $organisatietext = get_field("organisatietext");
-                                echo '<pre>';
-                                print_r($organisatietext);
-                                echo '</pre>';
-                                ?>  -->
                             </span>
-
-                            <div class="circle-border   btn-primary-custom " style="width: 248px">
-                                <a h ref="<?= get_field("vraagaanbtn")['url'] ?>" class="btn btn-primary">
+                            <div class="circle-border  btn-primary-custom mt-4" style="width: fit-content;">
+                                <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-custom">
                                     <?= get_field("vraagaanbtn")['title'] ?>
+                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                        alt="go kennismaken" class="go-arrow" />
                                 </a>
-
-                                <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
-                                    style="width: 9px; height: 7.69px; object-fit: cover; display: " />
                             </div>
+
                         </div>
                     </div>
+                </div> -->
+
+
+                <div class="whi-container mt-5 " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
+                        <span class="organ-title">
+                            <?= get_field("organisatietext") ?>
+                        </span>
+                        <div class="circle-border  btn-primary-custom" style="width: fit-content;">
+                            <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-custom">
+                                <?= get_field("vraagaanbtn")['title'] ?>
+                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                    alt="go kennismaken" class="go-arrow" />
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
+
                 <!--End of wshite-containe-->
             </div>
         </div>

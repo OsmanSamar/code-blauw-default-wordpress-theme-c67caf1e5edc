@@ -14,10 +14,6 @@
         object-fit: cover;
     }
 
-
-
-
-
     /* End of style Hero */
 
     .testimonial-slide {
@@ -33,112 +29,6 @@
 
     }
 
-    .testimonial-text {
-        font-size: 16px;
-        font-weight: 300;
-        margin-bottom: 8px;
-        font-family: 'Scala Sans Pro', sans-serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    }
-
-    .testimonial-naam {
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        color: #1e73be;
-        opacity: 1;
-        letter-spacing: 0px;
-    }
-
-    /* .swiper-container {
-        width: 100%;
-        margin: 0 auto;
-        overflow: clip;
-        overflow-y: visible;
-
-    }
-
-    .swiper-container .swiper-pagination {
-        bottom: -50px !important;
-    }
-
-    .swiper-container .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
-        background-color: #FFFFFF;
-    } */
-
-    .swiper-header {
-        /* display: flex;
-        align-items: center;
-        justify-content: center; */
-        /* position: absolute;
-        top: -70px;
-        right: 0;
-        width: 100%; */
-    }
-
-    /* .swiper-text {
-        font-size: 26px;
-        font-weight: 300;
-        white-space: nowrap;
-        text-align: center;
-        line-height: 50px;
-        font-family: 'Richmond Display', serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    } */
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        /* position: static !important; */
-        /* position: relative !important;
-        width: 41px;
-        height: 41px;
-        border: 1px solid #132030;
-        color: #132030;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10; */
-
-    }
-
-    /* 
-    .swiper-button-next::after,
-    .swiper-rtl .swiper-button-prev::after {
-        font-size: 16px;
-        font-weight: 900;
-    }
-
-    .swiper-button-prev:after,
-    .swiper-rtl .swiper-button-next:after,
-    .swiper-button-next::after,
-    .swiper-rtl .swiper-button-prev::after {
-        font-size: 16px;
-        font-weight: 900;
-    } */
-
-
-    .swiper-container .swiper-button-prev {
-        position: absolute;
-        /* left: 82% !important;
-        top: -70px !important; */
-        /* left: -2% !important;
-        top: -13px !important; */
-    }
-
-    /* .swiper-container .swiper-button-next {
-        position: absolute;
-        right: 5px !important;
-        top: -12px !important;
-    } */
-
-    /* End of Swiper */
 
     .section-header {
         display: flex;
@@ -177,53 +67,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-    @media (min-width: 768px) {
-        /* .swiper-container .swiper-button-prev {
-            position: absolute;
-            left: -3% !important;
-            top: -13px !important;
-        } */
-
-
-    }
-
-
     @media (min-width: 992px) {
-
-        /* .swiper-container .swiper-button-prev {
-            position: absolute;
-            left: -12% !important;
-            top: -12px !important;
-        }
-
-
-        .swiper-text {
-            font-size: 36px;
-        }
-
-        .organ-title {
-            font-size: 32px;
-            text-align: left;
-            line-height: 50px;
-        }
-
-        .whi-container {
-            height: 131px;
-        } */
-
         .first-blue-block {
             margin-top: unset;
             height: 868px;
-
         }
 
         .whi-container {
@@ -257,7 +104,7 @@
                     <a href="<?= get_field("ontdekbtn")['url'] ?>" class="btn-custom">
                         <?= get_field("ontdekbtn")['title'] ?>
                         <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go to article"
-                            class="testimonial-arrow" />
+                            class="go-arrow" />
                     </a>
 
 
@@ -298,8 +145,8 @@
                         $testimonial = get_field("testimonialwerkvoor");
                         ?>
                     <div class="col d-flex">
-                        <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column w-100">
-                            <div class="testimonial-slide d-flex flex-column w-100 p-3 border rounded">
+                        <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column w-100 h-100">
+                            <div class="testimonial-slide d-flex flex-column  ">
                                 <img src="<?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
                                     class="card-img-top"
                                     style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
@@ -352,7 +199,7 @@
                         <a href="<?= get_field("vraageenbtn")['url'] ?>" class="btn-custom">
                             <?= get_field("vraageenbtn")['title'] ?>
                             <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
-                                alt="go Contact page" class="testimonial-arrow" />
+                                alt="go Contact page" class="go-arrow" />
                         </a>
 
                     </div>

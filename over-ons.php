@@ -76,7 +76,7 @@
     }
 
     .swiper-text {
-        font-size: 16px;
+        font-size: 26px;
         font-weight: 300;
         white-space: nowrap;
         text-align: left;
@@ -234,7 +234,7 @@
                     <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn-custom">
                         <?= get_field("kennismakenbtn")['title'] ?>
                         <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go to article"
-                            class="testimonial-arrow" />
+                            class="go-arrow" />
                     </a>
                 </div>
             </div>
@@ -276,7 +276,7 @@
                                 style="color: #132030;">
                                 <?= get_field("neemcontactopbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                    alt="go onze expertises" class="testimonial-arrow" />
+                                    alt="go onze expertises" class="go-arrow" />
                             </a>
 
                         </div>
@@ -286,7 +286,7 @@
                                 style="color: #132030;">
                                 <?= get_field("onzewerkwijzebtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                    alt="go onze expertises" class="testimonial-arrow" />
+                                    alt="go onze expertises" class="go-arrow" />
                             </a>
 
                         </div>
@@ -315,7 +315,7 @@
                                     <a href="<?= get_field("contactbtn")['url'] ?>" class="btn-custom">
                                         <?= get_field("contactbtn")['title'] ?>
                                         <img src="<?= get_field("arrow")['url'] ?>"
-                                            alt="<?= get_field("arrow")['alt'] ?>" class="testimonial-arrow"
+                                            alt="<?= get_field("arrow")['alt'] ?>" class="go-arrow"
                                             style="pointer-events: auto ;z-index: 1000 " />
                                     </a>
                                 </div>
@@ -326,7 +326,7 @@
                                         style="color: #132030;">
                                         <?= get_field("veelgesteldevragenbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                            alt="go onze expertises" class="testimonial-arrow" />
+                                            alt="go onze expertises" class="go-arrow" />
                                     </a>
 
                                 </div>
@@ -430,7 +430,7 @@
                             <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="btn-custom">
                                 <?= get_field("vragenaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
-                                    alt="go to article" class="testimonial-arrow" />
+                                    alt="go to article" class="go-arrow" />
                             </a>
 
                         </div>

@@ -23,19 +23,6 @@
             color: #feffff;
         }
 
-        .pro-hero-text {
-            text-align: center;
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 300;
-            font-family: "Libre Franklin", sans-serif;
-            letter-spacing: 0px;
-            color: #ffffff;
-            opacity: 1;
-            width: 505px;
-            display: block;
-            margin-bottom: 10px;
-        }
 
 
         .img-container {
@@ -96,7 +83,8 @@
 
         .blauw-left-text {
             text-align: left;
-            font-size: 44px;
+            /* font-size: 44px; */
+            font-size: 32px;
             line-height: 46px;
             font-weight: 300;
             font-family: "Richmond Display", serif;
@@ -189,7 +177,7 @@
         }
 
         .swiper-text {
-            font-size: 16px;
+            font-size: 26px;
             font-weight: 300;
             white-space: nowrap;
             text-align: left;
@@ -198,6 +186,9 @@
             letter-spacing: 0px;
             color: #132030;
             opacity: 1;
+            position: relative !important;
+            top: -13px;
+            left: 8px;
         }
 
         .swiper-button-prev,
@@ -234,15 +225,13 @@
 
         .swiper-container .swiper-button-prev {
             position: absolute;
-            /* left: 82% !important;
-        top: -70px !important; */
-            left: -2% !important;
+            left: -8% !important;
             top: -13px !important;
         }
 
         .swiper-container .swiper-button-next {
             position: absolute;
-            right: 5px !important;
+            right: 9px !important;
             top: -12px !important;
         }
 
@@ -256,7 +245,7 @@
         @media (min-width: 768px) {
             .swiper-container .swiper-button-prev {
                 position: absolute;
-                left: -3% !important;
+                left: -8% !important;
                 top: -13px !important;
             }
         }
@@ -264,6 +253,10 @@
 
 
         @media (min-width: 992px) {
+            ..blauw-left-text {
+                font-size: 44px;
+            }
+
             .first-blue-block {
                 height: 662px;
                 margin-top: -26px;
@@ -301,34 +294,30 @@
     <div>
         <!-- Hero Section -->
         <div class="hero-section flex-column">
-            <div class="hero-content">
+            <div class="hero-content text-center">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="pro-hero-title" style="transition-delay: .25s;" data-aos="fade-up" data-aos-offset="100"
-                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <h1 class="pro-hero-title text-center" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
                         </span>
                     </h1>
                 </div>
-            </div>
-            <span class="pro-hero-text">
-                <span class="d-block">
-                    <?= get_field("herotext") ?>
+                <span class="pro-hero-text">
+                    <span class="d-block">
+                        <?= get_field("herotext") ?>
+                    </span>
                 </span>
-            </span>
-            <div class="button-group mt-4">
-                <div class="circle-border  btn-primary-custom "
-                    style=" width: 176px; pointer-events: auto; z-index: 1000; ">
-                    <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn btn-primary">
+
+                <div class="circle-border  btn-primary-custom mt-4" style="width: fit-content;">
+                    <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn-custom">
                         <?= get_field("meerwetenbtn")['title'] ?>
+                        <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go kennismaken"
+                            class="go-arrow" />
                     </a>
-                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go kennismaken"
-                        style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+
                 </div>
             </div>
-
-
-
         </div>
 
 
@@ -375,8 +364,9 @@
         <div class="white-contianer">
             <div class="container  ">
                 <div class="row pt-5 pb-5  ">
-                    <div class="col-12 col-lg-6 col-md-6 blauw-left-text" data-aos="fade-right" data-aos-offset="100"
-                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="col-12 col-lg-6 col-md-6 blauw-left-text mb-3" data-aos="fade-right"
+                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
                         <?= get_field("lefttext") ?>
                     </div>
                     <!-- offset-lg-1 -->
@@ -387,13 +377,12 @@
 
 
                             <div class="button-group">
-                                <div class="circle-border  btn-primary-custom " style="width:110px ">
-                                    <a href="<?= get_field("contactlink")['url'] ?>" class="btn btn-primary">
+                                <div class="circle-border  btn-primary-custom " style="width: fit-content;">
+                                    <a href="<?= get_field("contactlink")['url'] ?>" class="btn-custom">
                                         <?= get_field("contactlink")['title'] ?>
+                                        <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                            alt="go onze expertises" class="go-arrow" />
                                     </a>
-                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                        alt="go onze expertises" class="testimonial-arrow"
-                                        style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
                                 </div>
                                 <div class="circle-border gap-1  btn-custom-container " style="width:195px  ">
                                     <a href="<?= get_field("veelvragenlink")['url'] ?>" class="btn-custom"
@@ -477,9 +466,6 @@
                             ?>
                         </div>
                     </div>
-
-                    <div class="swiper-pagination"></div>
-
                 </div>
             </div>
 
@@ -508,10 +494,7 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
-            loop: true,
-            autoplay: { //added
-                delay: 2000, //added
-            },
+
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",

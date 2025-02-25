@@ -16,7 +16,7 @@
     }
 
     .kennis-hero-title {
-        font-size: 25px;
+        font-size: 54px;
         line-height: 76px;
         font-weight: 500;
         font-family: "Richmond Display", serif;
@@ -34,8 +34,6 @@
         letter-spacing: 1px;
         color: #ffffff;
         opacity: 1;
-        /* width: 505px; */
-        /* display: block; */
         margin-bottom: 10px;
     }
 
@@ -179,21 +177,25 @@
 
         <!-- Hero Section -->
         <div class="hero-section flex-column">
-            <div class="hero-content">
+            <div class="hero-content text-center">
                 <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="kennis-hero-title fadeIn  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                        data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <h1 class="kennis-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span class="d-block">
                             <?= get_field("herotitle") ?>
                         </span>
                     </h1>
                 </div>
-            </div>
-            <span class="kennis-hero-text ">
-                <span class="d-block">
-                    <?= get_field("herotext") ?>
+                <span class="kennis-hero-text ">
+                    <span class="d-block">
+                        <?= get_field("herotext") ?>
+                    </span>
                 </span>
-            </span>
+
+
+
+            </div>
+
         </div>
         <!-- End of Hero Section -->
 
