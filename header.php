@@ -91,7 +91,7 @@
                                 <a class="nav-link  " href="<?= esc_url(home_url('/over-ons')); ?>">Overons</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="<?= esc_url(home_url('/contact')); ?>">Contact</a>
+                                <a class="nav-link " href="<?= esc_url(home_url('/werkwijze')); ?>">Werkwijze</a>
                             </li>
 
                             <!-- The button here for smaller screens -->
