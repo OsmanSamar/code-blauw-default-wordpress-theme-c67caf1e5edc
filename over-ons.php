@@ -412,7 +412,6 @@
 
 
                 <!--White-containe-->
-
                 <div class="whi-container  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
@@ -427,9 +426,6 @@
                          echo '</pre>';
                          ?>                     -->
                         </span>
-
-
-
                         <div class="circle-border btn-primary-custom  gap-1">
                             <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="btn-custom">
                                 <?= get_field("vragenaanbtn")['title'] ?>

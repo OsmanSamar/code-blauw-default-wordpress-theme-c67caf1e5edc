@@ -52,7 +52,7 @@
         letter-spacing: 0px;
     }
 
-    .swiper-container {
+    /* .swiper-container {
         width: 100%;
         margin: 0 auto;
         overflow: clip;
@@ -68,19 +68,19 @@
         width: 10px;
         height: 10px;
         background-color: #FFFFFF;
-    }
+    } */
 
     .swiper-header {
-        display: flex;
+        /* display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
         /* position: absolute;
         top: -70px;
         right: 0;
         width: 100%; */
     }
 
-    .swiper-text {
+    /* .swiper-text {
         font-size: 26px;
         font-weight: 300;
         white-space: nowrap;
@@ -90,12 +90,12 @@
         letter-spacing: 0px;
         color: #132030;
         opacity: 1;
-    }
+    } */
 
     .swiper-button-prev,
     .swiper-button-next {
         /* position: static !important; */
-        position: relative !important;
+        /* position: relative !important;
         width: 41px;
         height: 41px;
         border: 1px solid #132030;
@@ -104,11 +104,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 10;
+        z-index: 10; */
 
     }
 
-
+    /* 
     .swiper-button-next::after,
     .swiper-rtl .swiper-button-prev::after {
         font-size: 16px;
@@ -121,57 +121,61 @@
     .swiper-rtl .swiper-button-prev::after {
         font-size: 16px;
         font-weight: 900;
-    }
+    } */
 
 
     .swiper-container .swiper-button-prev {
         position: absolute;
         /* left: 82% !important;
         top: -70px !important; */
-        left: -2% !important;
-        top: -13px !important;
+        /* left: -2% !important;
+        top: -13px !important; */
     }
 
-    .swiper-container .swiper-button-next {
+    /* .swiper-container .swiper-button-next {
         position: absolute;
         right: 5px !important;
         top: -12px !important;
-    }
+    } */
 
     /* End of Swiper */
+
+    .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .section-text {
+        font-size: 26px;
+        font-weight: 300;
+        white-space: nowrap;
+        text-align: center;
+        line-height: 50px;
+        font-family: 'Richmond Display', serif;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+
+    }
 
 
 
     .container-block {
-        /* background-color: #F7F6F4; */
         width: 100%;
         max-width: 1700px;
         margin: 0 auto;
     }
 
     .whi-container {
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        padding: 20px;
+
         width: 100%;
-        max-width: 1000px;
-        position: relative;
-        /* z-index: 1; */
-        top: -60px;
-        height: 182px;
-        border-radius: 5px;
-        margin: 0 auto;
+        max-width: 1289px;
+
     }
 
-    .organ-title {
-        font-size: 24px;
-        line-height: 35px;
-        font-weight: 300;
-        font-family: "Richmond Display", serif;
-        text-align: center;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    }
+
 
 
 
@@ -183,11 +187,11 @@
 
 
     @media (min-width: 768px) {
-        .swiper-container .swiper-button-prev {
+        /* .swiper-container .swiper-button-prev {
             position: absolute;
             left: -3% !important;
             top: -13px !important;
-        }
+        } */
 
 
     }
@@ -195,22 +199,7 @@
 
     @media (min-width: 992px) {
 
-
-        /* 
-            .button-container {
-                width: 436px;
-            }
-
-            .button-text {
-                text-align: left;
-                font-size: 16px;
-            } */
-
-
-
-
-
-        .swiper-container .swiper-button-prev {
+        /* .swiper-container .swiper-button-prev {
             position: absolute;
             left: -12% !important;
             top: -12px !important;
@@ -229,10 +218,17 @@
 
         .whi-container {
             height: 131px;
-        }
+        } */
 
         .first-blue-block {
             margin-top: unset;
+            height: 868px;
+
+        }
+
+        .whi-container {
+            position: relative;
+            top: -64px;
         }
 
     }
@@ -279,70 +275,67 @@
         <!--first-blue-block  -->
         <div class="first-blue-block position-relative">
             <div class="container blue-container">
-                <div class="swiper-container swiper position-relative ">
-
-                    <div class="swiper-header mb-5">
-                        <div class="swiper-text">
-                            <?= get_field("klantcases") ?>
-                        </div>
-
-                    </div>
-
-                    <div class="swiperwerken3 werk-swiper3">
-                        <div class="swiper-wrapper">
-                            <?php
-                            $delay = 0;
-                            $posts = get_posts([
-                                'post_type' => 'werken_voor',
-                                'numberposts' => -1,
-                                "order" => 'asc'
-                            ]);
-
-                            foreach ($posts as $post) {
-                                $fields = get_fields($post->ID);
-                                $testimonial = get_field("testimonialwerkvoor");
-                                ?>
-                            <div class="swiper-slide d-flex flex-column h-100">
-                                <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column h-100">
-                                    <div class="testimonial-slide d-flex flex-column h-100">
-                                        <img src="<?= $testimonial["logo"]['url'] ?>"
-                                            alt=" <?= $testimonial['logo']['alt'] ?>" class="card-img-top"
-                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
-
-                                        <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <span class="card-text">
-                                                    <?= $post->post_title ?></span>
-                                                <span class="d-flex justify-content-center align-items-center arrow">
-                                                    <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                        alt=" <?= $testimonial['white_arrow']['alt'] ?>"
-                                                        class="card-img-top"
-                                                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
-                                                </span>
-                                            </div>
-                                            <span class="card-title mt-auto">
-                                                <span><?= $testimonial["text"] ?></span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-header ">
+                            <div class="section-text">
+                                <?= get_field("klantcases") ?>
                             </div>
-                            <?php
-                                $delay += 300;
-                            }
-                            ?>
                         </div>
                     </div>
-                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-5">
+                    <?php
+                    $posts = get_posts([
+                        'post_type' => 'werken_voor',
+                        'numberposts' => -1,
+                        'order' => 'asc'
+                    ]);
+
+                    foreach ($posts as $post) {
+                        $fields = get_fields($post->ID);
+                        $testimonial = get_field("testimonialwerkvoor");
+                        ?>
+                    <div class="col d-flex">
+                        <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column w-100">
+                            <div class="testimonial-slide d-flex flex-column w-100 p-3 border rounded">
+                                <img src="<?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
+                                    class="card-img-top"
+                                    style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
+
+                                <div class="card-body d-flex flex-column mt-1 mb-0 pb-4 pt-2 h-100">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="card-text"><?= $post->post_title ?></span>
+                                        <span class="d-flex justify-content-center align-items-center arrow">
+                                            <img src="<?= $testimonial["white_arrow"]['url'] ?>"
+                                                alt=" <?= $testimonial['white_arrow']['alt'] ?>" class="card-img-top"
+                                                style="width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                                        </span>
+                                    </div>
+                                    <span class="card-title mt-auto">
+                                        <span><?= $testimonial["text"] ?></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
+
+
+
+
         </div>
         <!--End of first-blue-block  -->
 
         <!--White-containe-->
-        <div class="container-block" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-            data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <div class="whi-container d-flex align-items-center justify-content-around">
+        <div class="container-block">
+            <div class="whi-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
                     <span class="organ-title">
                         Ook de volgende stap zetten met jouw organisatie?
@@ -354,20 +347,21 @@
                          print_r($organisatietext);
                          echo '</pre>';
                          ?> -->
-
                     </span>
-
-                    <div class="circle-border btn-primary-custom " style="width: fit-content;">
-                        <a href="<?= get_field("vraageenbtn")['url'] ?>" class="btn btn-primary">
+                    <div class="circle-border btn-primary-custom  gap-1">
+                        <a href="<?= get_field("vraageenbtn")['url'] ?>" class="btn-custom">
                             <?= get_field("vraageenbtn")['title'] ?>
+                            <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
+                                alt="go Contact page" class="testimonial-arrow" />
                         </a>
-                        <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
-                            alt="go Contact page" />
+
                     </div>
 
                 </div>
             </div>
         </div>
+
+
         <!--End of wshite-containe-->
 
 
@@ -415,7 +409,7 @@
         // R ein itia li ze A O S after Swiper initialization
         on: {
             init: function() {
-                AOS.refresh();
+                AOS.refres h();
             },
             slideChangeTransitionEnd: function() {
                 AOS.refresh();
