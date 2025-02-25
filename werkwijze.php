@@ -189,15 +189,15 @@
         align-items: baseline;
         justify-content: space-between;
         position: absolute;
-        /* top: -70px; */
-        top: -41px;
+        top: -70px;
+        /* top: -41px; */
         right: 0;
         width: 100%;
 
     }
 
     .swiper-text {
-        font-size: 16px;
+        font-size: 26px;
         font-weight: 300;
         white-space: nowrap;
         text-align: left;
@@ -244,14 +244,14 @@
         position: absolute;
         /* left: 82% !important;
         top: -70px !important; */
-        left: -2% !important;
-        top: -13px !important;
+        left: -8% !important;
+        top: -2px !important;
     }
 
     .swiper-container .swiper-button-next {
         position: absolute;
-        right: 5px !important;
-        top: -12px !important;
+        right: 9px !important;
+        top: -2px !important;
     }
 
 
@@ -307,7 +307,8 @@
         position: relative;
         z-index: 1;
         /* top: -60px; */
-        top: 105px;
+        /* top: 105px; */
+        top: 58px;
         height: 131px;
         border-radius: 5px;
         margin: 0 auto;
@@ -345,8 +346,8 @@
 
         .swiper-container .swiper-button-prev {
             position: absolute;
-            left: -3% !important;
-            top: -13px !important;
+            left: -8% !important;
+            top: -3px !important;
         }
 
         .right-text,
@@ -415,7 +416,7 @@
         .swiper-container .swiper-button-prev {
             position: absolute;
             left: -12% !important;
-            top: -12px !important;
+            top: -2px !important;
         }
 
         .swiper-text {
@@ -583,10 +584,9 @@
         <div class="first-blue-block position-relative">
             <div class="container blue-container">
                 <div class="swiper-container werk-swiper3 position-relative mt-5">
-                    <div class="swiper-header mb-5">
+                    <div class="swiper-header ">
                         <div class="swiper-text">
-                            jjjjjjjjjjjjjjjjjjjjjj
-                            <?= get_field("organisatiesvoortitle") ?>
+                            <?= get_field("werkentitle") ?>
                         </div>
                         <div class="d-flex align-items-center gap-2">
                             <div class="swiper-button-prev"></div>
@@ -594,51 +594,56 @@
                         </div>
                     </div>
 
-                    <div class="swiper-wrapper">
-                        <?php
-                        $delay = 0;
-                        $posts = get_posts([
-                            'post_type' => 'werken_voor',
-                            'numberposts' => -1,
-                            "order" => 'asc'
-                        ]);
 
-                        foreach ($posts as $post) {
-                            $fields = get_fields($post->ID);
-                            $testimonial = get_field("testimonialwerkvoor");
-                            ?>
-                        <div class="swiper-slide d-flex flex-column h-100">
-                            <a href="<?= get_permalink($post) ?>" class="d-flex flex-column h-100">
+                    <div class="newswiper1 werk-swiper3">
+                        <div class="swiper-wrapper">
+                            <?php
+                            $delay = 0;
+                            $posts = get_posts([
+                                'post_type' => 'werken_voor',
+                                'numberposts' => -1,
+                                "order" => 'asc'
+                            ]);
 
-                                <div class="testimonial-slide d-flex flex-column h-100">
-                                    <img src="<?= $testimonial["logo"]['url'] ?>"
-                                        alt="<?= $testimonial['logo']['alt'] ?>" class="card-img-top"
-                                        style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
-                                    <div class="card-body d-flex flex-column mt-1 mb-0 pb-4 pt-2 h-100">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="card-text"><?= $post->post_title ?></span>
-                                            <span class="d-flex justify-content-center align-items-center arrow">
-                                                <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                    alt="<?= $testimonial['white_arrow']['alt'] ?>" class="card-img-top"
-                                                    style="width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                            foreach ($posts as $post) {
+                                $fields = get_fields($post->ID);
+                                $testimonial = get_field("testimonialwerkvoor");
+                                ?>
+                            <div class="swiper-slide d-flex flex-column h-100  ">
+                                <a href="<?= get_permalink($post) ?>" class="d-flex flex-column h-100">
+                                    <div class="testimonial-slide d-flex flex-column h-100">
+                                        <img src="<?= $testimonial["logo"]['url'] ?>"
+                                            alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
+                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
+                                        <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="card-text">
+                                                    <?= $post->post_title ?></span>
+                                                <span class="d-flex justify-content-center align-items-center arrow">
+                                                    <img src="<?= $testimonial["white_arrow"]['url'] ?>"
+                                                        alt=" <?= $testimonial['white_arrow']['alt'] ?>"
+                                                        class="card-img-top"
+                                                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
+                                                </span>
+                                            </div>
+                                            <span class="card-title mt-auto">
+                                                <span><?= $testimonial["text"] ?></span>
                                             </span>
                                         </div>
-                                        <span class="card-title mt-auto">
-                                            <span><?= $testimonial["text"] ?></span>
-                                        </span>
+
+
                                     </div>
-                                </div>
-                            </a>
+
+                                </a>
+                            </div>
+                            <?php
+                                $delay += 300;
+                            }
+                            ?>
                         </div>
-                        <?php
-                            $delay += 300;
-                        }
-                        ?>
                     </div>
 
                 </div>
-
-
 
                 <!--White-containe-->
                 <div class="small-whit-container">
@@ -671,30 +676,14 @@
                     </div>
                 </div>
                 <!--End of wshite-containe-->
+
+
+
+
+
             </div>
+            <!--first-blue-block  -->
         </div>
-        <!--first-blue-block  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
 
 
 
@@ -722,113 +711,135 @@
 
 
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const swiper = new Swiper('.sample-slider', {
 
-            slidesPerView: 2,
-            centeredSlides: true,
-            spaceBetween: 24,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.sample-slider', {
+
+                slidesPerView: 2,
+                centeredSlides: true,
+                spaceBetween: 24,
+
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+
+                breakpoints: {
+
+                    360: {
+                        slidesPerView: 2,
+                        spaceBetween: 1,
+
+                    },
+
+                    540: {
+                        slidesPerView: 3.2,
+                        spaceBetween: 1,
+
+                    },
+
+                    556: {
+                        slidesPerView: 3.2,
+                        spaceBetween: 1,
+                    },
+                    992: {
+
+                        slidesPerView: 5,
+                        spaceBetween: 2,
+                    },
+                    1025: {
+                        slidesPerView: 6,
+                        spaceBetween: 1,
+
+                    }
+
+
+                }
+            });
+        });
+        </script>
+
+
+        <script>
+        let newswiper1 = new Swiper('.werk-swiper3', {
+            slidesPerView: 2.5,
+            grabCursor: true,
+            spaceBetween: 20,
 
             pagination: {
                 el: '.swiper-pagination',
+                clickable: true,
             },
+
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
 
+
             breakpoints: {
-
                 360: {
-                    slidesPerView: 2,
-                    spaceBetween: 1,
-
+                    slidesPerView: 1.3
                 },
-
                 540: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 1,
-
+                    slidesPerView: 2
                 },
-
-                556: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 1,
+                768: {
+                    slidesPerView: 2.5
                 },
                 992: {
-
-                    slidesPerView: 5,
-                    spaceBetween: 2,
+                    slidesPerView: 3.2
                 },
                 1025: {
-                    slidesPerView: 6,
-                    spaceBetween: 1,
+                    slidesPerView: 4
+                },
+            },
 
+            // R ein itia li ze A O S after Swiper initialization
+            on: {
+                init: function() {
+                    AOS.refresh();
+                },
+                slideChangeTransitionEnd: function() {
+                    AOS.refresh();
                 }
 
-
             }
+
+
         });
-    });
-    </script>
 
-
-    <script>
-    let newswiper1 = new Swiper('.werk-swiper3', {
-        slidesPerView: 2.5,
-        grabCursor: true,
-        spaceBetween: 20,
-
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-
-        breakpoints: {
-            360: {
-                slidesPerView: 1.3
-            },
-            540: {
-                slidesPerView: 2
-            },
-            768: {
-                slidesPerView: 2.5
-            },
-            992: {
-                slidesPerView: 3.2
-            },
-            1025: {
-                slidesPerView: 4
-            },
-        },
-
-        // R ein itia li ze A O S after Swiper initialization
-        on: {
-            init: function() {
-                AOS.refresh();
-            },
-            slideChangeTransitionEnd: function() {
-                AOS.refresh();
-            }
-
-        }
-
-
-    });
-
-    // I nitialize AOS
-    AOS.init({
-        duration: 800, // Animation duration
-        once: true, // Only animate once
-    });
-    </script>
+        // I nitialize AOS
+        AOS.init({
+            duration: 800, // Animation duration
+            once: true, // Only animate once
+        });
+        </script>
 
 </main>
 
