@@ -7,7 +7,7 @@
     .hero-section {
         background: url("<?= get_field('heroimage')['url'] ?> ");
         width: 100%;
-        max-width: 1700px;
+        /* max-width: 1700px; */
         margin: 0 auto;
         background-size: cover;
         background-position: center;
@@ -41,7 +41,7 @@
 
     .blue-block {
         width: 100%;
-        max-width: 1700px;
+        /* max-width: 1700px; */
         margin: 0 auto;
         background-color: #CCE1F4;
         padding-top: 50px;

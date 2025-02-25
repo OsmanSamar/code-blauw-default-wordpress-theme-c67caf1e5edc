@@ -3,82 +3,82 @@
 
 <main class="cases">
     <style>
-    .hero-section {
-        background: url("<?= get_field('heroimage')['url'] ?> ");
-        width: 100%;
-        /* max-width: 1700px; */
-        margin: 0 auto;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
+        .hero-section {
+            background: url("<?= get_field('heroimage')['url'] ?> ");
+            width: 100%;
+            /* max-width: 1700px; */
+            margin: 0 auto;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
 
-    /* End of style Hero */
+        /* End of style Hero */
 
-    .testimonial-slide {
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border-radius: 5px;
-        padding: 18px;
-        box-shadow: 10px 10px 60px #2072BE1A;
-        text-align: left;
-        max-width: 400px;
-        margin: auto;
-        position: relative;
-        z-index: 3;
+        .testimonial-slide {
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            padding: 18px;
+            box-shadow: 10px 10px 60px #2072BE1A;
+            text-align: left;
+            max-width: 400px;
+            margin: auto;
+            position: relative;
+            z-index: 3;
 
-    }
-
-
-    .section-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    .section-text {
-        font-size: 26px;
-        font-weight: 300;
-        white-space: nowrap;
-        text-align: center;
-        line-height: 50px;
-        font-family: 'Richmond Display', serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-
-    }
+        }
 
 
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    .container-block {
-        width: 100%;
-        max-width: 1700px;
-        margin: 0 auto;
-    }
+        }
 
-    .whi-container {
+        .section-text {
+            font-size: 26px;
+            font-weight: 300;
+            white-space: nowrap;
+            text-align: center;
+            line-height: 50px;
+            font-family: 'Richmond Display', serif;
+            letter-spacing: 0px;
+            color: #132030;
+            opacity: 1;
 
-        width: 100%;
-        max-width: 1289px;
-
-    }
+        }
 
 
 
-    @media (min-width: 992px) {
-        .first-blue-block {
-            margin-top: unset;
-            height: 868px;
+        .container-block {
+            width: 100%;
+            max-width: 1700px;
+            margin: 0 auto;
         }
 
         .whi-container {
-            position: relative;
-            top: -64px;
+
+            width: 100%;
+            max-width: 1289px;
+
         }
 
-    }
+
+
+        @media (min-width: 992px) {
+            .first-blue-block {
+                margin-top: unset;
+                height: 868px;
+            }
+
+            .whi-container {
+                position: relative;
+                top: -64px;
+            }
+
+        }
     </style>
 
     <div>
@@ -144,30 +144,30 @@
                         $fields = get_fields($post->ID);
                         $testimonial = get_field("testimonialwerkvoor");
                         ?>
-                    <div class="col d-flex">
-                        <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column w-100 h-100">
-                            <div class="testimonial-slide d-flex flex-column  ">
-                                <img src="<?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
-                                    class="card-img-top"
-                                    style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
+                        <div class="col d-flex">
+                            <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column w-100 h-100">
+                                <div class="testimonial-slide d-flex flex-column  ">
+                                    <img src="<?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
+                                        class="card-img-top"
+                                        style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
 
-                                <div class="card-body d-flex flex-column mt-1 mb-0 pb-4 pt-2 h-100">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="card-text"><?= $post->post_title ?></span>
-                                        <span class="d-flex justify-content-center align-items-center arrow">
-                                            <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                alt=" <?= $testimonial['white_arrow']['alt'] ?>" class="card-img-top"
-                                                style="width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                                    <div class="card-body d-flex flex-column mt-1 mb-0 pb-4 pt-2 h-100">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="card-text"><?= $post->post_title ?></span>
+                                            <span class="d-flex justify-content-center align-items-center arrow">
+                                                <img src="<?= $testimonial["white_arrow"]['url'] ?>"
+                                                    alt=" <?= $testimonial['white_arrow']['alt'] ?>" class="card-img-top"
+                                                    style="width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                                            </span>
+                                        </div>
+                                        <span class="card-title mt-auto">
+                                            <span><?= $testimonial["text"] ?></span>
                                         </span>
                                     </div>
-                                    <span class="card-title mt-auto">
-                                        <span><?= $testimonial["text"] ?></span>
-                                    </span>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <?php
+                            </a>
+                        </div>
+                        <?php
                     }
                     ?>
                 </div>
@@ -216,62 +216,62 @@
 
 
     <script>
-    let swiperwerken3 = new Swiper('.werk-swiper3', {
-        slidesPerView: 2.5,
-        grabCursor: true,
-        spaceBetween: 20,
+        let swiperwerken3 = new Swiper('.werk-swiper3', {
+            slidesPerView: 2.5,
+            grabCursor: true,
+            spaceBetween: 20,
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        // loop: true,
-        // autoplay: { //added
-        //      delay: 2000, //added
-        //  },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // loop: true,
+            // autoplay: { //added
+            //      delay: 2000, //added
+            //  },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
 
 
-        breakpoints: {
-            360: {
-                slidesPerView: 1.3
+            breakpoints: {
+                360: {
+                    slidesPerView: 1.3
+                },
+                540: {
+                    slidesPerView: 2
+                },
+                768: {
+                    slidesPerView: 2.5
+                },
+                992: {
+                    slidesPerView: 3.2
+                },
+                1025: {
+                    slidesPerView: 4
+                },
             },
-            540: {
-                slidesPerView: 2
-            },
-            768: {
-                slidesPerView: 2.5
-            },
-            992: {
-                slidesPerView: 3.2
-            },
-            1025: {
-                slidesPerView: 4
-            },
-        },
 
-        // R ein itia li ze A O S after Swiper initialization
-        on: {
-            init: function() {
-                AOS.refres h();
-            },
-            slideChangeTransitionEnd: function() {
-                AOS.refresh();
+            // R ein itia li ze A O S after Swiper initialization
+            on: {
+                init: function () {
+                    AOS.refres h();
+                },
+                slideChangeTransitionEnd: function () {
+                    AOS.refresh();
+                }
+
             }
 
-        }
 
+        });
 
-    });
-
-    // I nitialize AOS
-    AOS.init({
-        duration: 800, // Animation duration
-        once: true, // Only animate once
-    });
+        // I nitialize AOS
+        AOS.init({
+            duration: 800, // Animation duration
+            once: true, // Only animate once
+        });
     </script>
 
 

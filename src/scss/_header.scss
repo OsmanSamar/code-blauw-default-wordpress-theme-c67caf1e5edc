@@ -384,6 +384,7 @@ strong:nth-of-type(2) {
   line-height: 20px;
   font-weight: 300;
   text-align: left;
+  letter-spacing: 0px;
 }
 
 .test-img-border {
@@ -866,10 +867,8 @@ strong:nth-of-type(2) {
   }
 
   .test-post-title {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 21px;
     flex: 1;
-    letter-spacing: 3px;
     /* text to take available space */
   }
 
