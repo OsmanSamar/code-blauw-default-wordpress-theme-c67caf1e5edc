@@ -230,12 +230,12 @@
                     </span>
                 </span>
 
-                <div class="circle-border btn-primary-custom mt-4">
+                <div class="circle-border btn-primary-custom mt-4" style="width: 148px;">
                     <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn-custom">
                         <?= get_field("kennismakenbtn")['title'] ?>
+                        <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go to article"
+                            class="testimonial-arrow" />
                     </a>
-                    <img src="<?= get_field("arrow")['url'] ?>" alt="<?= get_field("arrow")['alt'] ?>"
-                        style="pointer-events: auto ;z-index: 1000 " />
                 </div>
             </div>
         </div>
@@ -270,23 +270,25 @@
                     </span>
 
                     <div class="button-group">
-                        <div class="circle-border gap-1 " style="width: 182px;">
+                        <div class="circle-border gap-1 ">
+                            <!--  style="width: 182px;" -->
                             <a href="<?= get_field("neemcontactopbtn")['url'] ?>" class="btn-custom"
                                 style="color: #132030;">
                                 <?= get_field("neemcontactopbtn")['title'] ?>
+                                <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                    alt="go onze expertises" class="testimonial-arrow" />
                             </a>
-                            <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg" alt="go onze expertises"
-                                class="testimonial-arrow"
-                                style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
+
                         </div>
-                        <div class="circle-border gap-1 " style="width: 172px; ">
+                        <div class="circle-border gap-1 ">
+                            <!-- style="width: 172px; " -->
                             <a href="<?= get_field("onzewerkwijzebtn")['url'] ?>" class="btn-custom"
                                 style="color: #132030;">
                                 <?= get_field("onzewerkwijzebtn")['title'] ?>
+                                <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                    alt="go onze expertises" class="testimonial-arrow" />
                             </a>
-                            <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg" alt="go onze expertises"
-                                class="testimonial-arrow"
-                                style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
+
                         </div>
                     </div>
                 </div>
@@ -300,7 +302,7 @@
                 <div class="row">
                     <div class="col-12 col-lg-6 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <div class="d-flex flex-column  text-left gap-4">
+                        <div class="d-flex flex-column  text-left gap-4 mb-4">
                             <span class="fleft-text">
                                 <?= get_field("flefttext") ?>
                             </span>
@@ -308,24 +310,25 @@
                                 <?= get_field("seclefttext") ?>
                             </span>
                             <div class="button-group">
-                                <div class="circle-border  btn-primary-custom " style="  width: fit-content;">
-                                    <!-- width:110px -->
-                                    <a href="<?= get_field("contactbtn")['url'] ?>" class="btn btn-primary">
+
+                                <div class="circle-border btn-primary-custom " style="width: 110px;">
+                                    <a href="<?= get_field("contactbtn")['url'] ?>" class="btn-custom">
                                         <?= get_field("contactbtn")['title'] ?>
+                                        <img src="<?= get_field("arrow")['url'] ?>"
+                                            alt="<?= get_field("arrow")['alt'] ?>" class="testimonial-arrow"
+                                            style="pointer-events: auto ;z-index: 1000 " />
                                     </a>
-                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                        alt="go onze expertises" class="testimonial-arrow"
-                                        style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
                                 </div>
-                                <div class="circle-border gap-1  btn-custom-container " style=" width: fit-content;  ">
-                                    <!-- width:195px  -->
+
+
+                                <div class="circle-border gap-1  btn-custom-container " style="width: 190px;">
                                     <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="btn-custom"
                                         style="color: #132030;">
                                         <?= get_field("veelgesteldevragenbtn")['title'] ?>
+                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                            alt="go onze expertises" class="testimonial-arrow" />
                                     </a>
-                                    <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                        alt="go onze expertises" class="testimonial-arrow"
-                                        style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+
                                 </div>
                             </div>
                         </div>
@@ -384,8 +387,7 @@
                                                 <span class="card-text">
                                                     <?= $post->post_title ?></span>
                                                 <span class="d-flex justify-content-center align-items-center arrow">
-                                                    <!-- <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
-                                                        alt="go to article" class="icon" /> -->
+
                                                     <img src="<?= $testimonial["white_arrow"]['url'] ?>"
                                                         alt=" <?= $testimonial['white_arrow']['alt'] ?>"
                                                         class="card-img-top"
@@ -410,36 +412,35 @@
 
 
                 <!--White-containe-->
-                <div class="small-whit-container ">
-                    <div class="whi-container  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                        data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
-                            <span class="organ-title">
-                                Ook de volgende stap zetten met jouw organisatie?
-                                <?= get_field("organisatietext") ?>
-                                <!-- 
+
+                <div class="whi-container  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
+                        <span class="organ-title">
+                            Ook de volgende stap zetten met jouw organisatie?
+                            <?= get_field("organisatietext") ?>
+                            <!-- 
                          <?php
                          $organisatietext = get_field("organisatietext");
                          echo '<pre>';
                          print_r($organisatietext);
                          echo '</pre>';
                          ?>                     -->
-                            </span>
+                        </span>
 
 
 
-                            <div class="circle-border gap-1  btn-primary-custom " style=" width: fit-content;">
-                                <!-- width:195px -->
-
-                                <a h ref="<?= get_field("vraagaanbtn")['url'] ?>" class="btn btn-primary">
-                                    <?= get_field("vraagaanbtn")['title'] ?>
-                                </a>
+                        <div class="circle-border btn-primary-custom  gap-1">
+                            <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="btn-custom">
+                                <?= get_field("vragenaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
                                     alt="go to article" class="testimonial-arrow" />
-                            </div>
+                            </a>
+
                         </div>
                     </div>
                 </div>
+
                 <!--End of wshite-containe-->
             </div>
         </div>
@@ -469,7 +470,7 @@
         grabCursor: true,
         spaceBetween: 20,
 
-        pagi nation: {
+        pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
@@ -477,13 +478,13 @@
         //  autoplay: { //added
         //      delay: 2000, //added
         //  },
-        navi gation: {
+        navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
 
 
-        brea kpoints: {
+        breakpoints: {
             360: {
                 slidesPerView: 1.3
             },
@@ -506,7 +507,7 @@
             init: function() {
                 AOS.refresh();
             },
-            slid eChangeTransitionEnd: function() {
+            slideChangeTransitionEnd: function() {
                 AOS.refresh();
             }
 
@@ -521,6 +522,7 @@
         once: true, // Only animate once
     });
     </script>
+
 
 </main>
 
