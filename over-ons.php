@@ -230,7 +230,7 @@
                     </span>
                 </span>
 
-                <div class="circle-border btn-primary-custom mt-4" style="width: 148px;">
+                <div class="circle-border btn-primary-custom mt-4" style="width: fit-content;">
                     <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn-custom">
                         <?= get_field("kennismakenbtn")['title'] ?>
                         <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go to article"
@@ -270,7 +270,7 @@
                     </span>
 
                     <div class="button-group">
-                        <div class="circle-border gap-1 ">
+                        <div class="circle-border gap-1 " style="width: fit-content;">
                             <!--  style="width: 182px;" -->
                             <a href="<?= get_field("neemcontactopbtn")['url'] ?>" class="btn-custom"
                                 style="color: #132030;">
@@ -280,7 +280,7 @@
                             </a>
 
                         </div>
-                        <div class="circle-border gap-1 ">
+                        <div class="circle-border gap-1 " style="width: fit-content;">
                             <!-- style="width: 172px; " -->
                             <a href="<?= get_field("onzewerkwijzebtn")['url'] ?>" class="btn-custom"
                                 style="color: #132030;">
