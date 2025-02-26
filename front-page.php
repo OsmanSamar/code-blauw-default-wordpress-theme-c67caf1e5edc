@@ -554,8 +554,8 @@ $fields = get_fields();
                                 <?= get_field("titleoflogos") ?>
                             </div>
                             <div class="d-flex align-items-center gap-2">
-                                <!-- <div class="swiper-button-prev2"></div>
-                                <div class="swiper-button-next2"></div> -->
+                                <div class="swiper-button-prev2"></div>
+                                <div class="swiper-button-next2"></div>
                             </div>
                         </div>
                     </div>
