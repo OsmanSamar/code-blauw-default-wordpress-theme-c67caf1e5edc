@@ -5,301 +5,301 @@ $fields = get_fields();
 <main class="werkwijze">
 
     <style>
-    .hero-section {
-        background: url("<?= get_field('heroimage')['url'] ?> ");
-        width: 100%;
-        /* max-width: 1700px; */
-        margin: 0 auto;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
+        .hero-section {
+            background: url("<?= get_field('heroimage')['url'] ?> ");
+            width: 100%;
+            /* max-width: 1700px; */
+            margin: 0 auto;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
 
-    .werkwijze-hero-title {
-        font-size: 25px;
-        line-height: 76px;
-        font-weight: 500;
-        font-family: "Richmond Display", serif;
-        text-align: center;
-        letter-spacing: 0px;
-        color: #feffff;
-    }
+        .werkwijze-hero-title {
+            font-size: 25px;
+            line-height: 76px;
+            font-weight: 500;
+            font-family: "Richmond Display", serif;
+            text-align: center;
+            letter-spacing: 0px;
+            color: #feffff;
+        }
 
-    .werkwijze-hero-text {
-        text-align: center;
-        font-size: 14px;
-        line-height: 24px;
-        font-weight: 300;
-        font-family: "Libre Franklin", sans-serif;
-        letter-spacing: 1px;
-        color: #ffffff;
-        opacity: 1;
-        margin-bottom: 10px;
-    }
+        .werkwijze-hero-text {
+            text-align: center;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 300;
+            font-family: "Libre Franklin", sans-serif;
+            letter-spacing: 1px;
+            color: #ffffff;
+            opacity: 1;
+            margin-bottom: 10px;
+        }
 
-    .werk-blauwijs-title {
-        text-align: left;
-        font-size: 36px;
-        line-height: 50px;
-        font-weight: 300;
-        font-family: "Richmond Display", serif;
-        letter-spacing: 0px;
-        color: #1E73BE;
-        opacity: 1;
-    }
+        .werk-blauwijs-title {
+            text-align: left;
+            font-size: 36px;
+            line-height: 50px;
+            font-weight: 300;
+            font-family: "Richmond Display", serif;
+            letter-spacing: 0px;
+            color: #1E73BE;
+            opacity: 1;
+        }
 
 
-    .right-text,
-    .right-text-bold {
-        text-align: center;
-        font-size: 16px;
-        line-height: 30px;
-        font-weight: 300;
-        font-family: 'Scala Sans Pro', sans-serif;
-        letter-spacing: 2px;
-        color: #132030;
-        opacity: 1;
-        text-wrap: balance;
-        white-space: break-spaces;
-    }
+        .right-text,
+        .right-text-bold {
+            text-align: center;
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 300;
+            font-family: 'Scala Sans Pro', sans-serif;
+            letter-spacing: 2px;
+            color: #132030;
+            opacity: 1;
+            text-wrap: balance;
+            white-space: break-spaces;
+        }
 
-    .right-text-bold {
-        font-weight: bold;
-    }
+        .right-text-bold {
+            font-weight: bold;
+        }
 
-    /*1. Ann Frank vragen */
-    .werkwijze-block {
-        width: 100%;
-        /* max-width: 1700px; */
-        margin: 0 auto;
-        height: fit-content;
-        /* height: 651px; */
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        /* background-color: red; */
-        opacity: 1;
+        /*1. Ann Frank vragen */
+        .werkwijze-block {
+            width: 100%;
+            /* max-width: 1700px; */
+            margin: 0 auto;
+            height: fit-content;
+            /* height: 651px; */
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            /* background-color: red; */
+            opacity: 1;
 
-    }
+        }
 
-    .center-title {
-        font-size: 36px;
-        line-height: 50px;
-        font-weight: 300;
-        font-family: "Richmond Display", serif;
-        text-align: center;
-        letter-spacing: 0px;
-        color: #132030;
-        margin-bottom: 50px;
-        opacity: 1;
-    }
+        .center-title {
+            font-size: 36px;
+            line-height: 50px;
+            font-weight: 300;
+            font-family: "Richmond Display", serif;
+            text-align: center;
+            letter-spacing: 0px;
+            color: #132030;
+            margin-bottom: 50px;
+            opacity: 1;
+        }
 
-    .werkwijze-text {
+        .werkwijze-text {
 
-        font-family: 'Scala Sans Pro', sans-serif;
-        letter-spacing: 1px;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 30px;
-        color: #132030;
-        opacity: 1;
-        margin-top: 10px;
-        text-wrap: balance;
+            font-family: 'Scala Sans Pro', sans-serif;
+            letter-spacing: 1px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 30px;
+            color: #132030;
+            opacity: 1;
+            margin-top: 10px;
+            text-wrap: balance;
 
-    }
+        }
 
-    .container-img {
-        width: 100%;
-        object-fit: cover;
-        background-repeat: no-repeat;
-        /* margin: 0 auto;
+        .container-img {
+            width: 100%;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            /* margin: 0 auto;
         background-image: url("<?= get_template_directory_uri() ?>/images/img-container.png");
         background: transparent linear-gradient(90deg, #132030 0%, #13203000 100%) 0% 0% no-repeat padding-box; */
-        background: linear-gradient(90deg, rgba(6, 48, 101, 0.9) 0%, rgba(0, 85, 179, 0.1) 100%),
-            url("<?= get_template_directory_uri() ?>/images/img-container.png") 50%/cover no-repeat;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        height: 326px;
-    }
+            background: linear-gradient(90deg, rgba(6, 48, 101, 0.9) 0%, rgba(0, 85, 179, 0.1) 100%),
+                url("<?= get_template_directory_uri() ?>/images/img-container.png") 50%/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 326px;
+        }
 
 
 
-    .sample-slider {
-        width: 96%;
-    }
+        .sample-slider {
+            width: 96%;
+        }
 
-    .title-container {
-        width: 100%;
-        text-align: left;
-        padding-left: 15px;
-        color: #FFFFFF;
-        font-size: 22px;
-        line-height: 50px;
-        font-weight: 300;
-        font-family: "Richmond Display", serif;
-        letter-spacing: 1px;
+        .title-container {
+            width: 100%;
+            text-align: left;
+            padding-left: 15px;
+            color: #FFFFFF;
+            font-size: 22px;
+            line-height: 50px;
+            font-weight: 300;
+            font-family: "Richmond Display", serif;
+            letter-spacing: 1px;
 
-    }
-
-
-    .swiper-title {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        position: absolute;
-        top: -70px;
-        /* right: -98px; */
-        width: 100%;
-
-    }
+        }
 
 
-    .logo-container {
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border-radius: 5px;
-        width: 150px;
-        height: 93px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #FFFFFF;
-    }
+        .swiper-title {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            position: absolute;
+            top: -70px;
+            /* right: -98px; */
+            width: 100%;
 
-    /* Swiper in blauw block */
-    .swiper-container {
-        width: 100%;
-        margin: 0 auto;
-        overflow: clip;
-        overflow-y: visible;
-
-    }
-
-    .swiper-container .swiper-pagination {
-        bottom: -50px !important;
-    }
-
-    .swiper-container .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
-        background-color: #FFFFFF;
-    }
-
-    .swiper-header {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        position: absolute;
-        top: -70px;
-        /* top: -41px; */
-        right: 0;
-        width: 100%;
-
-    }
-
-    .swiper-text {
-        font-size: 26px;
-        font-weight: 300;
-        white-space: nowrap;
-        text-align: left;
-        line-height: 50px;
-        font-family: 'Richmond Display', serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        position: relative !important;
-        width: 41px;
-        height: 41px;
-        border: 1px solid #132030;
-        color: #132030;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-
-    }
+        }
 
 
-    .swiper-button-next::after,
-    .swiper-rtl .swiper-button-prev::after {
-        font-size: 16px;
-        font-weight: 900;
-    }
+        .logo-container {
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            width: 150px;
+            height: 93px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFFFFF;
+        }
 
-    .swiper-button-prev:after,
-    .swiper-rtl .swiper-button-next:after,
-    .swiper-button-next::after,
-    .swiper-rtl .swiper-button-prev::after {
-        font-size: 16px;
-        font-weight: 900;
-    }
+        /* Swiper in blauw block */
+        .swiper-container {
+            width: 100%;
+            margin: 0 auto;
+            overflow: clip;
+            overflow-y: visible;
+
+        }
+
+        .swiper-container .swiper-pagination {
+            bottom: -50px !important;
+        }
+
+        .swiper-container .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: #FFFFFF;
+        }
+
+        .swiper-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            position: absolute;
+            top: -70px;
+            /* top: -41px; */
+            right: 0;
+            width: 100%;
+
+        }
+
+        .swiper-text {
+            font-size: 26px;
+            font-weight: 300;
+            white-space: nowrap;
+            text-align: left;
+            line-height: 50px;
+            font-family: 'Richmond Display', serif;
+            letter-spacing: 0px;
+            color: #132030;
+            opacity: 1;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: relative !important;
+            width: 41px;
+            height: 41px;
+            border: 1px solid #132030;
+            color: #132030;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+
+        }
 
 
-    .swiper-container .swiper-button-prev {
-        position: absolute;
-        left: -8% !important;
-        top: -2px !important;
-    }
+        .swiper-button-next::after,
+        .swiper-rtl .swiper-button-prev::after {
+            font-size: 16px;
+            font-weight: 900;
+        }
 
-    .swiper-container .swiper-button-next {
-        position: absolute;
-        right: 9px !important;
-        top: -2px !important;
-    }
-
-
-    .testimonial-slide {
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border-radius: 5px;
-        padding: 18px;
-        box-shadow: 10px 10px 60px #2072BE1A;
-        text-align: left;
-        max-width: 400px;
-        margin: auto;
-        position: relative;
-        z-index: 3;
-
-    }
-
-    .testimonial-text {
-        font-size: 16px;
-        font-weight: 300;
-        margin-bottom: 8px;
-        font-family: 'Scala Sans Pro', sans-serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    }
-
-    .testimonial-naam {
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        color: #1e73be;
-        opacity: 1;
-        letter-spacing: 0px;
-    }
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after,
+        .swiper-button-next::after,
+        .swiper-rtl .swiper-button-prev::after {
+            font-size: 16px;
+            font-weight: 900;
+        }
 
 
-    .small-whit-container {
-        width: 100%;
-        max-width: 1700px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 192px;
-        text-align: center;
-        gap: 4px;
-        flex-direction: row;
-    }
+        .swiper-container .swiper-button-prev {
+            position: absolute;
+            left: -8% !important;
+            top: -2px !important;
+        }
 
-    /* .whi-container {
+        .swiper-container .swiper-button-next {
+            position: absolute;
+            right: 9px !important;
+            top: -2px !important;
+        }
+
+
+        .testimonial-slide {
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            padding: 18px;
+            box-shadow: 10px 10px 60px #2072BE1A;
+            text-align: left;
+            max-width: 400px;
+            margin: auto;
+            position: relative;
+            z-index: 3;
+
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 8px;
+            font-family: 'Scala Sans Pro', sans-serif;
+            letter-spacing: 0px;
+            color: #132030;
+            opacity: 1;
+        }
+
+        .testimonial-naam {
+            font-family: 'Scala Sans Pro', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e73be;
+            opacity: 1;
+            letter-spacing: 0px;
+        }
+
+
+        .small-whit-container {
+            width: 100%;
+            max-width: 1700px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 192px;
+            text-align: center;
+            gap: 4px;
+            flex-direction: row;
+        }
+
+        /* .whi-container {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         width: 1000px;
         position: relative;
@@ -314,7 +314,7 @@ $fields = get_fields();
         height: 250px;
     } */
 
-    /* .organ-title {
+        /* .organ-title {
         font-size: 26px;
         line-height: 35px;
         font-weight: 300;
@@ -327,101 +327,101 @@ $fields = get_fields();
 
 
 
-    @media (min-width: 768px) {
+        @media (min-width: 768px) {
 
-        .werkwijze-hero-text {
-            font-size: 18px;
+            .werkwijze-hero-text {
+                font-size: 18px;
+            }
+
+            .swiper-title {
+                top: -70px;
+            }
+
+            .swiper-container .swiper-button-prev {
+                position: absolute;
+                left: -8% !important;
+                top: -3px !important;
+            }
+
+            .right-text,
+            .right-text-bold {
+                text-align: left;
+            }
+
+            .button-group {
+                justify-content: flex-start;
+            }
         }
 
-        .swiper-title {
-            top: -70px;
-        }
+        @media (min-width: 992px) {
 
-        .swiper-container .swiper-button-prev {
-            position: absolute;
-            left: -8% !important;
-            top: -3px !important;
-        }
-
-        .right-text,
-        .right-text-bold {
-            text-align: left;
-        }
-
-        .button-group {
-            justify-content: flex-start;
-        }
-    }
-
-    @media (min-width: 992px) {
-
-        .werkwijze-hero-title {
-            font-size: 50px;
-            text-align: left;
-            line-height: 80px;
-        }
+            .werkwijze-hero-title {
+                font-size: 50px;
+                text-align: left;
+                line-height: 80px;
+            }
 
 
-        .werkwijze-hero-text {
-            font-size: 16px;
-            width: 505px;
-            display: block;
-        }
+            .werkwijze-hero-text {
+                font-size: 16px;
+                width: 505px;
+                display: block;
+            }
 
 
-        .right-text,
-        .right-text-bold {
-            text-align: left;
-        }
+            .right-text,
+            .right-text-bold {
+                text-align: left;
+            }
 
 
 
-        .title-container {
+            .title-container {
 
-            font-size: 36px;
+                font-size: 36px;
 
-        }
-
-
-        .swiper-title {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            left: 12px;
-
-        }
-
-        .first-blue-block {
-            height: 683px;
-            margin-top: unset;
-
-        }
-
-        .whi-container {
-            margin-top: 80px;
-
-        }
+            }
 
 
-        .swiper-container .swiper-button-prev {
-            position: absolute;
-            left: -12% !important;
-            top: -2px !important;
-        }
+            .swiper-title {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                left: 12px;
 
-        .swiper-text {
-            font-size: 36px;
-        }
+            }
+
+            .first-blue-block {
+                height: 683px;
+                margin-top: unset;
+
+            }
+
+            .whi-container {
+                margin-top: 80px;
+
+            }
+
+
+            .swiper-container .swiper-button-prev {
+                position: absolute;
+                left: -12% !important;
+                top: -2px !important;
+            }
+
+            .swiper-text {
+                font-size: 36px;
+            }
 
 
 
-        /* .organ-title {
+            /* .organ-title {
             font-size: 32px;
             line-height: 50px;
             text-align: left;
         } */
 
-    }
+        }
     </style>
     <div>
 
@@ -504,26 +504,26 @@ $fields = get_fields();
                     $delay = 0;
                     foreach (get_field("onzewerkwijzetestemonials") as $testimonails) {
                         ?>
-                    <div class="col-12 col-md-4 col-lg-3 d-flex  justify-content-center mb-4" data-aos="fade-up"
-                        data-aos-delay="<?= $delay ?>" data-aos-duration=" 800">
-                        <div>
+                        <div class="col-12 col-md-4 col-lg-3 d-flex  justify-content-center mb-4" data-aos="fade-up"
+                            data-aos-delay="<?= $delay ?>" data-aos-duration=" 800">
+                            <div>
 
-                            <div class="d-flex flex-column ">
-                                <span
-                                    style="color: #F29401;;font-family Manrope; font-size:15px;font-style:normal;font-weight:600;line-height:27px;">
-                                    <?= $testimonails["stap"] ?>
-                                </span>
-                                <span
-                                    style="color: #F29401;;font-family Manrope; font-size:15px;font-style:normal;font-weight:600;line-height:27px;">
-                                    <?= $testimonails["staptitle"] ?>
-                                </span>
-                            </div>
-                            <div class="werkwijze-text">
-                                <?= $testimonails["text"] ?>
+                                <div class="d-flex flex-column ">
+                                    <span
+                                        style="color: #F29401;;font-family Manrope; font-size:15px;font-style:normal;font-weight:600;line-height:27px;">
+                                        <?= $testimonails["stap"] ?>
+                                    </span>
+                                    <span
+                                        style="color: #F29401;;font-family Manrope; font-size:15px;font-style:normal;font-weight:600;line-height:27px;">
+                                        <?= $testimonails["staptitle"] ?>
+                                    </span>
+                                </div>
+                                <div class="werkwijze-text">
+                                    <?= $testimonails["text"] ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
                         $delay += 300;
                     }
                     ?>
@@ -549,17 +549,17 @@ $fields = get_fields();
                         $testemonials = get_field("partnerslogotestemonials");
                         if ($testemonials) {
                             foreach ($testemonials as $testemonial) { ?>
-                        <div class="swiper-slide">
-                            <div class="logo-container"
-                                style="background-color: #f0f0f0; border-radius:5px; padding: 20px;">
-                                <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>">
-                                    <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
-                                        alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
-                                        style="width: 72px; height: 64px; border-radius: 5px; object-fit: contain;" />
-                                </a>
-                            </div>
-                        </div>
-                        <?php }
+                                <div class="swiper-slide">
+                                    <div class="logo-container"
+                                        style="background-color: #f0f0f0; border-radius:5px; padding: 20px;">
+                                        <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>">
+                                            <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
+                                                alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
+                                                style="width: 72px; height: 64px; border-radius: 5px; object-fit: contain;" />
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php }
                         } ?>
                     </div>
                 </div>
@@ -596,34 +596,34 @@ $fields = get_fields();
                                 $fields = get_fields($post->ID);
                                 $testimonial = get_field("testimonialwerkvoor");
                                 ?>
-                            <div class="swiper-slide d-flex flex-column h-100  ">
-                                <a href="<?= get_permalink($post) ?>" class="d-flex flex-column h-100">
-                                    <div class="testimonial-slide d-flex flex-column h-100">
-                                        <img src="<?= $testimonial["logo"]['url'] ?>"
-                                            alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
-                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
-                                        <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <span class="card-text">
-                                                    <?= $post->post_title ?></span>
-                                                <span class="d-flex justify-content-center align-items-center arrow">
-                                                    <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                        alt=" <?= $testimonial['white_arrow']['alt'] ?>"
-                                                        class="card-img-top"
-                                                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
+                                <div class="swiper-slide d-flex flex-column h-100  ">
+                                    <a href="<?= get_permalink($post) ?>" class="d-flex flex-column h-100">
+                                        <div class="testimonial-slide d-flex flex-column h-100">
+                                            <img src="<?= $testimonial["logo"]['url'] ?>"
+                                                alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
+                                                style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
+                                            <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="card-text">
+                                                        <?= $post->post_title ?></span>
+                                                    <span class="d-flex justify-content-center align-items-center arrow">
+                                                        <img src="<?= $testimonial["white_arrow"]['url'] ?>"
+                                                            alt=" <?= $testimonial['white_arrow']['alt'] ?>"
+                                                            class="card-img-top"
+                                                            style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
+                                                    </span>
+                                                </div>
+                                                <span class="card-title mt-auto">
+                                                    <span><?= $testimonial["text"] ?></span>
                                                 </span>
                                             </div>
-                                            <span class="card-title mt-auto">
-                                                <span><?= $testimonial["text"] ?></span>
-                                            </span>
+
+
                                         </div>
 
-
-                                    </div>
-
-                                </a>
-                            </div>
-                            <?php
+                                    </a>
+                                </div>
+                                <?php
                                 $delay += 300;
                             }
                             wp_reset_postdata();
@@ -717,112 +717,112 @@ $fields = get_fields();
 
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const swiper = new Swiper('.sample-slider', {
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.sample-slider', {
 
-            slidesPerView: 2,
-            centeredSlides: true,
-            spaceBetween: 24,
+                slidesPerView: 2,
+                centeredSlides: true,
+                spaceBetween: 24,
 
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-
-            breakpoints: {
-
-                360: {
-                    slidesPerView: 2,
-                    spaceBetween: 1,
-
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
                 },
 
-                540: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 1,
+                breakpoints: {
 
-                },
+                    360: {
+                        slidesPerView: 2,
+                        spaceBetween: 1,
 
-                556: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 1,
-                },
-                992: {
+                    },
 
-                    slidesPerView: 5,
-                    spaceBetween: 2,
-                },
-                1025: {
-                    slidesPerView: 6,
-                    spaceBetween: 1,
+                    540: {
+                        slidesPerView: 3.2,
+                        spaceBetween: 1,
+
+                    },
+
+                    556: {
+                        slidesPerView: 3.2,
+                        spaceBetween: 1,
+                    },
+                    992: {
+
+                        slidesPerView: 5,
+                        spaceBetween: 2,
+                    },
+                    1025: {
+                        slidesPerView: 6,
+                        spaceBetween: 1,
+
+                    }
+
 
                 }
-
-
-            }
+            });
         });
-    });
     </script>
 
 
 
     <script>
-    let newswiper1 = new Swiper('.werk-swiper3', {
-        slidesPerView: 2.5,
-        grabCursor: true,
-        spaceBetween: 20,
+        let newswiper1 = new Swiper('.werk-swiper3', {
+            slidesPerView: 2.5,
+            grabCursor: true,
+            spaceBetween: 20,
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
 
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
 
 
-        breakpoints: {
-            360: {
-                slidesPerView: 1.3
+            breakpoints: {
+                360: {
+                    slidesPerView: 1.3
+                },
+                540: {
+                    slidesPerView: 2
+                },
+                768: {
+                    slidesPerView: 2.5
+                },
+                992: {
+                    slidesPerView: 3.2
+                },
+                1025: {
+                    slidesPerView: 4
+                },
             },
-            540: {
-                slidesPerView: 2
-            },
-            768: {
-                slidesPerView: 2.5
-            },
-            992: {
-                slidesPerView: 3.2
-            },
-            1025: {
-                slidesPerView: 4
-            },
-        },
 
-        // R ein itia li ze A O S after Swiper initialization
-        on: {
-            init: function() {
-                AOS.refresh();
-            },
-            slideChangeTransitionEnd: function() {
-                AOS.refresh();
+            // R ein itia li ze A O S after Swiper initialization
+            on: {
+                init: function () {
+                    AOS.refresh();
+                },
+                slideChangeTransitionEnd: function () {
+                    AOS.refresh();
+                }
+
             }
 
-        }
 
+        });
 
-    });
-
-    // I nitialize AOS
-    AOS.init({
-        duration: 800, // Animation duration
-        once: true, // Only animate once
-    });
+        // I nitialize AOS
+        AOS.init({
+            duration: 800, // Animation duration
+            once: true, // Only animate once
+        });
     </script>
 
 </main>

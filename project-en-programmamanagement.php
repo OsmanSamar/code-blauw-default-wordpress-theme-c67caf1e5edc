@@ -73,7 +73,7 @@
     }
 
     .white-contianer {
-
+        height: 479px;
         width: 100%;
         /* max-width: 1700px; */
         margin: 0 auto;
