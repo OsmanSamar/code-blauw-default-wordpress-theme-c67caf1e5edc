@@ -1,54 +1,13 @@
-<?php get_header()  //Template Name: frontpage  ?>
+<?php get_header();
+$fields = get_fields();
+//Template Name: frontpage  ?>
 
 <main class="front-page">
 
     <style>
-    .White-container-front-page {
-        /* position: relative;
-        z-index: 1;
-       
-        height: 131px;
-        border-radius: 5px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        height: 250px;
-        width: 100%;
-        max-width: 1700px;
-        margin: 0 auto;
-        box-shadow: 10px 10px 60px #2072BE1A;
-        border-radius: 5px;
-        opacity: 1;
-        padding-top: 70px; */
-        height: fit-content;
-
-        position: relative;
-        z-index: 1;
-        margin-top: 70px;
-        height: 131px;
-        border-radius: 5px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
-        width: 100%;
-        max-width: 1700px;
-        margin: 0 auto;
-        padding-top: 70px;
-        box-shadow: 10px 10px 60px #2072BE1A;
-        border-radius: 5px;
-        opacity: 1;
-
-    }
-
-    /*  */
-
     .hero-section {
         background: url("<?= get_field('heroimage')['url'] ?>");
         width: 100%;
-        /* max-width: 1700px; */
         margin: 0 auto;
         background-size: cover;
         background-position: center;
@@ -58,15 +17,12 @@
 
     .container-img {
         width: 100%;
-        /* max-width: 1700px; */
         height: 819px;
         object-fit: cover;
-        background-repeat: no-repeat;
         margin: 0 auto;
-        background-image: url("<?= get_template_directory_uri() ?>/images/mask-group.png");
-        background: transparent linear-gradient(90deg, #132030 0%, #13203000 100%) 0% 0% no-repeat padding-box;
         background: linear-gradient(90deg, rgba(6, 48, 101, 0.9) 0%, rgba(0, 85, 179, 0.1) 100%),
-            url("<?= get_template_directory_uri() ?>/images/mask-group.png") 50%/cover no-repeat
+            url("<?= get_template_directory_uri() ?>/images/mask-group.png") 50%/cover no-repeat;
+
     }
 
 
@@ -103,7 +59,6 @@
     }
 
     .swiper-container {
-        /* position: relative; */
         width: 100%;
         margin: 0 auto;
         overflow: clip;
@@ -126,13 +81,24 @@
         align-items: baseline;
         justify-content: space-between;
         position: absolute;
-        top: -70px;
+        top: -109px;
         right: 0;
         width: 100%;
     }
 
+    .swiper-title-btn {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        position: absolute;
+        top: -109px;
+        right: 0;
+        width: 100%;
+
+    }
+
     .swiper-text {
-        font-size: 26px;
+        font-size: 21px;
         font-weight: 300;
         white-space: nowrap;
         text-align: left;
@@ -141,9 +107,7 @@
         letter-spacing: 0px;
         color: #132030;
         opacity: 1;
-        position: relative !important;
-        top: -13px;
-        left: 8px;
+
     }
 
     .swiper-button-prev,
@@ -162,6 +126,21 @@
     }
 
 
+    .swiper-button-prev2,
+    .swiper-button-next2 {
+        position: relative !important;
+        width: 41px;
+        height: 41px;
+        border: 1px solid #FFFFFF;
+        color: #132030;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+
+    }
+
     .swiper-button-next::after,
     .swiper-rtl .swiper-button-prev::after {
         font-size: 16px;
@@ -176,20 +155,48 @@
         font-weight: 900;
     }
 
+    .swiper-button-next2::after,
+    .swiper-rtl .swiper-button-prev2::after {
+        font-size: 16px;
+        font-weight: 900;
+    }
+
+
+    .swiper-button-prev2:after,
+    .swiper-rtl .swiper-button-next2:after,
+    .swiper-button-next2::after,
+    .swiper-rtl .swiper-button-prev2::after {
+        font-size: 16px;
+        font-weight: 900;
+        color: red;
+
+    }
 
     .swiper-container .swiper-button-prev {
-        position: absolute;
-        /* left: 82% !important;
-        top: -70px !important; */
+
         left: -8% !important;
-        top: -13px !important;
+        top: 2px !important;
+    }
+
+    .swiper-container-2 .swiper-button-prev2 {
+
+        left: -8% !important;
+        top: 2px !important;
     }
 
     .swiper-container .swiper-button-next {
-        position: absolute;
+
         right: 9px !important;
-        top: -12px !important;
+        top: 2px !important;
     }
+
+    .swiper-container-2 .swiper-button-next2 {
+
+        right: 9px !important;
+        top: 2px !important;
+    }
+
+
 
     .onz-eexpertises-title {
         text-align: center;
@@ -208,11 +215,46 @@
         width: 96%;
     }
 
+    .logo-container {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        width: 150px;
+        height: 93px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF;
+    }
+
+    .title-container {
+        width: 100%;
+        text-align: left;
+        padding-left: 15px;
+        color: #FFFFFF;
+        font-size: 22px;
+        line-height: 50px;
+        font-weight: 300;
+        font-family: "Richmond Display", serif;
+        letter-spacing: 1px;
+
+    }
+
+
+    .swiper-title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        position: absolute;
+        top: -70px;
+        width: 100%;
+
+    }
+
+
     @media (min-width: 768px) {
-        .swiper-container .swiper-button-prev {
-            position: absolute;
-            left: -8% !important;
-            top: -13px !important;
+
+        .swiper-text {
+            font-size: 26px;
         }
 
     }
@@ -221,9 +263,14 @@
     @media (min-width: 992px) {
 
         .swiper-container .swiper-button-prev {
-            position: absolute;
             left: -12% !important;
-            top: -12px !important;
+            top: 3px !important;
+        }
+
+        .swiper-container-2 .swiper-button-prev-2 {
+
+            left: -12% !important;
+            top: 3px !important;
         }
 
         .swiper-text {
@@ -253,7 +300,7 @@
                     <h4 class="hero-text">
                         <span class="d-block"> <?= get_field("herotext") ?></span>
                     </h4>
-                    AOS <div class="button-group mt-4">
+                    <div class="button-group mt-4">
                         <div class="circle-border btn-primary-custom">
                             <a href="<?= get_field("meerwetenbtn")['url'] ?>" class=" btn-custom">
                                 <?= get_field("meerwetenbtn")['title'] ?>
@@ -427,114 +474,138 @@
                             <?php
                                 $delay += 300;
                             }
+                            wp_reset_postdata();
                             ?>
                         </div>
                     </div>
 
-                    <!-- <div class="swiper-pagination"></div> -->
 
                 </div>
             </div>
 
         </div>
+
 
 
         <div class="container-img position-relative">
-            <!--White-containe-->
-            <div class="White-container-front-page   " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                data-aos-duration="1000" data-aos-easing="ease-in-out" style="height: 378px;">
-                <div class="container">
-                    <div class="row g-0">
-                        <div class="col-lg-6">
-                            <img src="<?= get_template_directory_uri() ?>/images/manager-leading.png"
-                                alt="manager-leading" class="w-100 h-" style="object-fit:cover" />
+            <div class="container">
+                <div class="row g-0  pt-5">
 
-                        </div>
-                        <div class="col-lg-6 d-flex align-items-center"
-                            style="background: #ffffff 0% 0% no-repeat padding-box;box-shadow: 10px 10px 60px #2072BE1A;border-radius: 5px;opacity: 1;">
+                    <div class="col-12 col-md-6 col-lg-6" style="">
+                        <img src="<?= get_template_directory_uri() ?>/images/manager-leading.png" alt="manager-leading"
+                            class="w-100" style="object-fit: cover; border-radius: 5px; height: 387px; ">
+                    </div>
 
-                            <div class="d-flex justify-content-left flex-column text-left left-container" style="">
-                                <span class="verhaal-title">
-                                    Ons verhaal
-                                    <?= get_field("onsverhaaltitle") ?>
+                    <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center p-4"
+                        style="background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 10px 10px 60px rgba(32, 114, 190, 0.1); border-radius: 5px; height: 387px;">
+                        <div class="w-100">
+                            <h2 class="verhaal-title"><?= get_field("onsverhaaltitle") ?></h2>
+                            <p class="verhaal-text"><?= get_field("verhaaltext") ?>
+                            </p>
 
-                                </span>
-                                <span class="verhaal-text">
-                                    Met onze veelzijdige aanpak helpen we organisaties met veranderprocessen en
-                                    ontwikkeling, om ze mooier, wendbaarder, toekomstbestendiger én krachtiger
-                                    te maken.
-                                    <?= get_field("verhaaltext") ?>
-                                </span>
+                            <div class="d-flex gap-2 mt-4">
+                                <div class="circle-border btn-custom-container">
+                                    <a href="<?= get_field("overonsbtn")['url'] ?>" class="btn-custom"
+                                        style="color: #132030;">
 
-                                <!-- BTN -->
-                                <div class="d-flex justify-content-flex-start align-items-center gap-1 mt-4">
-
-                                    <div class="circle-border btn-custom-container">
-                                        <a href="<?= get_field("overonsbtn")['url'] ?>" class="btn-custom">
-                                            <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                                alt="go onze expertises" class="go-arrow"
-                                                style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
-                                            <?= get_field("overonsbtn")['title'] ?>
-                                        </a>
-
-                                    </div>
-
-                                    <a href="<?= get_field("werkwijzebtn")['url'] ?>" class="btn-s"
-                                        style="color:#132030">
+                                        <?= get_field("overonsbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                             alt="go onze expertises" class="go-arrow"
                                             style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
+                                    </a>
+
+                                </div>
+                                <div class="circle-border btn-custom-container">
+                                    <a href="<?= get_field("werkwijzebtn")['url'] ?>" class="btn-custom"
+                                        style="color: #132030;">
+
                                         <?= get_field("werkwijzebtn")['title'] ?>
-                                        Werkwijze
+                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                            alt="go onze expertises" class="go-arrow"
+                                            style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
                                     </a>
                                 </div>
+
                             </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!--End of wshite-containe-->
-
-
-            <div>
-                <div class="container position-relative mt-5">
-                    <div class="swiper-title ">
-                        <div class="title-container" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                            data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <?= get_field("titleoflogos") ?>
-                            <h1>Title of logo </h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="container  position-relative" style="margin-top: 70px;">
-                    nnnnnnnnnnnnnnnnnnnnn
-                    <div class="swiper sample-slider1  ">
-                        <div class="swiper-wrapper">
-                            <?php
-                            $testemonials = get_field("partnerslogotestemonials");
-                            if ($testemonials) {
-                                foreach ($testemonials as $testemonial) { ?>
-                            <div class="swiper-slide">
-                                <div class="logo-container"
-                                    style="background-color: #f0f0f0; border-radius:5px; padding: 20px;">
-                                    <a href="<?= esc_url($testemonial['partnerslogologo']['url']) ?>">
-                                        <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
-                                            alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
-                                            style="width: 72px; height: 64px; border-radius: 5px; object-fit: contain;" />
-                                    </a>
-                                </div>
-                            </div>
-                            <?php }
-                            } ?>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="container  position-relative" style="margin-top: 190px;">
+                <div class="swiper-container-2">
+                    <div class="">
+                        <!-- swiper-title-btn -->
+                        <div class="swiper-title ">
+                            <div class="title-container" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                                data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <?= get_field("titleoflogos") ?>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="swiper-button-prev2"></div>
+                                <div class="swiper-button-next2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="container  position-relative">
+                        <div class=" logoswiper sample-slider1  ">
+                            <div class="swiper-wrapper">
+                                <?php
+                                $testemonials = get_field("partnerslogotestemonials");
+                                if ($testemonials) {
+                                    foreach ($testemonials as $testemonial) { ?>
+                                <div class="swiper-slide ">
+                                    <div class="logo-container "
+                                        style="background-color: #f0f0f0; border-radius:5px; padding: 20px;">
+                                        <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>">
+                                            <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
+                                                alt="<?= esc_attr($testemonial['grotnerslogoimg']['alt']) ?>"
+                                                style="width: 72px; height: 64px; border-radius: 5px; object-fit: contain;" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <?php }
+                                } ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         </div>
+
+        <!--End of wshite-containe-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- End of Page -->
     </div>
@@ -602,7 +673,7 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const swiper = new Swiper('.sample-slider1', {
+        const logoswiper = new Swiper('.sample-slider1', {
 
             slidesPerView: 2,
             centeredSlides: true,
@@ -612,8 +683,8 @@
                 el: '.swiper-pagination',
             },
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next2",
+                prevEl: ".swiper-button-prev2",
             },
 
             breakpoints: {

@@ -68,10 +68,12 @@
             font-weight: bold;
         }
 
+        /*1. Ann Frank vragen */
         .werkwijze-block {
             width: 100%;
             /* max-width: 1700px; */
             margin: 0 auto;
+            height: fit-content;
             /* height: 651px; */
             background: #FFFFFF 0% 0% no-repeat padding-box;
             /* background-color: red; */
@@ -546,7 +548,7 @@
 
 
         <div class="container-img ">
-            <div class="container position-relative" style="top: 30%;">
+            <div class="container position-relative" style="margin-top: 120px;">
                 <div class="swiper-title ">
                     <div class="title-container" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -554,7 +556,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container  position-relative" style="top: 40%;">
+            <div class="container  position-relative" style="margin-top: 63px;">
                 <div class="swiper sample-slider  ">
                     <div class="swiper-wrapper">
                         <?php
