@@ -4,12 +4,12 @@
         max-width: 1700px;
         width: 100%;
         margin: 0 auto;
-        /* background-color: #F7F6F4; */
+
     }
 
     .footer-section {
         padding-bottom: 20px;
-        overflow-x: clip;
+        /* overflow-x: clip; */
         max-width: 100vw;
     }
 
@@ -34,8 +34,7 @@
     }
 
     .under-bottom {
-        /* border-bottom: 1px solid #132030;
-            opacity: 0.25; */
+
         border-bottom: 1px solid rgba(19, 32, 48, 0.25);
     }
 
@@ -65,14 +64,14 @@
 
     .bottom-under {
         padding-top: 40px;
-        /* background-color: #F7F6F4; */
+
     }
 
 
     .footer-codeblauw {
         margin-left: auto;
         padding: 60px 0;
-        /* background-color: #F7F6F4; */
+
     }
 
     .door-code-blauw {
@@ -158,12 +157,10 @@
     .img-jordi {
         position: absolute;
         object-fit: cover;
-        /* width: 259.46px;
-        height: 389px;
-        right: -70px; */
+
         width: 176.46px;
         height: 268px;
-        right: -34px;
+        right: -18px;
         bottom: 0;
 
     }
@@ -193,20 +190,10 @@
 
     li {
         margin-bottom: 0.25rem;
-        /* color: #132030;
-            font-family: 'Scala Sans Pro', sans-serif;
-            font-size: 12px;
-            font-weight: 300;
-            line-height: 24px;
-            letter-spacing: 0px; */
-    }
-
-    @media (max-width: 768px) {
-        /* .gap-lg-custom {
-                gap: 5rem !important;
-            } */
 
     }
+
+
 
     @media (min-width: 992px) {
 
@@ -430,7 +417,7 @@
             <div class="row">
                 <div class="bottom-under">
                     <div
-                        class="d-flex flex-row align-items-center justify-content-center flex-sm-row gap-3 gap-md-5 text-lg-start gap-lg-custom">
+                        class="d-flex flex-row align-items-center justify-content-between flex-sm-row gap-3 gap-md-5 text-lg-start gap-lg-custom">
                         <span class="footer-privacy"><?= get_field("blauwijstext", 'option') ?></span>
                         <span class="footer-privacy"><?= get_field("algemenevoorwaarden", 'option') ?></span>
                         <span class="footer-privacy"><?= get_field("privacyverklaring", 'option') ?></span>

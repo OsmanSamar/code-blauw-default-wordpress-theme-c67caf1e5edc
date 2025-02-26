@@ -24,8 +24,7 @@
 
 .gform_wrapper .gform_footer .gform_button {
   width: 116px !important;
-  padding: 12px 21px !important;
-  align-items: center;
+  // padding: 12px 21px !important;
   border-radius: 5px !important;
   background-color: #f29401 !important;
   color: #fff !important;
@@ -34,7 +33,8 @@
   align-items: center !important;
   background: url("<?= get_field('white_arrow')['url'] ?> ");
   background-size: 9px 8px !important;
-  background-position: right 5px center !important;
+  // background-position: right 3px center !important;
+  background-position: right 13px center !important;
   background-repeat: no-repeat !important;
 }
 

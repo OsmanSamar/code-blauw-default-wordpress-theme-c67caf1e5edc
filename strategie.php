@@ -1,4 +1,6 @@
-<?php get_header()  //Template Name: strategie  ?>
+<?php get_header();
+$fields = get_fields();
+//Template Name: strategie  ?>
 
 <main class="strategie">
     <style>
@@ -281,34 +283,16 @@
                 </div>
 
 
-                <!--White-containe-->
-                <!-- <div class="small-whit-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                    data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <div class="whi-container ">
-                        <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
-                            <span class="organ-title">
-                                <?= get_field("organisatietext") ?>
-                            </span>
-                            <div class="circle-border  btn-primary-custom mt-4" style="width: fit-content;">
-                                <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-custom">
-                                    <?= get_field("vraagaanbtn")['title'] ?>
-                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                        alt="go kennismaken" class="go-arrow" />
-                                </a>
-                            </div>
 
-                        </div>
-                    </div>
-                </div> -->
 
 
                 <div class="whi-container mt-5 " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
+                    <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
                         <span class="organ-title">
                             <?= get_field("organisatietext") ?>
                         </span>
-                        <div class="circle-border  btn-primary-custom" style="width: fit-content;">
+                        <div class="circle-border  btn-primary-custom">
                             <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-custom">
                                 <?= get_field("vraagaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"

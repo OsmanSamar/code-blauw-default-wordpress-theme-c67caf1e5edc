@@ -1,4 +1,5 @@
 <?php get_header();
+$fields = get_fields();
 
 //Template Name: single-werken-voor
 ?>
@@ -8,7 +9,7 @@
         .hero-section {
             background: url("<?= get_field('heroimage')['url'] ?> ");
             width: 100%;
-            max-width: 1700px;
+            /* max-width: 1700px; */
             margin: 0 auto;
             background-size: cover;
             background-position: center;
@@ -61,6 +62,9 @@
             </div>
         </div>
         <!--End of new Section -->
+
+
+
         <div class="white-container-text">
             <div class="container">
                 <div class="row">
@@ -82,30 +86,31 @@
 
 
         <!--White-containe-->
-        <div class="container" style="margin-bottom: 90px;">
-            <div class="small-whit-container">
-                <div class="whi-container  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                    data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
-                        <span class="organ-title">
-                            Ook de volgende stap zetten met jouw organisatie?
-                            <?= get_field("organisatietext") ?>
 
-                        </span>
+        <div class="container">
+            <div class="whi-container mt-5 mb-5 " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
+                    <span class="organ-title">
+                        <!-- Ook de volgende stap zetten met jouw organisatie? -->
+                        <?= get_field("organisatietext") ?>
+
+                    </span>
 
 
-                        <div class="circle-border gap-1  btn-primary-custom " style=" width: fit-content;">
-                            <!-- width:195px -->
-                            <a h ref="<?= get_field("vraagaanbtn")['url'] ?>" class="btn btn-primary">
-                                <?= get_field("vraagaanbtn")['title'] ?>
-                            </a>
-                            <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go to article"
-                                class="testimonial-arrow" />
-                        </div>
+                    <div class="circle-border gap-1  btn-primary-custom ">
+                        <!-- width:195px -->
+                        <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-custom">
+                            <?= get_field("vraagaanbtn")['title'] ?>
+                            <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
+                                alt="go Contact page" class="go-arrow" />
+                        </a>
+
                     </div>
                 </div>
             </div>
         </div>
+
         <!--End of wshite-containe-->
 
     </div>
