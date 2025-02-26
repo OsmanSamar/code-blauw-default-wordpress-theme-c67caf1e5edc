@@ -1,5 +1,7 @@
-<?php get_header()  //Template Name: cases
-    ?>
+<?php get_header();
+$fields = get_fields();
+//Template Name: cases
+?>
 
 <main class="cases">
     <style>
@@ -169,6 +171,7 @@
                         </div>
                         <?php
                     }
+                    wp_reset_postdata();
                     ?>
                 </div>
             </div>
@@ -185,7 +188,6 @@
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="d-flex align-items-center gap-4 flex-column flex-lg-row">
                     <span class="organ-title">
-                        Ook de volgende stap zetten met jouw organisatie?
                         <?= get_field("organisatietext") ?>
                         <!-- 
                          <?php
