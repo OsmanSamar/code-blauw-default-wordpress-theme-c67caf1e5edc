@@ -297,7 +297,7 @@ $fields = get_fields();
             top: -12px !important;
         }
 
-        .pe-lg-5 {
+        .pe-lg {
             padding-right: 30rem !important;
         }
 
@@ -307,9 +307,11 @@ $fields = get_fields();
 
         <!-- Hero Section -->
         <div class="hero-section">
-            <div class="container">
+            <div>
+                <!-- class="container" -->
                 <div class="hero-content">
-                    <div class="col-12   col-lg-12  pe-0 pe-lg-5">
+                    <div class="col-12 col-lg-12  pe-0 pe-lg">
+                        <!-- pe-lg-5 -->
                         <h1 class="hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <span class="d-block">
@@ -633,119 +635,119 @@ $fields = get_fields();
 
 
         <!-- End of Page -->
-    </div>
+        </di v>
 
-    <script>
-    let swiperwerken = new Swiper('.werk-swiper', {
-        slidesPerView: 2.5,
-        grabCursor: true,
-        spaceBetween: 20,
-
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        loop: true,
-        // a utoplay: {
-        // d elay: 2000,
-        // } ,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-
-        breakpoints: {
-            360: {
-                slidesPerView: 1.3
-            },
-            540: {
-                slidesPerView: 2
-            },
-            768: {
-                slidesPerView: 2.5
-            },
-            992: {
-                slidesPerView: 3.2
-            },
-            1025: {
-                slidesPerView: 4
-            },
-        },
-
-        // R ein itia li ze A O S after Swiper initialization
-        on: {
-            init: function() {
-                AOS.refresh();
-            },
-            slideChangeTransitionEnd: function() {
-                AOS.refresh();
-            }
-
-        }
-
-
-    });
-
-
-    // I nitialize AOS
-    AOS.init({
-        duration: 800, // Animation duration
-        once: true, // Only animate once
-    });
-    </script>
-
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const logoswiper = new Swiper('.sample-slider1', {
-
-            slidesPerView: 2,
-            centeredSlides: true,
-            spaceBetween: 24,
+        <scr ipt>
+            let swiperwerken = new Swiper('.werk-swiper', {
+            slidesPerView: 2.5,
+            grab Cursor: true,
+            spac eBetween: 20,
 
             pagination: {
-                el: '.swiper-pagination',
+            el: '.swiper-pagination',
+            clickable: true,
             },
+            loop: true,
+            // a utoplay: {
+            // d elay: 2000,
+            // } ,
             navigation: {
-                nextEl: ".swiper-button-next2",
-                prevEl: ".swiper-button-prev2",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
             },
 
-            breakpoints: {
 
-                360: {
-                    slidesPerView: 2,
-                    spaceBetween: 1,
+            brea kpoints: {
+            360: {
+            slidesPerView: 1.3
+            },
+            540: {
+            slidesPerView: 2
+            },
+            768: {
+            slidesPerView: 2.5
+            },
+            992: {
+            slidesPerView: 3.2
+            },
+            1025: {
+            slidesPerView: 4
+            },
+            },
 
-                },
-
-                540: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 1,
-
-                },
-
-                556: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 1,
-                },
-                992: {
-
-                    slidesPerView: 5,
-                    spaceBetween: 2,
-                },
-                1025: {
-                    slidesPerView: 6,
-                    spaceBetween: 1,
-
-                }
-
+            // R ein itia li ze A O S after Swiper initialization
+            on: {
+            init : function() {
+            AOS.refresh();
+            },
+            slideChangeTransitionEnd: function() {
+            AOS.refresh();
+            }
 
             }
-        });
-    });
-    </script>
+
+
+            });
+
+
+            // I nitialize AOS
+            AOS.init({
+            duration: 800, // Animation duration
+            once: true, // Only animate once
+            });
+            </script>
+
+
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                cons t logoswiper = new Swiper('.sample-slider1', {
+
+                    slidesPerView: 2,
+                    cent eredSlides: true,
+                    spaceBetween: 24,
+
+                    pagi nation: {
+                        el: '.swiper-pagination',
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next2",
+                        prevEl: ".swiper-button-prev2",
+                    },
+
+                    breakpoints: {
+
+                        360: {
+                            slidesPerView: 2,
+                            spaceBetween: 1,
+
+                        },
+
+                        540: {
+                            slidesPerView: 3.2,
+                            spaceBetween: 1,
+
+                        },
+
+                        556: {
+                            slidesPerView: 3.2,
+                            spaceBetween: 1,
+                        },
+                        992: {
+
+                            slidesPerView: 5,
+                            spaceBetween: 2,
+                        },
+                        1025: {
+                            slidesPerView: 6,
+                            spaceBetween: 1,
+
+                        }
+
+
+                    }
+                });
+            });
+            </script>
 
 
 
