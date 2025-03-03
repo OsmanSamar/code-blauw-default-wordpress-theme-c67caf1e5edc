@@ -24,10 +24,11 @@ $fields = get_fields();
         padding: 18px;
         box-shadow: 10px 10px 60px #2072BE1A;
         text-align: left;
-        max-width: 400px;
+        /* max-width: 400px;
         margin: auto;
         position: relative;
-        z-index: 3;
+        z-index: 3; */
+        height: 100%;
 
     }
 
@@ -151,13 +152,13 @@ $fields = get_fields();
                         $testimonial = get_field("testimonialwerkvoor");
                         ?>
                     <div class="col d-flex">
-                        <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column w-100 h-100">
-                            <div class="testimonial-slide d-flex flex-column  ">
+                        <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column  ">
+                            <div class="card testimonial-slide d-flex flex-column  ">
                                 <img src="<?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
                                     class="card-img-top"
                                     style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
 
-                                <div class="card-body d-flex flex-column mt-1 mb-0 pb-4 pt-2 h-100">
+                                <div class="card-body d-flex flex-column mt-1 mb-0 pb-4 pt-2">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <span class="card-text"><?= $post->post_title ?></span>
                                         <span class="d-flex justify-content-center align-items-center arrow">

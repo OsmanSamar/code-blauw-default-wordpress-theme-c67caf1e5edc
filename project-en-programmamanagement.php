@@ -73,7 +73,8 @@
     }
 
     .white-contianer {
-        height: 479px;
+        /* height: 479px; */
+        height: fit-content;
         width: 100%;
         /* max-width: 1700px; */
         margin: 0 auto;
@@ -112,8 +113,18 @@
         font-size: inherit;
         font-style: inherit;
         line-height: inherit;
+        font-weight: 800;
     }
 
+    .right-text-bold {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0px;
+        font-family: 'Scala Sans Pro', sans-serif;
+        color: #132030;
+        font-weight: 700;
+
+    }
 
     .testimonial-slide {
         background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -240,6 +251,11 @@
         border-radius: 50px;
         height: 28px;
         width: 28px;
+    }
+
+    .first-blue-block {
+
+        height: 500px;
     }
 
     @media (min-width: 768px) {
@@ -373,7 +389,11 @@
                     <div class="col-12 col-lg-6 col-md-6   blauw-right-text" data-aos="fade-left" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column">
-                            <?= get_field("righttext") ?>
+                            <span>
+                                <?= get_field("righttextbold") ?>
+                            </span>
+
+
 
 
                             <div class="button-group">

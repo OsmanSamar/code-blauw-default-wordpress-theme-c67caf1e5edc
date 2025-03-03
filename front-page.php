@@ -140,12 +140,15 @@ $fields = get_fields();
         align-items: center;
         justify-content: center;
         z-index: 10;
+        /* background-color: red; */
+        visibility: visible;
+        opacity: 1;
 
     }
 
     .swiper-button-next::after,
     .swiper-rtl .swiper-button-prev::after {
-        font-size: 16px;
+        font-size: 11px;
         font-weight: 900;
     }
 
@@ -153,7 +156,7 @@ $fields = get_fields();
     .swiper-rtl .swiper-button-next:after,
     .swiper-button-next::after,
     .swiper-rtl .swiper-button-prev::after {
-        font-size: 16px;
+        font-size: 11px;
         font-weight: 900;
     }
 
@@ -241,7 +244,7 @@ $fields = get_fields();
         text-align: left;
         padding-left: 15px;
         color: #FFFFFF;
-        font-size: 22px;
+        font-size: 19px;
         line-height: 50px;
         font-weight: 300;
         font-family: "Richmond Display", serif;
@@ -252,10 +255,12 @@ $fields = get_fields();
 
     .swiper-title {
         display: flex;
-        align-items: baseline;
+        align-items: center;
         justify-content: space-between;
         position: absolute;
-        top: -70px;
+        /* top: -70px; */
+        /* top: -124px; */
+        top: -90px;
         width: 100%;
 
     }
@@ -265,6 +270,10 @@ $fields = get_fields();
 
         .swiper-text {
             font-size: 26px;
+        }
+
+        .title-container {
+            font-size: 22px;
         }
 
     }
@@ -298,39 +307,43 @@ $fields = get_fields();
 
         <!-- Hero Section -->
         <div class="hero-section">
-            <div class="hero-content">
-                <div class="col-12   col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                        data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <span class="d-block">
-                            <?= get_field("herotitlegekleuredtext") ?>
-                        </span>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="col-12   col-lg-12  pe-0 pe-lg-5">
+                        <h1 class="hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                            data-aos-duration="1000" data-aos-easing="ease-in-out">
+                            <span class="d-block">
+                                <?= get_field("herotitlegekleuredtext") ?>
+                            </span>
 
-                    </h1>
-                    <h4 class="hero-text">
-                        <span class="d-block"> <?= get_field("herotext") ?></span>
-                    </h4>
-                    <div class="button-group mt-4">
-                        <div class="circle-border btn-primary-custom">
-                            <a href="<?= get_field("meerwetenbtn")['url'] ?>" class=" btn-custom">
-                                <?= get_field("meerwetenbtn")['title'] ?>
-                            </a>
-                            <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go contact page"
-                                class="go-arrow" style="pointer-events: auto ;z-index: 1000 " />
-                        </div>
-                        <div class="circle-border btn-custom-container">
-                            <a href="<?= get_field("overonsbtn")['url'] ?>" class="btn-custom">
-                                <?= get_field("overonsbtn")['title'] ?>
-                            </a>
-                            <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go over ons page"
-                                class="go-arrow" style="  pointer-events: auto ;z-index: 1000" />
+                        </h1>
+                        <h4 class="hero-text">
+                            <span class="d-block"> <?= get_field("herotext") ?></span>
+                        </h4>
+                        <div class="button-group mt-4">
+                            <div class="circle-border btn-primary-custom">
+                                <a href="<?= get_field("meerwetenbtn")['url'] ?>" class=" btn-custom">
+                                    <?= get_field("meerwetenbtn")['title'] ?>
+                                </a>
+                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                    alt="go contact page" class="go-arrow"
+                                    style="pointer-events: auto ;z-index: 1000 " />
+                            </div>
+                            <div class="circle-border btn-custom-container">
+                                <a href="<?= get_field("overonsbtn")['url'] ?>" class="btn-custom">
+                                    <?= get_field("overonsbtn")['title'] ?>
+                                </a>
+                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                    alt="go over ons page" class="go-arrow"
+                                    style="  pointer-events: auto ;z-index: 1000" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!--2 Flexible Content Field -->
+        <!--2 Flexible Content Field must change the code -->
         <div>
             <?php if (have_rows('flexiblecontentfield')): ?>
             <div class="container mt-4">
@@ -401,7 +414,7 @@ $fields = get_fields();
                     // var_dump($fields['nextarrow']);
                     ?>
 
-                <div class="col-lg-4 col-md-4 col-12 mb-4">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <a href="<?= get_permalink($post) ?>">
                         <div class="testimonial-container  h-100 ">
                             <div class=" d-flex flex-row align-items-center justify-content-between p-4">
@@ -470,7 +483,7 @@ $fields = get_fields();
                                                     <img src="<?= $testimonial["white_arrow"]['url'] ?>"
                                                         alt=" <?= $testimonial['white_arrow']['alt'] ?>"
                                                         class="card-img-top"
-                                                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
+                                                        style="width: 9px; height: 8.69px; object-fit: cover; display: block; " />
                                                 </span>
                                             </div>
                                             <span class="card-title mt-auto">
@@ -523,7 +536,7 @@ $fields = get_fields();
                                         <?= get_field("overonsbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                             alt="go onze expertises" class="go-arrow"
-                                            style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
+                                            style="  width: 10px; height: 9px;  object-fit: cover;" />
                                     </a>
 
                                 </div>
@@ -534,7 +547,7 @@ $fields = get_fields();
                                         <?= get_field("werkwijzebtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                             alt="go onze expertises" class="go-arrow"
-                                            style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
+                                            style="  width: 10px; height: 9px; object-fit: cover;" />
                                     </a>
                                 </div>
 
@@ -544,7 +557,7 @@ $fields = get_fields();
                 </div>
             </div>
 
-            <div class="container  position-relative" style="margin-top: 190px;">
+            <div class="container  position-relative" style="margin-top: 160px; margin-bottom: 50px;">
                 <div class="swiper-container-2">
                     <div class="">
                         <!-- swiper-title-btn -->
@@ -633,8 +646,8 @@ $fields = get_fields();
             clickable: true,
         },
         loop: true,
-        // a    utoplay: {
-        // d    elay: 2000,
+        // a utoplay: {
+        // d elay: 2000,
         // } ,
         navigation: {
             nextEl: ".swiper-button-next",
@@ -660,7 +673,7 @@ $fields = get_fields();
             },
         },
 
-        // R     ein itia li ze A O S after Swiper initialization
+        // R ein itia li ze A O S after Swiper initialization
         on: {
             init: function() {
                 AOS.refresh();

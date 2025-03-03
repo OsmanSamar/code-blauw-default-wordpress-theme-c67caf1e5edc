@@ -98,6 +98,7 @@
         font-weight: 300;
         font-family: 'Scala Sans Pro', sans-serif;
         letter-spacing: 0px;
+        max-width: 405px;
     }
 
     .footer-adres {
@@ -151,6 +152,7 @@
         font-weight: 300;
         line-height: 30px;
         letter-spacing: 0px;
+        opacity: 1;
 
     }
 
@@ -193,7 +195,31 @@
 
     }
 
+    .footer-contact-btn {
+        width: 110px;
+        border: 1px solid #FFFFFF;
+        border-radius: 5px;
+        color: #FFFFFF;
+        padding: 4px 8px;
+        height: 51px;
+        display: flex;
+        align-items: center;
+    }
 
+    .footer-linked-img {
+        width: 25.79px;
+        height: 25.8px;
+    }
+
+    .footer-logo {
+        width: 136px;
+        height: 36px;
+        object-fit: cover;
+    }
+
+    .footer-sm-screen {
+        margin-left: 20px;
+    }
 
     @media (min-width: 992px) {
 
@@ -244,6 +270,11 @@
 
         }
 
+        .footer-sm-screen {
+            margin-left: unset;
+        }
+
+
 
 
 
@@ -258,98 +289,104 @@
             <div class="row g-0">
                 <div class=" col-lg-6 left-cont under-bottom">
                     <div class="bg-left"></div>
-                    <div class=" d-flex align-items-center justify-content-between"
-                        style="max-width:405px; margin-top:70px;">
-                        <!-- <img src="<?= get_field("footerlogo", 'option')['url'] ?>"
-                            alt="<?= get_field("footerlogo", 'option')['alt'] ?>" style="width:150px; height:41px;" /> -->
-                        <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand">
-                            <img src="<?= get_template_directory_uri() ?>/images/logo-blauw-ijs.png"
-                                alt="Blauw Ijs Logo" style="width: 136px; height: 36px; top:30px"   />
-                        </a>
-                        <img src="<?= get_field("footerlinked", 'option')['url'] ?>"
-                            alt="<?= get_field("footerlinked", 'option')['alt'] ?>"
-                            style="width:25.79px; height:25.8px;" />
-                    </div>
 
-                    <div class=" d-flex align-items-center footer-text" style="max-width:405px;  ">
-                        <?= get_field("footertext", 'option') ?>
-                    </div>
 
-                    <div class="row row-cols-auto  mt-3 mb-4" style="align-items: baseline;">
+                    <div class="footer-sm-screen">
+                        <div class=" d-flex align-items-center justify-content-between"
+                            style="max-width:361px; margin-top:70px;">
 
-                        <div class="col d-flex  flex-column  ">
+                            <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>">
+                                <img src="<?= get_template_directory_uri() ?>/images/logo-blauw-ijs.png"
+                                    class="footer-logo" alt="Blauw Ijs Logo"   />
+                            </a>
+                            <a href="https://nl.linkedin.com" target="_blank">
+                                <img src="<?= get_field("footerlinked", 'option')['url'] ?>"
+                                    alt="<?= get_field("footerlinked", 'option')['alt'] ?>" class="footer-linked-img" />
+                            </a>
+                        </div>
 
-                            <div class="d-flex flex-column gap-1 ">
-                                <span class="footer-adres">
+                        <div class=" d-flex align-items-center footer-text">
+                            <!--  style="max-width:405px;  " -->
+                            <?= get_field("footertext", 'option') ?>
+                        </div>
 
-                                    <?= get_field("footercity", 'option') ?>
-                                </span>
-                                <span class="footer-adres">
-                                    <?= get_field("footeradres", 'option') ?>
-                                </span>
-                                <span class="footer-adres">
-                                    <?= get_field("footerkvk", 'option') ?>
-                                </span>
+                        <div class="row row-cols-auto  mt-5 mb- align-items-center">
+
+                            <div class="col d-flex  flex-column  ">
+
+                                <div class="d-flex flex-column gap-1 ">
+                                    <span class="footer-adres">
+
+                                        <?= get_field("footercity", 'option') ?>
+                                    </span>
+                                    <span class="footer-adres">
+                                        <?= get_field("footeradres", 'option') ?>
+                                    </span>
+                                    <span class="footer-adres">
+                                        <?= get_field("footerkvk", 'option') ?>
+                                    </span>
+                                </div>
                             </div>
+
+
+
+
+
+                            <div class="col d-flex flex-column ">
+                                <ul class="footer-nav">
+                                    <li class="footer-nav-item footer-adres">
+                                        <a class="footer-nav-link"
+                                            href="<?= esc_url(home_url('/sample-page')); ?>">Home</a>
+                                    </li>
+                                    <li class="footer-nav-item dropdown footer-adres">
+                                        <a class="footer-nav-link dropdown-toggle" href="#" id="footerDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Diensten
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="footerDropdown">
+                                            <li><a class="dropdown-item footer-adres"
+                                                    href="<?= esc_url(home_url('/')); ?>">X</a></li>
+                                            <li><a class="dropdown-item footer-adres"
+                                                    href="<?= esc_url(home_url('/')); ?>">e</a></li>
+                                            <li><a class="dropdown-item footer-adres"
+                                                    href="<?= esc_url(home_url('/')); ?>">g</a></li>
+                                            <li><a class="dropdown-item footer-adres"
+                                                    href="<?= esc_url(home_url('/')); ?>">T</a></li>
+                                            <li><a class="dropdown-item footer-adres"
+                                                    href="<?= esc_url(home_url('/')); ?>">A</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="footer-nav-item footer-adres">
+                                        <a class="footer-nav-link" href="<?= esc_url(home_url('/cases')); ?>">Cases</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+
+
+                            <div class="col d-flex flex-column gap-">
+                                <ul class="footer-nav">
+                                    <li class="footer-nav-item footer-adres">
+                                        <a class="nav-link custom-nav-link"
+                                            href="<?= esc_url(home_url('/over-ons')); ?>">Overons</a>
+                                    </li>
+                                    <li class="footer-nav-item footer-adres">
+                                        <a class=" nav-link custom-nav-link"
+                                            href="<?= esc_url(home_url('/werkwijze')); ?>">Werkwijze</a>
+                                    </li>
+                                    </li>
+                                    <li class="footer-nav-item footer-adres ">
+                                        <a class=" nav-link custom-nav-link"
+                                            href="<?= esc_url(home_url('/kennismaken')); ?>">Kennismaken</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
                         </div>
-
-
-
-
-
-                        <div class="col d-flex flex-column ">
-                            <ul class="footer-nav">
-                                <li class="footer-nav-item footer-adres">
-                                    <a class="footer-nav-link" href="<?= esc_url(home_url('/sample-page')); ?>">Home</a>
-                                </li>
-                                <li class="footer-nav-item dropdown footer-adres">
-                                    <a class="footer-nav-link dropdown-toggle" href="#" id="footerDropdown"
-                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Diensten
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="footerDropdown">
-                                        <li><a class="dropdown-item footer-adres"
-                                                href="<?= esc_url(home_url('/')); ?>">X</a></li>
-                                        <li><a class="dropdown-item footer-adres"
-                                                href="<?= esc_url(home_url('/')); ?>">e</a></li>
-                                        <li><a class="dropdown-item footer-adres"
-                                                href="<?= esc_url(home_url('/')); ?>">g</a></li>
-                                        <li><a class="dropdown-item footer-adres"
-                                                href="<?= esc_url(home_url('/')); ?>">T</a></li>
-                                        <li><a class="dropdown-item footer-adres"
-                                                href="<?= esc_url(home_url('/')); ?>">A</a></li>
-                                    </ul>
-                                </li>
-                                <li class="footer-nav-item footer-adres">
-                                    <a class="footer-nav-link" href="<?= esc_url(home_url('/cases')); ?>">Cases</a>
-                                </li>
-                            </ul>
-                        </div>
-
-
-
-
-
-                        <div class="col d-flex flex-column gap-">
-                            <ul class="footer-nav">
-                                <li class="footer-nav-item footer-adres">
-                                    <a class="nav-link custom-nav-link"
-                                        href="<?= esc_url(home_url('/over-ons')); ?>">Overons</a>
-                                </li>
-                                <li class="footer-nav-item footer-adres">
-                                    <a class=" nav-link custom-nav-link"
-                                        href="<?= esc_url(home_url('/werkwijze')); ?>">Werkwijze</a>
-                                </li>
-                                </li>
-                                <li class="footer-nav-item footer-adres ">
-                                    <a class=" nav-link custom-nav-link"
-                                        href="<?= esc_url(home_url('/kennismaken')); ?>">Kennismaken</a>
-                                </li>
-                            </ul>
-                        </div>
-
-
                     </div>
 
                 </div>
@@ -391,15 +428,13 @@
                         </a>
 
 
-                        <div class="mt-4 mb-4"
-                            style=" width:110px; border: 1px solid #FFFFFF; border-radius: 5px; color: #FFFFFF; padding: 4px 8px;;">
+                        <div class="mt-4 mb-4 footer-contact-btn">
                             <a href=" <?= get_field("contactbtn", 'option')['url'] ?>"
                                 class=" d-flex align-items-center gap-3 text-white">
                                 <?= get_field("contactbtn", 'option')['title'] ?>
 
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                    alt="go onze expertises" class="testimonial-arrow"
-                                    style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                                    alt="go contact page" class="go-arrow" />
                             </a>
                         </div>
                     </div>

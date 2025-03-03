@@ -43,7 +43,7 @@
                 <div class="container p-lg-0 m-0">
                     <!-- Ensures navbar takes full width inside container -->
                     <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand">
-                        <img src="<?= get_template_directory_uri() ?>/images/logo-blauw-ijs.png" alt="Blauw Ijs Logo"
+                        <img src="<?= get_template_directory_uri() ?>/images/logo-blauwijs.svg" alt="Blauw Ijs Logo"
                             style="width: 136px; height: 36px; top:30px; object-fit: cover;" />
                     </a>
 
