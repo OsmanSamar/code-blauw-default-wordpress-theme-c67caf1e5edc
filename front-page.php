@@ -734,7 +734,7 @@ $fields = get_fields();
             breakpoints: {
 
                 360: {
-                    slidesPerView: 2,
+                    slidesPerView: 1.7,
                     spaceBetween: 1,
 
                 },
