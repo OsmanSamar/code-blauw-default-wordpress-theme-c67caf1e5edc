@@ -6,16 +6,68 @@ $fields = get_fields();
 
 <main class="single-werken-voor flex-grow-1">
     <style>
-        .hero-section {
-            background: url("<?= get_field('heroimage')['url'] ?> ");
-            width: 100%;
-            /* max-width: 1700px; */
-            margin: 0 auto;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            object-fit: cover;
-        }
+    .hero-section {
+        background: url("<?= get_field('heroimage')['url'] ?> ");
+        width: 100%;
+        /* max-width: 1700px; */
+        margin: 0 auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+
+    .datum-title,
+    .less-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #F29401;
+        opacity: 1;
+        letter-spacing: 0px;
+        line-height: 24px;
+        font-family: "Libre Franklin", sans-serif;
+
+    }
+
+    .datum,
+    .less {
+        font-size: 16px;
+        font-weight: bold;
+        color: #FFFFFF;
+        opacity: 1;
+        letter-spacing: 0px;
+        line-height: 24px;
+        font-family: "Libre Franklin", sans-serif;
+        margin-top: 10px;
+    }
+
+    .datum-container {
+        display: flex;
+        flex-direction: column;
+        /* align-items: flex-start; */
+        margin-top: 120px;
+    }
+
+    .less-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 120px;
+        align-items: flex-start;
+
+    }
+
+
+        {
+        font-size: 16px;
+        font-weight: bold;
+        color: #FFFFFF;
+        opacity: 1;
+        letter-spacing: 0px;
+        line-height: 24px;
+        font-family: "Libre Franklin", sans-serif;
+        margin-top: 10px;
+    }
     </style>
 
     <div>
@@ -28,6 +80,27 @@ $fields = get_fields();
                         <span class="d-block">
                             <?= get_field("posttitle") ?>
                         </span>
+
+                        <div class="d-flex flex-row justify-content-between">
+                            <div class="datum-container ">
+                                <span class="datum-title">
+                                    Datum
+                                </span>
+                                <span class="datum">
+                                    <?= get_field("datum") ?>
+                                </span>
+                            </div>
+                            <div class="less-container ">
+                                <span class="less-title">
+                                    Leestijd
+                                </span>
+                                <span class="less">
+                                    <!-- <?= get_field("datum") ?> -->
+                                    5 minuten
+                                </span>
+                            </div>
+                        </div>
+
                     </span>
                 </div>
             </div>

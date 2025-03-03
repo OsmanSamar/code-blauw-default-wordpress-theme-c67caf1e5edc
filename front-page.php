@@ -66,6 +66,10 @@ $fields = get_fields();
         overflow: clip;
         overflow-y: visible;
 
+        padding-bottom: -40px;
+        padding-top: 100px;
+
+
     }
 
     .swiper-container .swiper-pagination {
@@ -83,7 +87,8 @@ $fields = get_fields();
         align-items: baseline;
         justify-content: space-between;
         position: absolute;
-        top: -109px;
+        /* top: -109px; */
+        top: 16px;
         right: 0;
         width: 100%;
     }
@@ -216,12 +221,13 @@ $fields = get_fields();
         letter-spacing: 0px;
         color: #132030;
         opacity: 1;
+        margin-bottom: 3rem;
     }
 
 
 
     .sample-slider1 {
-        width: 96%;
+        width: 100%;
         /* width: 100%; */
         margin: 0 auto;
         overflow: clip;
@@ -232,12 +238,12 @@ $fields = get_fields();
     .logo-container {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border-radius: 5px;
-        width: 150px;
+        width: 175px;
         height: 93px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #FFFFFF;
+        /* background-color: #FFFFFF; */
     }
 
     .title-container {
@@ -261,7 +267,7 @@ $fields = get_fields();
         position: absolute;
         /* top: -70px; */
         /* top: -124px; */
-        top: -90px;
+        top: -103px;
         width: 100%;
 
     }
@@ -303,7 +309,7 @@ $fields = get_fields();
         }
 
         .title-container {
-            font-size: 36px;
+            font-size: 50px;
         }
 
     }
@@ -333,8 +339,8 @@ $fields = get_fields();
                         <h4 class="hero-text">
                             <span class="d-block"> <?= get_field("herotext") ?></span>
                         </h4>
-                        <div class="button-group mt-4">
-                            <div class="circle-border btn-primary-custom">
+                        <div class="button-group d-flex mt-4 gap-2">
+                            <div class="circle-border btn-primary-custom" style="width: 176px;">
                                 <a href="<?= get_field("meerwetenbtn")['url'] ?>" class=" btn-custom">
                                     <?= get_field("meerwetenbtn")['title'] ?>
                                 </a>
@@ -371,7 +377,7 @@ $fields = get_fields();
                     </div>
                 </div>
 
-                <div class="row g-5 mt-1">
+                <div class="row g-5 mt-1 ">
                     <div class="col-lg-6 text-start mt-5 flexible-left-text" data-aos="fade-right" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
 
@@ -396,10 +402,10 @@ $fields = get_fields();
 
 
         <!-- Onze_Expertises -->
-        <div class="container p-3 px-1 mt-5 position-relative" id="testimonials" style=" z-index: 2;">
+        <div class="container p-3 px-1  position-relative" id="testimonials" style=" z-index: 2; margin-top: 6rem;">
 
             <div class="row">
-                <div class="col-12 d-flex justify-content-center mb-4">
+                <div class="col-12 d-flex justify-content-center ">
                     <div class="section-header ">
                         <div class="onz-eexpertises-title">
 
@@ -527,21 +533,21 @@ $fields = get_fields();
 
         <div class="container-img position-relative">
             <div class="container">
-                <div class="row g-0  pt-5">
+                <div class="row g-0  " style="padding-top: 5rem;
+">
 
-                    <div class="col-12 col-md-6 col-lg-6" style="">
+                    <div class="col-12 col-md-6 col-lg-6">
                         <img src="<?= get_template_directory_uri() ?>/images/manager-leading.png" alt="manager-leading"
-                            class="w-100" style="object-fit: cover; border-radius: 5px; height: 387px; ">
+                            class="w-100" style="object-fit: cover; border-radius: 5px 0px 0px 5px; height: 387px; ">
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center p-5"
-                        style="background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 10px 10px 60px rgba(32, 114, 190, 0.1); border-radius: 5px; height: 387px;">
+                        style="background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 10px 10px 60px rgba(32, 114, 190, 0.1); border-radius: 0px 5px 5px 0px; height: 387px;">
                         <div class="w-100">
                             <h2 class="verhaal-title"><?= get_field("onsverhaaltitle") ?></h2>
-                            <p class="verhaal-text"><?= get_field("verhaaltext") ?>
-                            </p>
+                            <p class="verhaal-text"><?= get_field("verhaaltext") ?> </p>
 
-                            <div class="d-flex gap-2 mt-4">
+                            <div class="d-flex  mt-4 gap-2">
                                 <div class="circle-border btn-custom-container">
                                     <a href="<?= get_field("overonsbtn")['url'] ?>" class="btn-custom"
                                         style="color: #132030;">
@@ -570,7 +576,7 @@ $fields = get_fields();
                 </div>
             </div>
 
-            <div class="container  position-relative" style="margin-top: 160px; margin-bottom: 50px;">
+            <div class="container  position-relative" style="margin-top: 160px; margin-bottom: 80px;">
                 <div class="swiper-container-2">
                     <div class="">
                         <!-- swiper-title-btn -->
@@ -595,8 +601,8 @@ $fields = get_fields();
                                 if ($testemonials) {
                                     foreach ($testemonials as $testemonial) { ?>
                                 <div class="swiper-slide ">
-                                    <div class="logo-container "
-                                        style="background-color: #f0f0f0; border-radius:5px; padding: 20px;">
+                                    <div class="logo-container " style=" border-radius:5px; padding: 20px;">
+                                        <!-- background-color: #f0f0f0; -->
                                         <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>">
                                             <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
                                                 alt="<?= esc_attr($testemonial['grotnerslogoimg']['alt']) ?>"
@@ -746,10 +752,10 @@ $fields = get_fields();
                 992: {
 
                     slidesPerView: 5,
-                    spaceBetween: 2,
+                    spaceBetween: 1,
                 },
                 1025: {
-                    slidesPerView: 6,
+                    slidesPerView: 6.2,
                     spaceBetween: 1,
 
                 }

@@ -296,10 +296,13 @@
                             style="max-width:361px; margin-top:70px;">
 
                             <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>">
-                                <img src="<?= get_template_directory_uri() ?>/images/logo-blauw-ijs.png"
-                                    class="footer-logo" alt="Blauw Ijs Logo"   />
+                                <img src="<?= get_template_directory_uri() ?>/images/blauwijs.svg" class="footer-logo"
+                                    alt="Blauw Ijs Logo"   />
                             </a>
                             <a href="https://nl.linkedin.com" target="_blank">
+                                <!-- <img src="<?= get_template_directory_uri() ?>/images/ linkedin.svg"
+                                    class="footer-linked-img" alt="Blauw Ijs Logo"   /> -->
+
                                 <img src="<?= get_field("footerlinked", 'option')['url'] ?>"
                                     alt="<?= get_field("footerlinked", 'option')['alt'] ?>" class="footer-linked-img" />
                             </a>
