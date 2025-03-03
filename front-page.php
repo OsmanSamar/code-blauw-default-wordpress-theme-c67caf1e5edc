@@ -134,16 +134,12 @@ $fields = get_fields();
         width: 41px;
         height: 41px;
         border: 1px solid #FFFFFF;
-        color: #132030;
+        color: #FFFFFF;
         border-radius: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 10;
-        /* background-color: red; */
-        visibility: visible;
-        opacity: 1;
-
     }
 
     .swiper-button-next::after,
@@ -163,9 +159,9 @@ $fields = get_fields();
 
 
 
-    .swiper-button-next2::after,
+    /* .swiper-button-next2::after,
     .swiper-rtl .swiper-button-prev2::after {
-        font-size: 16px;
+        font-size: 11px;
         font-weight: 900;
     }
 
@@ -174,11 +170,11 @@ $fields = get_fields();
     .swiper-rtl .swiper-button-next2:after,
     .swiper-button-next2::after,
     .swiper-rtl .swiper-button-prev2::after {
-        font-size: 16px;
+        font-size: 11px;
         font-weight: 900;
         color: red;
 
-    }
+    } */
 
     .swiper-container .swiper-button-prev {
 
@@ -188,8 +184,10 @@ $fields = get_fields();
 
     .swiper-container-2 .swiper-button-prev2 {
 
-        left: -8% !important;
-        top: 2px !important;
+        /* left: -8% !important;
+        top: 2px !important; */
+        left: 3% !important;
+        top: 12px !important;
     }
 
     .swiper-container .swiper-button-next {
@@ -200,8 +198,11 @@ $fields = get_fields();
 
     .swiper-container-2 .swiper-button-next2 {
 
-        right: 9px !important;
-        top: 2px !important;
+        /* right: 9px !important;
+        top: 2px !important; */
+        right: 14px !important;
+        top: 11px !important;
+
     }
 
 
@@ -301,6 +302,16 @@ $fields = get_fields();
             padding-right: 30rem !important;
         }
 
+        .title-container {
+            font-size: 36px;
+        }
+
+    }
+
+    @media (max-width: 1199.98px) {
+        .pe-lg {
+            padding-right: 3rem !important;
+        }
     }
     </style>
     <div>
@@ -568,9 +579,9 @@ $fields = get_fields();
                                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                                 <?= get_field("titleoflogos") ?>
                             </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <div class="swiper-button-prev2"></div>
-                                <div class="swiper-button-next2"></div>
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="swiper-button-prev2 swiper-button-prev"></div>
+                                <div class="swiper-button-next2 swiper-button-next"></div>
                             </div>
                         </div>
                     </div>
@@ -635,119 +646,119 @@ $fields = get_fields();
 
 
         <!-- End of Page -->
-        </di v>
+    </div>
 
-        <scr ipt>
-            let swiperwerken = new Swiper('.werk-swiper', {
-            slidesPerView: 2.5,
-            grab Cursor: true,
-            spac eBetween: 20,
+    <script>
+    let swiperwerken = new Swiper('.werk-swiper', {
+        slidesPerView: 2.5,
+        grabCursor: true,
+        spaceBetween: 20,
 
-            pagination: {
+        pagination: {
             el: '.swiper-pagination',
             clickable: true,
-            },
-            loop: true,
-            // a utoplay: {
-            // d elay: 2000,
-            // } ,
-            navigation: {
+        },
+        loop: true,
+        // a utoplay: {
+        // d elay: 2000,
+        // } ,
+        navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
-            },
+        },
 
 
-            brea kpoints: {
+        breakpoints: {
             360: {
-            slidesPerView: 1.3
+                slidesPerView: 1.3
             },
             540: {
-            slidesPerView: 2
+                slidesPerView: 2
             },
             768: {
-            slidesPerView: 2.5
+                slidesPerView: 2.5
             },
             992: {
-            slidesPerView: 3.2
+                slidesPerView: 3.2
             },
             1025: {
-            slidesPerView: 4
+                slidesPerView: 4
             },
-            },
+        },
 
-            // R ein itia li ze A O S after Swiper initialization
-            on: {
-            init : function() {
-            AOS.refresh();
+        // R ein itia li ze A O S after Swiper initialization
+        on: {
+            init: function() {
+                AOS.refresh();
             },
             slideChangeTransitionEnd: function() {
-            AOS.refresh();
+                AOS.refresh();
             }
 
-            }
+        }
 
 
-            });
+    });
 
 
-            // I nitialize AOS
-            AOS.init({
-            duration: 800, // Animation duration
-            once: true, // Only animate once
-            });
-            </script>
+    // I nitialize AOS
+    AOS.init({
+        duration: 800, // Animation duration
+        once: true, // Only animate once
+    });
+    </script>
 
 
-            <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                cons t logoswiper = new Swiper('.sample-slider1', {
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const logoswiper = new Swiper('.sample-slider1', {
 
+            slidesPerView: 2,
+            centeredSlides: true,
+            spaceBetween: 24,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+
+                360: {
                     slidesPerView: 2,
-                    cent eredSlides: true,
-                    spaceBetween: 24,
+                    spaceBetween: 1,
 
-                    pagi nation: {
-                        el: '.swiper-pagination',
-                    },
-                    navigation: {
-                        nextEl: ".swiper-button-next2",
-                        prevEl: ".swiper-button-prev2",
-                    },
+                },
 
-                    breakpoints: {
+                540: {
+                    slidesPerView: 3.2,
+                    spaceBetween: 1,
 
-                        360: {
-                            slidesPerView: 2,
-                            spaceBetween: 1,
+                },
 
-                        },
+                556: {
+                    slidesPerView: 3.2,
+                    spaceBetween: 1,
+                },
+                992: {
 
-                        540: {
-                            slidesPerView: 3.2,
-                            spaceBetween: 1,
+                    slidesPerView: 5,
+                    spaceBetween: 2,
+                },
+                1025: {
+                    slidesPerView: 6,
+                    spaceBetween: 1,
 
-                        },
-
-                        556: {
-                            slidesPerView: 3.2,
-                            spaceBetween: 1,
-                        },
-                        992: {
-
-                            slidesPerView: 5,
-                            spaceBetween: 2,
-                        },
-                        1025: {
-                            slidesPerView: 6,
-                            spaceBetween: 1,
-
-                        }
+                }
 
 
-                    }
-                });
-            });
-            </script>
+            }
+        });
+    });
+    </script>
 
 
 

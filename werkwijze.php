@@ -227,7 +227,7 @@ $fields = get_fields();
 
     .swiper-button-next::after,
     .swiper-rtl .swiper-button-prev::after {
-        font-size: 16px;
+        font-size: 11px;
         font-weight: 900;
     }
 
@@ -235,7 +235,7 @@ $fields = get_fields();
     .swiper-rtl .swiper-button-next:after,
     .swiper-button-next::after,
     .swiper-rtl .swiper-button-prev::after {
-        font-size: 16px;
+        font-size: 11px;
         font-weight: 900;
     }
 
