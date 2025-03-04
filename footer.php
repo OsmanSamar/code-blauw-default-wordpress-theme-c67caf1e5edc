@@ -88,7 +88,6 @@
 
 
     .footer-text {
-
         margin-top: 20px;
         color: #132030;
         text-align: left;
@@ -97,8 +96,7 @@
         letter-spacing: 0px;
         font-weight: 300;
         font-family: 'Scala Sans Pro', sans-serif;
-        letter-spacing: 0px;
-        max-width: 405px;
+        max-width: 432px;
     }
 
     .footer-adres {
@@ -204,6 +202,7 @@
         height: 51px;
         display: flex;
         align-items: center;
+        margin-top: 70px;
     }
 
     .footer-linked-img {
@@ -283,6 +282,8 @@
     }
     </style>
 
+
+
     <div class="footer-section">
         <div class="container">
             <!-- container -->
@@ -308,16 +309,16 @@
                             </a>
                         </div>
 
-                        <div class=" d-flex align-items-center footer-text">
-                            <!--  style="max-width:405px;  " -->
+                        <div class="d-flex align-items-center footer-text">
+
                             <?= get_field("footertext", 'option') ?>
                         </div>
 
-                        <div class="row row-cols-auto  mt-5 mb- align-items-center">
+                        <div class="row row-cols-auto  mt-3  align-items-center">
 
                             <div class="col d-flex  flex-column  ">
 
-                                <div class="d-flex flex-column gap-1 ">
+                                <div class="d-flex flex-column gap-2 ">
                                     <span class="footer-adres">
 
                                         <?= get_field("footercity", 'option') ?>
@@ -335,7 +336,7 @@
 
 
 
-                            <div class="col d-flex flex-column ">
+                            <div class="col d-flex flex-column gap-2 ">
                                 <ul class="footer-nav">
                                     <li class="footer-nav-item footer-adres">
                                         <a class="footer-nav-link"
@@ -370,7 +371,7 @@
 
 
 
-                            <div class="col d-flex flex-column gap-">
+                            <div class="col d-flex flex-column gap-2">
                                 <ul class="footer-nav">
                                     <li class="footer-nav-item footer-adres">
                                         <a class="nav-link custom-nav-link"
@@ -431,7 +432,7 @@
                         </a>
 
 
-                        <div class="mt-4 mb-4 footer-contact-btn">
+                        <div class="mt-2 mb-5 footer-contact-btn">
                             <a href=" <?= get_field("contactbtn", 'option')['url'] ?>"
                                 class=" d-flex align-items-center gap-3 text-white">
                                 <?= get_field("contactbtn", 'option')['title'] ?>
