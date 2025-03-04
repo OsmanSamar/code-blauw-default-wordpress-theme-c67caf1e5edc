@@ -104,7 +104,7 @@
 
                     <!-- Button on the Right side (visible only on large screens) -->
                     <div class="circle-border btn-primary-custom d-none d-lg-inline-flex justify-content-center align-items-center "
-                        style="width: 149px;height: 54px;    margin-right: -1px;">
+                        style="width: 149px;height: 55px;    margin-right: -1px;">
                         <!-- me-auto -->
                         <a href="<?= esc_url(home_url('/kennismaken')); ?>" class="btn-custom">Kennismaken</a>
                         <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"

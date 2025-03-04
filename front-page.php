@@ -314,21 +314,21 @@ $fields = get_fields();
 
     }
 
-    @media (max-width: 1199.98px) {
+    /* @media (max-width: 1199.98px) {
         .pe-lg {
             padding-right: 3rem !important;
         }
-    }
+    } */
     </style>
     <div>
 
         <!-- Hero Section -->
         <div class="hero-section">
-            <div>
-                <!-- class="container" -->
+            <div class="container">
+
                 <div class="hero-content">
-                    <div class="col-12 col-lg-12  pe-0 pe-lg">
-                        <!-- pe-lg-5 -->
+                    <div class="col-12 col-lg-8  offset-lg-1 pe-0 ">
+
                         <h1 class="hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <span class="d-block">
@@ -339,7 +339,8 @@ $fields = get_fields();
                         <h4 class="hero-text">
                             <span class="d-block"> <?= get_field("herotext") ?></span>
                         </h4>
-                        <div class="button-group d-flex mt-4 gap-2">
+                        <!-- d-lg-flex -->
+                        <div class="button-group d-flex justify-content-center justify-content-lg-start mt-4 gap-2">
                             <div class="circle-border btn-primary-custom" style="width: 176px;">
                                 <a href="<?= get_field("meerwetenbtn")['url'] ?>" class=" btn-custom">
                                     <?= get_field("meerwetenbtn")['title'] ?>
@@ -362,12 +363,14 @@ $fields = get_fields();
             </div>
         </div>
 
+
+
         <!--2 Flexible Content Field must change the code -->
-        <div>
+        <!-- <div>
             <?php if (have_rows('flexiblecontentfield')): ?>
             <div class="container mt-4">
                 <?php while (have_rows('flexiblecontentfield')):
-                        the_row(); ?>
+                    the_row(); ?>
                 <?php if (get_row_layout() == 'text'): ?>
                 <div class="row">
 
@@ -395,7 +398,57 @@ $fields = get_fields();
                 <?php endwhile; ?>
             </div>
             <?php endif; ?>
+        </div> -->
+
+
+        <?php
+        $flexible_content = get_field('flexiblecontentfield'); ?>
+        <div class="container mt-4">
+            <?php foreach ($flexible_content as $content): ?>
+
+            <!-- <div class="row">
+                <div class="col-12 col-lg-8 d-flex justify-content-center align-items-center  h-100  p-3 px-4 mt-5"
+                    data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out">
+                    <h1 class="flexible-title">
+                        <?= $content['title']; ?>
+                    </h1>
+                </div>
+            </div> -->
+
+            <div class="row">
+                <div class="col-12 col-lg-2"></div>
+                <div class="col-12 col-lg-8 d-flex justify-content-center align-items-center h-100 p-3 px-4 mt-5"
+                    data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                    data-aos-easing="ease-in-out">
+                    <h1 class="flexible-title">
+                        <?= $content['title']; ?>
+                    </h1>
+                </div>
+                <div class="col-12 col-lg-2"></div>
+            </div>
+
+            <div class="row g-5 mt-1">
+                <div class="col-lg-6 text-start mt-5 flexible-left-text" data-aos="fade-right" data-aos-offset="100"
+                    data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <span class="left-text"><?= $content['lefttext']; ?></span>
+                </div>
+
+                <div class="col-lg-6 text-start mt-5 flexible-right-text" data-aos="fade-left" data-aos-offset="100"
+                    data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <span class="right-text"><?= $content['righttext']; ?></span>
+                </div>
+            </div>
+
+            <?php endforeach; ?>
         </div>
+        <?php ?>
+
+
+
+
+
+
         <!-- End of Flexible Content Field -->
 
 
@@ -460,7 +513,7 @@ $fields = get_fields();
 
 
         <!--first-blue-block  -->
-        <div class="first-blue-block position-relative">
+        <div class="first-blue-block position-relative" style=" margin-top: -105px;">
             <div class="container blue-container">
                 <div class="swiper-container swiper position-relative ">
 
@@ -652,119 +705,119 @@ $fields = get_fields();
 
 
         <!-- End of Page -->
-    </div>
+        </di v>
 
-    <script>
-    let swiperwerken = new Swiper('.werk-swiper', {
-        slidesPerView: 2.5,
-        grabCursor: true,
-        spaceBetween: 20,
-
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        loop: true,
-        // a utoplay: {
-        // d elay: 2000,
-        // } ,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-
-        breakpoints: {
-            360: {
-                slidesPerView: 1.3
-            },
-            540: {
-                slidesPerView: 2
-            },
-            768: {
-                slidesPerView: 2.5
-            },
-            992: {
-                slidesPerView: 3.2
-            },
-            1025: {
-                slidesPerView: 4
-            },
-        },
-
-        // R ein itia li ze A O S after Swiper initialization
-        on: {
-            init: function() {
-                AOS.refresh();
-            },
-            slideChangeTransitionEnd: function() {
-                AOS.refresh();
-            }
-
-        }
-
-
-    });
-
-
-    // I nitialize AOS
-    AOS.init({
-        duration: 800, // Animation duration
-        once: true, // Only animate once
-    });
-    </script>
-
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const logoswiper = new Swiper('.sample-slider1', {
-
-            slidesPerView: 2,
-            centeredSlides: true,
-            spaceBetween: 24,
+        <scr ipt>
+            let swiperwerken = new Swiper('.werk-swiper', {
+            slidesPerView: 2.5,
+            grab Cursor: true,
+            spac eBetween: 20,
 
             pagination: {
-                el: '.swiper-pagination',
+            el: '.swiper-pagination',
+            clickable: true,
             },
+            loop: true,
+            // a utoplay: {
+            // d elay: 2000,
+            // } ,
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
             },
 
-            breakpoints: {
 
-                360: {
-                    slidesPerView: 1.7,
-                    spaceBetween: 1,
+            brea kpoints: {
+            360: {
+            slidesPerView: 1.3
+            },
+            540: {
+            slidesPerView: 2
+            },
+            768: {
+            slidesPerView: 2.5
+            },
+            992: {
+            slidesPerView: 3.2
+            },
+            1025: {
+            slidesPerView: 4
+            },
+            },
 
-                },
-
-                540: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 1,
-
-                },
-
-                556: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 1,
-                },
-                992: {
-
-                    slidesPerView: 5,
-                    spaceBetween: 1,
-                },
-                1025: {
-                    slidesPerView: 6.2,
-                    spaceBetween: 1,
-
-                }
-
+            // R ein itia li ze A O S after Swiper initialization
+            on: {
+            init: function() {
+            AOS.refresh();
+            },
+            slideChangeTransitionEnd: function() {
+            AOS.refresh();
+            }
 
             }
-        });
-    });
-    </script>
+
+
+            });
+
+
+            // I nitialize AOS
+            AOS.init({
+            duration: 800, // Animation duration
+            once: true, // Only animate once
+            });
+            </script>
+
+
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                cons t logoswiper = new Swiper('.sample-slider1', {
+
+                    slidesPerView: 2,
+                    cent eredSlides: true,
+                    spaceBetween: 24,
+
+                    pagi nation: {
+                        el: '.swiper-pagination',
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+
+                    breakpoi nts: {
+
+                        360: {
+                            slidesPerView: 1.7,
+                            spaceBetween: 1,
+
+                        },
+
+                        540: {
+                            slidesPerView: 3.2,
+                            spaceBetween: 1,
+
+                        },
+
+                        556: {
+                            slidesPerView: 3.2,
+                            spaceBetween: 1,
+                        },
+                        992: {
+
+                            slidesPerView: 5,
+                            spaceBetween: 1,
+                        },
+                        1025: {
+                            slidesPerView: 6.2,
+                            spaceBetween: 1,
+
+                        }
+
+
+                    }
+                });
+            });
+            </script>
 
 
 
