@@ -271,6 +271,9 @@ strong:nth-of-type(2) {
   font-size: 16px;
   font-weight: bold;
   line-height: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .btn-custom:hover,
@@ -470,15 +473,15 @@ strong:nth-of-type(2) {
 }
 
 // Styleing for Project Page
+
 .pro-hero-title {
-  font-size: 30px;
+  font-size: 25px;
   line-height: 85px;
-  font-weight: 500;
+  font-weight: 300;
   font-family: "Richmond Display", serif;
   text-align: center;
   letter-spacing: 0px;
   color: #feffff;
-  margin-bottom: 4px;
 }
 
 .pro-hero-text {
@@ -547,7 +550,7 @@ strong:nth-of-type(2) {
 
 .baluwtext {
   padding-top: 80px;
-  padding-bottom: 46px;
+  padding-bottom: 17px;
 }
 
 .center-title {
@@ -613,10 +616,8 @@ strong:nth-of-type(2) {
 //
 .white-medium-container {
   width: 100%;
-
   margin: 0 auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 90px 0px;
   background: #ffffff 0% 0% no-repeat padding-box;
   opacity: 1;
 }
@@ -667,7 +668,6 @@ strong:nth-of-type(2) {
   margin: 0 auto;
   width: 100%;
   max-width: 1700px;
-  margin: 0 auto;
   padding: 23px;
   // margin-top: 58px;
 }
@@ -729,9 +729,9 @@ strong:nth-of-type(2) {
 
 //////////////////////////////////////////////////////////////////////
 // Contact Page Style
-kennis-hero-title {
-  font-size: 54px;
-  line-height: 76px;
+.kennis-hero-title {
+  font-size: 50px;
+  line-height: 80px;
   font-weight: 500;
   font-family: "Richmond Display", serif;
   text-align: center;
@@ -799,40 +799,158 @@ kennis-hero-title {
   color: #132030;
   opacity: 1;
 }
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.section-text {
+  font-size: 26px;
+  font-weight: 300;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 46px;
+  font-family: "Richmond Display", serif;
+  letter-spacing: 0px;
+  color: #132030;
+  opacity: 1;
+}
+
+.werkwijze-hero-title {
+  font-size: 50px;
+  line-height: 80px;
+  font-weight: 500;
+  font-family: "Richmond Display", serif;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #feffff;
+}
+
+.werkwijze-hero-text {
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  font-family: "Libre Franklin", sans-serif;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 1;
+  margin-bottom: 10px;
+}
+
+.werk-blauwijs-title {
+  text-align: left;
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 300;
+  font-family: "Richmond Display", serif;
+  letter-spacing: 0px;
+  color: #1e73be;
+  opacity: 1;
+}
+
+.werk-right-text,
+.werk-right-text-bold {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  font-family: "Scala Sans Pro", sans-serif;
+  letter-spacing: 2px;
+  color: #132030;
+  opacity: 1;
+  text-wrap: balance;
+  white-space: break-spaces;
+}
+
+.werk-right-text-bold {
+  font-weight: bold;
+}
+
+/*1. Ann Frank vragen */
+.werkwijze-block {
+  width: 100%;
+  margin: 0 auto;
+  height: fit-content;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.werk-center-title {
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 300;
+  font-family: "Richmond Display", serif;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #132030;
+  margin: 75px 0px 20px;
+  opacity: 1;
+}
+
+.werkwijze-text {
+  font-family: "Scala Sans Pro", sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  color: #132030;
+  opacity: 1;
+  margin-top: 10px;
+  text-wrap: balance;
+}
+
+.sample-slider {
+  width: 96%;
+}
+
+.werk-logo-container {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  width: 150px;
+  height: 93px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.container-form {
+  margin: 50px 0px;
+}
 //////////////////////////////////////////////////////////////////////
 
 @media (min-width: 768px) {
-  // .flexible-title {
-  //   max-width: 100%;
-  // }
+  .werkwijze-hero-text {
+    font-size: 18px;
+  }
+
   .verhaal-container {
     width: unset;
   }
 
   .case-hero-text {
-    width: 505px;
-    display: block;
     font-size: 18px;
-    line-height: 30px;
+  }
+  .pro-hero-title {
+    font-size: 33px;
   }
 }
 
 @media (min-width: 992px) {
-  // Contact Page Style
-  .kennis-hero-title {
-    font-size: 50px;
-    // text-align: left;
-    line-height: 80px;
+  .werkwijze-hero-text {
+    font-size: 19px;
   }
 
+  .section-text {
+    font-size: 36px;
+  }
+  // Contact Page Style
   .kennis-hero-text {
     font-size: 16px;
-    width: 505px;
-    display: block;
   }
 
-  //
   b,
   strong {
     font-size: inherit;
@@ -951,18 +1069,12 @@ kennis-hero-title {
   }
 
   .pro-hero-title {
-    font-size: 50px;
-    text-align: left;
+    font-size: 75px;
   }
 
   .case-hero-title {
     text-align: left;
     line-height: 80px;
-  }
-
-  .case-hero-text {
-    width: 505px;
-    display: block;
   }
 
   .medium-container,
@@ -984,4 +1096,26 @@ kennis-hero-title {
     // line-height: 50px;
     text-align: left;
   }
+}
+
+.blauw-left-text {
+  text-align: left;
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 300;
+  font-family: "Richmond Display", serif;
+  letter-spacing: 1px;
+  color: #1e73be;
+  opacity: 1;
+}
+
+.blauw-right-text {
+  font-family: "Scala Sans Pro", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #132030;
+  opacity: 1;
 }

@@ -191,13 +191,15 @@ $fields = get_fields();
 
         /* left: -8% !important;
         top: 2px !important; */
-        left: 3% !important;
+        /* left: 3% !important; */
+        left: -7% !important;
         top: 12px !important;
     }
 
     .swiper-container .swiper-button-next {
 
-        right: 9px !important;
+        /* right: 9px !important; */
+        right: 0px !important;
         top: 2px !important;
     }
 
@@ -205,7 +207,8 @@ $fields = get_fields();
 
         /* right: 9px !important;
         top: 2px !important; */
-        right: 14px !important;
+        /* right: 14px !important; */
+        right: 24px !important;
         top: 11px !important;
 
     }
@@ -228,7 +231,6 @@ $fields = get_fields();
 
     .sample-slider1 {
         width: 100%;
-        /* width: 100%; */
         margin: 0 auto;
         overflow: clip;
         overflow-y: visible;
@@ -243,13 +245,15 @@ $fields = get_fields();
         display: flex;
         align-items: center;
         justify-content: center;
-        /* background-color: #FFFFFF; */
+        padding: 20px;
     }
+
+
 
     .title-container {
         width: 100%;
         text-align: left;
-        padding-left: 15px;
+        /* padding-left: 15px; */
         color: #FFFFFF;
         font-size: 19px;
         line-height: 50px;
@@ -289,7 +293,8 @@ $fields = get_fields();
     @media (min-width: 992px) {
 
         .swiper-container .swiper-button-prev {
-            left: -12% !important;
+            /* left: -12% !important; */
+            left: -1% !important;
             top: 3px !important;
         }
 
@@ -328,13 +333,11 @@ $fields = get_fields();
 
                 <div class="hero-content">
                     <div class="col-12 col-lg-8  offset-lg-1 pe-0 ">
-
                         <h1 class="hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <span class="d-block">
                                 <?= get_field("herotitlegekleuredtext") ?>
                             </span>
-
                         </h1>
                         <h4 class="hero-text">
                             <span class="d-block"> <?= get_field("herotext") ?></span>
@@ -405,27 +408,14 @@ $fields = get_fields();
         $flexible_content = get_field('flexiblecontentfield'); ?>
         <div class="container mt-4">
             <?php foreach ($flexible_content as $content): ?>
-
-            <!-- <div class="row">
-                <div class="col-12 col-lg-8 d-flex justify-content-center align-items-center  h-100  p-3 px-4 mt-5"
-                    data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-                    data-aos-easing="ease-in-out">
-                    <h1 class="flexible-title">
-                        <?= $content['title']; ?>
-                    </h1>
-                </div>
-            </div> -->
-
             <div class="row">
-                <div class="col-12 col-lg-2"></div>
-                <div class="col-12 col-lg-8 d-flex justify-content-center align-items-center h-100 p-3 px-4 mt-5"
+                <div class="col-12  col-lg-8 offset-lg-2 d-flex justify-content-center align-items-center h-100 p-3 px-4 mt-5"
                     data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
                     data-aos-easing="ease-in-out">
                     <h1 class="flexible-title">
                         <?= $content['title']; ?>
                     </h1>
                 </div>
-                <div class="col-12 col-lg-2"></div>
             </div>
 
             <div class="row g-5 mt-1">
@@ -443,12 +433,6 @@ $fields = get_fields();
             <?php endforeach; ?>
         </div>
         <?php ?>
-
-
-
-
-
-
         <!-- End of Flexible Content Field -->
 
 
@@ -554,7 +538,7 @@ $fields = get_fields();
                                                 <span class="d-flex justify-content-center align-items-center arrow">
                                                     <img src="<?= $testimonial["white_arrow"]['url'] ?>"
                                                         alt=" <?= $testimonial['white_arrow']['alt'] ?>"
-                                                        class="card-img-top"
+                                                        class="go-arrow"
                                                         style="width: 9px; height: 8.69px; object-fit: cover; display: block; " />
                                                 </span>
                                             </div>
@@ -586,8 +570,7 @@ $fields = get_fields();
 
         <div class="container-img position-relative">
             <div class="container">
-                <div class="row g-0  " style="padding-top: 5rem;
-">
+                <div class="row g-0  " style="padding-top: 5rem;">
 
                     <div class="col-12 col-md-6 col-lg-6">
                         <img src="<?= get_template_directory_uri() ?>/images/manager-leading.png" alt="manager-leading"
@@ -601,25 +584,22 @@ $fields = get_fields();
                             <p class="verhaal-text"><?= get_field("verhaaltext") ?> </p>
 
                             <div class="d-flex  mt-4 gap-2">
-                                <div class="circle-border btn-custom-container">
+                                <div class="circle-border btn-custom-container gap-3">
                                     <a href="<?= get_field("overonsbtn")['url'] ?>" class="btn-custom"
                                         style="color: #132030;">
-
                                         <?= get_field("overonsbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                            alt="go onze expertises" class="go-arrow"
-                                            style="  width: 10px; height: 9px;  object-fit: cover;" />
+                                            alt="go onze expertises" class="go-arrow" />
                                     </a>
-
                                 </div>
+
                                 <div class="circle-border btn-custom-container">
                                     <a href="<?= get_field("werkwijzebtn")['url'] ?>" class="btn-custom"
                                         style="color: #132030;">
 
                                         <?= get_field("werkwijzebtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                            alt="go onze expertises" class="go-arrow"
-                                            style="  width: 10px; height: 9px; object-fit: cover;" />
+                                            alt="go onze expertises" class="go-arrow" />
                                     </a>
                                 </div>
 
@@ -646,7 +626,7 @@ $fields = get_fields();
                     </div>
 
 
-                    <div class="container  position-relative">
+                    <!-- <div class="container  position-relative">
                         <div class=" logoswiper sample-slider1  ">
                             <div class="swiper-wrapper">
                                 <?php
@@ -655,7 +635,7 @@ $fields = get_fields();
                                     foreach ($testemonials as $testemonial) { ?>
                                 <div class="swiper-slide ">
                                     <div class="logo-container " style=" border-radius:5px; padding: 20px;">
-                                        <!-- background-color: #f0f0f0; -->
+                                      
                                         <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>">
                                             <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
                                                 alt="<?= esc_attr($testemonial['grotnerslogoimg']['alt']) ?>"
@@ -667,7 +647,36 @@ $fields = get_fields();
                                 } ?>
                             </div>
                         </div>
+                    </div> -->
+
+                    <div class="container position-relative">
+                        <div class="row">
+                            <div class="col-12 col-lg-12">
+
+                                <div class="logoswiper sample-slider1">
+                                    <div class="swiper-wrapper">
+                                        <?php
+                                        $testemonials = get_field("partnerslogotestemonials");
+                                        if ($testemonials) {
+                                            foreach ($testemonials as $testemonial) { ?>
+                                        <div class="swiper-slide">
+                                            <div class="logo-container" style="">
+                                                <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>">
+                                                    <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
+                                                        alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
+                                                        style="width: 72px; height: 64px; border-radius: 5px; object-fit: contain;" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <?php }
+                                        } ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
             </div>
 
@@ -705,119 +714,119 @@ $fields = get_fields();
 
 
         <!-- End of Page -->
-        </di v>
+    </div>
 
-        <scr ipt>
-            let swiperwerken = new Swiper('.werk-swiper', {
-            slidesPerView: 2.5,
-            grab Cursor: true,
-            spac eBetween: 20,
+    <script>
+    let swiperwerken = new Swiper('.werk-swiper', {
+        slidesPerView: 2.5,
+        grabCursor: true,
+        spaceBetween: 20,
 
-            pagination: {
+        pagination: {
             el: '.swiper-pagination',
             clickable: true,
-            },
-            loop: true,
-            // a utoplay: {
-            // d elay: 2000,
-            // } ,
-            navigation: {
+        },
+        loop: true,
+        // a utoplay: {
+        // d elay: 2000,
+        // } ,
+        navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
-            },
+        },
 
 
-            brea kpoints: {
+        breakpoints: {
             360: {
-            slidesPerView: 1.3
+                slidesPerView: 1.3
             },
             540: {
-            slidesPerView: 2
+                slidesPerView: 2
             },
             768: {
-            slidesPerView: 2.5
+                slidesPerView: 2.5
             },
             992: {
-            slidesPerView: 3.2
+                slidesPerView: 3.2
             },
             1025: {
-            slidesPerView: 4
+                slidesPerView: 4
             },
-            },
+        },
 
-            // R ein itia li ze A O S after Swiper initialization
-            on: {
+        // R ein itia li ze A O S after Swiper initialization
+        on: {
             init: function() {
-            AOS.refresh();
+                AOS.refresh();
             },
             slideChangeTransitionEnd: function() {
-            AOS.refresh();
+                AOS.refresh();
             }
 
+        }
+
+
+    });
+
+
+    // I nitialize AOS
+    AOS.init({
+        duration: 800, // Animation duration
+        once: true, // Only animate once
+    });
+    </script>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const logoswiper = new Swiper('.sample-slider1', {
+
+            slidesPerView: 2,
+            centeredSlides: true,
+            spaceBetween: 24,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+
+                360: {
+                    slidesPerView: 1.7,
+                    spaceBetween: 1,
+
+                },
+
+                540: {
+                    slidesPerView: 2.8,
+                    spaceBetween: 2,
+
+                },
+
+                556: {
+                    slidesPerView: 3.2,
+                    spaceBetween: 1,
+                },
+                992: {
+
+                    slidesPerView: 5,
+                    spaceBetween: 1,
+                },
+                1025: {
+                    slidesPerView: 6.2,
+                    spaceBetween: 1,
+
+                }
+
+
             }
-
-
-            });
-
-
-            // I nitialize AOS
-            AOS.init({
-            duration: 800, // Animation duration
-            once: true, // Only animate once
-            });
-            </script>
-
-
-            <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                cons t logoswiper = new Swiper('.sample-slider1', {
-
-                    slidesPerView: 2,
-                    cent eredSlides: true,
-                    spaceBetween: 24,
-
-                    pagi nation: {
-                        el: '.swiper-pagination',
-                    },
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-
-                    breakpoi nts: {
-
-                        360: {
-                            slidesPerView: 1.7,
-                            spaceBetween: 1,
-
-                        },
-
-                        540: {
-                            slidesPerView: 3.2,
-                            spaceBetween: 1,
-
-                        },
-
-                        556: {
-                            slidesPerView: 3.2,
-                            spaceBetween: 1,
-                        },
-                        992: {
-
-                            slidesPerView: 5,
-                            spaceBetween: 1,
-                        },
-                        1025: {
-                            slidesPerView: 6.2,
-                            spaceBetween: 1,
-
-                        }
-
-
-                    }
-                });
-            });
-            </script>
+        });
+    });
+    </script>
 
 
 

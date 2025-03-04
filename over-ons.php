@@ -4,210 +4,217 @@ $fields = get_fields();
 
 <main class="overons">
     <style>
-    .hero-section {
-        background: url("<?= get_field('heroimage')['url'] ?> ");
-        width: 100%;
+        .hero-section {
+            background: url("<?= get_field('heroimage')['url'] ?> ");
+            width: 100%;
 
-        margin: 0 auto;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
-
-    /*  */
-    .testimonial-slide {
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border-radius: 5px;
-        padding: 18px;
-        box-shadow: 10px 10px 60px #2072BE1A;
-        text-align: left;
-        max-width: 400px;
-        margin: auto;
-        position: relative;
-        z-index: 3;
-
-    }
-
-    .testimonial-text {
-        font-size: 16px;
-        font-weight: 300;
-        margin-bottom: 8px;
-        font-family: 'Scala Sans Pro', sans-serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    }
-
-    .testimonial-naam {
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        color: #1e73be;
-        opacity: 1;
-        letter-spacing: 0px;
-    }
-
-    .swiper-container {
-        width: 100%;
-        margin: 0 auto;
-        overflow: clip;
-        overflow-y: visible;
-
-    }
-
-    .swiper-container .swiper-pagination {
-        bottom: -50px !important;
-    }
-
-    .swiper-container .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
-        background-color: #FFFFFF;
-    }
-
-    .swiper-header {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        position: absolute;
-        top: -70px;
-
-        right: 0;
-        width: 100%;
-
-    }
-
-    .swiper-text {
-        font-size: 21px;
-        font-weight: 300;
-        white-space: nowrap;
-        text-align: left;
-        line-height: 50px;
-        font-family: 'Richmond Display', serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        position: relative !important;
-        width: 41px;
-        height: 41px;
-        border: 1px solid #132030;
-        color: #132030;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-
-    }
-
-
-    .swiper-button-next::after,
-    .swiper-rtl .swiper-button-prev::after {
-        font-size: 11px;
-        font-weight: 900;
-    }
-
-    .swiper-button-prev:after,
-    .swiper-rtl .swiper-button-next:after,
-    .swiper-button-next::after,
-    .swiper-rtl .swiper-button-prev::after {
-        font-size: 11px;
-        font-weight: 900;
-    }
-
-
-    .swiper-container .swiper-button-prev {
-        position: absolute;
-
-        left: -2% !important;
-        top: -2px !important;
-    }
-
-    .swiper-container .swiper-button-next {
-        position: absolute;
-        right: 5px !important;
-        top: -2px !important;
-    }
-
-    /* End of Swiper */
-
-
-
-    .container-block {
-
-        width: 100%;
-        max-width: 1700px;
-        margin: 0 auto;
-    }
-
-
-
-    @media (min-width: 768px) {
-
-
-        .swiper-text {
-            font-size: 26px;
+            margin: 0 auto;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            object-fit: cover;
         }
 
-    }
+        /*  */
+        .testimonial-slide {
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            padding: 18px;
+            box-shadow: 10px 10px 60px #2072BE1A;
+            text-align: left;
+            max-width: 400px;
+            margin: auto;
+            position: relative;
+            z-index: 3;
 
-
-    @media (min-width: 992px) {
-
-
-
-        .swiper-text {
-            font-size: 36px;
-            top: -12px !important;
         }
 
-        .content-wrapper {
-            padding: 20px;
+        .testimonial-text {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 8px;
+            font-family: 'Scala Sans Pro', sans-serif;
+            letter-spacing: 0px;
+            color: #132030;
+            opacity: 1;
+        }
+
+        .testimonial-naam {
+            font-family: 'Scala Sans Pro', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e73be;
+            opacity: 1;
+            letter-spacing: 0px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            margin: 0 auto;
+            overflow: clip;
+            overflow-y: visible;
+            margin-top: 5rem;
+
+        }
+
+        .swiper-container .swiper-pagination {
+            bottom: -50px !important;
+        }
+
+        .swiper-container .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: #FFFFFF;
+        }
+
+        .swiper-header {
             display: flex;
-            flex-direction: column;
+            align-items: baseline;
+            justify-content: space-between;
+            position: absolute;
+            top: -80px;
+            right: 0;
+            width: 100%;
+
+        }
+
+        .swiper-text {
+            font-size: 21px;
+            font-weight: 300;
+            white-space: nowrap;
+            text-align: left;
+            line-height: 50px;
+            font-family: 'Richmond Display', serif;
+            letter-spacing: 0px;
+            color: #132030;
+            opacity: 1;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: relative !important;
+            width: 41px;
+            height: 41px;
+            border: 1px solid #132030;
+            color: #132030;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
             justify-content: center;
+            z-index: 10;
+
         }
 
 
-        .first-blue-block {
-            height: 683px;
-            margin-top: unset;
+        .swiper-button-next::after,
+        .swiper-rtl .swiper-button-prev::after {
+            font-size: 11px;
+            font-weight: 900;
+        }
+
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after,
+        .swiper-button-next::after,
+        .swiper-rtl .swiper-button-prev::after {
+            font-size: 11px;
+            font-weight: 900;
         }
 
 
+        .swiper-container .swiper-button-prev {
+            position: absolute;
 
-    }
+            left: -2% !important;
+            top: -2px !important;
+        }
+
+        .swiper-container .swiper-button-next {
+            position: absolute;
+            right: 5px !important;
+            top: -2px !important;
+        }
+
+        /* End of Swiper */
+
+
+
+        .container-block {
+
+            width: 100%;
+            max-width: 1700px;
+            margin: 0 auto;
+        }
+
+        .whi-container {
+            margin-top: 5rem;
+        }
+
+
+        @media (min-width: 768px) {
+
+
+            .swiper-text {
+                font-size: 26px;
+            }
+
+        }
+
+
+        @media (min-width: 992px) {
+
+
+
+            .swiper-text {
+                font-size: 36px;
+                top: -12px !important;
+            }
+
+            .content-wrapper {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+
+            .first-blue-block {
+                height: 683px;
+                margin-top: unset;
+            }
+
+
+
+        }
     </style>
     <div>
 
         <!-- Hero Section -->
-        <div class="hero-section flex-column ">
-            <div class="hero-content text-center">
-                <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="case-hero-title text-center" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                        data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <span class="d-block">
-                            <?= get_field("herotitle") ?>
-                        </span>
-                    </h1>
-                </div>
-                <span class="case-hero-text ">
-                    <span class="d-block">
-                        <?= get_field("herotext") ?>
-                    </span>
-                </span>
+        <div class="hero-section  ">
+            <div class="container">
+                <div class="hero-content text-center">
+                    <div
+                        class="col-12  col-lg-4 offset-lg-4 col-md-8 offset-md-2    align-self-center d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="case-hero-title text-center" data-aos="fade-up" data-aos-offset="100"
+                            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                            <span class="d-block">
+                                <?= get_field("herotitle") ?>
+                            </span>
+                        </h1>
 
-                <div class="circle-border btn-primary-custom mt-4" style="width: fit-content;">
-                    <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn-custom">
-                        <?= get_field("kennismakenbtn")['title'] ?>
-                        <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go to article"
-                            class="go-arrow" />
-                    </a>
+                        <div class="case-hero-text ">
+                            <span class="d-block">
+                                <?= get_field("herotext") ?>
+                            </span>
+                        </div>
+                        <div class="circle-border btn-primary-custom mt-4" style="width: 148px;">
+                            <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn-custom">
+                                <?= get_field("kennismakenbtn")['title'] ?>
+                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                    alt="go to contact" class="go-arrow" />
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -232,16 +239,16 @@ $fields = get_fields();
             </div>
 
             <div class="baluwtext">
-                <div class="col-12  col-lg-7  max-auto text-center d-flex flex-column align-items-center justify-content-center "
+                <div class="col-12  col-lg-8 offset-lg-2  d-flex flex-column align-items-center justify-content-center "
                     data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
                     data-aos-easing="ease-in-out" style="margin:0 auto">
-                    <span class="center-title fadeIn  " data-side="right" style="transition-delay: .25s;">
+                    <div class="center-title fadeIn  " data-side="right" style="transition-delay: .25s;">
                         <span class="d-block">
                             <?= get_field("blauwijscentertext") ?>
                         </span>
-                    </span>
+                    </div>
 
-                    <div class="button-group">
+                    <div class="button-groupd d-flex gap-2">
                         <div class="circle-border gap-1 " style="width: fit-content;">
                             <!--  style="width: 182px;" -->
                             <a href="<?= get_field("neemcontactopbtn")['url'] ?>" class="btn-custom"
@@ -281,26 +288,21 @@ $fields = get_fields();
                             <span class="secleft-text">
                                 <?= get_field("seclefttext") ?>
                             </span>
-                            <div class="button-group">
-
+                            <div class="button-group mt-3 d-flex gap-2">
                                 <div class="circle-border btn-primary-custom " style="width: 110px;">
                                     <a href="<?= get_field("contactbtn")['url'] ?>" class="btn-custom">
                                         <?= get_field("contactbtn")['title'] ?>
-                                        <img src="<?= get_field("arrow")['url'] ?>"
-                                            alt="<?= get_field("arrow")['alt'] ?>" class="go-arrow"
-                                            style="pointer-events: auto ;z-index: 1000 " />
+                                        <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                            alt="go onze contact" class="go-arrow" />
                                     </a>
                                 </div>
-
-
                                 <div class="circle-border gap-1  btn-custom-container " style="width: 190px;">
                                     <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="btn-custom"
                                         style="color: #132030;">
                                         <?= get_field("veelgesteldevragenbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                            alt="go onze expertises" class="go-arrow" />
+                                            alt="go onze contact" class="go-arrow" />
                                     </a>
-
                                 </div>
                             </div>
                         </div>
@@ -321,7 +323,7 @@ $fields = get_fields();
         <!--first-blue-block  -->
         <div class="first-blue-block position-relative">
             <div class="container blue-container">
-                <div class="swiper-container swiper position-relative  mt-5 mb-5">
+                <div class="swiper-container swiper position-relative  mb-5 ">
 
                     <div class="swiper-header ">
                         <div class="swiper-text">
@@ -347,45 +349,44 @@ $fields = get_fields();
                                 $fields = get_fields($post->ID);
                                 $testimonial = get_field("testimonialwerkvoor");
                                 ?>
-                            <div class="swiper-slide d-flex flex-column h-100">
-                                <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column h-100">
-                                    <div class="testimonial-slide d-flex flex-column h-100">
-                                        <img src="<?= $testimonial["logo"]['url'] ?>"
-                                            alt=" <?= $testimonial['logo']['alt'] ?>" class="card-img-top"
-                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
+                                <div class="swiper-slide d-flex flex-column h-100">
+                                    <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column h-100">
+                                        <div class="testimonial-slide d-flex flex-column h-100">
+                                            <img src="<?= $testimonial["logo"]['url'] ?>"
+                                                alt=" <?= $testimonial['logo']['alt'] ?>" class="card-img-top"
+                                                style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
 
-                                        <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <span class="card-text">
-                                                    <?= $post->post_title ?></span>
-                                                <span class="d-flex justify-content-center align-items-center arrow">
+                                            <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="card-text">
+                                                        <?= $post->post_title ?></span>
+                                                    <span class="d-flex justify-content-center align-items-center arrow">
 
-                                                    <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                        alt=" <?= $testimonial['white_arrow']['alt'] ?>"
-                                                        class="card-img-top"
-                                                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
+                                                        <img src="<?= $testimonial["white_arrow"]['url'] ?>"
+                                                            alt=" <?= $testimonial['white_arrow']['alt'] ?>"
+                                                            class="card-img-top"
+                                                            style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
+                                                    </span>
+                                                </div>
+                                                <span class="card-title mt-auto">
+                                                    <span><?= $testimonial["text"] ?></span>
                                                 </span>
                                             </div>
-                                            <span class="card-title mt-auto">
-                                                <span><?= $testimonial["text"] ?></span>
-                                            </span>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <?php
+                                    </a>
+                                </div>
+                                <?php
                                 $delay += 300;
                             }
                             wp_reset_postdata();
                             ?>
                         </div>
                     </div>
-                    <!-- <div class="swiper-pagination"></div> -->
                 </div>
 
 
                 <!--White-containe-->
-                <div class="whi-container mt-5 " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                <div class="whi-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
                         <span class="organ-title">
@@ -394,7 +395,7 @@ $fields = get_fields();
                         <div class="circle-border btn-primary-custom  gap-1">
                             <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="btn-custom">
                                 <?= get_field("vragenaanbtn")['title'] ?>
-                                <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
+                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go Contact page" class="go-arrow" />
                             </a>
 
@@ -426,62 +427,62 @@ $fields = get_fields();
 
 
     <script>
-    let newswiper = new Swiper('.werk-swiper2', {
-        slidesPerView: 2.5,
-        grabCursor: true,
-        spaceBetween: 20,
+        let newswiper = new Swiper('.werk-swiper2', {
+            slidesPerView: 2.5,
+            grabCursor: true,
+            spaceBetween: 20,
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        loop: true,
-        //  autoplay: { //added
-        //      delay: 2000, //added
-        //  },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            //  autoplay: { //added
+            //      delay: 2000, //added
+            //  },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
 
 
-        breakpoints: {
-            360: {
-                slidesPerView: 1.3
+            breakpoints: {
+                360: {
+                    slidesPerView: 1.3
+                },
+                540: {
+                    slidesPerView: 2
+                },
+                768: {
+                    slidesPerView: 2.5
+                },
+                992: {
+                    slidesPerView: 3.2
+                },
+                1025: {
+                    slidesPerView: 4
+                },
             },
-            540: {
-                slidesPerView: 2
-            },
-            768: {
-                slidesPerView: 2.5
-            },
-            992: {
-                slidesPerView: 3.2
-            },
-            1025: {
-                slidesPerView: 4
-            },
-        },
 
-        // R ein itia li ze A O S after Swiper initialization
-        on: {
-            init: function() {
-                AOS.refresh();
-            },
-            slideChangeTransitionEnd: function() {
-                AOS.refresh();
+            // R ein itia li ze A O S after Swiper initialization
+            on: {
+                init: function () {
+                    AOS.refresh();
+                },
+                slideChangeTransitionEnd: function () {
+                    AOS.refresh();
+                }
+
             }
 
-        }
 
+        });
 
-    });
-
-    // I nitialize AOS
-    AOS.init({
-        duration: 800, // Animation duration
-        once: true, // Only animate once
-    });
+        // I nitialize AOS
+        AOS.init({
+            duration: 800, // Animation duration
+            once: true, // Only animate once
+        });
     </script>
 
 

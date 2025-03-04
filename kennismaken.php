@@ -32,32 +32,31 @@
     }
 
     /* Form Style */
-
-
-    @media (min-width: 992px) {}
     </style>
     <div>
 
 
         <!-- Hero Section -->
-        <div class="hero-section flex-column">
-            <div class="hero-content text-center">
-                <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="kennis-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
-                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <span class="d-block">
-                            <?= get_field("herotitle") ?>
-                        </span>
-                    </h1>
+        <div class="hero-section ">
+            <div class="container">
+                <div class="hero-content text-center">
+                    <div
+                        class="col-12  col-lg-6 offset-lg-3 col-md-8 offset-md-2 align-self-center d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="kennis-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
+                            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                            <span class="d-block">
+                                <?= get_field("herotitle") ?>
+                            </span>
+                        </h1>
+
+                        <div class="kennis-hero-text ">
+                            <span class="d-block">
+                                <?= get_field("herotext") ?>
+                            </span>
+                        </div>
+                    </div>
+
                 </div>
-                <span class="kennis-hero-text ">
-                    <span class="d-block">
-                        <?= get_field("herotext") ?>
-                    </span>
-                </span>
-
-
-
             </div>
 
         </div>
@@ -65,7 +64,7 @@
 
         <div class="blue-block ">
             <div class="container ">
-                <div class="row">
+                <div class="row container-form">
                     <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column text-align-flex-start gap-3">
@@ -75,7 +74,7 @@
                             <span class="waar-kunnen-helpen-text">
                                 <?= get_field("text") ?>
                             </span>
-                            <div class="d-flex flex-column text-align-flex-start gap-2 ">
+                            <div class="d-flex flex-column text-align-flex-start gap-2 mt-3 ">
                                 <span class="contact-title">
                                     <?= get_field("contactmetblauw_ijs") ?>
                                 </span>

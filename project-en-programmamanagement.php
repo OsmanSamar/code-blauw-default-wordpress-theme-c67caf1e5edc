@@ -1,4 +1,6 @@
-<?php get_header()  //Template Name: project  ?>
+<?php get_header();
+$fields = get_fields();
+//Template Name: project  ?>
 
 <main class="project-en-programmamanagement">
     <style>
@@ -13,15 +15,6 @@
         object-fit: cover;
     }
 
-    .pro-hero-title {
-        font-size: 25px;
-        line-height: 76px;
-        font-weight: 500;
-        font-family: "Richmond Display", serif;
-        text-align: center;
-        letter-spacing: 0px;
-        color: #feffff;
-    }
 
 
 
@@ -49,13 +42,15 @@
         margin: 0 auto;
         background: #F7F6F4 0% 0% no-repeat padding-box;
         opacity: 1;
+        padding-top: 80px;
+        padding-bottom: 50px;
 
     }
 
     .testi-title {
         font-size: 18px;
         line-height: 30px;
-        font-family: 300;
+        font-weight: 300;
         letter-spacing: 0px;
         color: #000000;
         opacity: 1;
@@ -65,7 +60,7 @@
     .testi-text {
         font-size: 16px;
         line-height: 30px;
-        font-family: 300;
+        font-weight: 300;
         font-family: 'Scala Sans Pro', sans-serif;
         letter-spacing: 0px;
         color: #132030;
@@ -73,37 +68,15 @@
     }
 
     .white-contianer {
-        /* height: 479px; */
         height: fit-content;
         width: 100%;
-        /* max-width: 1700px; */
         margin: 0 auto;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         opacity: 1;
+        padding: 80px 0px;
     }
 
-    .blauw-left-text {
-        text-align: left;
-        /* font-size: 44px; */
-        font-size: 32px;
-        line-height: 46px;
-        font-weight: 300;
-        font-family: "Richmond Display", serif;
-        letter-spacing: 1px;
-        color: #1E73BE;
-        opacity: 1;
-    }
 
-    .blauw-right-text {
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 16px;
-        line-height: 26px;
-        font-weight: 300;
-        text-align: left;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    }
 
 
     b,
@@ -269,9 +242,7 @@
 
 
     @media (min-width: 992px) {
-        ..blauw-left-text {
-            font-size: 44px;
-        }
+
 
         .first-blue-block {
             height: 662px;
@@ -279,11 +250,7 @@
         }
 
 
-        .pro-hero-title {
-            font-size: 50px;
-            text-align: left;
-            line-height: 80px;
-        }
+
 
         b,
         strong {
@@ -309,29 +276,38 @@
 
     <div>
         <!-- Hero Section -->
-        <div class="hero-section flex-column">
-            <div class="hero-content text-center">
-                <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <h1 class="pro-hero-title text-center" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                        data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <span class="d-block">
-                            <?= get_field("herotitle") ?>
-                        </span>
-                    </h1>
-                </div>
-                <span class="pro-hero-text">
-                    <span class="d-block">
-                        <?= get_field("herotext") ?>
-                    </span>
-                </span>
+        <div class="hero-section">
 
-                <div class="circle-border  btn-primary-custom mt-4" style="width: fit-content;">
-                    <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn-custom">
-                        <?= get_field("meerwetenbtn")['title'] ?>
-                        <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go kennismaken"
-                            class="go-arrow" />
-                    </a>
+            <!-- BreadCrumb Section -->
+            <?php get_template_part('components/breadcrumb') ?>
 
+
+
+            <div class="container">
+                <div class="hero-content text-center">
+                    <div class="col-12 col-lg-12   d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="pro-hero-title text-center" data-aos="fade-up" data-aos-offset="100"
+                            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                            <span class="d-block">
+                                <?= get_field("herotitle") ?>
+                            </span>
+                        </h1>
+
+                        <div class="pro-hero-text">
+                            <span class="d-block">
+                                <?= get_field("herotext") ?>
+                            </span>
+                        </div>
+
+                        <div class="circle-border  btn-primary-custom mt-4" style="width: fit-content;">
+                            <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn-custom">
+                                <?= get_field("meerwetenbtn")['title'] ?>
+                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                    alt="go kennismaken" class="go-arrow" />
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -340,23 +316,22 @@
 
         <!--Testimonials Section on All Screens -->
         <div class="testi-container">
-            <div class="container pt-5 pb-5" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+            <div class="container  pb-5 " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="row gy-2">
                     <?php
                     $delay = 0;
                     foreach (get_field("testimonials") as $testimonial) { ?>
                     <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
-                        data-aos-duration="800">
+                        data-aos-duration=" 800">
 
                         <div class="d-flex flex-column text-left gap-3">
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="d-flex justify-content-center align-items-center "
-                                    style="background-color: blue;width: 30px; height: 30px; border-radius: 50px;">
-                                    <!-- <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
-                                    alt="go to article" class="icon" /> -->
-                                    <img src="<?= get_field("arrow")['url'] ?>" alt=" <?= get_field("arrow")['url'] ?>"
-                                        class="icon" style="width: 14px;height: 18px;" />
+                                <span class="d-flex justify-content-center align-items-center ">
+                                    <img src="<?= get_template_directory_uri() ?>/images/check.svg"
+                                        alt="go to article" />
+
+
                                 </span>
                             </div>
 
@@ -385,7 +360,7 @@
                         data-aos-easing="ease-in-out">
                         <?= get_field("lefttext") ?>
                     </div>
-                    <!-- offset-lg-1 -->
+
                     <div class="col-12 col-lg-6 col-md-6   blauw-right-text" data-aos="fade-left" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column">
@@ -396,8 +371,9 @@
 
 
 
-                            <div class="button-group">
-                                <div class="circle-border  btn-primary-custom " style="width: fit-content;">
+                            <div
+                                class="button-group  d-flex justify-content-center justify-content-lg-start mt-4 gap-2">
+                                <div class="circle-border  btn-primary-custom " style="width: 110px;">
                                     <a href="<?= get_field("contactlink")['url'] ?>" class="btn-custom">
                                         <?= get_field("contactlink")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
@@ -539,7 +515,7 @@
             },
         },
 
-        // R ein itia li ze A O S after Swiper initialization
+        // R ein itia li z e A O S after Swiper initialization
         on: {
             init: function() {
                 AOS.refresh();
