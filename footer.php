@@ -1,325 +1,325 @@
 <footer class="footer">
     <style>
-    .footer {
-        max-width: 1700px;
-        width: 100%;
-        margin: 0 auto;
+        .footer {
+            max-width: 1700px;
+            width: 100%;
+            margin: 0 auto;
 
-    }
-
-    .footer-section {
-        padding-bottom: 20px;
-        /* overflow-x: clip; */
-        max-width: 100vw;
-    }
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .left-cont,
-    .right-cont {
-        position: relative;
-    }
-
-    .left-cont .bg-left {
-        position: absolute;
-        background-color: #F7F6F4;
-        height: 100%;
-        padding-left: 10px;
-        width: 200vw;
-        left: -50%;
-        z-index: -1;
-    }
-
-    .under-bottom {
-        border-bottom: 1px solid rgba(19, 32, 48, 0.25);
-    }
-
-    .left-cont {
-        order: 2;
-
-    }
-
-    .right-cont {
-        order: 1;
-    }
-
-    .right-cont .bg-right {
-        background: #F29401;
-        height: 100%;
-        padding-right: 0;
-        width: 200vw;
-        position: absolute;
-        z-index: 0;
-        left: -50%;
-    }
-
-
-    .bg-right {
-        left: 0;
-    }
-
-    .bottom-under {
-        padding-top: 40px;
-
-    }
-
-
-    .footer-codeblauw {
-        /* margin-left: auto; */
-        padding: 30px 0;
-
-    }
-
-    .door-code-blauw {
-        color: #132030;
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 24px;
-        letter-spacing: 0px;
-        opacity: 0.5;
-    }
-
-
-
-
-    .footer-text {
-        margin-top: 20px;
-        color: #132030;
-        text-align: left;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0px;
-        font-weight: 300;
-        font-family: 'Scala Sans Pro', sans-serif;
-        /* max-width: 432px; */
-    }
-
-    .footer-adres {
-        color: #132030;
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 24px;
-        letter-spacing: 0px;
-    }
-
-    .navbar-nav .custom-nav-link {
-        text-align: left;
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 22px;
-        font-family: 'Scala Sans Pro', sans-serif;
-        color: #132030;
-        letter-spacing: 0px;
-    }
-
-    .footer-vraag {
-        color: #FFFFFF;
-        font-family: 'Richmond Display', serif;
-        font-size: 24px;
-        font-weight: 300;
-        line-height: 30px;
-        letter-spacing: 0px;
-        margin-bottom: 20px;
-        width: 280px;
-    }
-
-    .footer-text2 {
-        color: #FFFFFF;
-        font-family: 'Scala Sans Pro', sans-serif;
-        /* font-size: 16px;
-        font-weight: 300;
-        line-height: 24px; */
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 30px;
-        letter-spacing: 0px;
-        margin-bottom: 10px;
-        width: 263px;
-        display: block;
-    }
-
-    .footer-icon {
-        color: #FFFFFF;
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 30px;
-        letter-spacing: 0px;
-        opacity: 1;
-
-    }
-
-    .img-jordi {
-        position: absolute;
-        object-fit: cover;
-
-        width: 176.46px;
-        height: 268px;
-        right: -18px;
-        bottom: 0;
-
-    }
-
-    .footer-right-container {
-        margin-top: 70px;
-        padding-left: 20px;
-    }
-
-
-    .footer-privacy {
-        color: #132030;
-        font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 24px;
-        letter-spacing: 0px;
-        opacity: 0.5;
-    }
-
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    li {
-        margin-bottom: 0.25rem;
-
-    }
-
-    .footer-contact-btn {
-        width: fit-content;
-        border: 1px solid #FFFFFF;
-        border-radius: 5px;
-        padding: 19px 14px 16px 14px;
-        /* padding: 4px 14px; */
-        height: 51px;
-        display: flex;
-        align-items: center;
-        margin-top: 33px;
-    }
-
-    .footer-linked-img {
-        width: 25.79px;
-        height: 25.8px;
-    }
-
-    .footer-logo {
-        width: 136px;
-        height: 36px;
-        object-fit: cover;
-    }
-
-    .footer-sm-screen {
-        margin-left: 20px;
-    }
-
-    .bottom-padding {
-        margin-bottom: 4rem;
-    }
-
-    @media(min-width: 768px) {
-
-
-        .footer-text {
-            font-size: 18px;
         }
 
-        /* 
-        .footer-adres {
-            font-size: 14px;
-        } */
-
-        .footer-text2 {
-
-            width: unset;
+        .footer-section {
+            padding-bottom: 20px;
+            /* overflow-x: clip; */
+            max-width: 100vw;
         }
 
-        .img-jordi {
-            width: 238.46px;
-            height: 381px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .bottom-padding {
-            margin-bottom: unset;
+        .row {
+            display: flex;
+            flex-wrap: wrap;
         }
 
-        .footer-text {
-            margin-top: 40px;
+        .left-cont,
+        .right-cont {
+            position: relative;
         }
 
-        .footer-right-container {
-            padding-left: 50px;
+        .left-cont .bg-left {
+            position: absolute;
+            background-color: #F7F6F4;
+            height: 100%;
+            padding-left: 10px;
+            width: 200vw;
+            left: -50%;
+            z-index: -1;
+        }
+
+        .under-bottom {
+            border-bottom: 1px solid rgba(19, 32, 48, 0.25);
         }
 
         .left-cont {
-            order: 1;
+            order: 2;
+
         }
 
         .right-cont {
-
-            order: 2;
+            order: 1;
         }
 
         .right-cont .bg-right {
-            width: 50vw;
-            left: unset;
+            background: #F29401;
+            height: 100%;
+            padding-right: 0;
+            width: 200vw;
+            position: absolute;
+            z-index: 0;
+            left: -50%;
+        }
+
+
+        .bg-right {
+            left: 0;
+        }
+
+        .bottom-under {
+            padding-top: 40px;
+
+        }
+
+
+        .footer-codeblauw {
+            /* margin-left: auto; */
+            padding: 30px 0;
+
+        }
+
+        .door-code-blauw {
+            color: #132030;
+            font-family: 'ff-scala-sans-pro', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0px;
+            opacity: 0.5;
+        }
+
+
+
+
+        .footer-text {
+            margin-top: 20px;
+            color: #132030;
+            text-align: left;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0px;
+            font-weight: 300;
+            font-family: 'ff-scala-sans-pro', sans-serif;
+            /* max-width: 432px; */
+        }
+
+        .footer-adres {
+            color: #132030;
+            font-family: 'ff-scala-sans-pro', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0px;
         }
 
         .navbar-nav .custom-nav-link {
             text-align: left;
-            font-size: 16px;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 22px;
+            font-family: 'ff-scala-sans-pro', sans-serif;
+            color: #132030;
+            letter-spacing: 0px;
         }
 
-
-
-        /* .img-jordi {
-            height: 325px;
-            width: 176.46px;
-        } */
-        .img-jordi {
-            height: 375px;
-            width: 210.46px;
+        .footer-vraag {
+            color: #FFFFFF;
+            font-family: 'richmond-display', serif;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 30px;
+            letter-spacing: 0px;
+            margin-bottom: 20px;
+            width: 280px;
         }
-
 
         .footer-text2 {
-            width: unset;
+            color: #FFFFFF;
+            font-family: 'ff-scala-sans-pro', sans-serif;
+            /* font-size: 16px;
+        font-weight: 300;
+        line-height: 24px; */
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 30px;
+            letter-spacing: 0px;
+            margin-bottom: 10px;
+            width: 263px;
+            display: block;
         }
 
-        .bottom-under {
-            padding-left: 15px;
-            padding-top: 20px;
+        .footer-icon {
+            color: #FFFFFF;
+            font-family: 'ff-scala-sans-pro', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 30px;
+            letter-spacing: 0px;
+            opacity: 1;
+
         }
 
-        .gap-lg-custom {
-            gap: 10rem !important;
+        .img-jordi {
+            position: absolute;
+            object-fit: cover;
+
+            width: 176.46px;
+            height: 268px;
+            right: -18px;
+            bottom: 0;
+
         }
+
+        .footer-right-container {
+            margin-top: 70px;
+            padding-left: 20px;
+        }
+
 
         .footer-privacy {
-            font-size: 14px;
+            color: #132030;
+            font-family: 'ff-scala-sans-pro', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0px;
+            opacity: 0.5;
+        }
 
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.25rem;
+
+        }
+
+        .footer-contact-btn {
+            width: fit-content;
+            border: 1px solid #FFFFFF;
+            border-radius: 5px;
+            padding: 19px 14px 16px 14px;
+            /* padding: 4px 14px; */
+            height: 51px;
+            display: flex;
+            align-items: center;
+            margin-top: 33px;
+        }
+
+        .footer-linked-img {
+            width: 25.79px;
+            height: 25.8px;
+        }
+
+        .footer-logo {
+            width: 136px;
+            height: 36px;
+            object-fit: cover;
         }
 
         .footer-sm-screen {
-            margin-left: unset;
+            margin-left: 20px;
         }
 
+        .bottom-padding {
+            margin-bottom: 4rem;
+        }
+
+        @media(min-width: 768px) {
+
+
+            .footer-text {
+                font-size: 18px;
+            }
+
+            /* 
+        .footer-adres {
+            font-size: 14px;
+        } */
+
+            .footer-text2 {
+
+                width: unset;
+            }
+
+            .img-jordi {
+                width: 238.46px;
+                height: 381px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .bottom-padding {
+                margin-bottom: unset;
+            }
+
+            .footer-text {
+                margin-top: 40px;
+            }
+
+            .footer-right-container {
+                padding-left: 50px;
+            }
+
+            .left-cont {
+                order: 1;
+            }
+
+            .right-cont {
+
+                order: 2;
+            }
+
+            .right-cont .bg-right {
+                width: 50vw;
+                left: unset;
+            }
+
+            .navbar-nav .custom-nav-link {
+                text-align: left;
+                font-size: 16px;
+            }
+
+
+
+            /* .img-jordi {
+            height: 325px;
+            width: 176.46px;
+        } */
+            .img-jordi {
+                height: 375px;
+                width: 210.46px;
+            }
+
+
+            .footer-text2 {
+                width: unset;
+            }
+
+            .bottom-under {
+                padding-left: 15px;
+                padding-top: 20px;
+            }
+
+            .gap-lg-custom {
+                gap: 10rem !important;
+            }
+
+            .footer-privacy {
+                font-size: 14px;
+
+            }
+
+            .footer-sm-screen {
+                margin-left: unset;
+            }
 
 
 
 
 
 
-    }
+
+        }
     </style>
 
 

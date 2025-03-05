@@ -4,52 +4,52 @@
 
 
     <style>
-    .hero-section {
-        background: url("<?= get_field('heroimage')['url'] ?> ");
-        width: 100%;
-        /* max-width: 1700px; */
-        margin: 0 auto;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
+        .hero-section {
+            background: url("<?= get_field('heroimage')['url'] ?> ");
+            width: 100%;
+            /* max-width: 1700px; */
+            margin: 0 auto;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
 
-    /* .hero-section {
+        /* .hero-section {
         height: 500px;
     } */
 
-    .blue-block {
-        width: 100%;
-        /* max-width: 1700px; */
-        margin: 0 auto;
-        background-color: #CCE1F4;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
+        .blue-block {
+            width: 100%;
+            /* max-width: 1700px; */
+            margin: 0 auto;
+            background-color: #CCE1F4;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
 
 
 
-    /* Form Style */
-    .gform_wrapper .gform_footer .gform_button {
-        background: url("<?= get_field('white_arrow')['url'] ?> ");
-    }
+        /* Form Style */
+        .gform_wrapper .gform_footer .gform_button {
+            background: url("<?= get_field('white_arrow')['url'] ?> ");
+        }
 
-    .content-container {
-        font: italic normal 300 14px/20px "Scala Sans Pro" !important;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    }
+        .content-container {
+            font: italic normal 300 14px/20px "ff-scala-sans-pro" !important;
+            letter-spacing: 0px;
+            color: #132030;
+            opacity: 1;
+        }
 
-    /* .gform-theme--foundation .gfield {
-        font: italic normal 300 14px/20px Scala Sans Pro;
+        /* .gform-theme--foundation .gfield {
+        font: italic normal 300 14px/20px ff-scala-sans-pro;
         letter-spacing: 0px;
         color: #132030;
         opacity: 1;
     } */
 
-    /* Form Style */
+        /* Form Style */
     </style>
     <div>
 
