@@ -345,7 +345,7 @@ $fields = get_fields();
                         </h4>
                         <!-- d-lg-flex -->
                         <div class="button-group d-flex justify-content-center justify-content-lg-start mt-4 gap-2">
-                            <div class="circle-border btn-primary-custom" style="width: 176px;">
+                            <div class="circle-border btn-primary-custom">
                                 <a href="<?= get_field("meerwetenbtn")['url'] ?>" class=" btn-custom">
                                     <?= get_field("meerwetenbtn")['title'] ?>
                                 </a>
@@ -464,7 +464,9 @@ $fields = get_fields();
 
         <!--first-blue-block  -->
         <div class="first-blue-block position-relative" style=" margin-top: -105px;">
-            <div class="container blue-container">
+
+            <div class="container blue-container werk-slider ">
+
                 <div class="swiper-container swiper position-relative ">
 
                     <div class="swiper-header">
@@ -551,7 +553,7 @@ $fields = get_fields();
                             <span class="verhaal-text"><?= get_field("verhaaltext") ?> </span>
 
                             <div class="d-flex  mt-4 gap-2">
-                                <div class="circle-border btn-custom-container gap-3">
+                                <div class="circle-border btn-custom-container ">
                                     <a href="<?= get_field("overonsbtn")['url'] ?>" class="btn-custom color-w" style="">
                                         <?= get_field("overonsbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
@@ -700,8 +702,8 @@ $fields = get_fields();
         // d elay: 2000,
         // } ,
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".werk-slider .swiper-button-next",
+            prevEl: ".werk-slider .swiper-button-prev",
         },
 
 

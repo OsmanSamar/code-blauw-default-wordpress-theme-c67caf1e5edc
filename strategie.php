@@ -218,7 +218,7 @@ $fields = get_fields();
                                 <?= get_field("herotext") ?>
                             </span>
                         </div>
-                        <div class="circle-border  btn-primary-custom mt-4" style="width: fit-content;">
+                        <div class="circle-border  btn-primary-custom mt-4">
                             <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn-custom">
                                 <?= get_field("meerwetenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
@@ -247,7 +247,7 @@ $fields = get_fields();
                         <div class="right-text-bold pt-2"> <?= get_field("righttext") ?></div>
                         <div class="right-text pt-2 "> <?= get_field("secrighttext") ?></div>
                         <div class="button-group mt-5">
-                            <div class="circle-border gap-1  " style="width: 172px; ">
+                            <div class="circle-border ">
                                 <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="btn-custom"
                                     style="color: #132030;">
                                     <?= get_field("onzeklantcasesbtn")['title'] ?>

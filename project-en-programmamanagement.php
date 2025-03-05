@@ -293,14 +293,13 @@ $fields = get_fields();
                             </span>
                         </h1>
 
-                        <div class="pro-hero-text" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                            data-aos-duration="1000" data-aos-easing="ease-in-out">
+                        <div class="pro-hero-text">
                             <span class="d-block">
                                 <?= get_field("herotext") ?>
                             </span>
                         </div>
 
-                        <div class="circle-border  btn-primary-custom mt-4" style="width: fit-content;">
+                        <div class="circle-border  btn-primary-custom mt-4">
                             <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn-custom">
                                 <?= get_field("meerwetenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
@@ -374,14 +373,14 @@ $fields = get_fields();
 
                             <div
                                 class="button-group  d-flex justify-content-center justify-content-lg-start mt-4 gap-2">
-                                <div class="circle-border  btn-primary-custom " style="width: 110px;">
+                                <div class="circle-border  btn-primary-custom ">
                                     <a href="<?= get_field("contactlink")['url'] ?>" class="btn-custom">
                                         <?= get_field("contactlink")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                             alt="go onze expertises" class="go-arrow" />
                                     </a>
                                 </div>
-                                <div class="circle-border  btn-custom-container " style="width:195px  ">
+                                <div class="circle-border  btn-custom-container ">
                                     <a href="<?= get_field("veelvragenlink")['url'] ?>" class="btn-custom color-w">
                                         <?= get_field("veelvragenlink")['title'] ?>
                                     </a>

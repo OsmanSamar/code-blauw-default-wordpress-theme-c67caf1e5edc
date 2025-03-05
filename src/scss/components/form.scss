@@ -23,14 +23,14 @@
 }
 
 .gform_wrapper .gform_footer .gform_button {
-  width: 116px !important;
-  // padding: 12px 21px !important;
+  padding-left: 13px !important;
+  padding-right: 34px !important;
   border-radius: 5px !important;
   background-color: #f29401 !important;
   color: #fff !important;
   border: none !important;
-  display: inline-flex !important;
-  align-items: center !important;
+  // display: inline-flex !important;
+  // align-items: center !important;
   background: url("<?= get_field('white_arrow')['url'] ?> ");
   background-size: 9px 8px !important;
   // background-position: right 3px center !important;
@@ -47,5 +47,5 @@
   letter-spacing: 0px !important;
   font-size: 16px !important;
   font-weight: bold !important;
-  line-height: 30px !important;
+  // line-height: 30px !important;
 }

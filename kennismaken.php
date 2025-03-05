@@ -15,6 +15,10 @@
         object-fit: cover;
     }
 
+    /* .hero-section {
+        height: 500px;
+    } */
+
     .blue-block {
         width: 100%;
         /* max-width: 1700px; */
@@ -31,6 +35,20 @@
         background: url("<?= get_field('white_arrow')['url'] ?> ");
     }
 
+    .content-container {
+        font: italic normal 300 14px/20px "Scala Sans Pro" !important;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+    }
+
+    /* .gform-theme--foundation .gfield {
+        font: italic normal 300 14px/20px Scala Sans Pro;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+    } */
+
     /* Form Style */
     </style>
     <div>
@@ -39,7 +57,7 @@
         <!-- Hero Section -->
         <div class="hero-section ">
             <div class="container">
-                <div class="hero-content text-center">
+                <div class="hero-content text-center mt-5">
                     <div
                         class="col-12  col-lg-6 offset-lg-3 col-md-8 offset-md-2 align-self-center d-flex flex-column justify-content-center align-items-center">
                         <h1 class="kennis-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"

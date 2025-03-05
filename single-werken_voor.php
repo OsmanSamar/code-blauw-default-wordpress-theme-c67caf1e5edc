@@ -182,7 +182,7 @@ $fields = get_fields();
                     </span>
 
 
-                    <div class="circle-border gap-1  btn-primary-custom ">
+                    <div class="circle-border btn-primary-custom ">
                         <!-- width:195px -->
                         <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-custom">
                             <?= get_field("vraagaanbtn")['title'] ?>

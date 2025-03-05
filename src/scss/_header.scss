@@ -227,6 +227,7 @@ strong:nth-of-type(2) {
 }
 
 .circle-border {
+  width: fit-content;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -236,8 +237,7 @@ strong:nth-of-type(2) {
   opacity: 1;
   position: relative;
   overflow: hidden;
-  // margin: 4px;
-  padding: 6px 8px;
+  padding: 19px 20px 16px 20px;
   height: 51px;
   color: #fff;
 }
@@ -268,7 +268,7 @@ strong:nth-of-type(2) {
 /* Style for the second button */
 .btn-custom-container {
   background: transparent;
-  width: 126px;
+  width: fit-content;
 }
 
 /* Button styles */
@@ -595,7 +595,6 @@ strong:nth-of-type(2) {
   line-height: 26px;
   font-family: "Scala Sans Pro", sans-serif;
   letter-spacing: 0px;
-  letter-spacing: 0px;
   color: #132030;
 }
 
@@ -611,7 +610,7 @@ strong:nth-of-type(2) {
   width: 100%;
   height: 100%;
   background: transparent 0% 0% no-repeat padding-box;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 7px;
   opacity: 1;
   object-fit: cover;
 }
@@ -738,13 +737,11 @@ strong:nth-of-type(2) {
   font-size: 16px;
   line-height: 30px;
   font-weight: 300;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   color: #132030;
   opacity: 1;
 }
-.whitecontainertext-right {
-  line-height: 30px;
-}
+
 .whitecontainertext-left {
   line-height: 26px;
 }
@@ -875,10 +872,10 @@ strong:nth-of-type(2) {
 .werk-right-text,
 .werk-right-text-bold {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 26px;
   font-weight: 300;
   font-family: "Scala Sans Pro", sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   color: #132030;
   opacity: 1;
   text-wrap: balance;

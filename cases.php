@@ -77,8 +77,7 @@ $fields = get_fields();
                                 <?= get_field("herotext") ?>
                             </span>
                         </div>
-                        <div class="circle-border btn-primary-custom mt-4"
-                            style="width: fit-content;   padding: 6px 20px;">
+                        <div class="circle-border btn-primary-custom mt-4">
                             <a href="<?= get_field("ontdekbtn")['url'] ?>" class="btn-custom">
                                 <?= get_field("ontdekbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
@@ -169,7 +168,7 @@ $fields = get_fields();
                          echo '</pre>';
                          ?> -->
                 </span>
-                <div class="circle-border btn-primary-custom  gap-1">
+                <div class="circle-border btn-primary-custom  ">
                     <a href="<?= get_field("vraageenbtn")['url'] ?>" class="btn-custom">
                         <?= get_field("vraageenbtn")['title'] ?>
                         <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go Contact page"
