@@ -101,7 +101,7 @@
     .footer-adres {
         color: #132030;
         font-family: 'Scala Sans Pro', sans-serif;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 300;
         line-height: 24px;
         letter-spacing: 0px;
@@ -131,9 +131,12 @@
     .footer-text2 {
         color: #FFFFFF;
         font-family: 'Scala Sans Pro', sans-serif;
+        /* font-size: 16px;
+        font-weight: 300;
+        line-height: 24px; */
         font-size: 16px;
         font-weight: 300;
-        line-height: 24px;
+        line-height: 30px;
         letter-spacing: 0px;
         margin-bottom: 10px;
         width: 263px;
@@ -228,12 +231,13 @@
             font-size: 18px;
         }
 
+        /* 
         .footer-adres {
             font-size: 14px;
-        }
+        } */
 
         .footer-text2 {
-            font-size: 18px;
+
             width: unset;
         }
 
@@ -275,9 +279,7 @@
             font-size: 16px;
         }
 
-        .footer-adres {
-            font-size: 16px;
-        }
+
 
         /* .img-jordi {
             height: 325px;
@@ -329,7 +331,8 @@
 
                 <div class="col-lg-6 left-cont under-bottom">
                     <div class="bg-left"></div>
-                    <div class="footer-sm-screen">
+                    <div class="footer-sm-screen" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="row align-items-center">
                             <!-- Logo and LinkedIn in 5 cols  row align-items-center-->
                             <div class="col-lg-10 d-flex align-items-center justify-content-between"
@@ -414,7 +417,9 @@
 
                 <div class="col-12 col-lg-6 right-cont ">
                     <div class="bg-right "></div>
-                    <div class="d-flex flex-column position-relative footer-right-container ">
+                    <div class="d-flex flex-column position-relative footer-right-container" data-aos="fade-left"
+                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
                         <div class="d-flex align-items-start justify-content-between">
                             <div class="col-12 col-md-8">
                                 <span class="footer-vraag d-block d-md-none d-lg-none">

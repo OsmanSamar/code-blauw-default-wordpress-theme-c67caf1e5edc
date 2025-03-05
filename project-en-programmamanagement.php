@@ -293,7 +293,8 @@ $fields = get_fields();
                             </span>
                         </h1>
 
-                        <div class="pro-hero-text">
+                        <div class="pro-hero-text" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                            data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <span class="d-block">
                                 <?= get_field("herotext") ?>
                             </span>
@@ -380,9 +381,8 @@ $fields = get_fields();
                                             alt="go onze expertises" class="go-arrow" />
                                     </a>
                                 </div>
-                                <div class="circle-border gap-1  btn-custom-container " style="width:195px  ">
-                                    <a href="<?= get_field("veelvragenlink")['url'] ?>" class="btn-custom"
-                                        style="color: #132030;">
+                                <div class="circle-border  btn-custom-container " style="width:195px  ">
+                                    <a href="<?= get_field("veelvragenlink")['url'] ?>" class="btn-custom color-w">
                                         <?= get_field("veelvragenlink")['title'] ?>
                                     </a>
                                     <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"

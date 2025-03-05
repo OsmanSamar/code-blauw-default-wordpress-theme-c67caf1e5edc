@@ -192,7 +192,7 @@ $fields = get_fields();
         /* left: -8% !important;
         top: 2px !important; */
         /* left: 3% !important; */
-        left: -7% !important;
+        left: -17% !important;
         top: 12px !important;
     }
 
@@ -208,7 +208,7 @@ $fields = get_fields();
         /* right: 9px !important;
         top: 2px !important; */
         /* right: 14px !important; */
-        right: 24px !important;
+        right: 36px !important;
         top: 11px !important;
 
     }
@@ -240,7 +240,7 @@ $fields = get_fields();
     .logo-container {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border-radius: 5px;
-        width: 175px;
+        /* width: 175px; */
         height: 93px;
         display: flex;
         align-items: center;
@@ -339,7 +339,8 @@ $fields = get_fields();
                                 <?= get_field("herotitlegekleuredtext") ?>
                             </span>
                         </h1>
-                        <h4 class="hero-text">
+                        <h4 class="hero-text" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                            data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <span class="d-block"> <?= get_field("herotext") ?></span>
                         </h4>
                         <!-- d-lg-flex -->
@@ -504,7 +505,7 @@ $fields = get_fields();
                                                     <img src="<?= $testimonial["white_arrow"]['url'] ?>"
                                                         alt=" <?= $testimonial['white_arrow']['alt'] ?>"
                                                         class="go-arrow"
-                                                        style="width: 9px; height: 8.69px; object-fit: cover; display: block; " />
+                                                        style="width: 10px; height: 8.69px; object-fit: cover; display: block; " />
                                                 </span>
                                             </div>
                                             <span class="card-title mt-auto">
@@ -545,14 +546,13 @@ $fields = get_fields();
 
                     <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center p-5"
                         style="background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 10px 10px 60px rgba(32, 114, 190, 0.1); border-radius: 0px 5px 5px 0px; height: 387px; ">
-                        <div class="w-">
+                        <div class="">
                             <h2 class="verhaal-title"><?= get_field("onsverhaaltitle") ?></h2>
                             <span class="verhaal-text"><?= get_field("verhaaltext") ?> </span>
 
                             <div class="d-flex  mt-4 gap-2">
                                 <div class="circle-border btn-custom-container gap-3">
-                                    <a href="<?= get_field("overonsbtn")['url'] ?>" class="btn-custom"
-                                        style="color: #132030;">
+                                    <a href="<?= get_field("overonsbtn")['url'] ?>" class="btn-custom color-w" style="">
                                         <?= get_field("overonsbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                             alt="go onze expertises" class="go-arrow" />
@@ -560,8 +560,8 @@ $fields = get_fields();
                                 </div>
 
                                 <div class="circle-border btn-custom-container">
-                                    <a href="<?= get_field("werkwijzebtn")['url'] ?>" class="btn-custom"
-                                        style="color: #132030;">
+                                    <a href="<?= get_field("werkwijzebtn")['url'] ?>" class="btn-custom color-w"
+                                        style="">
 
                                         <?= get_field("werkwijzebtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
@@ -751,7 +751,7 @@ $fields = get_fields();
         const logoswiper = new Swiper('.sample-slider1', {
 
             slidesPerView: 2,
-            centeredSlides: true,
+            // centeredSlides: true,
             spaceBetween: 24,
 
             pagination: {
@@ -766,28 +766,27 @@ $fields = get_fields();
 
                 360: {
                     slidesPerView: 1.7,
-                    spaceBetween: 1,
 
                 },
 
                 540: {
                     slidesPerView: 2.8,
-                    spaceBetween: 2,
+
 
                 },
 
                 556: {
                     slidesPerView: 3.2,
-                    spaceBetween: 1,
+
                 },
                 992: {
 
                     slidesPerView: 5,
-                    spaceBetween: 1,
+
                 },
                 1025: {
-                    slidesPerView: 6.2,
-                    spaceBetween: 1,
+                    slidesPerView: 6,
+
 
                 }
 
