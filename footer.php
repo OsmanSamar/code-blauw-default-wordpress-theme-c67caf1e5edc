@@ -194,11 +194,11 @@
     }
 
     .footer-contact-btn {
-        width: 110px;
+        width: fit-content;
         border: 1px solid #FFFFFF;
         border-radius: 5px;
-
-        padding: 4px 14px;
+        padding: 19px 14px 16px 14px;
+        /* padding: 4px 14px; */
         height: 51px;
         display: flex;
         align-items: center;
@@ -468,7 +468,6 @@
                             <a href=" <?= get_field("contactbtn", 'option')['url'] ?>"
                                 class=" d-flex align-items-center gap-3 text-white">
                                 <?= get_field("contactbtn", 'option')['title'] ?>
-
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go contact page" class="go-arrow" />
                             </a>
