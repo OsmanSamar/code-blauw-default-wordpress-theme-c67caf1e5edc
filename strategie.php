@@ -4,99 +4,99 @@ $fields = get_fields();
 
 <main class="strategie">
     <style>
-        .hero-section {
-            background: url("<?= get_field('heroimage')['url'] ?> ");
-            width: 100%;
+    .hero-section {
+        background: url("<?= get_field('heroimage')['url'] ?> ");
+        width: 100%;
 
-            margin: 0 auto;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            object-fit: cover;
-        }
+        margin: 0 auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
 
-        .strategie-hero-title {
-            font-size: 54px;
-            line-height: 76px;
-            font-weight: 500;
-            font-family: "Richmond Display", serif;
-            text-align: center;
-            letter-spacing: 0px;
-            color: #feffff;
-        }
+    .strategie-hero-title {
+        font-size: 54px;
+        line-height: 76px;
+        font-weight: 500;
+        font-family: "Richmond Display", serif;
+        text-align: center;
+        letter-spacing: 0px;
+        color: #feffff;
+    }
 
-        .strategie-hero-text {
-            text-align: center;
-            font-size: 14px;
-            line-height: 24px;
-            font-weight: 300;
-            font-family: "Libre Franklin", sans-serif;
-            letter-spacing: 1px;
-            color: #ffffff;
-            opacity: 1;
-            /* width: 505px; */
-            /* display: block; */
-            margin-bottom: 10px;
-        }
-
-
-
-        .button-container {
-            border: 1px solid #f29401;
-            border-radius: 5px;
-            width: 250px;
-            height: 51px;
-            padding: 10px;
-            background-color: #f29401;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            margin-top: 30px;
-        }
-
-        .button-text {
-            text-align: center;
-            font-size: 14px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #FFFFFF;
-        }
-
-        .werk-blauwijs-title {
-            text-align: left;
-            font-size: 36px;
-            line-height: 50px;
-            font-weight: 300;
-            font-family: "Richmond Display", serif;
-            letter-spacing: 0px;
-            color: #1E73BE;
-            opacity: 1;
-        }
-
-        .right-text,
-        .right-text-bold {
-            text-align: left;
-            font-size: 16px;
-            line-height: 30px;
-            font-weight: 300;
-            font-family: 'Scala Sans Pro', sans-serif;
-            letter-spacing: 2px;
-            color: #132030;
-            opacity: 1;
-            text-wrap: balance;
-            white-space: break-spaces;
-        }
-
-        .right-text-bold {
-            font-weight: bold;
-        }
+    .strategie-hero-text {
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 300;
+        font-family: "Libre Franklin", sans-serif;
+        letter-spacing: 1px;
+        color: #ffffff;
+        opacity: 1;
+        /* width: 505px; */
+        /* display: block; */
+        margin-bottom: 10px;
+    }
 
 
 
-        /* .whi-container {
+    .button-container {
+        border: 1px solid #f29401;
+        border-radius: 5px;
+        width: 250px;
+        height: 51px;
+        padding: 10px;
+        background-color: #f29401;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 30px;
+    }
+
+    .button-text {
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+    }
+
+    .werk-blauwijs-title {
+        text-align: left;
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: 300;
+        font-family: "Richmond Display", serif;
+        letter-spacing: 0px;
+        color: #1E73BE;
+        opacity: 1;
+    }
+
+    .right-text,
+    .right-text-bold {
+        text-align: left;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 300;
+        font-family: 'Scala Sans Pro', sans-serif;
+        letter-spacing: 2px;
+        color: #132030;
+        opacity: 1;
+        text-wrap: balance;
+        white-space: break-spaces;
+    }
+
+    .right-text-bold {
+        font-weight: bold;
+    }
+
+
+
+    /* .whi-container {
             background: #FFFFFF 0% 0% no-repeat padding-box;
             width: 1000px;
             z-index: 1;
@@ -112,93 +112,93 @@ $fields = get_fields();
 
 
 
-        .waaromkiezenvoorblauw {
-            text-align: left;
-            font-size: 36px;
-            line-height: 50px;
-            font-weight: 300;
-            font-family: "Richmond Display", serif;
-            letter-spacing: 0px;
-            color: #132030;
-            opacity: 1;
+    .waaromkiezenvoorblauw {
+        text-align: left;
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: 300;
+        font-family: "Richmond Display", serif;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
 
-        }
+    }
 
-        .right-text-bold,
-        .right-text-notbold {
-            text-align: left;
-            font-size: 16px;
-            line-height: 26px;
-            font-weight: 300;
-            font-family: 'Scala Sans Pro', sans-serif;
-            letter-spacing: 1px;
-            color: #132030;
-            opacity: 1;
-            text-wrap: balance;
-            white-space: break-spaces;
+    .right-text-bold,
+    .right-text-notbold {
+        text-align: left;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 300;
+        font-family: 'Scala Sans Pro', sans-serif;
+        letter-spacing: 1px;
+        color: #132030;
+        opacity: 1;
+        text-wrap: balance;
+        white-space: break-spaces;
 
-        }
+    }
 
+    .right-text-bold {
+        font-weight: bold;
+
+    }
+
+    .blue-block {
+        width: 100%;
+
+        margin: 0 auto;
+        background-color: #CCE1F4;
+        /* height: 41px; */
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+    @media (min-width: 768px) {
+
+        .right-text,
         .right-text-bold {
-            font-weight: bold;
-
+            text-align: left;
         }
-
-        .blue-block {
-            width: 100%;
-
-            margin: 0 auto;
-            background-color: #CCE1F4;
-            /* height: 41px; */
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
+    }
 
 
-        @media (min-width: 768px) {
 
-            .right-text,
-            .right-text-bold {
-                text-align: left;
-            }
+    @media (min-width: 992px) {
+
+        .strategie-hero-title {
+
+            text-align: left;
+            line-height: 80px;
         }
 
 
-
-        @media (min-width: 992px) {
-
-            .strategie-hero-title {
-
-                text-align: left;
-                line-height: 80px;
-            }
-
-
-            .strategie-hero-text {
-                font-size: 16px;
-                /* width: 505px;
+        .strategie-hero-text {
+            font-size: 16px;
+            /* width: 505px;
             display: block; */
-            }
-
-            .right-text,
-            .right-text-bold {
-                text-align: left;
-            }
-
-
-            .whi-container {
-                height: 131px;
-            }
-
-            .organ-title {
-                font-size: 32px;
-                line-height: 50px;
-                text-align: left;
-            }
-
-
-
         }
+
+        .right-text,
+        .right-text-bold {
+            text-align: left;
+        }
+
+
+        .whi-container {
+            height: 131px;
+        }
+
+        .organ-title {
+            font-size: 32px;
+            line-height: 50px;
+            text-align: left;
+        }
+
+
+
+    }
     </style>
     <div>
         <!-- Hero Section -->
@@ -239,7 +239,7 @@ $fields = get_fields();
                 <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <span class="werk-blauwijs-title"><?= get_field("voorwieisblauwijs") ?></span>
-                    sbl
+
                 </div>
                 <div class="col-12 col-lg-6 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">

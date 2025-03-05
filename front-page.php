@@ -369,41 +369,6 @@ $fields = get_fields();
 
 
         <!--2 Flexible Content Field must change the code -->
-        <!-- <div>
-            <?php if (have_rows('flexiblecontentfield')): ?>
-            <div class="container mt-4">
-                <?php while (have_rows('flexiblecontentfield')):
-                    the_row(); ?>
-                <?php if (get_row_layout() == 'text'): ?>
-                <div class="row">
-
-                    <div class="col-12   h-100 p-3 px-4 mt-5 " data-aos="fade-up" data-aos-offset="100"
-                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <h1 class="flexible-title"><?php the_sub_field('title'); ?></h1>
-                    </div>
-                </div>
-
-                <div class="row g-5 mt-1 ">
-                    <div class="col-lg-6 text-start mt-5 flexible-left-text" data-aos="fade-right" data-aos-offset="100"
-                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-
-                        <span class="left-text"><?php the_sub_field('lefttext'); ?></span>
-                    </div>
-
-                    <div class="col-lg-6 text-start mt-5 flexible-right-text" data-aos="fade-left" data-aos-offset="100"
-                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-
-                        <span class="right-text"><?php the_sub_field('righttext'); ?></span>
-                    </div>
-                </div>
-
-                <?php endif; ?>
-                <?php endwhile; ?>
-            </div>
-            <?php endif; ?>
-        </div> -->
-
-
         <?php
         $flexible_content = get_field('flexiblecontentfield'); ?>
         <div class="container mt-4">
@@ -573,15 +538,16 @@ $fields = get_fields();
                 <div class="row g-0  " style="padding-top: 5rem;">
 
                     <div class="col-12 col-md-6 col-lg-6">
-                        <img src="<?= get_template_directory_uri() ?>/images/manager-leading.png" alt="manager-leading"
-                            class="w-100" style="object-fit: cover; border-radius: 5px 0px 0px 5px; height: 387px; ">
+                        <img src="<?= get_template_directory_uri() ?>/images/senior-leadership.png"
+                            alt="manager-leading" class="w-100"
+                            style="object-fit: cover; border-radius: 5px 0px 0px 5px; height: 387px; ">
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center p-5"
-                        style="background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 10px 10px 60px rgba(32, 114, 190, 0.1); border-radius: 0px 5px 5px 0px; height: 387px;">
-                        <div class="w-100">
+                        style="background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 10px 10px 60px rgba(32, 114, 190, 0.1); border-radius: 0px 5px 5px 0px; height: 387px; ">
+                        <div class="w-">
                             <h2 class="verhaal-title"><?= get_field("onsverhaaltitle") ?></h2>
-                            <p class="verhaal-text"><?= get_field("verhaaltext") ?> </p>
+                            <span class="verhaal-text"><?= get_field("verhaaltext") ?> </span>
 
                             <div class="d-flex  mt-4 gap-2">
                                 <div class="circle-border btn-custom-container gap-3">
@@ -606,6 +572,9 @@ $fields = get_fields();
                             </div>
                         </div>
                     </div>
+
+
+
                 </div>
             </div>
 

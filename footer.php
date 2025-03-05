@@ -68,8 +68,8 @@
 
 
     .footer-codeblauw {
-        margin-left: auto;
-        padding: 60px 0;
+        /* margin-left: auto; */
+        padding: 30px 0;
 
     }
 
