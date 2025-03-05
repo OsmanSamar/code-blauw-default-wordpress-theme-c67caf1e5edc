@@ -34,7 +34,6 @@
     }
 
     .under-bottom {
-
         border-bottom: 1px solid rgba(19, 32, 48, 0.25);
     }
 
@@ -96,7 +95,7 @@
         letter-spacing: 0px;
         font-weight: 300;
         font-family: 'Scala Sans Pro', sans-serif;
-        max-width: 432px;
+        /* max-width: 432px; */
     }
 
     .footer-adres {
@@ -121,14 +120,12 @@
     .footer-vraag {
         color: #FFFFFF;
         font-family: 'Richmond Display', serif;
-        font-size: 30px;
+        font-size: 24px;
         font-weight: 300;
-        line-height: 50px;
+        line-height: 30px;
         letter-spacing: 0px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         width: 280px;
-        display: block;
-
     }
 
     .footer-text2 {
@@ -197,12 +194,12 @@
         width: 110px;
         border: 1px solid #FFFFFF;
         border-radius: 5px;
-        color: #FFFFFF;
-        padding: 4px 8px;
+
+        padding: 4px 14px;
         height: 51px;
         display: flex;
         align-items: center;
-        margin-top: 70px;
+        margin-top: 33px;
     }
 
     .footer-linked-img {
@@ -220,9 +217,44 @@
         margin-left: 20px;
     }
 
+    .bottom-padding {
+        margin-bottom: 4rem;
+    }
+
+    @media(min-width: 768px) {
+
+
+        .footer-text {
+            font-size: 18px;
+        }
+
+        .footer-adres {
+            font-size: 14px;
+        }
+
+        .footer-text2 {
+            font-size: 18px;
+            width: unset;
+        }
+
+        .img-jordi {
+            width: 238.46px;
+            height: 381px;
+        }
+    }
+
     @media (min-width: 992px) {
+        .bottom-padding {
+            margin-bottom: unset;
+        }
 
+        .footer-text {
+            margin-top: 40px;
+        }
 
+        .footer-right-container {
+            padding-left: 50px;
+        }
 
         .left-cont {
             order: 1;
@@ -247,12 +279,18 @@
             font-size: 16px;
         }
 
-        .img-jordi {
+        /* .img-jordi {
             height: 325px;
+            width: 176.46px;
+        } */
+        .img-jordi {
+            height: 375px;
+            width: 210.46px;
         }
 
+
         .footer-text2 {
-            width: 280px;
+            width: unset;
         }
 
         .bottom-under {
@@ -288,55 +326,40 @@
         <div class="container">
             <!-- container -->
             <div class="row g-0">
-                <div class=" col-lg-6 left-cont under-bottom">
+
+                <div class="col-lg-6 left-cont under-bottom">
                     <div class="bg-left"></div>
-
-
                     <div class="footer-sm-screen">
-                        <div class=" d-flex align-items-center justify-content-between"
-                            style="max-width:361px; margin-top:70px;">
-
-                            <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>">
-                                <img src="<?= get_template_directory_uri() ?>/images/blauwijs.svg" class="footer-logo"
-                                    alt="Blauw Ijs Logo"   />
-                            </a>
-                            <a href="https://nl.linkedin.com" target="_blank">
-                                <!-- <img src="<?= get_template_directory_uri() ?>/images/ linkedin.svg"
-                                    class="footer-linked-img" alt="Blauw Ijs Logo"   /> -->
-
-                                <img src="<?= get_field("footerlinked", 'option')['url'] ?>"
-                                    alt="<?= get_field("footerlinked", 'option')['alt'] ?>" class="footer-linked-img" />
-                            </a>
+                        <div class="row align-items-center">
+                            <!-- Logo and LinkedIn in 5 cols  row align-items-center-->
+                            <div class="col-lg-10 d-flex align-items-center justify-content-between"
+                                style="max-width:; margin-top:70px;">
+                                <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>">
+                                    <img src="<?= get_template_directory_uri() ?>/images/blauwijs.svg"
+                                        class="footer-logo" alt="Blauw Ijs Logo" />
+                                </a>
+                                <a href="https://nl.linkedin.com" target="_blank">
+                                    <img src="<?= get_field("footerlinked", 'option')['url'] ?>"
+                                        alt="<?= get_field("footerlinked", 'option')['alt'] ?>"
+                                        class="footer-linked-img" />
+                                </a>
+                            </div>
+                            <!-- Footer text in 5 cols -->
+                            <div class="col-lg-10  d-flex align-items-center footer-text">
+                                <?= get_field("footertext", 'option') ?>
+                            </div>
                         </div>
 
-                        <div class="d-flex align-items-center footer-text">
 
-                            <?= get_field("footertext", 'option') ?>
-                        </div>
-
-                        <div class="row row-cols-auto  mt-3  align-items-center">
-
-                            <div class="col d-flex  flex-column  ">
-
-                                <div class="d-flex flex-column gap-2 ">
-                                    <span class="footer-adres">
-
-                                        <?= get_field("footercity", 'option') ?>
-                                    </span>
-                                    <span class="footer-adres">
-                                        <?= get_field("footeradres", 'option') ?>
-                                    </span>
-                                    <span class="footer-adres">
-                                        <?= get_field("footerkvk", 'option') ?>
-                                    </span>
+                        <div class="row row-cols-auto mt-3 align-items-center  bottom-padding">
+                            <div class="col col-md-5 col-lg-5 d-flex flex-column flex-md-row">
+                                <div class="d-flex flex-column gap-2">
+                                    <span class="footer-adres"><?= get_field("footercity", 'option') ?></span>
+                                    <span class="footer-adres"><?= get_field("footeradres", 'option') ?></span>
+                                    <span class="footer-adres"><?= get_field("footerkvk", 'option') ?></span>
                                 </div>
                             </div>
-
-
-
-
-
-                            <div class="col d-flex flex-column gap-2 ">
+                            <div class="col col-md-2 col-lg-2 d-flex flex-column gap-2">
                                 <ul class="footer-nav">
                                     <li class="footer-nav-item footer-adres">
                                         <a class="footer-nav-link"
@@ -366,49 +389,53 @@
                                     </li>
                                 </ul>
                             </div>
-
-
-
-
-
-                            <div class="col d-flex flex-column gap-2">
+                            <div class="col col-md-4 col-lg-4 d-flex flex-column gap-2">
                                 <ul class="footer-nav">
                                     <li class="footer-nav-item footer-adres">
                                         <a class="nav-link custom-nav-link"
                                             href="<?= esc_url(home_url('/over-ons')); ?>">Overons</a>
                                     </li>
                                     <li class="footer-nav-item footer-adres">
-                                        <a class=" nav-link custom-nav-link"
+                                        <a class="nav-link custom-nav-link"
                                             href="<?= esc_url(home_url('/werkwijze')); ?>">Werkwijze</a>
                                     </li>
-                                    </li>
-                                    <li class="footer-nav-item footer-adres ">
-                                        <a class=" nav-link custom-nav-link"
-                                            href="<?= esc_url(home_url('/kennismaken')); ?>">Kennismaken</a>
+                                    <li class="footer-nav-item footer-adres">
+                                        <a class="nav-link custom-nav-link"
+                                            href="<?= esc_url(home_url('/kennismaken')); ?>">Veelgestelde vragen</a>
                                     </li>
                                 </ul>
                             </div>
-
-
                         </div>
                     </div>
-
                 </div>
-                <div class="col-12 col-lg-6 right-cont">
+
+
+
+
+                <div class="col-12 col-lg-6 right-cont ">
                     <div class="bg-right "></div>
-                    <div class="d-flex flex-column position-relative footer-right-container">
+                    <div class="d-flex flex-column position-relative footer-right-container ">
                         <div class="d-flex align-items-start justify-content-between">
-                            <div>
+                            <div class="col-12 col-md-8">
                                 <span class="footer-vraag d-block d-md-none d-lg-none">
                                     <?= get_field("footertextonsm", 'option') ?>
                                 </span>
                                 <span class="footer-vraag d-none d-md-block d-lg-block">
                                     <?= get_field("footervraag", 'option') ?>
                                 </span>
-                                <span class="footer-text2">
+                                <!-- md -->
+                                <span class="footer-text2 d-md-none">
                                     <?= get_field("footertekst", 'option') ?>
                                 </span>
+                                <div class="row mt-2">
+                                    <div class=" col-m-10 col-lg-12">
+                                        <span class="footer-text2 d-none  d-md-block">
+                                            <?= get_field("footertekst", 'option') ?>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
+
                             <img src="<?= get_field("footeriemandimg", 'option')['url'] ?>"
                                 alt="<?= get_field("footeriemandimg", 'option')['alt'] ?>" class="img-jordi" />
                         </div>
@@ -432,7 +459,7 @@
                         </a>
 
 
-                        <div class="mt-2 mb-5 footer-contact-btn">
+                        <div class=" mb-5 footer-contact-btn">
                             <a href=" <?= get_field("contactbtn", 'option')['url'] ?>"
                                 class=" d-flex align-items-center gap-3 text-white">
                                 <?= get_field("contactbtn", 'option')['title'] ?>
