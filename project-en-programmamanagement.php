@@ -278,12 +278,13 @@ $fields = get_fields();
         <!-- Hero Section -->
         <div class="hero-section">
 
-            <!-- BreadCrumb Section -->
-            <?php get_template_part('components/breadcrumb') ?>
+
 
 
 
             <div class="container">
+                <!-- BreadCrumb Section -->
+                <?php get_template_part('components/breadcrumb') ?>
                 <div class="hero-content text-center">
                     <div class="col-12 col-lg-12   d-flex flex-column justify-content-center align-items-center">
                         <h1 class="pro-hero-title text-center" data-aos="fade-up" data-aos-offset="100"

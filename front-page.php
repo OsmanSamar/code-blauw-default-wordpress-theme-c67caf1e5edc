@@ -38,6 +38,7 @@ $fields = get_fields();
         margin: auto;
         position: relative;
         z-index: 3;
+        height: 100% !important;
 
     }
 
@@ -498,21 +499,17 @@ $fields = get_fields();
                                 $fields = get_fields($post->ID);
                                 $testimonial = get_field("testimonialwerkvoor");
                                 ?>
-                            <div class="swiper-slide d-flex flex-column h-100  ">
-                                <!--  -->
+                            <div class="swiper-slide d-flex flex-column h-auto  ">
                                 <a href="<?= get_permalink($post) ?>" class="d-flex flex-column  ">
-                                    <div class="testimonial-slide d-flex flex-column  h-100">
-                                        <!-- h-100 -->
+                                    <div class="testimonial-slide d-flex flex-column ">
                                         <img src="<?= $testimonial["logo"]['url'] ?>"
                                             alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
                                             style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
                                         <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2 " style="">
-                                            <!--  h-100 -->
+
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="card-text">
-                                                    <?= $post->post_title ?>zvvvcxvxvxvcxv
-                                                    zvvvcxvxvxvcxv
-                                                    zvvvcxvxvxvcxv
+                                                    <?= $post->post_title ?>
                                                 </div>
                                                 <span class="d-flex justify-content-center align-items-center arrow">
                                                     <img src="<?= $testimonial["white_arrow"]['url'] ?>"

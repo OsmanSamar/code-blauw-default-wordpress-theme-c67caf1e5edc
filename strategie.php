@@ -178,6 +178,9 @@ $fields = get_fields();
         <!-- Hero Section -->
         <div class="hero-section ">
             <div class="container">
+
+                <!-- BreadCrumb Section -->
+                <?php get_template_part('components/breadcrumb') ?>
                 <div class="hero-content text-center">
                     <div
                         class="col-12 col-md-6 offset-md-3 align-self-center d-flex flex-column justify-content-center align-items-center ">

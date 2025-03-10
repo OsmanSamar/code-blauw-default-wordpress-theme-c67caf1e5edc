@@ -73,35 +73,77 @@ $fields = get_fields();
     <div>
 
         <!-- Hero Section -->
-        <div class="hero-section flex-column">
-            <div class="hero-content">
-                <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                    <span class="posttitle">
-                        <span class="d-block">
-                            <?= get_field("posttitle") ?>
-                        </span>
+        <div class="hero-section ">
+            <!-- <div class="container">
+                <?php get_template_part('components/breadcrumb') ?>
+                <div class="hero-content flex-column">
+                    <div class="col-12  col-lg-12  pe-0 pe-lg-5">
+                        <span class="posttitle">
+                            <span class="d-block">
+                                <?= get_field("posttitle") ?>
+                            </span>
 
-                        <div class="d-flex flex-row justify-content-between">
+
+                        </span>
+                        <div class="d-flex flex-row justify-content-center gap-4">
+
                             <div class="datum-container ">
                                 <span class="datum-title">
-                                    Datum
-                                </span>
+                                    Datum </span>
                                 <span class="datum">
                                     <?= get_field("datum") ?>
                                 </span>
                             </div>
+
                             <div class="less-container ">
                                 <span class="less-title">
                                     Leestijd
                                 </span>
                                 <span class="less">
-                                    <!-- <?= get_field("datum") ?> -->
+                                    <?= get_field("datum") ?>
                                     5 minuten
                                 </span>
                             </div>
+
                         </div>
 
-                    </span>
+
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <?php get_template_part('components/breadcrumb') ?> -->
+            <div>
+
+                <div class="hero-content flex-column">
+                    <div class="col-12  col-lg-12  pe-0 pe-lg-5">
+                        <span class="posttitle">
+                            <span class="d-block">
+                                <?= get_field("posttitle") ?>
+                            </span>
+
+                            <div class="d-flex flex-row justify-content-between">
+                                <div class="datum-container ">
+                                    <span class="datum-title">
+                                        Datum
+                                    </span>
+                                    <span class="datum">
+                                        <?= get_field("datum") ?>
+                                    </span>
+                                </div>
+                                <div class="less-container ">
+                                    <span class="less-title">
+                                        Leestijd
+                                    </span>
+                                    <span class="less">
+                                        <!-- <?= get_field("datum") ?> -->
+                                        5 minuten
+                                    </span>
+                                </div>
+                            </div>
+
+                        </span>
+                    </div>
                 </div>
             </div>
 

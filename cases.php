@@ -61,6 +61,8 @@ $fields = get_fields();
         <!-- Hero Section -->
         <div class="hero-section">
             <div class="container">
+                <!-- BreadCrumb Section -->
+                <?php get_template_part('components/breadcrumb') ?>
                 <div class="hero-content text-center">
                     <div
                         class="col-12 col-lg-6 offset-lg-3 col-md-8 offset-md-2    align-self-center d-flex flex-column justify-content-center align-items-center">
@@ -119,7 +121,7 @@ $fields = get_fields();
                         ?>
                     <div class="col d-flex">
                         <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column  ">
-                            <div class="card testimonial-slide d-flex flex-column  ">
+                            <div class="card border-0 testimonial-slide d-flex flex-column  ">
                                 <img src="<?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
                                     class="card-img-top"
                                     style="height: 101px; border-radius: 5px; background: #F7F6F4 0% 0% no-repeat padding-box; object-fit: scale-down;" />
