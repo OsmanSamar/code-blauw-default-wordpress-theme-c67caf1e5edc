@@ -115,25 +115,16 @@ $fields = get_fields();
                 <div class="row">
                     <div class="col-12 col-lg-5   mb-3 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <div class="d-flex flex-wrap flex-column  text-left gap-4">
+                        <div class="d-flex flex-wrap flex-column  text-left">
                             <span class="post-werk-title">
                                 <?= get_field("lefttitle") ?>
                             </span>
-                            <!-- <span class="post-werk-left">
-                                <?= get_field("lefttext") ?>
-                            </span>
-                            <span>
-                                <?= get_field("lightlefttext") ?>
-
-                            </span> -->
-
                             <span class="post-werk-left">
-                                De gemeente Veenendaal schakelde Blauw IJs in als projectleider om opgavegericht te gaan
-                                werken: werken vanuit een opdracht en niet vanuit de belangen van partijen.
-                            </span>Samen met het projectteam met interne medewerkers en het directieteam, stelde Blauw
-                            IJs een zogenaamd reisplan op. Vanuit dit vertrekpunt heeft de organisatie geoefend en
-                            gewerkt met opgavegericht werken.
-
+                                <span style=" font-weight: bolder;">
+                                    <?= get_field("lefttext") ?>
+                                </span>
+                                <?= get_field("lightlefttext") ?>
+                            </span>
                         </div>
                     </div>
                     <div class="col-lg-1 "></div>

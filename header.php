@@ -28,7 +28,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        AOS.init();
+    AOS.init();
     </script>
     <!-- AOS -->
 
@@ -38,7 +38,7 @@
         <div class="container">
             <!-- Bootstrap container -->
             <nav class="navbar navbar-expand-lg navbar-light sans-serif w-100"
-                style=" height: 55px; border: 1px solid #FFFFFF; border-radius: 5px; opacity: 1;">
+                style=" height: 55px; border: 1px solid #FFFFFF; border-radius: 5px; opacity: 1; padding-bottom: 6px;">
 
                 <div class="container p-lg-0 m-0">
                     <!-- Ensures navbar takes full width inside container -->
@@ -104,7 +104,7 @@
 
                     <!-- Button on the Right side (visible only on large screens) -->
                     <div class="circle-border btn-primary-custom d-none d-lg-inline-flex justify-content-center align-items-center "
-                        style="width: 149px;height: 55px;    margin-right: -1px;">
+                        style="width: 149px;height: 55px;    margin-right: -1px;     margin-bottom: 3px;">
                         <!-- me-auto -->
                         <a href="<?= esc_url(home_url('/kennismaken')); ?>" class="btn-custom">Kennismaken</a>
                         <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"

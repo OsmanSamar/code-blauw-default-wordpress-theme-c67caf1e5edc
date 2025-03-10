@@ -4,201 +4,175 @@ $fields = get_fields();
 
 <main class="strategie">
     <style>
-        .hero-section {
-            background: url("<?= get_field('heroimage')['url'] ?> ");
-            width: 100%;
+    .hero-section {
+        background: url("<?= get_field('heroimage')['url'] ?> ");
+        width: 100%;
+        margin: 0 auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
 
-            margin: 0 auto;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            object-fit: cover;
+    .strategie-hero-title {
+        font-size: 54px;
+        line-height: 76px;
+        font-weight: 500;
+        font-family: "richmond-display", serif;
+        text-align: center;
+        letter-spacing: 0px;
+        color: #feffff;
+    }
+
+    .strategie-hero-text {
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 300;
+        font-family: "Libre Franklin", sans-serif;
+        letter-spacing: 1px;
+        color: #ffffff;
+        opacity: 1;
+        margin-bottom: 10px;
+    }
+
+
+
+    .button-container {
+        border: 1px solid #f29401;
+        border-radius: 5px;
+        width: 250px;
+        height: 51px;
+        padding: 10px;
+        background-color: #f29401;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 30px;
+    }
+
+    .button-text {
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+    }
+
+    .werk-blauwijs-title {
+        text-align: left;
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: 300;
+        font-family: "richmond-display", serif;
+        letter-spacing: 0px;
+        color: #1E73BE;
+        opacity: 1;
+    }
+
+    .star-right-text,
+        {
+        text-align: left;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 300;
+        font-family: 'ff-scala-sans-pro', sans-serif;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+        /* text-wrap: balance;
+        white-space: break-spaces; */
+    }
+
+
+
+
+
+    .waaromkiezenvoorblauw {
+        text-align: left;
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: 300;
+        font-family: "richmond-display", serif;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+        margin-bottom: 1.5rem;
+
+    }
+
+    .right-text-bold,
+    .right-text-notbold {
+        text-align: left;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 300;
+        font-family: 'ff-scala-sans-pro', sans-serif;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+    }
+
+    .right-text-bold {
+        font-weight: bolder;
+
+    }
+
+    .blue-block {
+        width: 100%;
+
+        margin: 0 auto;
+        background-color: #CCE1F4;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+    @media (min-width: 768px) {
+
+        .right-text,
+        .right-text-bold {
+            text-align: left;
         }
+    }
+
+
+
+    @media (min-width: 992px) {
 
         .strategie-hero-title {
-            font-size: 54px;
-            line-height: 76px;
-            font-weight: 500;
-            font-family: "richmond-display", serif;
-            text-align: center;
-            letter-spacing: 0px;
-            color: #feffff;
+
+            text-align: left;
+            line-height: 80px;
         }
+
 
         .strategie-hero-text {
-            text-align: center;
-            font-size: 14px;
-            line-height: 24px;
-            font-weight: 300;
-            font-family: "Libre Franklin", sans-serif;
-            letter-spacing: 1px;
-            color: #ffffff;
-            opacity: 1;
-            /* width: 505px; */
-            /* display: block; */
-            margin-bottom: 10px;
-        }
-
-
-
-        .button-container {
-            border: 1px solid #f29401;
-            border-radius: 5px;
-            width: 250px;
-            height: 51px;
-            padding: 10px;
-            background-color: #f29401;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            margin-top: 30px;
-        }
-
-        .button-text {
-            text-align: center;
-            font-size: 14px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #FFFFFF;
-        }
-
-        .werk-blauwijs-title {
-            text-align: left;
-            font-size: 36px;
-            line-height: 50px;
-            font-weight: 300;
-            font-family: "richmond-display", serif;
-            letter-spacing: 0px;
-            color: #1E73BE;
-            opacity: 1;
+            font-size: 16px;
         }
 
         .right-text,
         .right-text-bold {
             text-align: left;
-            font-size: 16px;
-            line-height: 30px;
-            font-weight: 300;
-            font-family: 'ff-scala-sans-pro', sans-serif;
-            letter-spacing: 2px;
-            color: #132030;
-            opacity: 1;
-            text-wrap: balance;
-            white-space: break-spaces;
-        }
-
-        .right-text-bold {
-            font-weight: bold;
         }
 
 
-
-        /* .whi-container {
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            width: 1000px;
-            z-index: 1;
+        .whi-container {
             height: 131px;
-            border-radius: 5px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            height: 250px;
-            margin-top: 50px;
-        } */
+        }
 
-
-
-        .waaromkiezenvoorblauw {
-            text-align: left;
-            font-size: 36px;
+        .organ-title {
+            font-size: 32px;
             line-height: 50px;
-            font-weight: 300;
-            font-family: "richmond-display", serif;
-            letter-spacing: 0px;
-            color: #132030;
-            opacity: 1;
-
-        }
-
-        .right-text-bold,
-        .right-text-notbold {
             text-align: left;
-            font-size: 16px;
-            line-height: 26px;
-            font-weight: 300;
-            font-family: 'ff-scala-sans-pro', sans-serif;
-            letter-spacing: 1px;
-            color: #132030;
-            opacity: 1;
-            text-wrap: balance;
-            white-space: break-spaces;
-
-        }
-
-        .right-text-bold {
-            font-weight: bold;
-
-        }
-
-        .blue-block {
-            width: 100%;
-
-            margin: 0 auto;
-            background-color: #CCE1F4;
-            /* height: 41px; */
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-
-
-        @media (min-width: 768px) {
-
-            .right-text,
-            .right-text-bold {
-                text-align: left;
-            }
         }
 
 
 
-        @media (min-width: 992px) {
-
-            .strategie-hero-title {
-
-                text-align: left;
-                line-height: 80px;
-            }
-
-
-            .strategie-hero-text {
-                font-size: 16px;
-                /* width: 505px;
-            display: block; */
-            }
-
-            .right-text,
-            .right-text-bold {
-                text-align: left;
-            }
-
-
-            .whi-container {
-                height: 131px;
-            }
-
-            .organ-title {
-                font-size: 32px;
-                line-height: 50px;
-                text-align: left;
-            }
-
-
-
-        }
+    }
     </style>
     <div>
         <!-- Hero Section -->
@@ -244,8 +218,15 @@ $fields = get_fields();
                 <div class="col-12 col-lg-6 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="d-flex flex-column ">
-                        <div class="right-text-bold pt-2"> <?= get_field("righttext") ?></div>
-                        <div class="right-text pt-2 "> <?= get_field("secrighttext") ?></div>
+                        <span class="star-right-text pt-2 ">
+                            <span style="font-weight: bolder;">
+                                <?= get_field("righttext") ?>
+                            </span>
+                            <?= get_field("secrighttext") ?>
+                        </span>
+
+
+
                         <div class="button-group mt-5">
                             <div class="circle-border ">
                                 <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="btn-custom"
@@ -253,7 +234,7 @@ $fields = get_fields();
                                     <?= get_field("onzeklantcasesbtn")['title'] ?>
                                 </a>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                    alt="go onze expertises" class="testimonial-arrow"
+                                    alt="go onze execttises" class="testimonial-arrow"
                                     style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
                             </div>
                         </div>
@@ -268,16 +249,21 @@ $fields = get_fields();
             <div class="container ">
 
                 <div class="row  mb-3">
-                    <div class="col-12 col-lg-6 mb-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    <div class="col-12 col-lg-5 mb-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <div class="d-flex flex-column gap-4 ">
+                        <div class="col-lg-8 d-flex ">
                             <span class="waaromkiezenvoorblauw"><?= get_field("waaromkiezenvoorblauw") ?></span>
+                        </div>
+                        <div class="d-flex flex-column  ">
+                            <!-- <span class="waaromkiezenvoorblauw"><?= get_field("waaromkiezenvoorblauw") ?></span> -->
                             <span class="right-text-bold"><?= get_field("righttextbold") ?></span>
                             <span class="right-text-notbold"><?= get_field("righttextnotbold") ?></span>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-offset="100"
-                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="col-lg-1"></div>
+                    <!-- offset-lg-1 -->
+                    <div class="col-12 col-lg-6 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <img src="<?= get_field("businesswomen")['url'] ?>"
                             alt="<?= get_field("businesswomen")['alt'] ?>"
                             style="border-radius: 5px 0px 0px 5px; object-fit: cover;" />
