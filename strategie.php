@@ -156,14 +156,16 @@ $fields = get_fields();
 
 
         .whi-container {
-            height: 131px;
+            /* height: 131px; */
             /* margin-top: 5rem !important; */
         }
 
         .organ-title {
-            font-size: 32px;
+            font-size: 40px;
             line-height: 50px;
             text-align: left;
+            padding-left: 27px;
+            margin-bottom: -9px;
         }
 
         .hero-content {
@@ -286,7 +288,7 @@ $fields = get_fields();
                         <span class="organ-title">
                             <?= get_field("organisatietext") ?>
                         </span>
-                        <div class="circle-border  btn-primary-custom">
+                        <div class="circle-border  btn-primary-custom" style="margin-right: 27px;">
                             <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-custom">
                                 <?= get_field("vraagaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"

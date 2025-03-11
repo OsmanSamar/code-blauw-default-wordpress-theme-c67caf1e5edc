@@ -15,6 +15,10 @@ $fields = get_fields();
         object-fit: cover;
     }
 
+    .hero-section {
+        height: 500px;
+    }
+
     .container-img {
         width: 100%;
         object-fit: cover;
@@ -130,8 +134,20 @@ $fields = get_fields();
 
     .swiper-container .swiper-button-next {
         position: absolute;
-        right: 9px !important;
+        right: 0px !important;
         top: -2px !important;
+    }
+
+    .werk-logo-container {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        /* width: 175px; */
+        height: 93px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        width: 193px;
     }
 
 
@@ -145,6 +161,7 @@ $fields = get_fields();
         margin: auto;
         position: relative;
         z-index: 3;
+        width: 310px;
 
     }
 
@@ -229,7 +246,7 @@ $fields = get_fields();
 
         .swiper-container .swiper-button-prev {
             position: absolute;
-            left: -12% !important;
+            left: 3% !important;
             top: -2px !important;
         }
 
@@ -333,11 +350,11 @@ $fields = get_fields();
 
                             <div class="d-flex flex-column ">
                                 <span
-                                    style="color: #F29401;;font-family Manrope; font-size:15px;font-style:normal;font-weight:600;line-height:27px;">
+                                    style="color: #F29401;;font-family Manrope; font-size:18px;font-style:normal;font-weight:600;line-height:32px;    font-weight: lighter;">
                                     <?= $testimonails["stap"] ?>
                                 </span>
                                 <span
-                                    style="color: #F29401;;font-family Manrope; font-size:15px;font-style:normal;font-weight:600;line-height:27px;">
+                                    style="color: #F29401;;font-family Manrope; font-size:18px;font-style:normal;font-weight:600;line-height:32px;    font-weight: lighter;">
                                     <?= $testimonails["staptitle"] ?>
                                 </span>
                             </div>
@@ -357,7 +374,7 @@ $fields = get_fields();
 
 
         <div class="container-img ">
-            <div class="container position-relative" style="margin-top: 120px;">
+            <div class="container position-relative" style="margin-top: 127px;">
                 <div class="swiper-title ">
                     <div class="title-container" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -365,7 +382,7 @@ $fields = get_fields();
                     </div>
                 </div>
             </div>
-            <div class="container  position-relative" style="padding-top: 63px;">
+            <div class="container  position-relative" style="padding-top: 30px;">
                 <div class="swiper sample-slider  ">
                     <div class="swiper-wrapper">
                         <?php
@@ -373,9 +390,8 @@ $fields = get_fields();
                         if ($testemonials) {
                             foreach ($testemonials as $testemonial) { ?>
                         <div class="swiper-slide">
-                            <div class="werk-logo-container"
-                                style="background-color: #f0f0f0; border-radius:5px; padding: 20px;">
-                                <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>">
+                            <div class="werk-logo-container">
+                                <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>" target="_blank">
                                     <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
                                         alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
                                         style="width: 72px; height: 64px; border-radius: 5px; object-fit: contain;" />
@@ -392,8 +408,9 @@ $fields = get_fields();
 
         <!--first-blue-block  -->
         <div class="first-blue-block position-relative">
-            <div class="container blue-container">
-                <div class="swiper-container werk-swiper3 position-relative mb-5">
+            <div class="container blue-container werk-slider">
+
+                <div class="swiper-container swiper position-relative mb-5">
                     <div class="swiper-header ">
                         <div class="swiper-text">
                             <?= get_field("werkentitle") ?>
@@ -482,64 +499,7 @@ $fields = get_fields();
         </div>
         <!--End of first-blue-block  -->
 
-
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -552,37 +512,36 @@ $fields = get_fields();
             pagination: {
                 el: '.swiper-pagination',
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
+            // navigation: {
+            //     nextEl: ".swiper-button-next",
+            //     prevEl: ".swiper-button-prev",
+            // },
 
             breakpoints: {
 
                 360: {
-                    slidesPerView: 2,
-                    spaceBetween: 1,
+                    slidesPerView: 1.7,
 
                 },
 
                 540: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 1,
+                    slidesPerView: 2.8,
+
 
                 },
 
                 556: {
                     slidesPerView: 3.2,
-                    spaceBetween: 1,
+
                 },
                 992: {
 
-                    slidesPerView: 5,
-                    spaceBetween: 2,
+                    slidesPerView: 4.3,
+
                 },
                 1025: {
                     slidesPerView: 6,
-                    spaceBetween: 1,
+
 
                 }
 
@@ -606,8 +565,8 @@ $fields = get_fields();
         },
 
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".werk-slider .swiper-button-next",
+            prevEl: ".werk-slider .swiper-button-prev",
         },
 
 

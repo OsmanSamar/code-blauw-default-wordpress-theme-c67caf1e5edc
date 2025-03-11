@@ -15,9 +15,11 @@
         object-fit: cover;
     }
 
-    /* .hero-section {
+    .hero-section {
         height: 500px;
-    } */
+    }
+
+
 
     .blue-block {
         width: 100%;
@@ -88,7 +90,7 @@
                 <div class="row container-form">
                     <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <div class="d-flex flex-column text-align-flex-start gap-3">
+                        <div class="d-flex flex-column text-align-flex-start gap-3 contact-left-col" style="   ">
                             <span class="waar-kunnen-helpen-title">
                                 <?= get_field("waarkunnenwemeehelpen") ?>
                             </span>

@@ -590,9 +590,9 @@ strong:nth-of-type(2) {
 }
 
 .center-title {
-  font-size: 36px;
-  line-height: 46px;
-  font-weight: 300;
+  font-size: 44px;
+  line-height: 66px;
+  font-weight: 100;
   font-family: "richmond-display", serif;
   text-align: center;
   letter-spacing: 0px;
@@ -604,8 +604,8 @@ strong:nth-of-type(2) {
 .secleft-text,
 .fleft-text {
   text-align: left;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 17px;
+  line-height: 32px;
   font-family: "ff-scala-sans-pro", sans-serif;
   letter-spacing: 0px;
   color: #132030;
@@ -632,8 +632,8 @@ strong:nth-of-type(2) {
 .secleft-text,
 .fleft-text {
   text-align: left;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 17px;
+  line-height: 32px;
   font-family: "ff-scala-sans-pro", sans-serif;
   letter-spacing: 0px;
   letter-spacing: 0px;
@@ -792,8 +792,8 @@ strong:nth-of-type(2) {
 
 .waar-kunnen-helpen-text {
   text-align: left;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 17px;
+  line-height: 32px;
   font-weight: 300;
   font-family: "ff-scala-sans-pro", sans-serif;
   letter-spacing: 0px;
@@ -878,8 +878,8 @@ strong:nth-of-type(2) {
 
 .werk-right-text,
 .werk-right-text-bold {
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 17px;
+  line-height: 32px;
   font-weight: 300;
   font-family: "ff-scala-sans-pro", sans-serif;
   letter-spacing: 0px;
@@ -917,10 +917,10 @@ strong:nth-of-type(2) {
 .werkwijze-text {
   font-family: "ff-scala-sans-pro", sans-serif;
   letter-spacing: 1px;
-  font-size: 16px;
+  font-size: 17px;
   font-style: normal;
-  font-weight: 300;
-  line-height: 30px;
+  font-weight: 100;
+  line-height: 32px;
   color: #132030;
   opacity: 1;
   margin-top: 10px;
@@ -1154,7 +1154,7 @@ strong:nth-of-type(2) {
 }
 
 .footer-logo {
-  width: 136px;
+  // width: 136px;
   height: 36px;
   object-fit: cover;
 }
@@ -1169,6 +1169,10 @@ strong:nth-of-type(2) {
 
 .gekleured-text {
   color: #f29401;
+}
+
+.contact-left-col {
+  margin-top: unset;
 }
 @media (min-width: 768px) {
   .werkwijze-hero-text {
@@ -1198,11 +1202,14 @@ strong:nth-of-type(2) {
 }
 
 @media (min-width: 992px) {
+  .contact-left-col {
+    margin-top: 36px;
+  }
   .navbar-nav .nav-link {
     color: #ffffff;
   }
   .werkwijze-hero-text {
-    font-size: 19px;
+    font-size: 16px;
   }
 
   .section-text {
@@ -1322,9 +1329,9 @@ strong:nth-of-type(2) {
     text-align: left;
   }
 
-  .whi-container {
-    height: 131px;
-  }
+  // .whi-container {
+  //   height: 131px;
+  // }
 
   .organ-title {
     font-size: 32px;

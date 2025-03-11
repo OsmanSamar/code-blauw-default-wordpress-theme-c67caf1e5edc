@@ -49,3 +49,14 @@
   font-weight: bold !important;
   // line-height: 30px !important;
 }
+
+.gform-theme--foundation .gform_fields {
+  grid-column-gap: 0;
+  -moz-column-gap: 0;
+  column-gap: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(auto-fill, auto);
+
+  grid-row-gap: 20px !important;
+}

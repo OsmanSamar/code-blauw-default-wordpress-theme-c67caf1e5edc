@@ -53,6 +53,12 @@ $fields = get_fields();
             top: -64px;
         }
 
+
+        .hero-section {
+            height: 500px;
+        }
+
+
     }
     </style>
 

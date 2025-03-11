@@ -17,6 +17,11 @@ $fields = get_fields();
         object-fit: cover;
     }
 
+    .hero-section {
+        height: 500px;
+    }
+
+
     .datum-title,
     .less-title {
         font-size: 16px;
@@ -184,7 +189,7 @@ $fields = get_fields();
 
         <div class="white-container-text">
             <div class="container">
-                <div class="row">
+                <div class="row" style="    margin-top: 25px;">
                     <div class="col-12 col-lg-6 col-md-6 mb-3">
                         <p class="whitecontainertext-right">
                             <?= get_field("seclefttext") ?>

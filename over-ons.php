@@ -15,6 +15,11 @@ $fields = get_fields();
         object-fit: cover;
     }
 
+    .hero-section {
+        height: 500px;
+    }
+
+
     /*  */
     .testimonial-slide {
         background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -26,6 +31,7 @@ $fields = get_fields();
         margin: auto;
         position: relative;
         z-index: 3;
+        width: 310px;
 
     }
 
@@ -130,7 +136,7 @@ $fields = get_fields();
 
     .swiper-container .swiper-button-next {
         position: absolute;
-        right: 5px !important;
+        right: 0px !important;
         top: -2px !important;
     }
 

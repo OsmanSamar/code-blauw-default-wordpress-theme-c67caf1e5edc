@@ -58,7 +58,12 @@
                                 <div class="d-flex flex-column gap-2">
                                     <span class="footer-adres"><?= get_field("footercity", 'option') ?></span>
                                     <span class="footer-adres"><?= get_field("footeradres", 'option') ?></span>
-                                    <span class="footer-adres"><?= get_field("footerkvk", 'option') ?></span>
+                                    <!-- <span class="footer-adres"><?= get_field("footerkvk", 'option') ?></span> -->
+                                    <div class="d-flex gap-1">
+                                        <span class="footer-adres "
+                                            style="font-weight:bold"><?= get_field("footerkvk", 'option') ?></span>
+                                        <span class="footer-adres"><?= get_field("footernumber", 'option') ?></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col col-md-2 col-lg-2 d-flex flex-column gap-2">
@@ -95,7 +100,7 @@
                                 <ul class="footer-nav">
                                     <li class="footer-nav-item footer-adres">
                                         <a class="nav-link custom-nav-link"
-                                            href="<?= esc_url(home_url('/over-ons')); ?>">Overons</a>
+                                            href="<?= esc_url(home_url('/over-ons')); ?>">Over ons</a>
                                     </li>
                                     <li class="footer-nav-item footer-adres">
                                         <a class="nav-link custom-nav-link"
