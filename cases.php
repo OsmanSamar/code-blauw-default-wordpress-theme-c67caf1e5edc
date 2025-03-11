@@ -126,10 +126,10 @@ $fields = get_fields();
                         $testimonial = get_field("testimonialwerkvoor");
                         ?>
                     <div class="col d-flex">
-                        <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column  ">
-                            <div class="card border-0 testimonial-slide d-flex flex-column  ">
-                                <img src="<?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
-                                    class="card-img-top"
+                        <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column ">
+                            <div class=" card border-0 testimonial-slide d-flex flex-column ">
+                                <img src=" <?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
+                                    class=" card-img-top"
                                     style="height: 101px; border-radius: 5px; background: #F7F6F4 0% 0% no-repeat padding-box; object-fit: scale-down;" />
 
                                 <div class="card-body d-flex flex-column mt-1 mb-0 pb-4 pt-2">
@@ -157,41 +157,34 @@ $fields = get_fields();
 
 
 
-
         </div>
         <!--End of first-blue-block  -->
-
         <!--White-containe-->
-
         <div class="whi-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
             data-aos-easing="ease-in-out">
             <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
                 <span class="organ-title">
                     <?= get_field("organisatietext") ?>
                     <!-- 
-                         <?php
-                         $organisatietext = get_field("organisatietext");
-                         echo '<pre>';
-                         print_r($organisatietext);
-                         echo '</pre>';
-                         ?> -->
+                     <?php
+                     $organisatietext = get_field("organisatietext");
+                     echo '<pre>';
+                     print_r($organisatietext);
+                     echo '</pre>';
+                     ?> -->
                 </span>
-                <div class="circle-border btn-primary-custom  ">
+                <div class="circle-border btn-primary-custom  " style="margin-right: 27px;">
                     <a href="<?= get_field("vraageenbtn")['url'] ?>" class="btn-custom">
                         <?= get_field("vraageenbtn")['title'] ?>
                         <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go Contact page"
                             class="go-arrow" />
                     </a>
-
                 </div>
-
             </div>
         </div>
 
 
-
         <!--End of wshite-containe-->
-
 
     </div>
 

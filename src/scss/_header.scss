@@ -1333,9 +1333,16 @@ strong:nth-of-type(2) {
   //   height: 131px;
   // }
 
+  // .organ-title {
+  //   font-size: 32px;
+  //   text-align: left;
+  // }
   .organ-title {
-    font-size: 32px;
+    font-size: 40px;
+    line-height: 50px;
     text-align: left;
+    padding-left: 27px;
+    margin-bottom: -9px;
   }
 
   .bottom-padding {

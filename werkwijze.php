@@ -483,7 +483,7 @@ $fields = get_fields();
                         <span class="organ-title">
                             <?= get_field("organisatietext") ?>
                         </span>
-                        <div class="circle-border   btn-primary-custom ">
+                        <div class="circle-border   btn-primary-custom " style="margin-right: 27px;">
                             <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-custom">
                                 <?= get_field("vraagaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
