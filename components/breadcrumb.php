@@ -6,7 +6,7 @@
     data-aos-easing="ease-in-out">
 
     <div class=" d-flex align-items-baseline justify-content-start" style=" position: absolute;
-    top: -118px;    margin-left: 8px; ">
+    top: -19px;    margin-left: 8px; ">
         <div class="d-flex align-items-center justify-content-start rounded  ">
             <?php
             if (function_exists('yoast_breadcrumb')) {

@@ -43,7 +43,7 @@ $fields = get_fields();
         background: #F7F6F4 0% 0% no-repeat padding-box;
         opacity: 1;
         padding-top: 80px;
-        padding-bottom: 50px;
+        padding-bottom: 30px;
 
     }
 
@@ -231,6 +231,10 @@ $fields = get_fields();
         height: 500px;
     }
 
+    .hero-section {
+        height: 500px;
+    }
+
     @media (min-width: 768px) {
         .swiper-container .swiper-button-prev {
             position: absolute;
@@ -242,6 +246,12 @@ $fields = get_fields();
 
 
     @media (min-width: 992px) {
+        .pro-hero-title {
+            margin-top: 53px;
+            display: flex;
+            justify-content: center;
+        }
+
 
 
         .first-blue-block {
@@ -289,7 +299,7 @@ $fields = get_fields();
                     <div class="col-12 col-lg-12   d-flex flex-column justify-content-center align-items-center">
                         <h1 class="pro-hero-title text-center" data-aos="fade-up" data-aos-offset="100"
                             data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="d-block">
+                            <span class="">
                                 <?= get_field("herotitle") ?>
                             </span>
                         </h1>

@@ -73,23 +73,6 @@ $fields = get_fields();
         opacity: 1;
     }
 
-    .star-right-text,
-        {
-        text-align: left;
-        font-size: 16px;
-        line-height: 26px;
-        font-weight: 300;
-        font-family: 'ff-scala-sans-pro', sans-serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-        /* text-wrap: balance;
-        white-space: break-spaces; */
-    }
-
-
-
-
 
     .waaromkiezenvoorblauw {
         text-align: left;
@@ -107,14 +90,16 @@ $fields = get_fields();
     .right-text-bold,
     .right-text-notbold {
         text-align: left;
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 17px;
+        line-height: 32px;
         font-weight: 300;
         font-family: 'ff-scala-sans-pro', sans-serif;
         letter-spacing: 0px;
         color: #132030;
         opacity: 1;
     }
+
+
 
     .right-text-bold {
         font-weight: bolder;
@@ -123,13 +108,16 @@ $fields = get_fields();
 
     .blue-block {
         width: 100%;
-
         margin: 0 auto;
         background-color: #CCE1F4;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 84px;
+        padding-bottom: 65px;
     }
 
+    .str-left-col {
+        margin-top: unset;
+        margin-bottom: 3rem;
+    }
 
     @media (min-width: 768px) {
 
@@ -139,7 +127,14 @@ $fields = get_fields();
         }
     }
 
+    .hero-section {
+        height: 500px;
+    }
 
+    .whi-container {
+
+        margin-top: 5rem !important;
+    }
 
     @media (min-width: 992px) {
 
@@ -162,6 +157,7 @@ $fields = get_fields();
 
         .whi-container {
             height: 131px;
+            /* margin-top: 5rem !important; */
         }
 
         .organ-title {
@@ -170,6 +166,13 @@ $fields = get_fields();
             text-align: left;
         }
 
+        .hero-content {
+            margin-top: 23px;
+        }
+
+        .str-left-col {
+            margin-top: 5rem;
+        }
 
 
     }
@@ -221,11 +224,11 @@ $fields = get_fields();
                 <div class="col-12 col-lg-6 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="d-flex flex-column ">
-                        <span class="star-right-text pt-2 ">
-                            <span style="font-weight: bolder;">
+                        <span class=" pt-2 ">
+                            <span class="right-text-bold " style="font-weight: bolder;">
                                 <?= get_field("righttext") ?>
                             </span>
-                            <?= get_field("secrighttext") ?>
+                            <span class="right-text-notbold pt-2 "><?= get_field("secrighttext") ?></span>
                         </span>
 
 
@@ -252,8 +255,8 @@ $fields = get_fields();
             <div class="container ">
 
                 <div class="row  mb-3">
-                    <div class="col-12 col-lg-5 mb-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                        data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="col-12 col-lg-5 str-left-col " style="    " data-aos="fade-right" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="col-lg-8 d-flex ">
                             <span class="waaromkiezenvoorblauw"><?= get_field("waaromkiezenvoorblauw") ?></span>
                         </div>
@@ -277,7 +280,7 @@ $fields = get_fields();
 
 
 
-                <div class="whi-container mt-5 " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                <div class="whi-container  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
                         <span class="organ-title">

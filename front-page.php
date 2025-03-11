@@ -219,7 +219,7 @@ $fields = get_fields();
     .onz-eexpertises-title {
         text-align: center;
         font-size: 36px;
-        font-weight: 300;
+        font-weight: 100;
         line-height: 50px;
         font-family: 'richmond-display', serif;
         letter-spacing: 0px;
@@ -315,7 +315,7 @@ $fields = get_fields();
         }
 
         .title-container {
-            font-size: 50px;
+            font-size: 36px;
         }
 
     }
