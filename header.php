@@ -37,8 +37,9 @@
 
         <div class="container">
             <!-- Bootstrap container -->
-            <nav class="navbar navbar-expand-lg navbar-light sans-serif w-100"
+            <nav class="navbar navbar-expand-lg navbar-light sans-serif w-100 "
                 style=" height: 55px; border: 1px solid #FFFFFF; border-radius: 5px; opacity: 1; padding-bottom: 6px;">
+                <!-- pt-sm-2 -->
 
                 <div class="container p-lg-0 m-0">
                     <!-- Ensures navbar takes full width inside container -->
