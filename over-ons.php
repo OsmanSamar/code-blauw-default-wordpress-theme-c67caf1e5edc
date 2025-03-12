@@ -36,14 +36,14 @@ $fields = get_fields();
         margin: auto;
     }
 
-    .testimonial-slide img {
+    /* .testimonial-slide img {
         width: 100%;
         height: 101px;
         object-fit: scale-down;
-        /* object-fit: cover; */
+        
         border-radius: 5px;
         background: #F7F6F4;
-    }
+    } */
 
     .testimonial-text {
         font-size: 16px;
@@ -370,10 +370,11 @@ $fields = get_fields();
                                     <div class="testimonial-slide d-flex flex-column">
                                         <img src="<?= $testimonial["logo"]['url'] ?>"
                                             alt=" <?= $testimonial['logo']['alt'] ?>"
-                                            class="card-img-top uniform-img" />
+                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;"
+                                            class="card-img-top" />
                                         <!--  style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;"  -->
                                         <!--  class="card-img-top" -->
-                                        <div class="card-body mt-1 mb-0 pb-4 pt-2  h-100">
+                                        <div class="card-body d-flex flex-column mt-1 mb-0 pb-4 pt-2">
                                             <!-- d-flex flex-column -->
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <span class="card-text">
@@ -381,8 +382,7 @@ $fields = get_fields();
                                                 <span class="d-flex justify-content-center align-items-center arrow">
                                                     <img src="<?= $testimonial["white_arrow"]['url'] ?>"
                                                         alt=" <?= $testimonial['white_arrow']['alt'] ?>"
-                                                        class="card-img-top"
-                                                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " />
+                                                        class="go-arrow" />
                                                 </span>
                                             </div>
                                             <span class="card-title mt-auto">

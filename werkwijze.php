@@ -436,22 +436,18 @@ $fields = get_fields();
                                 $fields = get_fields($post->ID);
                                 $testimonial = get_field("testimonialwerkvoor");
                                 ?>
-                            <div class="swiper-slide d-flex flex-column h-auto  ">
+                            <div class="swiper-slide d-flex flex-column h-auto">
                                 <a href="<?= get_permalink($post) ?>" class="d-flex flex-column">
                                     <div class="testimonial-slide d-flex flex-column">
                                         <img src="<?= $testimonial["logo"]['url'] ?>"
                                             alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
-                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
-                                        <div class="card-body   mt-1 mb-0 pb-4 pt-2  h-100">
+                                            style="height:101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
+                                        <div class="card-body d-flex flex-column   mt-1 mb-0 pb-4 pt-2">
                                             <!-- d-flex flex-column -->
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <span class="card-text">
                                                     <?= $post->post_title ?></span>
                                                 <span class="d-flex justify-content-center align-items-center arrow">
-                                                    <!-- <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                        alt=" <?= $testimonial['white_arrow']['alt'] ?>"
-                                                        class="card-img-top"
-                                                        style="width: 9px; height: 7.69px; object-fit: cover; display: block; " /> -->
                                                     <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                                         alt="go Contact page" class="go-arrow" />
                                                 </span>
