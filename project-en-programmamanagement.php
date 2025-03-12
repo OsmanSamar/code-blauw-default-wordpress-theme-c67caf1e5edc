@@ -109,6 +109,7 @@ $fields = get_fields();
         margin: auto;
         position: relative;
         z-index: 3;
+        width: 310px;
 
     }
 
@@ -137,6 +138,7 @@ $fields = get_fields();
         margin: 0 auto;
         overflow: clip;
         overflow-y: visible;
+        padding-top: 77px;
 
     }
 
@@ -155,7 +157,7 @@ $fields = get_fields();
         align-items: baseline;
         justify-content: space-between;
         position: absolute;
-        top: -70px;
+        top: -5px;
         right: 0;
         width: 100%;
     }
@@ -210,7 +212,7 @@ $fields = get_fields();
     .swiper-container .swiper-button-prev {
         position: absolute;
         left: -8% !important;
-        top: -13px !important;
+        top: -12px !important;
     }
 
     .swiper-container .swiper-button-next {
@@ -255,7 +257,7 @@ $fields = get_fields();
 
 
         .first-blue-block {
-            height: 662px;
+            height: 572px;
             margin-top: -26px;
         }
 
@@ -495,7 +497,7 @@ $fields = get_fields();
     let swiperwerken = new Swiper('.werk-swiper', {
         slidesPerView: 2.5,
         grabCursor: true,
-        spaceBetween: 20,
+        spaceBetween: 24,
 
         pagination: {
             el: '.swiper-pagination',
@@ -510,13 +512,13 @@ $fields = get_fields();
 
         breakpoints: {
             360: {
-                slidesPerView: 1.3
+                slidesPerView: 1.2
             },
             540: {
                 slidesPerView: 2
             },
             768: {
-                slidesPerView: 2.5
+                slidesPerView: 2.1
             },
             992: {
                 slidesPerView: 3.2

@@ -184,7 +184,7 @@ $fields = get_fields();
 
 
         .first-blue-block {
-            height: 683px;
+            height: 725px;
             margin-top: unset;
         }
 
