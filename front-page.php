@@ -39,7 +39,10 @@ $fields = get_fields();
         position: relative;
         z-index: 3;
         height: 100% !important;
-        width: 310px;
+        width: 100%;
+        max-width: 400px;
+        min-width: 250px;
+        margin: auto;
 
     }
 
@@ -307,6 +310,8 @@ $fields = get_fields();
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go contact page" class="go-arrow"
                                     style="pointer-events: auto ;z-index: 1000 " />
+
+
                             </div>
 
                             <div class=" btn-custom-container">
@@ -455,12 +460,12 @@ $fields = get_fields();
                                 $testimonial = get_field("testimonialwerkvoor");
                                 ?>
                             <div class="swiper-slide d-flex flex-column h-auto  ">
-                                <a href="<?= get_permalink($post) ?>" class="d-flex flex-column  ">
+                                <a href="<?= get_permalink($post) ?>" class="d-flex flex-column">
                                     <div class="testimonial-slide d-flex flex-column ">
                                         <img src="<?= $testimonial["logo"]['url'] ?>"
                                             alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
                                             style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
-                                        <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2 " style="">
+                                        <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2">
 
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="card-text">
@@ -469,8 +474,7 @@ $fields = get_fields();
                                                 <span class="d-flex justify-content-center align-items-center arrow">
                                                     <img src="<?= $testimonial["white_arrow"]['url'] ?>"
                                                         alt=" <?= $testimonial['white_arrow']['alt'] ?>"
-                                                        class="go-arrow"
-                                                        style="width: 10px; height: 8.69px; object-fit: cover; display: block; " />
+                                                        class="go-arrow" />
                                                 </span>
                                             </div>
                                             <span class="card-title mt-auto">
@@ -513,16 +517,16 @@ $fields = get_fields();
                             <span class="verhaal-text"><?= get_field("verhaaltext") ?> </span>
 
                             <div class="d-flex  mt-4 gap-2">
-                                <div class="circle-border  ">
-                                    <a href="<?= get_field("overonsbtn")['url'] ?>" class="">
+                                <div class="btn-custom-container">
+                                    <a href="<?= get_field("overonsbtn")['url'] ?>" class="" style="color: #132030;">
                                         <?= get_field("overonsbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                             alt="go onze expertises" class="go-arrow" />
                                     </a>
                                 </div>
 
-                                <div class="circle-border ">
-                                    <a href="<?= get_field("werkwijzebtn")['url'] ?>">
+                                <div class="btn-custom-container">
+                                    <a href="<?= get_field("werkwijzebtn")['url'] ?>" style="color: #132030;">
                                         <?= get_field("werkwijzebtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                             alt="go onze expertises" class="go-arrow" />
@@ -619,6 +623,10 @@ $fields = get_fields();
 
         breakpoints: {
             360: {
+                slidesPerView: 1
+
+            },
+            410: {
                 slidesPerView: 1.2
 
             },
@@ -664,7 +672,7 @@ $fields = get_fields();
         const logoswiper = new Swiper('.sample-slider1', {
 
             slidesPerView: 2,
-            // centeredSlides: true,
+            // c           enteredSlides: true,
             spaceBetween: 24,
 
             pagination: {

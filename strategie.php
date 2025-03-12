@@ -200,8 +200,8 @@ $fields = get_fields();
                                 <?= get_field("herotext") ?>
                             </span>
                         </div>
-                        <div class="circle-border  btn-primary-custom mt-4">
-                            <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn-custom">
+                        <div class="btn-primary-custom mt-4">
+                            <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="">
                                 <?= get_field("meerwetenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go kennismaken" class="go-arrow" />
@@ -236,9 +236,8 @@ $fields = get_fields();
 
 
                         <div class="button-group mt-5">
-                            <div class="circle-border ">
-                                <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="btn-custom"
-                                    style="color: #132030;">
+                            <div class="btn-custom-container">
+                                <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="" style="color: #132030;">
                                     <?= get_field("onzeklantcasesbtn")['title'] ?>
                                 </a>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"

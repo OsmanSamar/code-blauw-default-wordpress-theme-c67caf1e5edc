@@ -109,7 +109,9 @@ $fields = get_fields();
         margin: auto;
         position: relative;
         z-index: 3;
-        width: 310px;
+        max-width: 400px;
+        min-width: 250px;
+        margin: auto;
 
     }
 
@@ -289,11 +291,6 @@ $fields = get_fields();
     <div>
         <!-- Hero Section -->
         <div class="hero-section">
-
-
-
-
-
             <div class="container">
                 <!-- BreadCrumb Section -->
                 <?php get_template_part('components/breadcrumb') ?>
@@ -305,16 +302,14 @@ $fields = get_fields();
                                 <?= get_field("herotitle") ?>
                             </span>
                         </h1>
-
                         <div class="pro-hero-text" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <span class="d-block">
                                 <?= get_field("herotext") ?>
                             </span>
                         </div>
-
-                        <div class="circle-border  btn-primary-custom mt-4">
-                            <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="btn-custom">
+                        <div class="btn-primary-custom mt-4">
+                            <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="">
                                 <?= get_field("meerwetenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go kennismaken" class="go-arrow" />
@@ -394,8 +389,9 @@ $fields = get_fields();
                                             alt="go onze expertises" class="go-arrow" />
                                     </a>
                                 </div>
-                                <div class="circle-border  btn-custom-container ">
-                                    <a href="<?= get_field("veelvragenlink")['url'] ?>" class="btn-custom color-w">
+                                <div class="btn-custom-container">
+                                    <a href="<?= get_field("veelvragenlink")['url'] ?>" class=""
+                                        style="color: #132030;">
                                         <?= get_field("veelvragenlink")['title'] ?>
                                     </a>
                                     <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
@@ -443,21 +439,21 @@ $fields = get_fields();
                                 $fields = get_fields($post->ID);
                                 $testimonial = get_field("testimonialwerkvoor");
                                 ?>
-                            <div class="swiper-slide d-flex flex-column h-100">
-                                <a href="<?= get_permalink($post) ?>" class="d-flex flex-column h-100">
-                                    <div class="testimonial-slide d-flex flex-column h-100">
+                            <div class="swiper-slide d-flex flex-column h-auto">
+                                <a href="<?= get_permalink($post) ?>" class="d-flex flex-column">
+                                    <div class="testimonial-slide d-flex flex-column ">
                                         <img src="<?= $testimonial["logo"]['url'] ?>"
                                             alt="<?= $testimonial['logo']['alt'] ?>" class="card-img-top"
                                             style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
 
-                                        <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
+                                        <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <span class="card-text"><?= $post->post_title ?></span>
                                                 <span class="d-flex justify-content-center align-items-center arrow">
                                                     <img src="<?= $testimonial["white_arrow"]['url'] ?>"
                                                         alt="<?= $testimonial['white_arrow']['alt'] ?>"
-                                                        class="card-img-top"
-                                                        style="width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+                                                        class="go-arrow" />
+                                                    <!--  style="width: 9px; height: 7.69px; object-fit: cover; display: block;" -->
                                                 </span>
                                             </div>
                                             <span class="card-title mt-auto">
