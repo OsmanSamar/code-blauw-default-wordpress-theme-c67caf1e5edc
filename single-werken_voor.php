@@ -214,15 +214,11 @@ $fields = get_fields();
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
                     <span class="organ-title">
-                        <!-- Ook de volgende stap zetten met jouw organisatie? -->
                         <?= get_field("organisatietext") ?>
-
                     </span>
-
-
-                    <div class="circle-border btn-primary-custom ">
+                    <div class="btn-primary-custom" style="margin-right: 27px;">
                         <!-- width:195px -->
-                        <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-custom">
+                        <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="">
                             <?= get_field("vraagaanbtn")['title'] ?>
                             <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
                                 alt="go Contact page" class="go-arrow" />

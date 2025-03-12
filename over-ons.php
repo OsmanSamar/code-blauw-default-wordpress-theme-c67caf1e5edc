@@ -36,6 +36,15 @@ $fields = get_fields();
         margin: auto;
     }
 
+    .testimonial-slide img {
+        width: 100%;
+        height: 101px;
+        object-fit: scale-down;
+        /* object-fit: cover; */
+        border-radius: 5px;
+        background: #F7F6F4;
+    }
+
     .testimonial-text {
         font-size: 16px;
         font-weight: 300;
@@ -359,20 +368,17 @@ $fields = get_fields();
                             <div class="swiper-slide d-flex flex-column h-auto">
                                 <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column">
                                     <div class="testimonial-slide d-flex flex-column">
-
                                         <img src="<?= $testimonial["logo"]['url'] ?>"
                                             alt=" <?= $testimonial['logo']['alt'] ?>"
-                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
+                                            class="card-img-top uniform-img" />
+                                        <!--  style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;"  -->
                                         <!--  class="card-img-top" -->
-
-
-                                        <div class="card-body   mt-1 mb-0 pb-4 pt-2  h-100">
+                                        <div class="card-body mt-1 mb-0 pb-4 pt-2  h-100">
                                             <!-- d-flex flex-column -->
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <span class="card-text">
                                                     <?= $post->post_title ?></span>
                                                 <span class="d-flex justify-content-center align-items-center arrow">
-
                                                     <img src="<?= $testimonial["white_arrow"]['url'] ?>"
                                                         alt=" <?= $testimonial['white_arrow']['alt'] ?>"
                                                         class="card-img-top"
@@ -441,7 +447,7 @@ $fields = get_fields();
     let newswiper = new Swiper('.werk-swiper2', {
         slidesPerView: 2.5,
         grabCursor: true,
-        spaceBetween: 24,
+        spaceBetween: 20,
 
         pagination: {
             el: '.swiper-pagination',
@@ -461,15 +467,11 @@ $fields = get_fields();
             360: {
                 slidesPerView: 1.3
             },
-            410: {
-                slidesPerView: 1.2
-
-            },
             540: {
                 slidesPerView: 2
             },
             768: {
-                slidesPerView: 2.1
+                slidesPerView: 2.5
             },
             992: {
                 slidesPerView: 3.2
@@ -482,7 +484,7 @@ $fields = get_fields();
         // R ein itia li ze A O S after Swiper initialization
         on: {
             init: function() {
-                AOS.refres h();
+                AOS.refresh();
             },
             slideChangeTransitionEnd: function() {
                 AOS.refresh();
@@ -499,6 +501,7 @@ $fields = get_fields();
         once: true, // Only animate once
     });
     </script>
+
 
 
 </main>
