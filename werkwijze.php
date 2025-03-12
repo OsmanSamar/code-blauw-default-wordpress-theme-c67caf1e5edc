@@ -157,12 +157,13 @@ $fields = get_fields();
         padding: 18px;
         box-shadow: 10px 10px 60px #2072BE1A;
         text-align: left;
-        max-width: 400px;
-        margin: auto;
         position: relative;
         z-index: 3;
-        width: 310px;
-
+        height: 100% !important;
+        width: 100%;
+        max-width: 400px;
+        min-width: 250px;
+        margin: auto;
     }
 
     .testimonial-text {
@@ -301,16 +302,15 @@ $fields = get_fields();
                     <div class="werk-right-text pt-2 mt-3"> <?= get_field("secrighttext") ?></div>
 
                     <div class="button-group mt-5 d-flex gap-2">
-                        <div class="circle-border btn-primary-custom ">
-                            <a href="<?= get_field("wetenbtn")['url'] ?>" class="btn-custom">
+                        <div class="btn-primary-custom">
+                            <a href="<?= get_field("wetenbtn")['url'] ?>" class="">
                                 <?= get_field("wetenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go to article" class="go-arrow" />
                             </a>
                         </div>
-                        <div class="circle-border ">
-                            <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="btn-custom"
-                                style="color: #132030;">
+                        <div class="btn-custom-container">
+                            <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="" style="color: #132030;">
                                 <?= get_field("veelgesteldevragenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                     alt="go onze expertises" class="go-arrow" />
@@ -436,13 +436,14 @@ $fields = get_fields();
                                 $fields = get_fields($post->ID);
                                 $testimonial = get_field("testimonialwerkvoor");
                                 ?>
-                            <div class="swiper-slide d-flex flex-column h-100  ">
-                                <a href="<?= get_permalink($post) ?>" class="d-flex flex-column h-100">
-                                    <div class="testimonial-slide d-flex flex-column h-100">
+                            <div class="swiper-slide d-flex flex-column h-auto  ">
+                                <a href="<?= get_permalink($post) ?>" class="d-flex flex-column">
+                                    <div class="testimonial-slide d-flex flex-column">
                                         <img src="<?= $testimonial["logo"]['url'] ?>"
                                             alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
                                             style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
-                                        <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
+                                        <div class="card-body   mt-1 mb-0 pb-4 pt-2  h-100">
+                                            <!-- d-flex flex-column -->
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <span class="card-text">
                                                     <?= $post->post_title ?></span>
@@ -557,7 +558,7 @@ $fields = get_fields();
     let newswiper1 = new Swiper('.werk-swiper3', {
         slidesPerView: 2.5,
         grabCursor: true,
-        spaceBetween: 20,
+        spaceBetween: 24,
 
         pagination: {
             el: '.swiper-pagination',
@@ -573,6 +574,10 @@ $fields = get_fields();
         breakpoints: {
             360: {
                 slidesPerView: 1.3
+            },
+            410: {
+                slidesPerView: 1.2
+
             },
             540: {
                 slidesPerView: 2

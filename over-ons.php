@@ -27,12 +27,13 @@ $fields = get_fields();
         padding: 18px;
         box-shadow: 10px 10px 60px #2072BE1A;
         text-align: left;
-        max-width: 400px;
-        margin: auto;
         position: relative;
         z-index: 3;
-        width: 310px;
-
+        height: 100% !important;
+        width: 100%;
+        max-width: 400px;
+        min-width: 250px;
+        margin: auto;
     }
 
     .testimonial-text {
@@ -214,8 +215,8 @@ $fields = get_fields();
                                 <?= get_field("herotext") ?>
                             </span>
                         </div>
-                        <div class="circle-border btn-primary-custom mt-4">
-                            <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="btn-custom">
+                        <div class="btn-primary-custom mt-4">
+                            <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="">
                                 <?= get_field("kennismakenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go to contact" class="go-arrow" />
@@ -257,20 +258,18 @@ $fields = get_fields();
                     </div>
 
                     <div class="button-groupd d-flex gap-2">
-                        <div class="circle-border  ">
+                        <div class="btn-custom-container">
                             <!--  style="width: 182px;" -->
-                            <a href="<?= get_field("neemcontactopbtn")['url'] ?>" class="btn-custom"
-                                style="color: #132030;">
+                            <a href="<?= get_field("neemcontactopbtn")['url'] ?>" class="" style="color: #132030;">
                                 <?= get_field("neemcontactopbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                     alt="go onze expertises" class="go-arrow" />
                             </a>
 
                         </div>
-                        <div class="circle-border">
+                        <div class="btn-custom-container">
 
-                            <a href="<?= get_field("onzewerkwijzebtn")['url'] ?>" class="btn-custom"
-                                style="color: #132030;">
+                            <a href="<?= get_field("onzewerkwijzebtn")['url'] ?>" class="" style="color: #132030;">
                                 <?= get_field("onzewerkwijzebtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                     alt="go onze expertises" class="go-arrow" />
@@ -297,15 +296,15 @@ $fields = get_fields();
                                 <?= get_field("seclefttext") ?>
                             </span>
                             <div class="button-group mt-3 d-flex gap-2">
-                                <div class="circle-border btn-primary-custom ">
-                                    <a href="<?= get_field("contactbtn")['url'] ?>" class="btn-custom">
+                                <div class="btn-primary-custom ">
+                                    <a href="<?= get_field("contactbtn")['url'] ?>" class="">
                                         <?= get_field("contactbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                             alt="go onze contact" class="go-arrow" />
                                     </a>
                                 </div>
-                                <div class="circle-border  btn-custom-container ">
-                                    <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="btn-custom"
+                                <div class="btn-custom-container">
+                                    <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class=""
                                         style="color: #132030;">
                                         <?= get_field("veelgesteldevragenbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
@@ -357,14 +356,18 @@ $fields = get_fields();
                                 $fields = get_fields($post->ID);
                                 $testimonial = get_field("testimonialwerkvoor");
                                 ?>
-                            <div class="swiper-slide d-flex flex-column h-100">
-                                <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column h-100">
-                                    <div class="testimonial-slide d-flex flex-column h-100">
-                                        <img src="<?= $testimonial["logo"]['url'] ?>"
-                                            alt=" <?= $testimonial['logo']['alt'] ?>" class="card-img-top"
-                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
+                            <div class="swiper-slide d-flex flex-column h-auto">
+                                <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column">
+                                    <div class="testimonial-slide d-flex flex-column">
 
-                                        <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2  h-100">
+                                        <img src="<?= $testimonial["logo"]['url'] ?>"
+                                            alt=" <?= $testimonial['logo']['alt'] ?>"
+                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
+                                        <!--  class="card-img-top" -->
+
+
+                                        <div class="card-body   mt-1 mb-0 pb-4 pt-2  h-100">
+                                            <!-- d-flex flex-column -->
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <span class="card-text">
                                                     <?= $post->post_title ?></span>
@@ -400,8 +403,8 @@ $fields = get_fields();
                         <span class="organ-title">
                             <?= get_field("organisatietext") ?>
                         </span>
-                        <div class="circle-border btn-primary-custom" style="margin-right: 27px;">
-                            <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="btn-custom">
+                        <div class="btn-primary-custom" style="margin-right: 27px;">
+                            <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="">
                                 <?= get_field("vragenaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go Contact page" class="go-arrow" />
@@ -438,7 +441,7 @@ $fields = get_fields();
     let newswiper = new Swiper('.werk-swiper2', {
         slidesPerView: 2.5,
         grabCursor: true,
-        spaceBetween: 20,
+        spaceBetween: 24,
 
         pagination: {
             el: '.swiper-pagination',
@@ -458,11 +461,15 @@ $fields = get_fields();
             360: {
                 slidesPerView: 1.3
             },
+            410: {
+                slidesPerView: 1.2
+
+            },
             540: {
                 slidesPerView: 2
             },
             768: {
-                slidesPerView: 2.5
+                slidesPerView: 2.1
             },
             992: {
                 slidesPerView: 3.2
@@ -475,7 +482,7 @@ $fields = get_fields();
         // R ein itia li ze A O S after Swiper initialization
         on: {
             init: function() {
-                AOS.refresh();
+                AOS.refres h();
             },
             slideChangeTransitionEnd: function() {
                 AOS.refresh();
