@@ -256,7 +256,7 @@ $fields = get_fields();
             <div class="container ">
 
                 <div class="row  mb-3">
-                    <div class="col-12 col-lg-5 str-left-col " style="    " data-aos="fade-right" data-aos-offset="100"
+                    <div class="col-12 col-lg-5 str-left-col  my-auto py-4" data-aos="fade-right" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="col-lg-8 d-flex ">
                             <span class="waaromkiezenvoorblauw"><?= get_field("waaromkiezenvoorblauw") ?></span>

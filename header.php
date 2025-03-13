@@ -33,9 +33,9 @@
     <!-- AOS -->
 
 
-    <header class="header position-absolute d-flex justify-content-center " style=" z-index:2; width: 100vw; top:4px; ">
+    <header class="header position-absolute d-flex justify-content-center " style=" z-index:2; top:4px; ">
 
-        <div class="container">
+        <div class="container p-0">
             <!-- Bootstrap container -->
             <nav class="navbar navbar-expand-lg navbar-light sans-serif w-100 "
                 style=" height: 55px; border: 1px solid #FFFFFF; border-radius: 5px; opacity: 1; padding-bottom: 6px;">

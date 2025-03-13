@@ -6,7 +6,7 @@ $fields = get_fields();
 
     <style>
     .hero-section {
-        background: url("<?= get_field('heroimage')['url'] ?>");
+        background: ;
         width: 100%;
         margin: 0 auto;
         background-size: cover;
@@ -284,10 +284,13 @@ $fields = get_fields();
     <div>
 
         <!-- Hero Section -->
-        <div class="hero-section">
-            <div class="container">
+        <div class="container">
 
-                <div class="hero-content">
+            <div class="hero-section bg-holder">
+                <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?>')">
+
+                </div>
+                <div class="hero-content w-100">
                     <div class="col-12 col-lg-8  offset-lg-1 pe-0 ">
                         <h1 class="hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000" data-aos-easing="ease-in-out">

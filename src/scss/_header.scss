@@ -197,6 +197,8 @@ strong:nth-of-type(2) {
   text-align: center;
   color: white;
   width: 100%;
+  max-width: 100vw;
+  overflow: clip;
 
   margin: 0 auto;
 }
@@ -1419,4 +1421,22 @@ strong:nth-of-type(2) {
   .footer-sm-screen {
     margin-left: unset;
   }
+}
+.bg-holder {
+  position: relative;
+  overflow: clip;
+  overflow-x: visible !important;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
