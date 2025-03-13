@@ -194,28 +194,31 @@ $fields = get_fields();
 
                 <div class="hero-content text-center w-100">
                     <?php get_template_part('components/breadcrumb') ?>
-                    <div
-                        class="col-12  col-lg-4 offset-lg-4 col-md-8 offset-md-2    align-self-center d-flex flex-column justify-content-center align-items-center">
-                        <h1 class="case-hero-title text-center" data-aos="fade-up" data-aos-offset="100"
-                            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="d-block">
-                                <?= get_field("herotitle") ?>
-                            </span>
-                        </h1>
+                    <div class="row my-auto   ">
+                        <div class="col-12  col-lg-4 offset-lg-4 col-md-8 offset-md-2 
+                            py-4 mt-2  
+                            align-self-center d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="case-hero-title text-center" data-aos="fade-up" data-aos-offset="100"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <span class="d-block">
+                                    <?= get_field("herotitle") ?>
+                                </span>
+                            </h1>
 
-                        <div class="case-hero-text ">
-                            <span class="d-block">
-                                <?= get_field("herotext") ?>
-                            </span>
-                        </div>
-                        <div class="btn-primary-custom mt-4">
-                            <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="">
-                                <?= get_field("kennismakenbtn")['title'] ?>
-                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                    alt="go to contact" class="go-arrow" />
-                            </a>
-                        </div>
+                            <div class="case-hero-text ">
+                                <span class="d-block">
+                                    <?= get_field("herotext") ?>
+                                </span>
+                            </div>
+                            <div class="btn-primary-custom mt-4">
+                                <a href="<?= get_field("kennismakenbtn")['url'] ?>" class="">
+                                    <?= get_field("kennismakenbtn")['title'] ?>
+                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                        alt="go to contact" class="go-arrow" />
+                                </a>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
