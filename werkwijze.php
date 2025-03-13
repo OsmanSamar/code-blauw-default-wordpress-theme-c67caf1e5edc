@@ -6,16 +6,6 @@ $fields = get_fields();
 
     <style>
     .hero-section {
-        background: url("<?= get_field('heroimage')['url'] ?> ");
-        width: 100%;
-        margin: 0 auto;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
-
-    .hero-section {
         height: 500px;
     }
 
@@ -259,25 +249,27 @@ $fields = get_fields();
     <div>
 
         <!-- Hero Section -->
-        <div class="hero-section ">
-            <div class="container">
-                <!-- BreadCrumb Section -->
-                <?php get_template_part('components/breadcrumb') ?>
+        <div class="container ">
+            <div class="hero-section  bg-holder">
+                <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
+                </div>
+                <div class="hero-content text-center w-100">
+                    <?php get_template_part('components/breadcrumb') ?>
+                    <div class="row my-auto py-4">
+                        <div
+                            class="col-12  col-lg-6 offset-lg-3 col-md-8 offset-md-2 align-self-center d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="werkwijze-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <span class="d-block">
+                                    <?= get_field("herotitle") ?>
+                                </span>
+                            </h1>
 
-                <div class="hero-content text-center">
-                    <div
-                        class="col-12  col-lg-6 offset-lg-3 col-md-8 offset-md-2 align-self-center d-flex flex-column justify-content-center align-items-center">
-                        <h1 class="werkwijze-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
-                            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="d-block">
-                                <?= get_field("herotitle") ?>
-                            </span>
-                        </h1>
-
-                        <div class="werkwijze-hero-text ">
-                            <span class="d-block">
-                                <?= get_field("herotext") ?>
-                            </span>
+                            <div class="werkwijze-hero-text ">
+                                <span class="d-block">
+                                    <?= get_field("herotext") ?>
+                                </span>
+                            </div>
                         </div>
                     </div>
 
@@ -373,36 +365,42 @@ $fields = get_fields();
         <!--End of -Onze werkwijze Block -->
 
 
-        <div class="container-img ">
-            <div class="container position-relative" style="margin-top: 127px;">
-                <div class="swiper-title ">
+        <div class="container  ">
+            <div class="container-img position-relative bg-holder">
+                <!-- style="margin-top: 127px;" -->
+                <div class="bg"
+                    style="background-image: url('<?= get_template_directory_uri() ?>/images/img-container.png')">
+                </div>
+                <div class="swiper-title " style=" position: relative;z-index: 1;">
                     <div class="title-container" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <?= get_field("titleoflogos") ?>
                     </div>
                 </div>
-            </div>
-            <div class="container  position-relative" style="padding-top: 30px;">
-                <div class="swiper sample-slider  ">
-                    <div class="swiper-wrapper">
-                        <?php
-                        $testemonials = get_field("partnerslogotestemonials");
-                        if ($testemonials) {
-                            foreach ($testemonials as $testemonial) { ?>
-                        <div class="swiper-slide">
-                            <div class="werk-logo-container">
-                                <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>" target="_blank">
-                                    <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
-                                        alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
-                                        style="width: 72px; height: 64px; border-radius: 5px; object-fit: contain;" />
-                                </a>
+
+                <div class="container  position-relative" style="padding-top: 30px; z-index: 1;">
+                    <div class="swiper sample-slider  ">
+                        <div class="swiper-wrapper">
+                            <?php
+                            $testemonials = get_field("partnerslogotestemonials");
+                            if ($testemonials) {
+                                foreach ($testemonials as $testemonial) { ?>
+                            <div class="swiper-slide">
+                                <div class="werk-logo-container">
+                                    <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>" target="_blank">
+                                        <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
+                                            alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
+                                            style="width: 72px; height: 64px; border-radius: 5px; object-fit: contain;" />
+                                    </a>
+                                </div>
                             </div>
+                            <?php }
+                            } ?>
                         </div>
-                        <?php }
-                        } ?>
                     </div>
                 </div>
             </div>
+
         </div>
 
 

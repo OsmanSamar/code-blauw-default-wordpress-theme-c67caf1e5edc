@@ -5,22 +5,11 @@ $fields = get_fields();
 <main class="overons">
     <style>
     .hero-section {
-        background: url("<?= get_field('heroimage')['url'] ?> ");
-        width: 100%;
-
-        margin: 0 auto;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
-
-    .hero-section {
         height: 500px;
     }
 
 
-    /*  */
+
     .testimonial-slide {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border-radius: 5px;
@@ -36,14 +25,7 @@ $fields = get_fields();
         margin: auto;
     }
 
-    /* .testimonial-slide img {
-        width: 100%;
-        height: 101px;
-        object-fit: scale-down;
-        
-        border-radius: 5px;
-        background: #F7F6F4;
-    } */
+
 
     .testimonial-text {
         font-size: 16px;
@@ -205,11 +187,13 @@ $fields = get_fields();
     <div>
 
         <!-- Hero Section -->
-        <div class="hero-section  ">
-            <div class="container">
-                <!-- BreadCrumb Section -->
-                <?php get_template_part('components/breadcrumb') ?>
-                <div class="hero-content text-center">
+        <div class="container">
+            <div class=" hero-section bg-holder">
+                <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
+                </div>
+
+                <div class="hero-content text-center w-100">
+                    <?php get_template_part('components/breadcrumb') ?>
                     <div
                         class="col-12  col-lg-4 offset-lg-4 col-md-8 offset-md-2    align-self-center d-flex flex-column justify-content-center align-items-center">
                         <h1 class="case-hero-title text-center" data-aos="fade-up" data-aos-offset="100"
@@ -295,7 +279,7 @@ $fields = get_fields();
         <div class="white-medium-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-6 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column  text-left gap-4 mb-4">
                             <span class="fleft-text">
@@ -369,9 +353,8 @@ $fields = get_fields();
                                 <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column">
                                     <div class="testimonial-slide d-flex flex-column">
                                         <img src="<?= $testimonial["logo"]['url'] ?>"
-                                            alt=" <?= $testimonial['logo']['alt'] ?>"
-                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;"
-                                            class="card-img-top" />
+                                            alt=" <?= $testimonial['logo']['alt'] ?>" style=" height: 101px; border-radius: 5px; background: #F7F6F4; object-fit:
+                                            scale-down;" class="card-img-top" />
                                         <!--  style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;"  -->
                                         <!--  class="card-img-top" -->
                                         <div class="card-body d-flex flex-column mt-1 mb-0 pb-4 pt-2">
@@ -386,7 +369,8 @@ $fields = get_fields();
                                                 </span>
                                             </div>
                                             <span class="card-title mt-auto">
-                                                <span><?= $testimonial["text"] ?></span>
+                                                <span>
+                                                    <?= $testimonial["text"] ?></span>
                                             </span>
                                         </div>
                                     </div>
@@ -501,6 +485,7 @@ $fields = get_fields();
         once: true, // Only animate once
     });
     </script>
+
 
 
 
