@@ -5,7 +5,7 @@ $fields = get_fields();
 <main class="strategie">
     <style>
     .hero-section {
-        background: url("<?= get_field('heroimage')['url'] ?> ");
+        background: ;
         width: 100%;
         margin: 0 auto;
         background-size: cover;
@@ -181,31 +181,36 @@ $fields = get_fields();
     </style>
     <div>
         <!-- Hero Section -->
-        <div class="hero-section ">
-            <div class="container">
+        <div class=" container ">
+            <div class="hero-section  bg-holder">
+                <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
+                </div>
 
-                <!-- BreadCrumb Section -->
-                <?php get_template_part('components/breadcrumb') ?>
-                <div class="hero-content text-center">
-                    <div
-                        class="col-12 col-md-6 offset-md-3 align-self-center d-flex flex-column justify-content-center align-items-center ">
-                        <h1 class="strategie-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
-                            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="d-block">
-                                <?= get_field("herotitle") ?>
-                            </span>
-                        </h1>
-                        <div class="strategie-hero-text ">
-                            <span class="d-block">
-                                <?= get_field("herotext") ?>
-                            </span>
-                        </div>
-                        <div class="btn-primary-custom mt-4">
-                            <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="">
-                                <?= get_field("meerwetenbtn")['title'] ?>
-                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                    alt="go kennismaken" class="go-arrow" />
-                            </a>
+
+
+                <div class="hero-content text-center w-100">
+                    <?php get_template_part('components/breadcrumb') ?>
+                    <div class="row">
+                        <div
+                            class="col-12 col-md-6 offset-md-3 align-self-center d-flex flex-column justify-content-center align-items-center my-auto py-4 ">
+                            <h1 class="strategie-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <span class="d-block">
+                                    <?= get_field("herotitle") ?>
+                                </span>
+                            </h1>
+                            <div class="strategie-hero-text ">
+                                <span class="d-block">
+                                    <?= get_field("herotext") ?>
+                                </span>
+                            </div>
+                            <div class="btn-primary-custom mt-4">
+                                <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="">
+                                    <?= get_field("meerwetenbtn")['title'] ?>
+                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                        alt="go kennismaken" class="go-arrow" />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

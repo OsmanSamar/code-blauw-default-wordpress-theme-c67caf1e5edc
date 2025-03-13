@@ -4,16 +4,17 @@ $fields = get_fields();
 
 <main class="project-en-programmamanagement">
     <style>
-    .img-container {
-        background-color: blue;
-        /* Your desired background color */
-        border-radius: 50px;
-        padding: 10px;
-        /* Optional padding to add some space around the image */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .blauw-left-text {
+        text-align: left;
+        font-size: 32px;
+        line-height: 53px;
+        font-weight: 100;
+        font-family: "richmond-display", serif;
+        letter-spacing: 1px;
+        color: #1e73be;
+        opacity: 1;
     }
+
 
     .arrow-image {
         width: 12px;
@@ -268,6 +269,13 @@ $fields = get_fields();
             font-size: 36px;
         }
 
+        .blauw-left-text {
+            text-align: left;
+            font-size: 44px;
+            line-height: 56px;
+
+        }
+
 
     }
     </style>
@@ -282,26 +290,28 @@ $fields = get_fields();
 
                 <div class="hero-content text-center w-100">
                     <?php get_template_part('components/breadcrumb') ?>
-                    <div class="col-12 col-lg-12   d-flex flex-column justify-content-center align-items-center">
-                        <h1 class="pro-hero-title text-center" data-aos="fade-up" data-aos-offset="100"
-                            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="">
-                                <?= get_field("herotitle") ?>
-                            </span>
-                        </h1>
-                        <div class="pro-hero-text" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                            data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="d-block">
-                                <?= get_field("herotext") ?>
-                            </span>
-                        </div>
-                        <div class="btn-primary-custom mt-4">
-                            <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="">
-                                <?= get_field("meerwetenbtn")['title'] ?>
-                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                    alt="go kennismaken" class="go-arrow" />
-                            </a>
+                    <div class="row">
+                        <div class="col-12 col-lg-12   d-flex flex-column justify-content-center align-items-center">
+                            <h1 class=" pro-hero-title text-center" data-aos="fade-up" data-aos-offset="100"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <span class="">
+                                    <?= get_field("herotitle") ?>
+                                </span>
+                            </h1>
+                            <div class="pro-hero-text" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                                data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <span class="d-block">
+                                    <?= get_field("herotext") ?>
+                                </span>
+                            </div>
+                            <div class="btn-primary-custom mt-4">
+                                <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="">
+                                    <?= get_field("meerwetenbtn")['title'] ?>
+                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                        alt="go kennismaken" class="go-arrow" />
+                                </a>
 
+                            </div>
                         </div>
                     </div>
                 </div>
