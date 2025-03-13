@@ -20,10 +20,12 @@ $fields = get_fields();
         height: 819px;
         object-fit: cover;
         margin: 0 auto;
-        background: linear-gradient(90deg, rgba(6, 48, 101, 0.9) 0%, rgba(0, 85, 179, 0.1) 100%),
-            url("<?= get_template_directory_uri() ?>/images/mask-group.png") 50%/cover no-repeat;
+        /* background: linear-gradient(90deg, rgba(6, 48, 101, 0.9) 0%, rgba(0, 85, 179, 0.1) 100%),
+            url("<?= get_template_directory_uri() ?>/images/mask-group.png") 50%/cover no-repeat; */
         height: fit-content;
         padding: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
 
     }
 
@@ -166,21 +168,21 @@ $fields = get_fields();
         top: 2px !important;
     }
 
-    .swiper-container-2 .swiper-button-prev2 {
+    /* .swiper-container-2 .swiper-button-prev2 {
         left: -17% !important;
         top: 11px !important;
-    }
+    } */
 
     .swiper-container .swiper-button-next {
         right: 0px !important;
         top: 2px !important;
     }
 
-    .swiper-container-2 .swiper-button-next2 {
+    /* .swiper-container-2 .swiper-button-next2 {
         right: 36px !important;
         top: 11px !important;
 
-    }
+    } */
 
     .onz-eexpertises-title {
         text-align: center;
@@ -251,7 +253,7 @@ $fields = get_fields();
 
     @media (min-width: 992px) {
         .first-blue-block {
-            height: 574px;
+            height: 625px;
         }
 
         .swiper-container .swiper-button-prev {
@@ -311,8 +313,6 @@ $fields = get_fields();
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go contact page" class="go-arrow"
                                     style="pointer-events: auto ;z-index: 1000 " />
-
-
                             </div>
 
                             <div class=" btn-custom-container">
@@ -345,7 +345,6 @@ $fields = get_fields();
                     </h1>
                 </div>
             </div>
-
             <div class="row g-5 mt-1">
                 <div class="col-lg-6 text-start mt-5 flexible-left-text" data-aos="fade-right" data-aos-offset="100"
                     data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -369,8 +368,6 @@ $fields = get_fields();
         <!-- End of Flexible Content Field -->
 
 
-
-
         <!-- Onze_Expertises -->
         <div class="container p-3 px-1  position-relative" id="testimonials" style=" z-index: 2; margin-top: 6rem;">
 
@@ -384,9 +381,6 @@ $fields = get_fields();
                     </div>
                 </div>
             </div>
-
-
-
             <div class="row mb-4">
                 <?php
                 $delay = 0;
@@ -405,21 +399,18 @@ $fields = get_fields();
 
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <a href="<?= get_permalink($post) ?>">
-                        <div class="testimonial-container  h-100 ">
-                            <div class=" d-flex flex-row align-items-center justify-content-between p-4">
-                                <span class="test-post-title">
-                                    <?= $post->post_title ?>
-                                </span>
-                                <span class="test-img-border">
-                                    <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                        alt="go onze expertises" class="go-arrow" />
-                                </span>
-                            </div>
+                        <div
+                            class="testimonial-container d-flex flex-row align-items-center justify-content-between p-4  h-100 ">
+                            <span class="test-post-title">
+                                <?= $post->post_title ?>
+                            </span>
+                            <span class="test-img-border">
+                                <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                    alt="go onze expertises" class="go-arrow" />
+                            </span>
                         </div>
                     </a>
                 </div>
-
-
                 <?php
 
                 }
@@ -430,88 +421,94 @@ $fields = get_fields();
 
 
         <!--first-blue-block  -->
-        <div class="first-blue-block position-relative" style=" margin-top: -105px;">
+        <div class="container ">
+            <div class=" bg-holder " style=" margin-top: -105px;">
+                <div class="bg first-blue-block ">
+                </div>
+                <div class=" blue-container werk-slider " style="position: relative;z-index: 1;">
+                    <div class="swiper-container swiper position-relative  " style="position: relative;z-index: 1;">
 
-            <div class="container blue-container werk-slider ">
-
-                <div class="swiper-container swiper position-relative ">
-
-                    <div class="swiper-header">
-                        <div class="swiper-text">
-                            <?= get_field("werkentitle") ?>
+                        <div class="swiper-header">
+                            <div class="swiper-text">
+                                <?= get_field("werkentitle") ?>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
                         </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
-                    </div>
 
-                    <div class="swiperwerken werk-swiper">
-                        <div class="swiper-wrapper">
-                            <?php
-                            $delay = 0;
-                            $posts = get_posts([
-                                'post_type' => 'werken_voor',
-                                'numberposts' => -1,
-                                "order" => 'asc'
-                            ]);
+                        <div class="swiperwerken werk-swiper">
+                            <div class="swiper-wrapper">
+                                <?php
+                                $delay = 0;
+                                $posts = get_posts([
+                                    'post_type' => 'werken_voor',
+                                    'numberposts' => -1,
+                                    "order" => 'asc'
+                                ]);
 
-                            foreach ($posts as $post) {
-                                $fields = get_fields($post->ID);
-                                $testimonial = get_field("testimonialwerkvoor");
-                                ?>
-                            <div class="swiper-slide d-flex flex-column h-auto  ">
-                                <a href="<?= get_permalink($post) ?>" class="d-flex flex-column">
-                                    <div class="testimonial-slide d-flex flex-column ">
-                                        <img src="<?= $testimonial["logo"]['url'] ?>"
-                                            alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
-                                            style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
-                                        <div class="card-body  mt-1 mb-0 pb-4 pt-2">
-                                            <!--  d-flex flex-column -->
+                                foreach ($posts as $post) {
+                                    $fields = get_fields($post->ID);
+                                    $testimonial = get_field("testimonialwerkvoor");
+                                    ?>
+                                <div class="swiper-slide d-flex flex-column h-auto  ">
+                                    <a href="<?= get_permalink($post) ?>" class="d-flex flex-column">
+                                        <div class="testimonial-slide d-flex flex-column ">
+                                            <img src="<?= $testimonial["logo"]['url'] ?>"
+                                                alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
+                                                style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
+                                            <div class="card-body  mt-1 mb-0 pb-4 pt-2">
 
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="card-text">
-                                                    <?= $post->post_title ?>
+
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="card-text">
+                                                        <?= $post->post_title ?>
+                                                    </div>
+                                                    <span
+                                                        class="d-flex justify-content-center align-items-center arrow">
+                                                        <img src="<?= $testimonial["white_arrow"]['url'] ?>"
+                                                            alt=" <?= $testimonial['white_arrow']['alt'] ?>"
+                                                            class="go-arrow" />
+                                                    </span>
                                                 </div>
-                                                <span class="d-flex justify-content-center align-items-center arrow">
-                                                    <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                        alt=" <?= $testimonial['white_arrow']['alt'] ?>"
-                                                        class="go-arrow" />
+                                                <span class="card-title mt-auto">
+                                                    <span><?= $testimonial["text"] ?></span>
                                                 </span>
                                             </div>
-                                            <span class="card-title mt-auto">
-                                                <span><?= $testimonial["text"] ?></span>
-                                            </span>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
+                                <?php
+                                    $delay += 300;
+                                }
+                                wp_reset_postdata();
+                                ?>
                             </div>
-                            <?php
-                                $delay += 300;
-                            }
-                            wp_reset_postdata();
-                            ?>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-
         </div>
 
 
 
-        <div class="container-img position-relative">
-            <div class="container">
-                <div class="row g-0  " style="padding-top: 5rem;">
+
+
+        <div class="container ">
+            <div class="container-img position-relative bg-holder">
+                <div class="bg"
+                    style="background-image:url('<?= get_template_directory_uri() ?>/images/mask-group.png') ">
+                </div>
+
+                <div class="row  g-0 " style="padding-top: 5rem; position: relative;z-index: 1;">
+
 
                     <div class="col-12 col-md-6 col-lg-6">
                         <img src="<?= get_template_directory_uri() ?>/images/senior-leadership.png"
                             alt="manager-leading" class="w-100"
                             style="object-fit: cover; border-radius: 5px 0px 0px 5px; height: 387px; ">
                     </div>
-
                     <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center "
                         style="background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 10px 10px 60px rgba(32, 114, 190, 0.1); border-radius: 0px 5px 5px 0px; height: 387px;padding: 43px 26px; ">
                         <div class="">
@@ -538,62 +535,56 @@ $fields = get_fields();
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
-            </div>
 
-            <div class="container  position-relative" style="margin-top: 160px; margin-bottom: 80px;">
-                <div class="swiper-container-2">
-                    <div class="">
-                        <!-- swiper-title-btn -->
-                        <div class="swiper-title ">
-                            <div class="title-container" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                                data-aos-duration="1000" data-aos-easing="ease-in-out">
-                                <?= get_field("titleoflogos") ?>
-                            </div>
-                            <div class="d-flex align-items-center gap-4">
-                                <div class="swiper-button-prev2 swiper-button-prev"></div>
-                                <div class="swiper-button-next2 swiper-button-next"></div>
+                <div class="container  position-relative" style="margin-top: 160px; margin-bottom: 80px;">
+                    <div class="swiper-container-2">
+                        <div class="">
+                            <!-- swiper-title-btn -->
+                            <div class="swiper-title ">
+                                <div class="title-container" data-aos="fade-right" data-aos-offset="100"
+                                    data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                    <?= get_field("titleoflogos") ?>
+                                </div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <div class="swiper-button-prev2 swiper-button-prev"></div>
+                                    <div class="swiper-button-next2 swiper-button-next"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="container position-relative">
+                            <div class="row">
+                                <div class="col-12 col-lg-12">
 
-
-
-                    <div class="container position-relative">
-                        <div class="row">
-                            <div class="col-12 col-lg-12">
-
-                                <div class="logoswiper sample-slider1">
-                                    <div class="swiper-wrapper">
-                                        <?php
-                                        $testemonials = get_field("partnerslogotestemonials");
-                                        if ($testemonials) {
-                                            foreach ($testemonials as $testemonial) { ?>
-                                        <div class="swiper-slide">
-                                            <div class="logo-container" style="">
-                                                <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>"
-                                                    target="_blank">
-                                                    <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
-                                                        alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
-                                                        style="width: 72px; height: 64px; border-radius: 5px; object-fit: contain;" />
-                                                </a>
+                                    <div class="logoswiper sample-slider1">
+                                        <div class="swiper-wrapper">
+                                            <?php
+                                            $testemonials = get_field("partnerslogotestemonials");
+                                            if ($testemonials) {
+                                                foreach ($testemonials as $testemonial) { ?>
+                                            <div class="swiper-slide">
+                                                <div class="logo-container" style="">
+                                                    <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>"
+                                                        target="_blank">
+                                                        <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
+                                                            alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
+                                                            style="width: 72px; height: 64px; border-radius: 5px; object-fit: contain;" />
+                                                    </a>
+                                                </div>
                                             </div>
+                                            <?php }
+                                            } ?>
                                         </div>
-                                        <?php }
-                                        } ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
+
+
 
 
         </div>
@@ -614,8 +605,8 @@ $fields = get_fields();
             clickable: true,
         },
         loop: true,
-        // a utoplay: {
-        // d elay: 2000,
+        // a      utoplay: {
+        // d    elay: 2000,
         // } ,
         navigation: {
             nextEl: ".werk-slider .swiper-button-next",
@@ -646,7 +637,7 @@ $fields = get_fields();
             },
         },
 
-        // R ein itia li ze A O S after Swiper initialization
+        // R       ein itia li ze A O S after Swiper initialization
         on: {
             init: function() {
                 AOS.refresh();
@@ -674,7 +665,7 @@ $fields = get_fields();
         const logoswiper = new Swiper('.sample-slider1', {
 
             slidesPerView: 2,
-            // c           enteredSlides: true,
+            // c               enteredSlides: true,
             spaceBetween: 24,
 
             pagination: {
