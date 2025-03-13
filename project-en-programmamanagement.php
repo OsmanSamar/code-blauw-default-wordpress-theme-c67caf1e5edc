@@ -4,20 +4,6 @@ $fields = get_fields();
 
 <main class="project-en-programmamanagement">
     <style>
-    .hero-section {
-        background: url("<?= get_field('heroimage')['url'] ?> ");
-        width: 100%;
-        /* max-width: 1700px; */
-        margin: 0 auto;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
-
-
-
-
     .img-container {
         background-color: blue;
         /* Your desired background color */
@@ -38,7 +24,6 @@ $fields = get_fields();
 
     .testi-container {
         width: 100%;
-        /* max-width: 1700px; */
         margin: 0 auto;
         background: #F7F6F4 0% 0% no-repeat padding-box;
         opacity: 1;
@@ -290,11 +275,13 @@ $fields = get_fields();
 
     <div>
         <!-- Hero Section -->
-        <div class="hero-section">
-            <div class="container">
-                <!-- BreadCrumb Section -->
-                <?php get_template_part('components/breadcrumb') ?>
-                <div class="hero-content text-center">
+        <div class="container">
+            <div class=" hero-section bg-holder">
+                <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
+                </div>
+
+                <div class="hero-content text-center w-100">
+                    <?php get_template_part('components/breadcrumb') ?>
                     <div class="col-12 col-lg-12   d-flex flex-column justify-content-center align-items-center">
                         <h1 class="pro-hero-title text-center" data-aos="fade-up" data-aos-offset="100"
                             data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -410,6 +397,7 @@ $fields = get_fields();
 
 
 
+
         <!--first-blue-block  -->
         <div class="first-blue-block position-relative">
             <div class="container blue-container">
@@ -453,7 +441,6 @@ $fields = get_fields();
                                                     <img src="<?= $testimonial["white_arrow"]['url'] ?>"
                                                         alt="<?= $testimonial['white_arrow']['alt'] ?>"
                                                         class="go-arrow" />
-                                                    <!--  style="width: 9px; height: 7.69px; object-fit: cover; display: block;" -->
                                                 </span>
                                             </div>
                                             <span class="card-title mt-auto">
@@ -475,6 +462,7 @@ $fields = get_fields();
             </div>
 
         </div>
+
 
 
 
