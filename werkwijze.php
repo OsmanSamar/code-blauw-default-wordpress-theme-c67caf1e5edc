@@ -40,7 +40,7 @@ $fields = get_fields();
         align-items: baseline;
         justify-content: space-between;
         position: absolute;
-        top: -70px;
+        top: 62px;
         /* right: -98px; */
         width: 100%;
 
@@ -195,7 +195,7 @@ $fields = get_fields();
 
     @media (min-width: 768px) {
         .swiper-title {
-            top: -70px;
+            top: 57px;
         }
 
         .swiper-container .swiper-button-prev {
@@ -378,7 +378,7 @@ $fields = get_fields();
                     </div>
                 </div>
 
-                <div class="container  position-relative" style="padding-top: 30px; z-index: 1;">
+                <div class="container  position-relative my-auto py-4" style=" z-index: 1;">
                     <div class="swiper sample-slider  ">
                         <div class="swiper-wrapper">
                             <?php
