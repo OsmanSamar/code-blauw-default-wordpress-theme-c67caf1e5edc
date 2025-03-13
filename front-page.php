@@ -278,7 +278,7 @@ $fields = get_fields();
             <div class="hero-section bg-holder">
                 <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?>')">
                 </div>
-                <div class="hero-content w-100">
+                <div class="hero-content w-100" style="top: -7px;">
                     <div class="col-12 col-lg-8  offset-lg-1 pe-0 ">
                         <h1 class="hero-title" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -457,7 +457,7 @@ $fields = get_fields();
                                                             class="go-arrow" />
                                                     </span>
                                                 </div>
-                                                <span class="card-title mt-auto">
+                                                <span class="card-title mt-auto" style=" color: #132030;">
                                                     <span><?= $testimonial["text"] ?></span>
                                                 </span>
                                             </div>

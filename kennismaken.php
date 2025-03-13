@@ -4,40 +4,77 @@
 
 
     <style>
-        .hero-section {
-            height: 500px;
-        }
+    .hero-section {
+        height: 500px;
+    }
+
+    .hero-content {
+        position: relative;
+    }
+
+    .breadcrumb-wrap {
+        position: absolute;
+        top: -109px;
+    }
 
 
 
-        .blue-block {
-            width: 100%;
-            /* max-width: 1700px; */
-            margin: 0 auto;
-            background-color: #CCE1F4;
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
+    .blue-block {
+        width: 100%;
+        /* max-width: 1700px; */
+        margin: 0 auto;
+        background-color: #CCE1F4;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 
 
 
-        /* Form Style */
-        .gform_wrapper .gform_footer .gform_button {
-            background: url("<?= get_field('white_arrow')['url'] ?> ");
-        }
+    /* Form Style */
+    .gform_wrapper .gform_footer .gform_button {
+        background: url("<?= get_field('white_arrow')['url'] ?> ");
+    }
 
-        .content-container {
-            font: italic normal 300 14px/20px "ff-scala-sans-pro" !important;
-            letter-spacing: 0px;
-            color: #132030;
-            opacity: 1;
-        }
+    .content-container {
+        font: italic normal 300 14px/20px "ff-scala-sans-pro" !important;
+        letter-spacing: 0px;
+        color: #132030;
+        opacity: 1;
+    }
     </style>
     <div>
 
 
         <!-- Hero Section -->
-        <?= get_template_part("components/hero") ?>
+
+        <div class="container ">
+            <div class="hero-section  bg-holder">
+                <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
+                </div>
+                <div class="hero-content text-center w-100">
+                    <?php get_template_part('components/breadcrumb') ?>
+                    <div class="row  ">
+                        <div class="col-12  col-lg-6 offset-lg-3 col-md-8 offset-md-2
+                            
+                             align-self-center d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="werkwijze-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <span class="d-block">
+                                    <?= get_field("herotitle") ?>
+                                </span>
+                            </h1>
+
+                            <div class="werkwijze-hero-text ">
+                                <span class="d-block">
+                                    <?= get_field("herotext") ?>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- End of Hero Section -->
 
         <div class="blue-block ">

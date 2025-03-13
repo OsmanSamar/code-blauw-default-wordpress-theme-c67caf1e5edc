@@ -160,8 +160,8 @@ $fields = get_fields();
         <div class="medium-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-5   mb-3 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                        data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="col-12 col-lg-5 my-auto py-4" data-aos="fade-right" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-wrap flex-column  text-left">
                             <span class="post-werk-title">
                                 <?= get_field("lefttitle") ?>

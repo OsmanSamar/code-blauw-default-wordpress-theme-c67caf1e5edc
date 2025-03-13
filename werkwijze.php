@@ -9,6 +9,17 @@ $fields = get_fields();
         height: 500px;
     }
 
+
+
+    .hero-content {
+        position: relative;
+    }
+
+    .breadcrumb-wrap {
+        position: absolute;
+        top: -97px;
+    }
+
     .container-img {
         width: 100%;
         object-fit: cover;
@@ -249,13 +260,13 @@ $fields = get_fields();
     <div>
 
         <!-- Hero Section -->
-        <!-- <div class="container ">
+        <div class="container ">
             <div class="hero-section  bg-holder">
                 <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
                 </div>
                 <div class="hero-content text-center w-100">
                     <?php get_template_part('components/breadcrumb') ?>
-                    <div class="row my-auto py-3 ">
+                    <div class="row  ">
                         <div class="col-12  col-lg-6 offset-lg-3 col-md-8 offset-md-2
                             
                              align-self-center d-flex flex-column justify-content-center align-items-center">
@@ -275,9 +286,9 @@ $fields = get_fields();
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- Hero Section -->
-        <?= get_template_part("components/hero") ?>
+
         <!-- End of Hero Section -->
         <!-- End of Hero Section -->
 
@@ -451,7 +462,7 @@ $fields = get_fields();
                                                         alt="go Contact page" class="go-arrow" />
                                                 </span>
                                             </div>
-                                            <span class="card-title mt-auto">
+                                            <span class="card-title mt-auto" style=" color: #132030;">
                                                 <span><?= $testimonial["text"] ?></span>
                                             </span>
                                         </div>
@@ -499,11 +510,11 @@ $fields = get_fields();
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        cons t swiper = new Swiper('.sample-slider', {
+        const swiper = new Swiper('.sample-slider', {
 
             slidesPerView: 2,
             // centeredSlides: true,
-            spac eBetween: 24,
+            spaceBetween: 24,
 
             pagination: {
                 el: '.swiper-pagination',
@@ -513,7 +524,7 @@ $fields = get_fields();
             //     prevEl: ".swiper-button-prev",
             // },
 
-            breakpoi nts: {
+            breakpoints: {
 
                 360: {
                     slidesPerView: 1.7,
@@ -549,65 +560,65 @@ $fields = get_fields();
 
 
 
-    <scr ipt>
-        let newswiper1 = new Swiper('.werk-swiper3', {
+    <script>
+    let newswiper1 = new Swiper('.werk-swiper3', {
         slidesPerView: 2.5,
         grabCursor: true,
-        spac eBetween: 24,
+        spaceBetween: 24,
 
         pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+            el: '.swiper-pagination',
+            clickable: true,
         },
 
         navigation: {
-        nextEl: ".werk-slider .swiper-button-next",
-        prevEl: ".werk-slider .swiper-button-prev",
+            nextEl: ".werk-slider .swiper-button-next",
+            prevEl: ".werk-slider .swiper-button-prev",
         },
 
 
-        brea kpoints: {
-        360: {
-        slidesPerView: 1.3
-        },
-        410: {
-        slidesPerView: 1.2
+        breakpoints: {
+            360: {
+                slidesPerView: 1.3
+            },
+            410: {
+                slidesPerView: 1.2
 
-        },
-        540: {
-        slidesPerView: 2
-        },
-        768: {
-        slidesPerView: 2.5
-        },
-        992: {
-        slidesPerView: 3.2
-        },
-        1025: {
-        slidesPerView: 4
-        },
+            },
+            540: {
+                slidesPerView: 2
+            },
+            768: {
+                slidesPerView: 2.5
+            },
+            992: {
+                slidesPerView: 3.2
+            },
+            1025: {
+                slidesPerView: 4
+            },
         },
 
         // R ein itia li ze A O S after Swiper initialization
         on: {
-        init: function() {
-        AOS.refresh();
-        },
-        slideChangeTransitionEnd: function() {
-        AOS.refresh();
-        }
+            init: function() {
+                AOS.refresh();
+            },
+            slideChangeTransitionEnd: function() {
+                AOS.refresh();
+            }
 
         }
 
 
-        });
+    });
 
-        // I nitialize AOS
-        AOS.init({
+    // I nitialize AOS
+    AOS.init({
         duration: 800, // Animation duration
         once: true, // Only animate once
-        });
-        </script>
+    });
+    </script>
 
 </main>
 

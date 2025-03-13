@@ -8,6 +8,14 @@ $fields = get_fields();
         height: 500px;
     }
 
+    .hero-content {
+        position: relative;
+    }
+
+    .breadcrumb-wrap {
+        position: absolute;
+        top: -96px;
+    }
 
 
     .testimonial-slide {
@@ -180,6 +188,9 @@ $fields = get_fields();
             margin-top: unset;
         }
 
+        .werkwijze-hero-title {
+            margin-top: -29px;
+        }
 
 
     }
@@ -187,7 +198,42 @@ $fields = get_fields();
     <div>
 
         <!-- Hero Section -->
-        <?= get_template_part("components/hero") ?>
+
+
+        <div class=" container ">
+            <div class="hero-section  bg-holder">
+                <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
+                </div>
+                <div class="hero-content text-center w-100">
+                    <div class="row ">
+                        <?php get_template_part('components/breadcrumb') ?>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 offset-md-3 align-self-center
+                             d-flex flex-column justify-content-center align-items-center ">
+                            <h1 class="werkwijze-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <span class="d-block">
+                                    <?= get_field("herotitle") ?>
+                                </span>
+                            </h1>
+                            <div class="werkwijze-hero-text ">
+                                <span class="d-block">
+                                    <?= get_field("herotext") ?>
+                                </span>
+                            </div>
+                            <div class="btn-primary-custom mt-4">
+                                <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="">
+                                    <?= get_field("meerwetenbtn")['title'] ?>
+                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                        alt="go kennismaken" class="go-arrow" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- End of Hero Section -->
 
         <!-- Onze Visie -->
@@ -321,8 +367,9 @@ $fields = get_fields();
                                 <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column">
                                     <div class="testimonial-slide d-flex flex-column">
                                         <img src="<?= $testimonial["logo"]['url'] ?>"
-                                            alt=" <?= $testimonial['logo']['alt'] ?>" style=" height: 101px; border-radius: 5px; background: #F7F6F4; object-fit:
-                                            scale-down;" class="card-img-top" />
+                                            alt=" <?= $testimonial['logo']['alt'] ?>" style=" height: 101px;
+                                            border-radius: 5px; background: #F7F6F4; object-fit: scale-down;"
+                                            class="card-img-top" />
                                         <!--  style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;"  -->
                                         <!--  class="card-img-top" -->
                                         <div class="card-body d-flex flex-column mt-1 mb-0 pb-4 pt-2">
@@ -336,7 +383,7 @@ $fields = get_fields();
                                                         class="go-arrow" />
                                                 </span>
                                             </div>
-                                            <span class="card-title mt-auto">
+                                            <span class="card-title mt-auto" style=" color: #132030;">
                                                 <span>
                                                     <?= $testimonial["text"] ?></span>
                                             </span>

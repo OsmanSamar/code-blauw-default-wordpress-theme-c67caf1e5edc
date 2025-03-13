@@ -19,6 +19,10 @@
             font-size: 16px;
         }
     }
+
+    .footer-text {
+        margin-top: 49px;
+    }
     </style>
 
 
@@ -69,13 +73,13 @@
                             <div class="col col-md-2 col-lg-2 d-flex flex-column gap-2">
                                 <ul class="footer-nav">
                                     <li class="footer-nav-item footer-adres">
-                                        <a class="footer-nav-link"
+                                        <a class="footer-nav-link" style=" color: #132030;"
                                             href="<?= esc_url(home_url('/sample-page')); ?>">Home</a>
                                     </li>
                                     <li class="footer-nav-item dropdown footer-adres">
                                         <a class="footer-nav-link dropdown-toggle" href="#" id="footerDropdown"
                                             role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
+                                            aria-expanded="false" style=" color: #132030;">
                                             Diensten
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="footerDropdown">
@@ -92,7 +96,8 @@
                                         </ul>
                                     </li>
                                     <li class="footer-nav-item footer-adres">
-                                        <a class="footer-nav-link" href="<?= esc_url(home_url('/cases')); ?>">Cases</a>
+                                        <a class="footer-nav-link" href="<?= esc_url(home_url('/cases')); ?>"
+                                            style=" color: #132030;">Cases</a>
                                     </li>
                                 </ul>
                             </div>
@@ -197,7 +202,7 @@
                         <span class="footer-privacy"><?= get_field("privacyverklaring", 'option') ?></span>
                         <span class="footer-privacy  d-none d-lg-block d-md-block">
                             <!-- <?= get_field("door:codeblauw", 'option') ?> -->
-                            <a target="_blank" href="https://code-blauw.nl/">
+                            <a target="_blank" href="https://code-blauw.nl/" style="  color: #132030;">
                                 <?= get_field("door:codeblauw", 'option') ?>
                             </a>
                         </span>
@@ -208,7 +213,7 @@
 
                 <div class="footer-codeblauw text-center d-flex justify-content-center d-md-none d-lg-none">
                     <span class="door-code-blauw">
-                        <a target="_blank" href="https://code-blauw.nl/">
+                        <a target="_blank" href="https://code-blauw.nl/" style="  color: #132030;">
                             <?= get_field("door:codeblauw", 'option') ?>
                         </a>
                     </span>

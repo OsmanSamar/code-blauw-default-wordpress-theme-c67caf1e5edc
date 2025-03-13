@@ -22,6 +22,15 @@ a:any-link {
   text-decoration: none;
 }
 
+.nav-link:focus,
+.nav-link:hover {
+  color: white !important;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: white !important;
+}
+
 img {
   width: 100%;
   height: auto;

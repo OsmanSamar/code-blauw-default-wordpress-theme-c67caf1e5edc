@@ -5,6 +5,15 @@ $fields = get_fields();
 
 <main class="cases">
     <style>
+    .hero-content {
+        position: relative;
+    }
+
+    .breadcrumb-wrap {
+        position: absolute;
+        top: -71px;
+    }
+
     .testimonial-slide {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         padding: 18px;
@@ -47,6 +56,9 @@ $fields = get_fields();
             height: 500px;
         }
 
+        .werkwijze-hero-title {
+            margin-top: -25px;
+        }
 
     }
     </style>
@@ -54,40 +66,40 @@ $fields = get_fields();
     <div>
 
         <!-- Hero Section -->
-        <!-- <div class="container">
-            <div class="hero-section bg-holder">
+        <div class=" container ">
+            <div class="hero-section  bg-holder">
                 <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
                 </div>
                 <div class="hero-content text-center w-100">
-                    <?php get_template_part('components/breadcrumb') ?>
-                    <div class="col-12 col-lg-6 offset-lg-3 col-md-8 offset-md-2  
-                        align-self-center d-flex flex-column justify-content-center align-items-center">
-                        <h1 class="case-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
-                            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="d-block">
-                                <?= get_field("herotitle") ?>
-                            </span>
-                        </h1>
-
-                        <div class="case-hero-text" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                            data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="d-block">
-                                <?= get_field("herotext") ?>
-                            </span>
-                        </div>
-                        <div class="btn-primary-custom mt-4">
-                            <a href="<?= get_field("ontdekbtn")['url'] ?>" class="">
-                                <?= get_field("ontdekbtn")['title'] ?>
-                                <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg"
-                                    alt="go to article" class="go-arrow" />
-                            </a>
+                    <div class="row ">
+                        <?php get_template_part('components/breadcrumb') ?>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 offset-md-3 align-self-center
+                             d-flex flex-column justify-content-center align-items-center ">
+                            <h1 class="werkwijze-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <span class="d-block">
+                                    <?= get_field("herotitle") ?>
+                                </span>
+                            </h1>
+                            <div class="werkwijze-hero-text ">
+                                <span class="d-block">
+                                    <?= get_field("herotext") ?>
+                                </span>
+                            </div>
+                            <div class="btn-primary-custom mt-4">
+                                <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="">
+                                    <?= get_field("meerwetenbtn")['title'] ?>
+                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                        alt="go kennismaken" class="go-arrow" />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
-
-        <?= get_template_part("components/hero") ?>
+        </div>
         <!-- End of Hero Section -->
 
 
@@ -134,8 +146,9 @@ $fields = get_fields();
                                                 style="width: 9px; height: 7.69px; object-fit: cover; display: block;" />
                                         </span>
                                     </div>
-                                    <span class="card-title mt-auto">
-                                        <span><?= $testimonial["text"] ?></span>
+                                    <span class="card-title mt-auto" style=" color: #132030;">
+                                        <span>
+                                            <?= $testimonial["text"] ?></span>
                                     </span>
                                 </div>
                             </div>

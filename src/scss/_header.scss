@@ -137,13 +137,6 @@
   margin-left: unset;
 }
 
-// .btn-primary:hover,
-// .btn-primary:focus {
-//   background-color: #d87a01;
-
-//   border-color: #d87a01;
-// }
-
 // b,
 // strong:first-of-type {
 //   color: #1e73be;
@@ -203,17 +196,6 @@ strong:nth-of-type(2) {
   margin: 0 auto;
   padding-top: 85px;
 }
-
-// .hero-section {
-//   background: ;
-//   width: 100%;
-//   margin: 0 auto;
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   object-fit: cover;
-
-// }
 
 .hero-section::before {
   content: "";
@@ -469,8 +451,8 @@ strong:nth-of-type(2) {
   line-height: 22px;
   letter-spacing: 0px;
   color: #132030;
-  opacity: 1;
-  width: 240px;
+  // opacity: 1;
+  // width: 240px;
 }
 
 .card-text {
@@ -883,7 +865,7 @@ strong:nth-of-type(2) {
 
 .werkwijze-hero-title {
   font-size: 50px;
-  line-height: 80px;
+  line-height: 85px;
   font-weight: 500;
   font-family: "richmond-display", serif;
   text-align: center;
@@ -1349,7 +1331,7 @@ strong:nth-of-type(2) {
   }
 
   .pro-hero-title {
-    font-size: 70px;
+    font-size: 50px;
   }
 
   .case-hero-title {

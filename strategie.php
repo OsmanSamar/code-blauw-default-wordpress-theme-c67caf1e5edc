@@ -5,19 +5,21 @@ $fields = get_fields();
 <main class="strategie">
     <style>
     .hero-section {
-        background: ;
-        width: 100%;
-        margin: 0 auto;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
-        padding-top: 85px;
+        height: 550px;
+    }
+
+    .hero-content {
+        position: relative;
+    }
+
+    .breadcrumb-wrap {
+        position: absolute;
+        top: -81px;
     }
 
     .strategie-hero-title {
-        font-size: 54px;
-        line-height: 76px;
+        font-size: 50px;
+        line-height: 85px;
         font-weight: 500;
         font-family: "richmond-display", serif;
         text-align: center;
@@ -142,7 +144,7 @@ $fields = get_fields();
         .strategie-hero-title {
 
             text-align: left;
-            line-height: 80px;
+
         }
 
 
@@ -169,12 +171,16 @@ $fields = get_fields();
             margin-bottom: -9px;
         }
 
-        .hero-content {
+        /* .hero-content {
             margin-top: 23px;
-        }
+        } */
 
         .str-left-col {
             margin-top: 5rem;
+        }
+
+        .strategie-hero-title {
+            margin-top: -24px;
         }
 
 
@@ -186,11 +192,10 @@ $fields = get_fields();
             <div class="hero-section  bg-holder">
                 <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
                 </div>
-
-
-
                 <div class="hero-content text-center w-100">
-                    <?php get_template_part('components/breadcrumb') ?>
+                    <div class="row ">
+                        <?php get_template_part('components/breadcrumb') ?>
+                    </div>
                     <div class="row">
                         <div class="col-12 col-md-6 offset-md-3 align-self-center
                              d-flex flex-column justify-content-center align-items-center ">
@@ -217,7 +222,10 @@ $fields = get_fields();
                 </div>
             </div>
         </div>
+
         <!-- End of Hero Section -->
+
+
 
 
 
