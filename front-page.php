@@ -10,8 +10,6 @@ $fields = get_fields();
             height: 819px;
             object-fit: cover;
             margin: 0 auto;
-            /* background: linear-gradient(90deg, rgba(6, 48, 101, 0.9) 0%, rgba(0, 85, 179, 0.1) 100%),
-            url("<?= get_template_directory_uri() ?>/images/mask-group.png") 50%/cover no-repeat; */
             height: fit-content;
             padding: 16px;
             background-position: center;
@@ -277,10 +275,8 @@ $fields = get_fields();
 
         <!-- Hero Section -->
         <div class="container">
-
             <div class="hero-section bg-holder">
                 <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?>')">
-
                 </div>
                 <div class="hero-content w-100">
                     <div class="col-12 col-lg-8  offset-lg-1 pe-0 ">
@@ -360,7 +356,6 @@ $fields = get_fields();
 
         <!-- Onze_Expertises -->
         <div class="container p-3 px-1  position-relative" id="testimonials" style=" z-index: 2; margin-top: 6rem;">
-
             <div class="row">
                 <div class="col-12 d-flex justify-content-center ">
                     <div class="section-header ">
@@ -501,29 +496,29 @@ $fields = get_fields();
                     </div>
                     <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center "
                         style="background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 10px 10px 60px rgba(32, 114, 190, 0.1); border-radius: 0px 5px 5px 0px; height: 387px;padding: 43px 26px; ">
-                        <dit_tlass="">
-                            <h2 class="verhaal-title"><?= get_field("onsverhaaltitle") ?></h2>
-                            <span class="verhaal-text"><?= get_field("verhaaltext") ?> </span>
+                        ostit_tlass="">
+                        <h2 class="verhaal-title"><?= get_field("onsverhaaltitle") ?></h2>
+                        <span class="verhaal-text"><?= get_field("verhaaltext") ?> </span>
 
-                            <div class="d-flex  mt-4 gap-2">
-                                <div class="btn-custom-container">
-                                    <a href="<?= get_field("overonsbtn")['url'] ?>" class="" style="color: #132030;">
-                                        <?= get_field("overonsbtn")['title'] ?>
-                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                            alt="go onze expertises" class="go-arrow" />
-                                    </a>
-                                </div>
-
-                                <div class="btn-custom-container">
-                                    <a href="<?= get_field("werkwijzebtn")['url'] ?>" style="color: #132030;">
-                                        <?= get_field("werkwijzebtn")['title'] ?>
-                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                            alt="go onze expertises" class="go-arrow" />
-                                    </a>
-                                </div>
-
+                        <div class="d-flex  mt-4 gap-2">
+                            <div class="btn-custom-container">
+                                <a href="<?= get_field("overonsbtn")['url'] ?>" class="" style="color: #132030;">
+                                    <?= get_field("overonsbtn")['title'] ?>
+                                    <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                        alt="go onze expertises" class="go-arrow" />
+                                </a>
                             </div>
-                            </dit_tlass=>
+
+                            <div class="btn-custom-container">
+                                <a href="<?= get_field("werkwijzebtn")['url'] ?>" style="color: #132030;">
+                                    <?= get_field("werkwijzebtn")['title'] ?>
+                                    <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                        alt="go onze expertises" class="go-arrow" />
+                                </a>
+                            </div>
+
+                        </div>
+                        </dit_tlass=>
                     </div>
                 </div>
 

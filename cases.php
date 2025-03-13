@@ -5,18 +5,6 @@ $fields = get_fields();
 
 <main class="cases">
     <style>
-    .hero-section {
-        background: url("<?= get_field('heroimage')['url'] ?> ");
-        width: 100%;
-        margin: 0 auto;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
-
-
-
     .testimonial-slide {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         padding: 18px;
@@ -25,11 +13,6 @@ $fields = get_fields();
         height: 100% !important;
         display: flex;
         flex-direction: column;
-
-        /* width: 100%;
-        max-width: 400px;
-        min-width: 250px;
-        margin: auto; */
     }
 
     .container-block {
@@ -71,13 +54,14 @@ $fields = get_fields();
     <div>
 
         <!-- Hero Section -->
-        <div class="hero-section">
-            <div class="container">
-                <!-- BreadCrumb Section -->
-                <?php get_template_part('components/breadcrumb') ?>
-                <div class="hero-content text-center">
-                    <div
-                        class="col-12 col-lg-6 offset-lg-3 col-md-8 offset-md-2    align-self-center d-flex flex-column justify-content-center align-items-center">
+        <div class="container">
+            <div class="hero-section bg-holder">
+                <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
+                </div>
+                <div class="hero-content text-center w-100">
+                    <?php get_template_part('components/breadcrumb') ?>
+                    <div class="col-12 col-lg-6 offset-lg-3 col-md-8 offset-md-2  
+                        align-self-center d-flex flex-column justify-content-center align-items-center">
                         <h1 class="case-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
                             data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <span class="d-block">
