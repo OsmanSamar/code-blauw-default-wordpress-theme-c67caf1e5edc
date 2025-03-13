@@ -12,6 +12,7 @@ $fields = get_fields();
         background-position: center;
         background-repeat: no-repeat;
         object-fit: cover;
+        padding-top: 85px;
     }
 
     .strategie-hero-title {
@@ -191,8 +192,8 @@ $fields = get_fields();
                 <div class="hero-content text-center w-100">
                     <?php get_template_part('components/breadcrumb') ?>
                     <div class="row">
-                        <div
-                            class="col-12 col-md-6 offset-md-3 align-self-center d-flex flex-column justify-content-center align-items-center my-auto py-4 ">
+                        <div class="col-12 col-md-6 offset-md-3 align-self-center
+                             d-flex flex-column justify-content-center align-items-center ">
                             <h1 class="strategie-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
                                 data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                                 <span class="d-block">

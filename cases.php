@@ -5,56 +5,56 @@ $fields = get_fields();
 
 <main class="cases">
     <style>
-        .testimonial-slide {
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            padding: 18px;
-            box-shadow: 10px 10px 60px #2072BE1A;
-            text-align: left;
-            height: 100% !important;
-            display: flex;
-            flex-direction: column;
-        }
+    .testimonial-slide {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        padding: 18px;
+        box-shadow: 10px 10px 60px #2072BE1A;
+        text-align: left;
+        height: 100% !important;
+        display: flex;
+        flex-direction: column;
+    }
 
-        .container-block {
-            width: 100%;
-            max-width: 1700px;
-            margin: 0 auto;
+    .container-block {
+        width: 100%;
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+
+    .whi-container {
+        width: 100%;
+        max-width: 1289px;
+    }
+
+    .first-blue-block {
+        height: fit-content;
+        padding: 80px 0px;
+    }
+
+
+    @media (min-width: 992px) {
+        .first-blue-block {
+            margin-top: unset;
         }
 
         .whi-container {
-            width: 100%;
-            max-width: 1289px;
-        }
-
-        .first-blue-block {
-            height: fit-content;
-            padding: 80px 0px;
+            position: relative;
+            top: -64px;
         }
 
 
-        @media (min-width: 992px) {
-            .first-blue-block {
-                margin-top: unset;
-            }
-
-            .whi-container {
-                position: relative;
-                top: -64px;
-            }
-
-
-            .hero-section {
-                height: 500px;
-            }
-
-
+        .hero-section {
+            height: 500px;
         }
+
+
+    }
     </style>
 
     <div>
 
         <!-- Hero Section -->
-        <div class="container">
+        <!-- <div class="container">
             <div class="hero-section bg-holder">
                 <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
                 </div>
@@ -85,7 +85,9 @@ $fields = get_fields();
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <?= get_template_part("components/hero") ?>
         <!-- End of Hero Section -->
 
 
@@ -115,31 +117,31 @@ $fields = get_fields();
                         $fields = get_fields($post->ID);
                         $testimonial = get_field("testimonialwerkvoor");
                         ?>
-                        <div class="col-lg-3 col-md-4 col-12 d-flex">
-                            <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column ">
-                                <div class=" card border-0 testimonial-slide d-flex flex-column ">
-                                    <img src=" <?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
-                                        class=" card-img-top"
-                                        style="height: 101px; border-radius: 5px; background: #F7F6F4 0% 0% no-repeat padding-box; object-fit: scale-down;" />
+                    <div class="col-lg-3 col-md-4 col-12 d-flex">
+                        <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column ">
+                            <div class=" card border-0 testimonial-slide d-flex flex-column ">
+                                <img src=" <?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
+                                    class=" card-img-top"
+                                    style="height: 101px; border-radius: 5px; background: #F7F6F4 0% 0% no-repeat padding-box; object-fit: scale-down;" />
 
-                                    <div class="card-body mt-1 mb-0 pb-4 pt-2">
-                                        <!--  d-flex flex-column  -->
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="card-text"><?= $post->post_title ?></span>
-                                            <span class="d-flex justify-content-center align-items-center arrow">
-                                                <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                    alt=" <?= $testimonial['white_arrow']['alt'] ?>" class="card-img-top"
-                                                    style="width: 9px; height: 7.69px; object-fit: cover; display: block;" />
-                                            </span>
-                                        </div>
-                                        <span class="card-title mt-auto">
-                                            <span><?= $testimonial["text"] ?></span>
+                                <div class="card-body mt-1 mb-0 pb-4 pt-2">
+                                    <!--  d-flex flex-column  -->
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="card-text"><?= $post->post_title ?></span>
+                                        <span class="d-flex justify-content-center align-items-center arrow">
+                                            <img src="<?= $testimonial["white_arrow"]['url'] ?>"
+                                                alt=" <?= $testimonial['white_arrow']['alt'] ?>" class="card-img-top"
+                                                style="width: 9px; height: 7.69px; object-fit: cover; display: block;" />
                                         </span>
                                     </div>
+                                    <span class="card-title mt-auto">
+                                        <span><?= $testimonial["text"] ?></span>
+                                    </span>
                                 </div>
-                            </a>
-                        </div>
-                        <?php
+                            </div>
+                        </a>
+                    </div>
+                    <?php
                     }
                     wp_reset_postdata();
                     ?>
@@ -181,66 +183,66 @@ $fields = get_fields();
 
 
     <script>
-        let swiperwerken3 = new Swiper('.werk-swiper3', {
-            slidesPerView: 2.5,
-            grabCursor: true,
-            spaceBetween: 20,
+    let swiperwerken3 = new Swiper('.werk-swiper3', {
+        slidesPerView: 2.5,
+        grabCursor: true,
+        spaceBetween: 20,
 
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        // loop: true,
+        // autoplay: { //added
+        //      delay: 2000, //added
+        //  },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+
+        breakpoints: {
+            360: {
+                slidesPerView: 1
             },
-            // loop: true,
-            // autoplay: { //added
-            //      delay: 2000, //added
-            //  },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+            410: {
+                slidesPerView: 1.2
+
             },
-
-
-            breakpoints: {
-                360: {
-                    slidesPerView: 1
-                },
-                410: {
-                    slidesPerView: 1.2
-
-                },
-                540: {
-                    slidesPerView: 2
-                },
-                768: {
-                    slidesPerView: 2.1
-                },
-                992: {
-                    slidesPerView: 3.2
-                },
-                1025: {
-                    slidesPerView: 4
-                },
+            540: {
+                slidesPerView: 2
             },
+            768: {
+                slidesPerView: 2.1
+            },
+            992: {
+                slidesPerView: 3.2
+            },
+            1025: {
+                slidesPerView: 4
+            },
+        },
 
-            // R ein itia li ze A O S after Swiper initialization
-            on: {
-                init: function () {
-                    AOS.refres h();
-                },
-                slideChangeTransitionEnd: function () {
-                    AOS.refresh();
-                }
-
+        // R ein itia li ze A O S after Swiper initialization
+        on: {
+            init: function() {
+                AOS.refres h();
+            },
+            slideChangeTransitionEnd: function() {
+                AOS.refresh();
             }
 
+        }
 
-        });
 
-        // I nitialize AOS
-        AOS.init({
-            duration: 800, // Animation duration
-            once: true, // Only animate once
-        });
+    });
+
+    // I nitialize AOS
+    AOS.init({
+        duration: 800, // Animation duration
+        once: true, // Only animate once
+    });
     </script>
 
 

@@ -249,7 +249,7 @@ $fields = get_fields();
     <div>
 
         <!-- Hero Section -->
-        <div class="container ">
+        <!-- <div class="container ">
             <div class="hero-section  bg-holder">
                 <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
                 </div>
@@ -257,7 +257,7 @@ $fields = get_fields();
                     <?php get_template_part('components/breadcrumb') ?>
                     <div class="row my-auto py-3 ">
                         <div class="col-12  col-lg-6 offset-lg-3 col-md-8 offset-md-2
-                             py-4 mt-4
+                            
                              align-self-center d-flex flex-column justify-content-center align-items-center">
                             <h1 class="werkwijze-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
                                 data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -273,12 +273,12 @@ $fields = get_fields();
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-
-        </div>
+        </div> -->
+        <!-- Hero Section -->
+        <?= get_template_part("components/hero") ?>
+        <!-- End of Hero Section -->
         <!-- End of Hero Section -->
 
 
