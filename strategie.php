@@ -14,7 +14,8 @@ $fields = get_fields();
 
     .breadcrumb-wrap {
         position: absolute;
-        top: -81px;
+        /* top: -81px; */
+        top: -12px;
     }
 
     .strategie-hero-title {
@@ -188,7 +189,7 @@ $fields = get_fields();
     </style>
     <div>
         <!-- Hero Section -->
-        <div class=" container ">
+        <!-- <div class=" container ">
             <div class="hero-section  bg-holder">
                 <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
                 </div>
@@ -221,6 +222,11 @@ $fields = get_fields();
                     </div>
                 </div>
             </div>
+        </div> -->
+
+
+        <div>
+            <?= get_template_part("components/hero") ?>
         </div>
 
         <!-- End of Hero Section -->
@@ -249,16 +255,17 @@ $fields = get_fields();
 
 
 
-                        <div class="button-group mt-5">
-                            <div class="btn-custom-container">
-                                <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="" style="color: #132030;">
-                                    <?= get_field("onzeklantcasesbtn")['title'] ?>
-                                </a>
+
+                        <div class=" mt-5">
+                            <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="btn-custom-container"
+                                style="">
+                                <?= get_field("onzeklantcasesbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                    alt="go onze execttises" class="testimonial-arrow"
-                                    style="  width: 12px; height: 10.26px; flex-shrink: 0; object-fit: cover;" />
-                            </div>
+                                    alt="go onze execttises" class="go-arrow" />
+                            </a>
+
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -301,8 +308,8 @@ $fields = get_fields();
                         <span class="organ-title">
                             <?= get_field("organisatietext") ?>
                         </span>
-                        <div class="btn-primary-custom" style="margin-right: 27px;">
-                            <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="">
+                        <div class="d-inline-flex" style="margin-right: 27px;">
+                            <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-primary-custom">
                                 <?= get_field("vraagaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go kennismaken" class="go-arrow" />

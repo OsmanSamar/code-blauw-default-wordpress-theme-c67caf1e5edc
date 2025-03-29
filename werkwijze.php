@@ -5,262 +5,16 @@ $fields = get_fields();
 <main class="werkwijze">
 
     <style>
-    .hero-section {
-        height: 500px;
-    }
-
-
-
-    .hero-content {
-        position: relative;
-    }
-
     .breadcrumb-wrap {
         position: absolute;
-        top: -97px;
-    }
-
-    .container-img {
-        width: 100%;
-        object-fit: cover;
-        background-repeat: no-repeat;
-        background: linear-gradient(90deg, rgba(6, 48, 101, 0.9) 0%, rgba(0, 85, 179, 0.1) 100%),
-            url("<?= get_template_directory_uri() ?>/images/img-container.png") 50%/cover no-repeat;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        height: 326px;
-    }
-
-
-
-    .title-container {
-        width: 100%;
-        text-align: left;
-        padding-left: 15px;
-        color: #FFFFFF;
-        font-size: 22px;
-        line-height: 50px;
-        font-weight: 300;
-        font-family: "richmond-display", serif;
-        letter-spacing: 1px;
-    }
-
-    .swiper-title {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        position: absolute;
-        top: 62px;
-        /* right: -98px; */
-        width: 100%;
-
-    }
-
-    /* Swiper in blauw block */
-    .swiper-container {
-        width: 100%;
-        margin: 0 auto;
-        overflow: clip;
-        overflow-y: visible;
-        margin-top: 5rem;
-    }
-
-    .swiper-container .swiper-pagination {
-        bottom: -50px !important;
-    }
-
-    .swiper-container .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
-        background-color: #FFFFFF;
-    }
-
-    .swiper-header {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        position: absolute;
-        top: -80px;
-        right: 0;
-        width: 100%;
-    }
-
-    .swiper-text {
-        font-size: 26px;
-        font-weight: 300;
-        white-space: nowrap;
-        text-align: left;
-        line-height: 50px;
-        font-family: 'richmond-display', serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        position: relative !important;
-        width: 41px;
-        height: 41px;
-        border: 1px solid #132030;
-        color: #132030;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-    }
-
-    .swiper-button-next::after,
-    .swiper-rtl .swiper-button-prev::after {
-        font-size: 11px;
-        font-weight: 900;
-    }
-
-    .swiper-button-prev:after,
-    .swiper-rtl .swiper-button-next:after,
-    .swiper-button-next::after,
-    .swiper-rtl .swiper-button-prev::after {
-        font-size: 11px;
-        font-weight: 900;
-    }
-
-
-    .swiper-container .swiper-button-prev {
-        position: absolute;
-        left: -8% !important;
-        top: -2px !important;
-    }
-
-    .swiper-container .swiper-button-next {
-        position: absolute;
-        right: 0px !important;
-        top: -2px !important;
-    }
-
-    .werk-logo-container {
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border-radius: 5px;
-        /* width: 175px; */
-        height: 93px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        width: 193px;
-    }
-
-
-    .testimonial-slide {
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border-radius: 5px;
-        padding: 18px;
-        box-shadow: 10px 10px 60px #2072BE1A;
-        text-align: left;
-        position: relative;
-        z-index: 3;
-        height: 100% !important;
-        width: 100%;
-        max-width: 400px;
-        min-width: 250px;
-        margin: auto;
-    }
-
-    .testimonial-text {
-        font-size: 16px;
-        font-weight: 300;
-        margin-bottom: 8px;
-        font-family: 'ff-scala-sans-pro', sans-serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    }
-
-    .testimonial-naam {
-        font-family: 'ff-scala-sans-pro', sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        color: #1e73be;
-        opacity: 1;
-        letter-spacing: 0px;
-    }
-
-
-    .small-whit-container {
-        width: 100%;
-        max-width: 1700px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 192px;
-        text-align: center;
-        gap: 4px;
-        flex-direction: row;
-    }
-
-    .whi-container {
-        margin-top: 58px;
-    }
-
-    @media (min-width: 768px) {
-        .swiper-title {
-            top: 57px;
-        }
-
-        .swiper-container .swiper-button-prev {
-            position: absolute;
-            left: -8% !important;
-            top: -3px !important;
-        }
-
-        .werk-right-text,
-        .werk-right-text-bold {
-            text-align: left;
-        }
-
-        .button-group {
-            justify-content: flex-start;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .title-container {
-            font-size: 36px;
-        }
-
-        .swiper-title {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            left: 12px;
-        }
-
-        .first-blue-block {
-            height: 683px;
-            margin-top: unset;
-        }
-
-        .whi-container {
-            margin-top: 80px;
-        }
-
-        .swiper-container .swiper-button-prev {
-            position: absolute;
-            left: 3% !important;
-            top: -2px !important;
-        }
-
-        .swiper-text {
-            font-size: 36px;
-        }
+        /* top: -97px; */
+        top: -29px;
     }
     </style>
     <div>
 
         <!-- Hero Section -->
-        <div class="container ">
+        <!-- <div class="container ">
             <div class="hero-section  bg-holder">
                 <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
                 </div>
@@ -286,11 +40,15 @@ $fields = get_fields();
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Hero Section -->
 
+        <div>
+            <?= get_template_part("components/hero") ?>
+        </div>
+
         <!-- End of Hero Section -->
-        <!-- End of Hero Section -->
+
 
 
         <!-- Hoe werkt Blauw IJs? Block -->
@@ -306,15 +64,16 @@ $fields = get_fields();
                     <div class="werk-right-text pt-2 mt-3"> <?= get_field("secrighttext") ?></div>
 
                     <div class="button-group mt-5 d-flex gap-2">
-                        <div class="btn-primary-custom">
-                            <a href="<?= get_field("wetenbtn")['url'] ?>" class="">
+                        <div class="">
+                            <a href="<?= get_field("wetenbtn")['url'] ?>" class="btn-primary-custom">
                                 <?= get_field("wetenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go to article" class="go-arrow" />
                             </a>
                         </div>
-                        <div class="btn-custom-container">
-                            <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="" style="color: #132030;">
+                        <div class="">
+                            <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>" class="btn-custom-container"
+                                style="color: #132030;">
                                 <?= get_field("veelgesteldevragenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                     alt="go onze expertises" class="go-arrow" />
@@ -490,8 +249,8 @@ $fields = get_fields();
                         <span class="organ-title">
                             <?= get_field("organisatietext") ?>
                         </span>
-                        <div class="btn-primary-custom " style="margin-right: 27px;">
-                            <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="">
+                        <div class=" " style="margin-right: 27px;">
+                            <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-primary-custom">
                                 <?= get_field("vraagaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go Contact page" class="go-arrow" />

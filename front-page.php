@@ -657,7 +657,7 @@ $fields = get_fields();
         const logoswiper = new Swiper('.sample-slider1', {
 
             slidesPerView: 2,
-            // c               enteredSlides: true,
+            // centeredSlides: true,
             spaceBetween: 24,
 
             pagination: {

@@ -11,6 +11,7 @@ $fields = get_fields();
     .breadcrumb-wrap {
         position: absolute;
         top: -83px;
+        /* top: 28px; */
     }
 
     .blauw-left-text {
@@ -327,6 +328,8 @@ $fields = get_fields();
             </div>
         </div>
 
+
+
         <!-- End of Hero Section -->
 
 
@@ -390,21 +393,21 @@ $fields = get_fields();
 
                             <div
                                 class="button-group  d-flex justify-content-center justify-content-lg-start mt-4 gap-2">
-                                <div class="circle-border  btn-primary-custom ">
-                                    <a href="<?= get_field("contactlink")['url'] ?>" class="btn-custom">
+                                <div class="   ">
+                                    <a href="<?= get_field("contactlink")['url'] ?>" class="btn-primary-custom">
                                         <?= get_field("contactlink")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                             alt="go onze expertises" class="go-arrow" />
                                     </a>
                                 </div>
-                                <div class="btn-custom-container">
-                                    <a href="<?= get_field("veelvragenlink")['url'] ?>" class=""
+                                <div class="">
+                                    <a href="<?= get_field("veelvragenlink")['url'] ?>" class="btn-custom-container"
                                         style="color: #132030;">
                                         <?= get_field("veelvragenlink")['title'] ?>
+                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                            alt="go onze expertises" class="go-arrow" />
                                     </a>
-                                    <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                        alt="go onze expertises" class="testimonial-arrow"
-                                        style="  width: 9px; height: 7.69px; object-fit: cover; display: block;" />
+
                                 </div>
                             </div>
 

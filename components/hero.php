@@ -1,10 +1,16 @@
 <div class="container">
     <div class="hero-section bg-holder flex-column">
 
-        <?php get_template_part('components/breadcrumb') ?>
+        <!-- <?php get_template_part('components/breadcrumb') ?>
+        <p style="color: red;">Breadcrumb Loaded</p> -->
+
         <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
         </div>
+
         <div class="hero-content text-center  w-100 ">
+
+            <?php get_template_part('components/breadcrumb') ?>
+            <!-- <p style="color: red;">Breadcrumb Loaded2</p> -->
             <div class="col-12  col-lg-6 offset-lg-3 col-md-8 offset-md-2 
                         py-5 mt-4
                         align-self-center d-flex flex-column justify-content-center align-items-center">

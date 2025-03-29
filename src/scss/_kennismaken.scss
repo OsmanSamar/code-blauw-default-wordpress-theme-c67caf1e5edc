@@ -1,0 +1,28 @@
+.hero-section {
+  height: 500px;
+}
+
+.hero-content {
+  position: relative;
+}
+
+.blue-block {
+  width: 100%;
+  /* max-width: 1700px; */
+  margin: 0 auto;
+  background-color: #cce1f4;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Form Style */
+.gform_wrapper .gform_footer .gform_button {
+  background: url("<?= get_field('white_arrow')['url'] ?> ");
+}
+
+.content-container {
+  font: italic normal 300 14px/20px "ff-scala-sans-pro" !important;
+  letter-spacing: 0px;
+  color: #132030;
+  opacity: 1;
+}

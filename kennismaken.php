@@ -4,42 +4,15 @@
 
 
     <style>
-    .hero-section {
-        height: 500px;
-    }
-
-    .hero-content {
-        position: relative;
-    }
-
     .breadcrumb-wrap {
         position: absolute;
-        top: -109px;
+        /* top: -109px; */
+        top: -41px;
     }
-
-
-
-    .blue-block {
-        width: 100%;
-        /* max-width: 1700px; */
-        margin: 0 auto;
-        background-color: #CCE1F4;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
-
 
     /* Form Style */
     .gform_wrapper .gform_footer .gform_button {
         background: url("<?= get_field('white_arrow')['url'] ?> ");
-    }
-
-    .content-container {
-        font: italic normal 300 14px/20px "ff-scala-sans-pro" !important;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
     }
     </style>
     <div>
@@ -47,7 +20,7 @@
 
         <!-- Hero Section -->
 
-        <div class="container ">
+        <!-- <div class="container ">
             <div class="hero-section  bg-holder">
                 <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
                 </div>
@@ -73,8 +46,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
+        <div>
+            <?= get_template_part("components/hero") ?>
+        </div>
         <!-- End of Hero Section -->
 
         <div class="blue-block ">

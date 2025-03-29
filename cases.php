@@ -5,68 +5,38 @@ $fields = get_fields();
 
 <main class="cases">
     <style>
-    .hero-content {
-        position: relative;
-    }
-
     .breadcrumb-wrap {
         position: absolute;
-        top: -71px;
+        /* top: -71px; */
+        top: 0px;
     }
 
-    .testimonial-slide {
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        padding: 18px;
-        box-shadow: 10px 10px 60px #2072BE1A;
-        text-align: left;
-        height: 100% !important;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .container-block {
-        width: 100%;
-        max-width: 1700px;
-        margin: 0 auto;
-    }
+    .whi-container {}
 
     .whi-container {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        width: 1000px;
+        border-radius: 5px;
+        margin: 0 auto;
         width: 100%;
         max-width: 1289px;
+        padding: 23px;
     }
-
-    .first-blue-block {
-        height: fit-content;
-        padding: 80px 0px;
-    }
-
 
     @media (min-width: 992px) {
-        .first-blue-block {
-            margin-top: unset;
-        }
+
 
         .whi-container {
             position: relative;
             top: -64px;
         }
-
-
-        .hero-section {
-            height: 500px;
-        }
-
-        .werkwijze-hero-title {
-            margin-top: -25px;
-        }
-
     }
     </style>
 
     <div>
 
         <!-- Hero Section -->
-        <div class=" container ">
+        <!-- <div class=" container ">
             <div class="hero-section  bg-holder">
                 <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
                 </div>
@@ -99,6 +69,11 @@ $fields = get_fields();
                     </div>
                 </div>
             </div>
+        </div> -->
+
+
+        <div style=" height: 500px;">
+            <?= get_template_part("components/hero") ?>
         </div>
         <!-- End of Hero Section -->
 
@@ -179,8 +154,8 @@ $fields = get_fields();
                      echo '</pre>';
                      ?> -->
                 </span>
-                <div class="btn-primary-custom" style="margin-right: 27px;">
-                    <a href="<?= get_field("vraageenbtn")['url'] ?>" class="">
+                <div class="" style="margin-right: 27px;">
+                    <a href="<?= get_field("vraageenbtn")['url'] ?>" class="btn-primary-custom">
                         <?= get_field("vraageenbtn")['title'] ?>
                         <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go Contact page"
                             class="go-arrow" />
