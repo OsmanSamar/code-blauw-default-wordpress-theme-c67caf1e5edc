@@ -98,7 +98,7 @@ unset($menu_items);
 
                                                 <?php foreach ($item->children as $child): ?>
                                                     <li>
-                                                        <a class="dropdown-item  d-flex justify-content-between align-items-center"
+                                                        <a class="dropdown-item  d-flex "
                                                             href="<?= $child->url; ?>">
                                                             <?= $child->title ?>
 
