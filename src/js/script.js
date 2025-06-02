@@ -1,5 +1,5 @@
 import "babel-polyfill";
-// import 'bootstrap'
+import 'bootstrap'
 
 // Styling
 import "../scss/style.scss";

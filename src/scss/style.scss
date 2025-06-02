@@ -1,9 +1,9 @@
 @import "variables";
+@import "~bootstrap";
+@import "~bootstrap/scss/_variables";
 @import "components/form";
 
-@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Richmond+Display&display=swap");
 
-@import url("https://use.typekit.net/fyu5pka.css");
 
 /* General styling */
 html,
@@ -34,21 +34,21 @@ img {
   height: auto;
 }
 
-h1 {
-  font-size: 28px;
-}
+// h1 {
+//   font-size: 28px;
+// }
 
-h2 {
-  font-size: 25px;
-}
+// h2 {
+//   font-size: 25px;
+// }
 
-h3 {
-  font-size: 22px;
-}
+// h3 {
+//   font-size: 22px;
+// }
 
-h4 {
-  font-size: 20px;
-}
+// h4 {
+//   font-size: 20px;
+// }
 
 .bg-contain {
   background-size: contain;
@@ -72,3 +72,4 @@ h4 {
 @import "pages/page";
 @import "pages/login";
 @import "button";
+@import"font";

@@ -1,3 +1,126 @@
 .front-page {
-    
+  .left-col {
+    margin-bottom: -38px;
+  }
+  .down-arrow {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+  }
+
+  .lead {
+    text-align: left;
+  }
+
+  
+  .hero-section {
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 100vw;
+    overflow: clip;
+    margin: 0 auto;
+   
+
+    &.bg-holder {
+      position: relative;
+      overflow: clip;
+      overflow-x: visible !important;
+      .bg-content {
+        top: 0;
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      width: 100%;
+      z-index: 3;
+       min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  
+
+  @media (min-width: 768px) {
+    .left-col {
+      margin-bottom: unset;
+    }
+    .hero-section {
+      .hero-content {
+        // min-height: 45vh ;
+        min-height: 400px;
+      }
+    }
+
+   
+  }
+  @media (min-width: 992px) {
+    .left-col {
+      margin-bottom: unset;
+    }
+    .hero-section {
+      .hero-content {
+        min-height: 600px;
+      }
+    }
+   
+  }
+
+  // Added For blauw container
+
+  .bg-container {
+    position: relative;
+    overflow: clip;
+    overflow-x: visible !important;
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.home footer {
+  position: relative;
+}
+
+.home footer::before {
+  width: 100vw;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 80%;
+  height: 100vh;
+  background-image: url(../images/lijnen.png) !important;
+  background-repeat: repeat-x;
+  position: absolute;
+  z-index: -1;
+  background-size: 1470px;
+  background-position: bottom center;
 }
