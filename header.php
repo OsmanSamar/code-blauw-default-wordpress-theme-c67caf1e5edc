@@ -21,6 +21,27 @@
     <!-- Swiper -->
 </head>
 
+
+
+<?php
+$menu_id = get_nav_menu_locations()['header-menu'];
+$items = wp_get_nav_menu_items($menu_id);
+$menu_items = array();
+foreach ((array) $items as $key => $menu_item) {
+    $menu_items[$menu_item->menu_item_parent][] = $menu_item;
+}
+$menu = [];
+foreach ($items as $item) {
+    if ($item->menu_item_parent == 0) {
+        $menu[] = $item;
+    }
+    if (isset($menu_items[$item->ID])) {
+        $item->children = $menu_items[$item->ID];
+    }
+}
+unset($menu_items);
+?>
+
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
@@ -36,10 +57,10 @@
     <header class="header position-absolute d-flex justify-content-center " style=" z-index:2; top:4px; ">
 
         <div class="container p-0">
-            <!-- Bootstrap container -->
+           
             <nav class="navbar navbar-expand-lg navbar-light sans-serif w-100 "
                 style=" height: 55px; border: 1px solid #FFFFFF; border-radius: 5px; opacity: 1; padding-bottom: 6px;">
-                <!-- pt-sm-2 -->
+               
 
                 <div class="container p-lg-0 m-0">
                     <!-- Ensures navbar takes full width inside container -->
@@ -49,65 +70,77 @@
                     </a>
 
                     <!-- Hamburger button for mobile -->
-                    <div class="d-lg-none"
-                        style="border-radius: 5px; height: 38px; width:38px; border: 1px solid  #F29401;">
-                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    <div class="d-xl-none wrapper">
+                        <button id="box" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation"
-                            style="width:38px; height:38px; border-radius:5px; padding:4px; background-color:transparent;">
-                            <span class="toggler-icon top-bar"></span>
-                            <span class="toggler-icon middle-bar"></span>
-                            <span class="toggler-icon bottom-bar"></span>
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger">
+                                <span class="one"></span>
+                                <span class="two"></span>
+                                <span class="three"></span>
+                            </div>
                         </button>
                     </div>
 
-                    <!-- Navigation Menu -->
-                    <div class="collapse navbar-collapse ul-bg" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto justify-content-end flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?= esc_url(home_url('/home')); ?>">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Diensten
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="<?= esc_url(home_url('/project')); ?>">Project-en
-                                            programmamanagement</a></li>
+                     <!-- Navigation Menu -->
+                    <div class="collapse navbar-collapse ul-bg " id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto justify-content-center  flex-grow-1">
+                            <?php foreach ($menu as $item):
+                                $active = get_permalink() == $item->url;
+                                if (is_archive()) {
+                                    $post_type = get_post_type();
+                                    $active = $item->url == get_post_type_archive_link($post_type);
+                                }
+                                ?>
+                                <li class="nav-item dropdown">
 
-                                    <li><a class="dropdown-item"
-                                            href="<?= esc_url(home_url('/strategie')); ?>">Strategie</a></li>
+                                    <?php if ($item->children): ?>
+                                        <a class="nav-link nav-link-ltr dropdown-toggle d-flex align-items-center <?= $active ? "active" : "" ?>"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <?= $item->title ?>
+                                            <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
+                                                alt="Dropdown Icon" style="" class="dropdownarrow">
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                           
+                                            <?php foreach ($item->children as $child): ?>
+                                                <li>
+                                                    <a class="dropdown-item  d-flex justify-content-between align-items-center"
+                                                        href="<?= $child->url; ?>">
+                                                        <?= $child->title ?>
 
-                                    <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">g</a></li>
-                                    <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">T</a></li>
-                                    <li><a class="dropdown-item" href="<?= esc_url(home_url('/')); ?>">A</a></li>
-                                </ul>
-                            </li>
+                                                    </a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                        <?php
+                                    else:
+                                        ?>
+                                        <a class="nav-link  nav-link-ltr  d-flex align-items-center <?= $active ? "active" : "" ?>"
+                                            href="<?= $item->url; ?>" role="button">
+                                            <?= $item->title ?> </a>
+                                        <?php
+                                    endif; ?>
+                                </li>
+                            <?php endforeach; ?>
 
-                            <li class="nav-item">
-                                <a class="nav-link " href="<?= esc_url(home_url('/cases')); ?>">Cases</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link  " href="<?= esc_url(home_url('/over-ons')); ?>">Over ons</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="<?= esc_url(home_url('/werkwijze')); ?>">Werkwijze</a>
-                            </li>
-
-                            <!-- The button here for smaller screens -->
-                            <li>
-                                <a class="d-block d-lg-none nav-link "
-                                    href="<?= esc_url(home_url('/kennismaken')); ?>">Kennismaken</a>
-                            </li>
                         </ul>
-                    </div>
+                        <!-- <a href="<?= esc_url(get_permalink(get_page_by_path('kennismaken'))) ?>"
+                            class="button secondary-button ms-lg-3 mt-2 ">
+                            Neem contact op
+                            <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                                class="dropdown-arrow">
+                        </a> -->
 
+                    </div>
+                   
                     <!-- Button on the Right side (visible only on large screens) -->
                     <div class=" btn-primary-custom d-none d-lg-inline-flex justify-content-center align-items-center "
                         style="width: 149px;height: 55px;    margin-right: -1px;     margin-bottom: 3px;">
                         <!-- me-auto -->
-                        <a href="<?= esc_url(home_url('/kennismaken')); ?>" class="btn-custom">Kennismaken</a>
+                        <a href="<?= esc_url(get_permalink(get_page_by_path('kennismaken'))) ?>" class="btn-custom">
+                            Kennismaken
+                        </a>
                         <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
                             class="go-arrow" />
                     </div>
