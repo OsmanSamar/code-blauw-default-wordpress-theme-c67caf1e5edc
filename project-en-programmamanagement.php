@@ -314,7 +314,7 @@ $fields = get_fields();
                                     <?= get_field("herotext") ?>
                                 </span>
                             </div>
-                            <div class="btn-primary-custom mt-4">
+                            <div class="button btn-primary mt-4">
                                 <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="">
                                     <?= get_field("meerwetenbtn")['title'] ?>
                                     <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
@@ -394,14 +394,14 @@ $fields = get_fields();
                             <div
                                 class="button-group  d-flex justify-content-center justify-content-lg-start mt-4 gap-2">
                                 <div class="   ">
-                                    <a href="<?= get_field("contactlink")['url'] ?>" class="btn-primary-custom">
+                                    <a href="<?= get_field("contactlink")['url'] ?>" class="button btn-primary">
                                         <?= get_field("contactlink")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                             alt="go onze expertises" class="go-arrow" />
                                     </a>
                                 </div>
                                 <div class="">
-                                    <a href="<?= get_field("veelvragenlink")['url'] ?>" class="btn-custom-container"
+                                    <a href="<?= get_field("veelvragenlink")['url'] ?>" class="button btn-custom-container"
                                         style="color: #132030;">
                                         <?= get_field("veelvragenlink")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"

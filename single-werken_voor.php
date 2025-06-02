@@ -216,7 +216,7 @@ $fields = get_fields();
                     <span class="organ-title">
                         <?= get_field("organisatietext") ?>
                     </span>
-                    <div class="btn-primary-custom" style="margin-right: 27px;">
+                    <div class="button btn-primary" style="margin-right: 27px;">
                         <!-- width:195px -->
                         <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="">
                             <?= get_field("vraagaanbtn")['title'] ?>

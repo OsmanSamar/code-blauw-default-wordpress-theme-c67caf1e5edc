@@ -292,7 +292,7 @@ $fields = get_fields();
                         </h4>
                         <!-- d-lg-flex -->
                         <div class="button-group d-flex justify-content-center justify-content-lg-start mt-4 gap-2">
-                            <div class=" btn-primary-custom">
+                            <div class="button btn-primary">
                                 <a href="<?= get_field("meerwetenbtn")['url'] ?>" class=" ">
                                     <?= get_field("meerwetenbtn")['title'] ?>
                                 </a>
@@ -301,7 +301,7 @@ $fields = get_fields();
                                     style="pointer-events: auto ;z-index: 1000 " />
                             </div>
 
-                            <div class=" btn-custom-container">
+                            <div class="button btn-custom-container">
                                 <a href="<?= get_field("overonsbtn")['url'] ?>" class="">
                                     <?= get_field("overonsbtn")['title'] ?>
                                 </a>
@@ -499,7 +499,7 @@ $fields = get_fields();
                             <span class="verhaal-text"><?= get_field("verhaaltext") ?> </span>
 
                             <div class="d-flex  mt-4 gap-2">
-                                <div class="btn-custom-container">
+                                <div class="button btn-custom-container">
                                     <a href="<?= get_field("overonsbtn")['url'] ?>" class="" style="color: #132030;">
                                         <?= get_field("overonsbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
@@ -507,7 +507,7 @@ $fields = get_fields();
                                     </a>
                                 </div>
 
-                                <div class="btn-custom-container">
+                                <div class="button btn-custom-container">
                                     <a href="<?= get_field("werkwijzebtn")['url'] ?>" style="color: #132030;">
                                         <?= get_field("werkwijzebtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"

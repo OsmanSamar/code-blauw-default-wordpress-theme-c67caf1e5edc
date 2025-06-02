@@ -26,21 +26,7 @@
                         <?= get_field("herotext") ?>
                     </span>
                 </div>
-                <!-- <span class="d-block mb-3 invisible">Placeholder</span>
-                <div class="d-flex flex-wrap row-gap-2 column-gap-3">
-                    <?php foreach (get_field("btns") as $i => $btn) {
-                        ?>
-                    <div class="<?= $i == 0 ? "btn-primary-custom" : " btn-custom-container" ?> mt-4">
-                        <a href="<?= $btn['btn']['url'] ?>" class="">
-                            <?= $btn['btn']['title'] ?>
-                            <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go to contact"
-                                class="go-arrow" />
-                        </a>
-                    </div>
-                    <?php
-                    }
-                    ?>
-                </div> -->
+             
 
                 <?php
                 $buttons = get_field("btns");
@@ -51,7 +37,7 @@
                 <div class="d-flex flex-wrap row-gap-2 column-gap-3">
                     <?php if (!empty($buttons)): ?>
                     <?php foreach ($buttons as $i => $btn): ?>
-                    <div class="<?= $i == 0 ? "btn-primary-custom" : "btn-custom-container" ?> mt-4">
+                    <div class="<?= $i == 0 ? "button btn-primary" : "btn-custom-container" ?> mt-4">
                         <a href="<?= esc_url($btn['btn']['url']) ?>">
                             <?= esc_html($btn['btn']['title']) ?>
                             <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go to contact"

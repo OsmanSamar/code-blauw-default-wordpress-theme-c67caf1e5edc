@@ -49,108 +49,84 @@ unset($menu_items);
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-    AOS.init();
+        AOS.init();
     </script>
     <!-- AOS -->
 
 
-    <header class="header position-absolute d-flex justify-content-center " style=" z-index:2; top:4px; ">
-
-        <div class="container p-0">
-           
-            <nav class="navbar navbar-expand-lg navbar-light sans-serif w-100 "
-                style=" height: 55px; border: 1px solid #FFFFFF; border-radius: 5px; opacity: 1; padding-bottom: 6px;">
-               
-
-                <div class="container p-lg-0 m-0">
-                    <!-- Ensures navbar takes full width inside container -->
-                    <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand">
-                        <img src="<?= get_template_directory_uri() ?>/images/logo-blauwijs.svg" alt="Blauw Ijs Logo"
-                            style="width: 136px; height: 36px; top:30px; object-fit: cover;" />
-                    </a>
-
-                    <!-- Hamburger button for mobile -->
-                    <div class="d-xl-none wrapper">
-                        <button id="box" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <div class="hamburger">
-                                <span class="one"></span>
-                                <span class="two"></span>
-                                <span class="three"></span>
-                            </div>
-                        </button>
-                    </div>
-
-                     <!-- Navigation Menu -->
-                    <div class="collapse navbar-collapse ul-bg " id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto justify-content-center  flex-grow-1">
-                            <?php foreach ($menu as $item):
-                                $active = get_permalink() == $item->url;
-                                if (is_archive()) {
-                                    $post_type = get_post_type();
-                                    $active = $item->url == get_post_type_archive_link($post_type);
-                                }
-                                ?>
-                                <li class="nav-item dropdown">
-
-                                    <?php if ($item->children): ?>
-                                        <a class="nav-link nav-link-ltr dropdown-toggle d-flex align-items-center <?= $active ? "active" : "" ?>"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <?= $item->title ?>
-                                            <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
-                                                alt="Dropdown Icon" style="" class="dropdownarrow">
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                           
-                                            <?php foreach ($item->children as $child): ?>
-                                                <li>
-                                                    <a class="dropdown-item  d-flex justify-content-between align-items-center"
-                                                        href="<?= $child->url; ?>">
-                                                        <?= $child->title ?>
-
-                                                    </a>
-                                                </li>
-                                            <?php endforeach; ?>
-                                        </ul>
-                                        <?php
-                                    else:
-                                        ?>
-                                        <a class="nav-link  nav-link-ltr  d-flex align-items-center <?= $active ? "active" : "" ?>"
-                                            href="<?= $item->url; ?>" role="button">
-                                            <?= $item->title ?> </a>
-                                        <?php
-                                    endif; ?>
-                                </li>
-                            <?php endforeach; ?>
-
-                        </ul>
-                        <!-- <a href="<?= esc_url(get_permalink(get_page_by_path('kennismaken'))) ?>"
-                            class="button secondary-button ms-lg-3 mt-2 ">
-                            Neem contact op
-                            <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
-                                class="dropdown-arrow">
-                        </a> -->
-
-                    </div>
-                   
-                    <!-- Button on the Right side (visible only on large screens) -->
-                    <div class=" btn-primary-custom d-none d-lg-inline-flex justify-content-center align-items-center "
-                        style="width: 149px;height: 55px;    margin-right: -1px;     margin-bottom: 3px;">
-                        <!-- me-auto -->
-                        <a href="<?= esc_url(get_permalink(get_page_by_path('kennismaken'))) ?>" class="btn-custom">
-                            Kennismaken
+    <header class="header position-absolute d-flex justify-content-center">
+        <nav class="w-100">
+            <div class="container">
+                <div class="navbar navbar-expand-lg navbar-light sans-serif w-100 ">
+                    <div class="container p-lg-0 m-0">
+                        <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand">
+                            <img src="<?= get_template_directory_uri() ?>/images/logo-blauwijs.svg" alt="Blauw Ijs Logo"
+                                style="width: 136px; height: 36px; top:30px; object-fit: cover;" />
                         </a>
-                        <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
-                            class="go-arrow" />
+                        <!-- Hamburger button for mobile -->
+                        <div class="d-xl-none wrapper">
+                            <button id="box" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <div class="hamburger">
+                                    <span class="one"></span>
+                                    <span class="two"></span>
+                                    <span class="three"></span>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- Navigation Menu -->
+                        <div class="collapse navbar-collapse ul-bg " id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto justify-content-center  flex-grow-1">
+                                <?php foreach ($menu as $item):
+                                    $active = get_permalink() == $item->url;
+                                    if (is_archive()) {
+                                        $post_type = get_post_type();
+                                        $active = $item->url == get_post_type_archive_link($post_type);
+                                    }
+                                    ?>
+                                    <li class="nav-item dropdown">
+
+                                        <?php if ($item->children): ?>
+                                            <a class="nav-link nav-link-ltr dropdown-toggle d-flex align-items-center <?= $active ? "active" : "" ?>"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <?= $item->title ?>
+                                                <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
+                                                    alt="Dropdown Icon" style="" class="dropdownarrow">
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                <?php foreach ($item->children as $child): ?>
+                                                    <li>
+                                                        <a class="dropdown-item  d-flex justify-content-between align-items-center"
+                                                            href="<?= $child->url; ?>">
+                                                            <?= $child->title ?>
+
+                                                        </a>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                            <?php
+                                        else:
+                                            ?>
+                                            <a class="nav-link  nav-link-ltr  d-flex align-items-center <?= $active ? "active" : "" ?>"
+                                                href="<?= $item->url; ?>" role="button">
+                                                <?= $item->title ?> </a>
+                                            <?php
+                                        endif; ?>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                        <!-- Button on the Right side (visible only on large screens) -->
+                         <a href="<?= esc_url(get_permalink(get_page_by_path('kennismaken'))) ?>"
+                            class="button btn-primary d-none d-lg-inline-flex justify-content-center align-items-center" style="width: 149px;height: 55px;    margin-right: -1px;     margin-bottom: -1px;" >
+                           kennismaken
+                             <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
+                                class="go-arrow" />
+                        </a>
                     </div>
                 </div>
-            </nav>
-        </div> <!-- End Bootstrap Container -->
-
-
-
-
-
-
+            </div>
+        </nav>
     </header>

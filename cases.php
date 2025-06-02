@@ -155,7 +155,7 @@ $fields = get_fields();
                      ?> -->
                 </span>
                 <div class="" style="margin-right: 27px;">
-                    <a href="<?= get_field("vraageenbtn")['url'] ?>" class="btn-primary-custom">
+                    <a href="<?= get_field("vraageenbtn")['url'] ?>" class="button btn-primary">
                         <?= get_field("vraageenbtn")['title'] ?>
                         <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go Contact page"
                             class="go-arrow" />

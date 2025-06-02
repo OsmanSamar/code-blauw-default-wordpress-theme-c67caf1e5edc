@@ -87,7 +87,7 @@ $fields = get_fields();
                     <div class="button-groupd d-flex gap-2">
                         <div class="">
                             <!--  style="width: 182px;" -->
-                            <a href="<?= get_field("neemcontactopbtn")['url'] ?>" class="btn-custom-container"
+                            <a href="<?= get_field("neemcontactopbtn")['url'] ?>" class="button btn-custom-container"
                                 style="color: #132030;">
                                 <?= get_field("neemcontactopbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
@@ -97,7 +97,7 @@ $fields = get_fields();
                         </div>
                         <div class="">
 
-                            <a href="<?= get_field("onzewerkwijzebtn")['url'] ?>" class="btn-custom-container"
+                            <a href="<?= get_field("onzewerkwijzebtn")['url'] ?>" class="button btn-custom-container"
                                 style="color: #132030;">
                                 <?= get_field("onzewerkwijzebtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
@@ -126,7 +126,7 @@ $fields = get_fields();
                             </span>
                             <div class="button-group mt-3 d-flex gap-2">
                                 <div class=" ">
-                                    <a href="<?= get_field("contactbtn")['url'] ?>" class="btn-primary-custom">
+                                    <a href="<?= get_field("contactbtn")['url'] ?>" class="button btn-primary">
                                         <?= get_field("contactbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                             alt="go onze contact" class="go-arrow" />
@@ -134,7 +134,7 @@ $fields = get_fields();
                                 </div>
                                 <div class="">
                                     <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>"
-                                        class="btn-custom-container" style="color: #132030;">
+                                        class="button btn-custom-container" style="color: #132030;">
                                         <?= get_field("veelgesteldevragenbtn")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                             alt="go onze contact" class="go-arrow" />
@@ -231,7 +231,7 @@ $fields = get_fields();
                             <?= get_field("organisatietext") ?>
                         </span>
                         <div class="" style="margin-right: 27px;">
-                            <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="btn-primary-custom">
+                            <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="button btn-primary">
                                 <?= get_field("vragenaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go Contact page" class="go-arrow" />

@@ -257,7 +257,7 @@ $fields = get_fields();
 
 
                         <div class=" mt-5">
-                            <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="btn-custom-container"
+                            <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="button btn-custom-container"
                                 style="">
                                 <?= get_field("onzeklantcasesbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
@@ -309,7 +309,7 @@ $fields = get_fields();
                             <?= get_field("organisatietext") ?>
                         </span>
                         <div class="d-inline-flex" style="margin-right: 27px;">
-                            <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-primary-custom">
+                            <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="button btn-primary">
                                 <?= get_field("vraagaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go kennismaken" class="go-arrow" />
