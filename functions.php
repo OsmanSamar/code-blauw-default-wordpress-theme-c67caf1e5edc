@@ -71,7 +71,6 @@ add_action('init', 'thumbnails');
 // Our custom Events post type function
 function create_onze_expertises_post_type()
 {
-
     register_post_type(
         'onze_expertises',
         // CPT Options
@@ -88,11 +87,7 @@ function create_onze_expertises_post_type()
             'supports' => ['title', 'editor', 'thumbnail']
         )
     );
-
-
 }
-
-// Hooking up our function to theme setup
 add_action('init', 'create_onze_expertises_post_type');
 
 // Our custom Events post type function
