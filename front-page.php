@@ -271,7 +271,7 @@ $fields = get_fields();
 
         }
     </style>
-    <div class="">
+   
 
         <div class="container">
 
@@ -279,11 +279,11 @@ $fields = get_fields();
 
             <div class="hero-section bg-holder">
                 <div class="bg-content"
-                    style="background: linear-gradient(180deg,  rgba(0, 0, 0, 0.00) -11.36%, rgba(0, 0, 0, 0.81) 82.88%), url('<?= get_the_post_thumbnail_url() ?>') lightgray 50% / cover no-repeat;">
+                    style="background: transparent linear-gradient(90deg, #132030 0%, #13203000 100%), url('<?= get_the_post_thumbnail_url() ?>') 0% 0% no-repeat padding-box;">
                 </div>
                 <div class="hero-content ">
                     <div class="row">
-                        <div class="col-12 col-lg-8  offset-lg-1 pe-0 ">
+                        <div class="col-12 col-lg-8  offset-lg-1 pe-0 text-start">
                             <h1  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                                     <?= get_field("herotitlegekleuredtext") ?>
@@ -293,7 +293,7 @@ $fields = get_fields();
                                 <?= get_field("herotext") ?>
                             </span>
                           
-                            <div class="button-group d-flex justify-content-center justify-content-lg-start mt-4 gap-2">
+                            <div class="button-group d-flex justify-content-start  mt-4 gap-2">
                                 <div class="button btn-primary">
                                     <a href="<?= get_field("meerwetenbtn")['url'] ?>" class=" ">
                                         <?= get_field("meerwetenbtn")['title'] ?>
@@ -588,7 +588,7 @@ $fields = get_fields();
 
             <!-- End of Page -->
         </div>
-    </div>
+   
 
     <script>
         let swiperwerken = new Swiper('.werk-swiper', {
