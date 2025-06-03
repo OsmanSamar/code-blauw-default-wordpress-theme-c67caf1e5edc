@@ -10,31 +10,24 @@ $werkenVoor = new WP_Query($args);
 if ($werkenVoor->have_posts()): ?>
 
     <div class="werken-slider ">
-        <div class="container">
+        <div class="container swiper-container">
             <div class="row">
                 <div class=" col-lg-12 ">
                     <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap ">
-                        <div class="swiper-header">
-                            <div class="swiper-text">
-                                <?= get_field("werkentitle") ?>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            </div>
+                        <h3>
+                            <?= get_field("werkentitle") ?>
+                        </h3>
+                        <div class="d-lg-flex d-none  gap-2">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
                     </div>
                 </div>
-
-
-
 
                 <div class="swiperwerken werk-swiper">
                     <div class="swiper-wrapper">
                         <?php
                         $i = 0;
-
-
                         while ($werkenVoor->have_posts()):
                             $werkenVoor->the_post();
                             $testimonial = get_field("testimonialwerkvoor");
@@ -44,7 +37,6 @@ if ($werkenVoor->have_posts()): ?>
                                 echo ' data-aos="fade-up" data-aos-delay="' . (100 + $i * 50) . '"';
                             }
                             ?>>
-
                                 <div class="container-card border-wrap"
                                     style="<?= $hasBackground && $backgroundColor ? '--background-color: ' . esc_attr($backgroundColor) . ';' : ''; ?>">
                                     <a href="<?= get_permalink($post) ?>">
@@ -71,12 +63,14 @@ if ($werkenVoor->have_posts()): ?>
                                         </div>
                                     </a>
                                 </div>
-
                             </div>
                             <?php
                             $i++;
                         endwhile; ?>
                     </div>
+
+                    <div class="swiper-pagination"></div>
+
                 </div>
             </div>
         </div>

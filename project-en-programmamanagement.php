@@ -140,9 +140,9 @@ $fields = get_fields();
 
     }
 
-    .swiper-container .swiper-pagination {
+    /* .swiper-container .swiper-pagination {
         bottom: -50px !important;
-    }
+    } */
 
     .swiper-container .swiper-pagination-bullet {
         width: 10px;

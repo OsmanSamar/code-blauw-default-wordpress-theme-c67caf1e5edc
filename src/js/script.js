@@ -1,5 +1,5 @@
 import "babel-polyfill";
-import 'bootstrap'
+import "bootstrap";
 
 // Styling
 import "../scss/style.scss";
@@ -22,3 +22,80 @@ jQuery(document).ready(function ($) {
     $("#user_pass").attr("placeholder", "Wachtwoord");
   }
 });
+
+
+document.querySelectorAll(".werken-slider").forEach((x) => {
+  let swiper = new Swiper(x.querySelector(".werk-swiper"), {
+    slidesPerView: 1.4,
+    grabCursor: true,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: x.querySelector(".swiper-button-next"),
+      prevEl: x.querySelector(".swiper-button-prev"),
+    },
+    pagination: {
+      el: x.querySelector(".swiper-pagination"),
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1280: {
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 3.8,
+      },
+    },
+    on: {
+      init: function () {
+        
+      },
+      slideChangeTransitionEnd: function () {
+        
+      },
+    },
+  });
+});
+
+
+
+
+document.querySelectorAll(".partner-slider").forEach((x) => {
+  let swiper = new Swiper(x.querySelector(".partner-swiper"), {
+    slidesPerView: 1.4,
+    grabCursor: true,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: x.querySelector(".swiper-button-next"),
+      prevEl: x.querySelector(".swiper-button-prev"),
+    },
+    pagination: {
+      el: x.querySelector(".swiper-pagination"),
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1280: {
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 3.8,
+      },
+    },
+    on: {
+      init: function () {
+       
+      },
+      slideChangeTransitionEnd: function () {
+        
+      },
+    },
+  });
+});
+

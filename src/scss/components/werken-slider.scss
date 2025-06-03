@@ -1,12 +1,132 @@
 .werken-slider {
   background: #cce1f4;
-  width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
+}
+
+.swiper-container {
+  width: 100vw;
+  margin: 0 auto;
+  overflow: clip;
+  overflow-y: visible;
+  height: 512px;
   display: flex;
   padding: 60px 0px;
   flex-direction: column;
   gap: 10px;
-  
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: relative !important;
+    width: 41px;
+    height: 41px;
+    border: 1px solid #132030;
+    color: #132030;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .swiper-button-next::after,
+  .swiper-rtl .swiper-button-prev::after {
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after,
+  .swiper-button-next::after,
+  .swiper-rtl .swiper-button-prev::after {
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+
+ .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+}
+ .swiper-button-prev {
+  left: -8% !important;
+  top: 2px !important;
+}
+
+ .swiper-button-next {
+  right: 0px !important;
+  top: -2px !important;
+}
+
+ .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+}
+
+
+@media (min-width: 768px) {
+}
+
+
+@media (min-width: 992px) {
+   .swiper-button-prev {
+    left: 3% !important;
+    top: 2px !important;
+  }
+}
+
+}
+
+
+
+.swiper-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+.swiper-text {
+  font-size: 26px;
+  font-weight: 300;
+  white-space: nowrap;
+  text-align: left;
+  line-height: 50px;
+  font-family: "richmond-display", serif;
+  letter-spacing: 0px;
+  color: #132030;
+  opacity: 1;
+}
+
+
+
+
+
+.swiper-pagination {
+  position: relative !important;
+  text-align: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+  bottom: 10px;
+  left: 0;
+}
+
+
+
+@media (min-width: 768px) {
+}
+// .swiper-container .swiper-button-prev {
+//   left: -8% !important;
+//   top: -3px !important;
+// }
+
+// LG
+@media (min-width: 992px) {
  
 }
