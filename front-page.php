@@ -172,17 +172,7 @@ $fields = get_fields();
 
     } */
 
-        .onz-eexpertises-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 100;
-            line-height: 50px;
-            font-family: 'richmond-display', serif;
-            letter-spacing: 0px;
-            color: #132030;
-            opacity: 1;
-            margin-bottom: 3rem;
-        }
+      
 
         .sample-slider1 {
             width: 100%;
@@ -327,131 +317,38 @@ $fields = get_fields();
             }
             ?>
 
-      
-
 
             <!-- Onze_Expertises -->
-            <div class="container p-3 px-1  position-relative" id="testimonials" style=" z-index: 2; margin-top: 6rem;">
-                <div class="row">
-                    <div class="col-12 d-flex justify-content-center ">
-                        <div class="section-header ">
-                            <div class="onz-eexpertises-title">
-
-                                <?= get_field("onzeexpertisestitle") ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <?php
-                    $delay = 0;
-                    $posts = get_posts([
-                        'post_type' => 'onze_expertises',
-                        'numberposts' => -1,
-                        "order" => 'asc'
-                    ]);
-
-                    foreach ($posts as $post) {
-                        $fields = get_fields($post->ID);
-                        $testimonial = get_field("expertisestestimonials");
-                        // Debugging: Check the values of $fields['nextarrow']
-                        // var_dump($fields['nextarrow']);
-                        ?>
-
-                        <div class="col-lg-4 col-md-6 col-12 mb-4">
-                            <a href="<?= get_permalink($post) ?>">
-                                <div
-                                    class="testimonial-container d-flex flex-row align-items-center justify-content-between p-4  h-100 ">
-                                    <span class="test-post-title">
-                                        <?= $post->post_title ?>
-                                    </span>
-                                    <span class="test-img-border">
-                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                            alt="go onze expertises" class="go-arrow" />
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <?php
-
-                    }
-                    wp_reset_postdata();
-                    ?>
-                </div>
+            <div class="" data-type="onze_expertises">
+                <?php
+                $i = 0;
+                foreach ($posts as $post) {
+                    // Fetch the "General" tab fields directly
+                    get_template_part('components/onze-expertises', null, ['post' => $post, 'index' => $i]);
+                    $i++;
+                }
+                wp_reset_postdata();
+                ?>
             </div>
 
 
-            <!--first-blue-block  -->
-            <div class="container ">
-                <div class="bg-container " style=" margin-top: -105px;">
-                    <div class="bg first-blue-block ">
-                    </div>
-                    <div class=" blue-container werk-slider " style="position: relative;z-index: 1;">
-                        <div class="swiper-container swiper position-relative" style="position: relative;z-index: 1;">
-
-                            <div class="swiper-header">
-                                <div class="swiper-text">
-                                    <?= get_field("werkentitle") ?>
-                                </div>
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                            </div>
-
-                            <div class="swiperwerken werk-swiper">
-                                <div class="swiper-wrapper">
-                                    <?php
-                                    $delay = 0;
-                                    $posts = get_posts([
-                                        'post_type' => 'werken_voor',
-                                        'numberposts' => -1,
-                                        "order" => 'asc'
-                                    ]);
-
-                                    foreach ($posts as $post) {
-                                        $fields = get_fields($post->ID);
-                                        $testimonial = get_field("testimonialwerkvoor");
-                                        ?>
-                                        <div class="swiper-slide d-flex flex-column h-auto  ">
-                                            <a href="<?= get_permalink($post) ?>" class="d-flex flex-column">
-                                                <div class="testimonial-slide d-flex flex-column ">
-                                                    <img src="<?= $testimonial["logo"]['url'] ?>"
-                                                        alt="<?= $testimonial['logog']['alt'] ?>" class="card-img-top"
-                                                        style="height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;" />
-                                                    <div class="card-body  mt-1 mb-0 pb-4 pt-2">
 
 
-                                                        <div class="d-flex justify-content-between align-items-center">
-                                                            <div class="card-text">
-                                                                <?= $post->post_title ?>
-                                                            </div>
-                                                            <span
-                                                                class="d-flex justify-content-center align-items-center arrow">
-                                                                <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                                    alt=" <?= $testimonial['white_arrow']['alt'] ?>"
-                                                                    class="go-arrow" />
-                                                            </span>
-                                                        </div>
-                                                        <span class="card-title mt-auto" style=" color: #132030;">
-                                                            <span><?= $testimonial["text"] ?></span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <?php
-                                        $delay += 300;
-                                    }
-                                    wp_reset_postdata();
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
+
+            <!--werken-swiper block  -->
+            <div class="" data-type="onze_expertises">
+                <?php
+                $i = 0;
+                foreach ($posts as $post) {
+                    // Fetch the "General" tab fields directly
+                    get_template_part('components/werken-swiper', null, ['post' => $post, 'index' => $i]);
+                    $i++;
+                }
+                wp_reset_postdata();
+                ?>
             </div>
-
 
             <div class="container ">
                 <div class="container-img position-relative bg-holder">
