@@ -271,7 +271,7 @@ $fields = get_fields();
 
         }
     </style>
-   
+    <div class="">
 
         <div class="container">
 
@@ -279,21 +279,21 @@ $fields = get_fields();
 
             <div class="hero-section bg-holder">
                 <div class="bg-content"
-                    style="background: transparent linear-gradient(90deg, #132030 0%, #13203000 100%), url('<?= get_the_post_thumbnail_url() ?>') 0% 0% no-repeat padding-box;">
+                    style="background: url('<?= get_the_post_thumbnail_url() ?>') lightgray 50% / cover no-repeat;">
                 </div>
                 <div class="hero-content ">
                     <div class="row">
-                        <div class="col-12 col-lg-8  offset-lg-1 pe-0 text-start">
-                            <h1  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                                data-aos-duration="1000" data-aos-easing="ease-in-out">
-                                    <?= get_field("herotitlegekleuredtext") ?>
+                        <div class="col-12 col-lg-8  offset-lg-1 pe-0 text-start ">
+                            <h1 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                                data-aos-easing="ease-in-out">
+                                <?= get_field("herotitlegekleuredtext") ?>
                             </h1>
                             <span class="lead" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                                 <?= get_field("herotext") ?>
                             </span>
-                          
-                            <div class="button-group d-flex justify-content-start  mt-4 gap-2">
+
+                            <div class="button-group d-flex justify-content-start flex-wrap  mt-4 gap-2">
                                 <div class="button btn-primary">
                                     <a href="<?= get_field("meerwetenbtn")['url'] ?>" class=" ">
                                         <?= get_field("meerwetenbtn")['title'] ?>
@@ -317,43 +317,17 @@ $fields = get_fields();
             </div>
 
 
-
-
-            <!--2 Flexible Content Field must change the code -->
             <?php
-            $flexible_content = get_field('flexiblecontentfield'); ?>
-            <div class="container mt-4">
-                <?php foreach ($flexible_content as $content): ?>
-                    <div class="row">
-                        <div class="col-12  col-lg-8 offset-lg-2 d-flex justify-content-center align-items-center h-100 p-3 px-4 mt-5"
-                            data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-                            data-aos-easing="ease-in-out">
-                            <h2 >
-                                <?= $content['title']; ?>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="row g-5 mt-1">
-                        <div class="col-lg-6 text-start mt-5 flexible-left-text" data-aos="fade-right" data-aos-offset="100"
-                            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="left-text">
-                                <span style="font-weight: 700;">
-                                    <?= $content['lefttextbold']; ?>
-                                </span>
-                                <?= $content['lefttext']; ?>
-                            </span>
-                        </div>
+            $content = get_field('content');
 
-                        <div class="col-lg-6 text-start mt-5 flexible-right-text" data-aos="fade-left" data-aos-offset="100"
-                            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="right-text"><?= $content['righttext']; ?></span>
-                        </div>
-                    </div>
+            if (!empty($content) && is_array($content)) {
+                foreach ($content as $block) {
+                    get_template_part('components/' . $block['acf_fc_layout'], null, ['fields' => $block]);
+                }
+            }
+            ?>
 
-                <?php endforeach; ?>
-            </div>
-            <?php ?>
-            <!-- End of Flexible Content Field -->
+      
 
 
             <!-- Onze_Expertises -->
@@ -588,7 +562,7 @@ $fields = get_fields();
 
             <!-- End of Page -->
         </div>
-   
+    </div>
 
     <script>
         let swiperwerken = new Swiper('.werk-swiper', {

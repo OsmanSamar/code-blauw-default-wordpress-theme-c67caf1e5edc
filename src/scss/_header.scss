@@ -379,18 +379,7 @@ strong:nth-of-type(2) {
 
 
 
-.flexible-left-text p,
-.flexible-right-text p {
-  max-width: 90%;
-  font-size: 16px;
-  text-align: justify;
-  font-weight: 300;
-  line-height: 26px;
-  font-family: "ff-scala-sans-pro", sans-serif;
-  letter-spacing: 0px;
-  color: #132030;
-  opacity: 1;
-}
+
 
 .logos-container {
   flex-wrap: wrap !important;
@@ -606,19 +595,6 @@ strong:nth-of-type(2) {
   opacity: 1;
 }
 
-.left-text,
-.right-text {
-  text-align: center;
-  font-size: 17px;
-  line-height: 32px;
-  font-weight: 300;
-  font-family: "ff-scala-sans-pro", sans-serif;
-  letter-spacing: 0px;
-  color: #132030;
-  opacity: 1;
-  // text-wrap: balance;
-  // white-space: break-spaces;
-}
 
 .right-text {
   margin-top: 8px;

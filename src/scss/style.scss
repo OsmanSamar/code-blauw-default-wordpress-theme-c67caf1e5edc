@@ -34,21 +34,6 @@ img {
   height: auto;
 }
 
-// h1 {
-//   font-size: 28px;
-// }
-
-// h2 {
-//   font-size: 25px;
-// }
-
-// h3 {
-//   font-size: 22px;
-// }
-
-// h4 {
-//   font-size: 20px;
-// }
 
 .bg-contain {
   background-size: contain;
@@ -73,3 +58,4 @@ img {
 @import "pages/login";
 @import "button";
 @import"font";
+@import"components/text";
