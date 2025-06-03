@@ -9,10 +9,10 @@ $onzeExpertises = new WP_Query($args);
 
 if ($onzeExpertises->have_posts()): ?>
 
-    <div class="onze-expertises mb-5 mt-5">
+    <div class="onze-expertises mt-5">
         <div class="expertises-container  position-relative" id="testimonials" style=" z-index: 2;">
 
-            <div class="row mb-5">
+            <div class="row mb-4">
                 <div class="col-12 d-flex justify-content-center ">
                     <div class="d-flex align-items-center justify-content-center">
                         <h3 >
@@ -22,13 +22,13 @@ if ($onzeExpertises->have_posts()): ?>
                 </div>
             </div>
 
-            <div class="row mb-4">
+            <div class="row gy-4">
                 <?php
                 $i = 0;
                 while ($onzeExpertises->have_posts()):
                     $onzeExpertises->the_post();
                     ?>
-                    <div class="col-lg-4 col-md-6 col-12 mb-4" <?php
+                    <div class="col-lg-4 col-md-6 col-12" <?php
                     if ($i < 7) {
                         echo ' data-aos="fade-up" data-aos-delay="' . (100 + $i * 50) . '"';
                     }

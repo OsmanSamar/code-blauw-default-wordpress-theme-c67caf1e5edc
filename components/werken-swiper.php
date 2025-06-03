@@ -17,7 +17,7 @@ if ($werkenVoor->have_posts()): ?>
                         <h3>
                             <?= get_field("werkentitle") ?>
                         </h3>
-                        <div class="d-lg-flex d-none  gap-2">
+                        <div class="d-flex  gap-2">
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         </div>
@@ -69,7 +69,12 @@ if ($werkenVoor->have_posts()): ?>
                         endwhile; ?>
                     </div>
 
-                    <div class="swiper-pagination"></div>
+
+                     <!-- <div class="d-lg-none d-flex  gap-2">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div> -->
+                    <!-- <div class="swiper-pagination"></div> -->
 
                 </div>
             </div>

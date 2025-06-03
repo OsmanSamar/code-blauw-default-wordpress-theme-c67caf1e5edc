@@ -65,8 +65,9 @@ document.querySelectorAll(".werken-slider").forEach((x) => {
 
 document.querySelectorAll(".partner-slider").forEach((x) => {
   let swiper = new Swiper(x.querySelector(".partner-swiper"), {
-    slidesPerView: 1.4,
+    slidesPerView: 2,
     grabCursor: true,
+     centeredSlides: true,
     spaceBetween: 20,
     loop: true,
     navigation: {
@@ -82,10 +83,10 @@ document.querySelectorAll(".partner-slider").forEach((x) => {
         slidesPerView: 2,
       },
       1280: {
-        slidesPerView: 3,
+        slidesPerView: 5,
       },
       1440: {
-        slidesPerView: 3.8,
+        slidesPerView: 7,
       },
     },
     on: {

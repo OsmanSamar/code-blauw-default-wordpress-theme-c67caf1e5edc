@@ -115,54 +115,48 @@ $fields = get_fields();
 
 
 
-        <div class="container-img position-relative bg-holder">
+        <div class="img-container position-relative bg-holder">
             <div class="bg" style="background-image:url('<?= get_template_directory_uri() ?>/images/mask-group.png') ">
             </div>
 
-            <div class="text-img-container row g-0 pt-5 position-relative">
+            <div class="text-img-container row g-0  position-relative">
                 <div class="col-12 col-md-6 col-lg-6">
                     <img src="<?= get_template_directory_uri() ?>/images/senior-leadership.png" alt="manager-leading"
                         class="w-100 right-img">
                 </div>
                 <div class="left-container col-12 col-md-6 col-lg-6 d-flex align-items-center ">
-                    <div>
-                        <h3><?= get_field("onsverhaaltitle") ?></h3>
+                      <div class="row">
+                        <div class="col-lg-10 offset-lg-1" >
+                              <h3><?= get_field("onsverhaaltitle") ?></h3>
                         <span class="regular"><?= get_field("verhaaltext") ?> </span>
-                        <div class="d-flex  mt-4 gap-2">
-                           
+                        <div class="d-flex flex-wrap mt-4 gap-2">
                                 <a href="<?= get_field("overonsbtn")['url'] ?>" class="button btn-yellow-line" >
                                     <?= get_field("overonsbtn")['title'] ?>
                                     <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                         alt="go onze expertises" class="go-arrow" />
                                 </a>
-                           
-                           
                                 <a href="<?= get_field("werkwijzebtn")['url'] ?>"class="button btn-yellow-line" >
                                     <?= get_field("werkwijzebtn")['title'] ?>
                                     <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                         alt="go onze expertises" class="go-arrow" />
                                 </a>
-                            
                         </div>
-                    </div>
+                        </div>
+                      </div>
                 </div>
-
             </div>
 
-            <div class="container partner-slider  position-relative" style="margin-top: 160px; margin-bottom: 80px;">
-
+            <div class="w-100 partner-slider  position-relative" style="">
                     <div class="d-flex align-items-center justify-content-between ">
                         <h3 class="text-white" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000" data-aos-easing="ease-in-out" >
                             <?= get_field("titleoflogos") ?>
                         </h3>
-                        <div class="d-flex align-items-center gap-4">
+                        <div class="d-flex  align-items-center gap-4 swiper-button-wrap">
                             <div class="swiper-button-prev "></div>
                             <div class="swiper-button-next"></div>
                         </div>
                     </div>
-
-
                     <div class=" position-relative">
                         <div class="row">
                             <div class="col-12 col-lg-12">
@@ -189,8 +183,9 @@ $fields = get_fields();
                                 </div>
                             </div>
                         </div>
+
+                         
                     </div>
-               
             </div>
         </div>
 
