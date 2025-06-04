@@ -100,3 +100,6 @@ document.querySelectorAll(".partner-slider").forEach((x) => {
   });
 });
 
+
+
+

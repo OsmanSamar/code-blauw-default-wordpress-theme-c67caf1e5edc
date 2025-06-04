@@ -7,13 +7,13 @@ $fields = get_fields();
     <style>
        
 
-        .swiper-title {
+        /* .swiper-title {
           
             position: absolute;
             top: -84px;
             width: 100%;
 
-        }
+        } */
 
 
 
@@ -173,7 +173,8 @@ $fields = get_fields();
                                                             target="_blank">
                                                             <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
                                                                 alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
-                                                                style="width: 72px; height: 64px; border-radius: 5px; object-fit: contain;" />
+                                                                class="logo-img"
+                                                                 />
                                                         </a>
                                                     </div>
                                                 </div>

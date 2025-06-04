@@ -127,6 +127,9 @@
     margin: 0 auto;
     overflow-y: visible;
   }
+  .logo-img{
+    width: 72px; height: 64px; border-radius: 5px; object-fit: contain;
+  }
 
   .swiper-button-prev,
   .swiper-button-next {

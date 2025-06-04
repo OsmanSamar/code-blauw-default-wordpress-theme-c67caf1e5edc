@@ -76,14 +76,14 @@ if ($werkenVoor->have_posts()): ?>
 
             wp_reset_postdata();
             ?>
-            <!-- White-containe -->
+            <!-- White-block -->
             <div class="white-wraper" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
                 <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
-                    <span class="organ-title">
+                    <h3>
                         <?= get_field("organisatietext") ?>
-                    </span>
-                    <div class="" style="margin-right: 27px;">
+                    </h3>
+                    <div class="btn-left">
                         <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="button btn-primary">
                             <?= get_field("vragenaanbtn")['title'] ?>
                             <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
