@@ -1,3 +1,7 @@
+
+.werken-slider{
+  padding-bottom: 50px;
+}
 .werken-slider::before {
   content: "";
     position: absolute;
@@ -5,7 +9,7 @@
     margin-right: calc(-50vw + 50%);
     width: 100vw;
     left: 0;
-    height: 89%;
+    height: 100%;
     opacity: 1;
   background: #cce1f4;
  
@@ -57,12 +61,12 @@
 }
  .swiper-button-prev {
   left: -8% !important;
-  top: 2px !important;
+  // top: 2px !important;
 }
 
  .swiper-button-next {
   right: 0px !important;
-  top: -2px !important;
+  // top: -2px !important;
 }
 
  .swiper-pagination-bullet {
@@ -71,6 +75,9 @@
   background-color: #ffffff;
 }
 
+h3{
+  z-index: 1;
+}
 
 @media (min-width: 768px) {
 }
@@ -79,7 +86,7 @@
 @media (min-width: 992px) {
    .swiper-button-prev {
     left: 3% !important;
-    top: 2px !important;
+    // top: 2px !important;
   }
 }
 
@@ -123,12 +130,12 @@
   left: 0;
 }
 
-// .button-wrap {
-//     position: absolute;
-//     bottom: 0;
-//     left: 50%;
-//     transform: translateX(-50%);
-// }
+.button-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 @media (min-width: 768px) {
 }
@@ -136,5 +143,9 @@
 
 
 @media (min-width: 992px) {
+  .button-wrap {
+    position: relative;
+   
+}
  
 }

@@ -11,7 +11,7 @@ $werkenVoor = new WP_Query($args);
 
 if ($werkenVoor->have_posts()): ?>
 
-    <div class="werken-slider ">
+    <div class="werken-slider position-relative z-1 ">
         <div class="container swiper-container">
             <div class="row">
                 <div class=" col-lg-12 ">
@@ -19,7 +19,7 @@ if ($werkenVoor->have_posts()): ?>
                         <h3>
                             <?= get_field("werkentitle") ?>
                         </h3>
-                        <div class=" d-flex  gap-2">
+                        <div class="button-wrap d-flex align-items-center  gap-2">
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         </div>

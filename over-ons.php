@@ -29,7 +29,7 @@ $fields = get_fields();
         </div>
 
         <div class="text-wraper">
-            <div class="col-12  col-lg-8 offset-lg-2  d-flex flex-column align-items-center justify-content-center "
+            <div class="mb-5 col-12  col-lg-8 offset-lg-2  d-flex flex-column align-items-center justify-content-center "
                 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
                 data-aos-easing="ease-in-out" style="margin:0 auto">
                 <h2 class="mb-5 text-center">
@@ -57,7 +57,7 @@ $fields = get_fields();
         <div class="white-container">
             <div class="inside-wraper">
                 <div class="row">
-                    <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    <div class="col-12 col-lg-6 my-auto py-4" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column  text-left gap-4 mb-4">
                             <span class="regular text-bold">

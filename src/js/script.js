@@ -46,7 +46,7 @@ document.querySelectorAll(".werken-slider").forEach((x) => {
         slidesPerView: 3,
       },
       1440: {
-        slidesPerView: 3.8,
+        slidesPerView: 4,
       },
     },
     on: {
