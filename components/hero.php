@@ -25,6 +25,27 @@ $bgImg = get_the_post_thumbnail_url();
                             <?php
                         endif; ?>
                     </h1>
+
+                    <?php if(is_singular( 'werken_voor' )): ?>
+                        <div class="d-flex flex-row justify-content-between">
+                                <div class="datum-container ">
+                                    <span class="datum-title">
+                                        Datum
+                                    </span>
+                                    <span class="datum">
+                                        <?= get_the_date(  )?>
+                                    </span>
+                                </div>
+                                <div class="less-container ">
+                                    <span class="less-title">
+                                        Leestijd
+                                    </span>
+                                    <span class="less">
+                                        <?= (string) YoastSEO()->meta->for_current_page()->estimated_reading_time_minutes ?> minuten
+                                    </span>
+                                </div>
+                            </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

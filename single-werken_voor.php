@@ -5,6 +5,7 @@ $fields = get_fields();
 ?>
 
 <main class="single-werken-voor flex-grow-1">
+    <div class="container">
     <style>
     /* .hero-section {
         background: url("<?= get_field('heroimage')['url'] ?> ");
@@ -78,46 +79,9 @@ $fields = get_fields();
     <div>
 
         <!-- Hero Section -->
-        <div class="hero-section ">
-            <!-- <div class="container">
-                <?php get_template_part('components/breadcrumb') ?>
-                <div class="hero-content flex-column">
-                    <div class="col-12  col-lg-12  pe-0 pe-lg-5">
-                        <span class="posttitle">
-                            <span class="d-block">
-                                <?= get_field("posttitle") ?>
-                            </span>
-
-
-                        </span>
-                        <div class="d-flex flex-row justify-content-center gap-4">
-
-                            <div class="datum-container ">
-                                <span class="datum-title">
-                                    Datum </span>
-                                <span class="datum">
-                                    <?= get_field("datum") ?>
-                                </span>
-                            </div>
-
-                            <div class="less-container ">
-                                <span class="less-title">
-                                    Leestijd
-                                </span>
-                                <span class="less">
-                                    <?= get_field("datum") ?>
-                                    5 minuten
-                                </span>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <?php get_template_part('components/breadcrumb') ?> -->
+         <?=  get_template_part( 'components/hero') ?>
+        <!-- <div class="hero-section ">
+         
             <div>
 
                 <div class="hero-content flex-column">
@@ -141,7 +105,6 @@ $fields = get_fields();
                                         Leestijd
                                     </span>
                                     <span class="less">
-                                        <!-- <?= get_field("datum") ?> -->
                                         5 minuten
                                     </span>
                                 </div>
@@ -152,7 +115,7 @@ $fields = get_fields();
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!-- End of Hero Section -->
 
 
@@ -233,6 +196,6 @@ $fields = get_fields();
 
     </div>
 
-
+    </div>
 </main>
 <?php get_footer() ?>

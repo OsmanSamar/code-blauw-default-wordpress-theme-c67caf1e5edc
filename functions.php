@@ -99,8 +99,18 @@ function create_werken_voor_post_type()
         // CPT Options
         array(
             'labels' => array(
-                'name' => __('Werken_Voor'),
-                'singular_name' => __('Werken_Voor')
+                'name' => __('Werken voor'),
+                'singular_name' => __('Werken voor'),
+                'menu_name' => __('Werken voor'),
+                'all_items' => __('Werken voor'),
+                'add_new' => __('Add New'),
+                'add_new_item' => __('Add New Werken voor'),
+                'edit_item' => __('Edit Werken voor'),
+                'new_item' => __('New Werken voor'),
+                'view_item' => __('View Werken voor'),
+                'search_items' => __('Search Werken voor'),
+                'not_found' => __('No Werken voor found'),
+                'not_found_in_trash' => __('No Werken voor found in Trash'),
             ),
             'public' => true,
             'has_archive' => true,
