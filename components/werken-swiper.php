@@ -1,4 +1,6 @@
 <?php
+
+$ctabarShow = isset($args['ctabar']) && $args['ctabar'];
 $post = $args['post'];
 $args = array(
     'post_type' => 'werken_voor',
@@ -17,7 +19,7 @@ if ($werkenVoor->have_posts()): ?>
                         <h3>
                             <?= get_field("werkentitle") ?>
                         </h3>
-                        <div class="d-flex  gap-2">
+                        <div class=" d-flex  gap-2">
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         </div>
@@ -68,17 +70,34 @@ if ($werkenVoor->have_posts()): ?>
                             $i++;
                         endwhile; ?>
                     </div>
-
-
-                     <!-- <div class="d-lg-none d-flex  gap-2">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                        </div> -->
-                    <!-- <div class="swiper-pagination"></div> -->
-
                 </div>
             </div>
         </div>
+
+        <?php if ($ctabarShow) {
+
+            wp_reset_postdata();
+            ?>
+            <!-- White-containe -->
+            <div class="white-wraper" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
+                <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
+                    <span class="organ-title">
+                        <?= get_field("organisatietext") ?>
+                    </span>
+                    <div class="" style="margin-right: 27px;">
+                        <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="button btn-primary">
+                            <?= get_field("vragenaanbtn")['title'] ?>
+                            <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
+                                class="go-arrow" />
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
 
     </div>
 

@@ -37,6 +37,8 @@
     top: 0;
     width: 100vw;
     height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     object-fit: cover;
   }
 
@@ -55,11 +57,12 @@
   .bg-img {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100% !important;
+    width: 100vw !important;
     height: 100%;
     z-index: 1;
     object-fit: cover;
+     left: 50%;
+    transform: translateX(-50%);
 
     &::before {
       content: "";

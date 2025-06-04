@@ -4,29 +4,7 @@ $fields = get_fields();
 ?>
 
 <main class="cases">
-    <style>
-       
-      
-
-        .whi-container {
-            background: #ffffff 0% 0% no-repeat padding-box;
-            width: 1000px;
-            border-radius: 5px;
-            margin: 0 auto;
-            width: 100%;
-            max-width: 1289px;
-            padding: 23px;
-        }
-
-        @media (min-width: 992px) {
-
-
-            .whi-container {
-                position: relative;
-                top: -64px;
-            }
-        }
-    </style>
+   
 
     <div class=" container">
 

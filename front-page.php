@@ -146,7 +146,7 @@ $fields = get_fields();
                 </div>
             </div>
 
-            <div class="w-100 partner-slider  position-relative" style="">
+            <div class="w-100 partner-slider  position-relative">
                     <div class="d-flex align-items-center justify-content-between ">
                         <h3 class="text-white" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000" data-aos-easing="ease-in-out" >
