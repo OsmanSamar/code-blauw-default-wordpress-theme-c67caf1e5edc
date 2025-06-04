@@ -1,22 +1,13 @@
 .cases {
-  background: #cce1f4;
-  width: 100vw !important;
+  h3 {
+    z-index: 1;
+    font-size: 36px;
+    line-height: 46px;
+  }
 
-
-//   .cases::before {
-//   content: "";
-//   display: block;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: #cce1f4; 
-//   z-index: -1; 
-// }
-
-
-
+  .btn-left {
+    margin-right: 27px;
+  }
   .testimonial-slide {
     background: #ffffff 0% 0% no-repeat padding-box;
     padding: 18px;
@@ -33,18 +24,26 @@
     margin: 0 auto;
   }
 
-  .first-blue-block {
-    height: fit-content;
+  .blue-container::before {
+    content: "";
+    position: absolute;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    left: 0;
+    height: 100%;
+    background: #cce1f4;
+    min-height: 740px;
+  }
+
+  .inside-block {
     padding: 80px 0px;
   }
 
   @media (min-width: 992px) {
-    .first-blue-block {
-      margin-top: unset;
-    }
   }
 
-  .whi-container {
+  .white-container {
     background: #ffffff 0% 0% no-repeat padding-box;
     width: 1000px;
     border-radius: 5px;
@@ -55,7 +54,7 @@
   }
 
   @media (min-width: 992px) {
-    .whi-container {
+    .white-container {
       position: relative;
       top: -64px;
     }
