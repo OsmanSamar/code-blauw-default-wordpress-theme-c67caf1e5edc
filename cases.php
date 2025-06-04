@@ -52,7 +52,7 @@ $fields = get_fields();
                                     <div class="card-body mt-1 mb-0 pb-4 pt-2">
                                         <!--  d-flex flex-column  -->
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <span class="card-text"><?= $post->post_title ?></span>
+                                            <span class="regular"><?= $post->post_title ?></span>
                                             <span class="d-flex justify-content-center align-items-center arrow">
                                                 <img src="<?= $testimonial["white_arrow"]['url'] ?>"
                                                     alt=" <?= $testimonial['white_arrow']['alt'] ?>" class="card-img-top"

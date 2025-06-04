@@ -1,6 +1,4 @@
 .overons {
-
-
   .text-wraper {
     padding-top: 80px;
     padding-bottom: 17px;
@@ -34,39 +32,7 @@
     object-fit: cover;
   }
 
-  .testimonial-slide {
-    background: #ffffff 0% 0% no-repeat padding-box;
-    border-radius: 5px;
-    padding: 18px;
-    box-shadow: 10px 10px 60px #2072be1a;
-    text-align: left;
-    position: relative;
-    z-index: 3;
-    height: 100% !important;
-    width: 100%;
-    max-width: 400px;
-    min-width: 250px;
-    margin: auto;
-  }
 
-  .testimonial-text {
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 8px;
-    font-family: "ff-scala-sans-pro", sans-serif;
-    letter-spacing: 0px;
-    color: #132030;
-    opacity: 1;
-  }
-
-  .testimonial-naam {
-    font-family: "ff-scala-sans-pro", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #1e73be;
-    opacity: 1;
-    letter-spacing: 0px;
-  }
 
   .container-block {
     width: 100%;
@@ -85,11 +51,9 @@
     margin-bottom: 1rem;
   }
 
-
-  
-.werken-slider {
-  z-index: 1;
-}
+  .werken-slider {
+    z-index: 1;
+  }
   .werken-slider::before {
     content: "";
     position: absolute;
@@ -108,25 +72,48 @@
     overflow: clip;
     overflow-y: visible;
     display: flex;
-    padding: 60px 0px 51px;
+    padding: 60px 0px 90px;
     flex-direction: column;
     gap: 10px;
   }
 
+  .button-wrap {
+    position: absolute;
+    bottom: 300px ;
+    z-index: 1000 ;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   @media (min-width: 768px) {
+     .button-wrap {
+      position: relative;
+      bottom: unset;
+      left: unset;
+      transform: unset;
+    }
   }
 
   @media (min-width: 992px) {
-      h2 {
-    font-size: 44px;
-    line-height: 66px;
-    font-weight: 100;
-    text-align: center;
-  }
+    .swiper-container {
+      padding: 60px 0px 51px;
+    }
+    .button-wrap {
+      position: relative;
+      bottom: unset;
+      left: unset;
+      transform: unset;
+    }
+    h2 {
+      font-size: 44px;
+      line-height: 66px;
+      font-weight: 100;
+      text-align: center;
+    }
 
-     .inside-wraper {
-    padding: 90px 0px;
-  }
+    .inside-wraper {
+      padding: 90px 0px;
+    }
 
     .content-wrapper {
       padding: 20px;

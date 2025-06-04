@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
 
 document.querySelectorAll(".werken-slider").forEach((x) => {
   let swiper = new Swiper(x.querySelector(".werk-swiper"), {
-    slidesPerView: 1.4,
+    slidesPerView: 1,
     grabCursor: true,
     spaceBetween: 20,
     loop: true,
