@@ -1,55 +1,32 @@
-<div class="container">
-    <div class="hero-section bg-holder flex-column">
+<?php
+$bgImg = get_the_post_thumbnail_url();
+?>
 
-        <!-- <?php get_template_part('components/breadcrumb') ?>
-        <p style="color: red;">Breadcrumb Loaded</p> -->
-
-        <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
+<div class="hero" >
+    <div class="hero-section bg-holder d-flex align-items-start flex-column" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
+                        data-aos-easing="ease-in-out">
+        <div class="bg-img" style="background-image:url('<?= $bgImg?>')">
         </div>
-
-        <div class="hero-content text-center  w-100 ">
-
+        <div class="hero-content container">
             <?php get_template_part('components/breadcrumb') ?>
-            <!-- <p style="color: red;">Breadcrumb Loaded2</p> -->
-            <div class="col-12  col-lg-6 offset-lg-3 col-md-8 offset-md-2 
+          
+            <div class="row my-auto">
+                <div
+                    class="col-12 col-lg-6 offset-lg-3 col-md-8 offset-md-2 
                         py-5 mt-4
-                        align-self-center d-flex flex-column justify-content-center align-items-center">
-                <h1 class="kennis-hero-title text-center  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                    data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <span class="d-block">
-                        <?= get_field("herotitle") ?>
-                    </span>
-                </h1>
-
-                <div class="kennis-hero-text ">
-                    <span class="d-block">
-                        <?= get_field("herotext") ?>
-                    </span>
-                </div>
-             
-
-                <?php
-                $buttons = get_field("btns");
-                ?>
-
-                <span class="d-block mb-3 <?= empty($buttons) ? '' : 'd-none' ?>"></span>
-
-                <div class="d-flex flex-wrap row-gap-2 column-gap-3">
-                    <?php if (!empty($buttons)): ?>
-                    <?php foreach ($buttons as $i => $btn): ?>
-                    <div class="<?= $i == 0 ? "button btn-primary" : "btn-custom-container" ?> mt-4">
-                        <a href="<?= esc_url($btn['btn']['url']) ?>">
-                            <?= esc_html($btn['btn']['title']) ?>
-                            <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go to contact"
-                                class="go-arrow" />
-                        </a>
-                    </div>
-                    <?php endforeach; ?>
-                    <?php endif; ?>
+                        d-flex flex-column justify-content-center align-items-center align-self-center
+                         my-auto ">
+                    <h1 data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
+                        data-aos-easing="ease-in-out">
+                        <?php if (get_field("hero_title")): ?>
+                            <?= get_field("hero_title", $id) ?>
+                        <?php else: ?>
+                            <?= get_the_title($id); ?>
+                            <?php
+                        endif; ?>
+                    </h1>
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>

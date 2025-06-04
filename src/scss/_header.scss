@@ -1,14 +1,40 @@
-#breadcrumbs,
-#breadcrumbs a,
+// #breadcrumbs,
+// #breadcrumbs a,
+// #breadcrumbs span strong {
+//   color: #ffffff !important;
+//   letter-spacing: 0px;
+//   opacity: 1;
+//   font-size: 14px;
+//   font-weight: lighter;
+//   line-height: 24px;
+//   font-family: "ff-scala-sans-pro", sans-serif;
+// }
+
+
+.breadcrumbs {
+  // color: #fff;
+  // font-family: Figtree;
+  // font-size: 16px;
+  // font-style: normal;
+  // font-weight: 400;
+  // line-height: 160%;
+}
+.breadcrumb-wrap {
+  z-index: 3;
+  margin-top: 100px;
+}
+
+#breadcrumbs span a,
 #breadcrumbs span strong {
-  color: #ffffff !important;
+  color: #fff;
   letter-spacing: 0px;
   opacity: 1;
-  font-size: 14px;
+     font-size: 14px;
   font-weight: lighter;
   line-height: 24px;
   font-family: "ff-scala-sans-pro", sans-serif;
 }
+
 
 .header {
   width: 100vw;
@@ -320,58 +346,8 @@ strong:nth-of-type(2) {
   color: #f29401;
 }
 
-.hero-section {
-  position: relative;
-  height: 676px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  width: 100%;
-  max-width: 100vw;
-  overflow: clip;
-  margin: 0 auto;
-  padding-top: 85px;
-}
 
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent 0% 0% no-repeat padding-box;
-  z-index: 1;
-  opacity: 1;
-}
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  color: #feffff;
-  letter-spacing: 0px;
-}
-
-.hero-title {
-  font-size: 46px;
-  line-height: 48px;
-  font-weight: 300;
-  font-family: "richmond-display", serif;
-  text-align: center;
-  letter-spacing: 1px;
-  opacity: 1;
-}
-
-.hero-title br {
-  display: none;
-}
 
 .color-w {
   color: #132030;
@@ -583,9 +559,7 @@ strong:nth-of-type(2) {
   font-weight: 300;
 }
 
-// .secleft-text {
 
-// }
 
 .fleft-text {
   font-weight: bolder;
@@ -1202,28 +1176,7 @@ strong:nth-of-type(2) {
     border-bottom: unset;
   }
 
-  .hero-content {
-    text-align: left;
-  }
-
-  .hero-title {
-    font-size: 80px;
-    line-height: 85px;
-    font-weight: 300;
-    font-family: "richmond-display", serif;
-    text-align: left;
-  }
-
-  .hero-title br {
-    display: inline;
-  }
-
-  .hero-text {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 300;
-    font-family: "Libre Franklin", sans-serif;
-  }
+ 
   .navbar-brand {
     margin-left: 1rem;
   }
@@ -1386,9 +1339,5 @@ strong:nth-of-type(2) {
 //   background-repeat: no-repeat;
 // }
 
-.breadcrumb-wrap {
-  z-index: 2;
-  align-self: baseline;
-}
 
 

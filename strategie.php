@@ -4,7 +4,7 @@ $fields = get_fields();
 
 <main class="strategie">
     <style>
-    .hero-section {
+    /* .hero-section {
         height: 550px;
     }
 
@@ -14,9 +14,9 @@ $fields = get_fields();
 
     .breadcrumb-wrap {
         position: absolute;
-        /* top: -81px; */
+   
         top: -12px;
-    }
+    } */
 
     .strategie-hero-title {
         font-size: 50px;
@@ -130,10 +130,10 @@ $fields = get_fields();
             text-align: left;
         }
     }
-
+/* 
     .hero-section {
         height: 500px;
-    }
+    } */
 
     .whi-container {
 
@@ -189,47 +189,14 @@ $fields = get_fields();
     </style>
     <div>
         <!-- Hero Section -->
-        <!-- <div class=" container ">
-            <div class="hero-section  bg-holder">
-                <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
-                </div>
-                <div class="hero-content text-center w-100">
-                    <div class="row ">
-                        <?php get_template_part('components/breadcrumb') ?>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-6 offset-md-3 align-self-center
-                             d-flex flex-column justify-content-center align-items-center ">
-                            <h1 class="strategie-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
-                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                                <span class="d-block">
-                                    <?= get_field("herotitle") ?>
-                                </span>
-                            </h1>
-                            <div class="strategie-hero-text ">
-                                <span class="d-block">
-                                    <?= get_field("herotext") ?>
-                                </span>
-                            </div>
-                            <div class="btn-primary-custom mt-4">
-                                <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="">
-                                    <?= get_field("meerwetenbtn")['title'] ?>
-                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                        alt="go kennismaken" class="go-arrow" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+        
 
 
         <div>
             <?= get_template_part("components/hero") ?>
         </div>
 
-        <!-- End of Hero Section -->
+      
 
 
 

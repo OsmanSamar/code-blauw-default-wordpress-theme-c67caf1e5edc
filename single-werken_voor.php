@@ -6,20 +6,20 @@ $fields = get_fields();
 
 <main class="single-werken-voor flex-grow-1">
     <style>
-    .hero-section {
+    /* .hero-section {
         background: url("<?= get_field('heroimage')['url'] ?> ");
         width: 100%;
-        /* max-width: 1700px; */
+      
         margin: 0 auto;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         object-fit: cover;
-    }
+    } */
 
-    .hero-section {
+    /* .hero-section {
         height: 500px;
-    }
+    } */
 
 
     .datum-title,

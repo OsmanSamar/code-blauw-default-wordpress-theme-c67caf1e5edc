@@ -4,11 +4,7 @@
 
 
     <style>
-    .breadcrumb-wrap {
-        position: absolute;
-        /* top: -109px; */
-        top: -41px;
-    }
+    
 
     /* Form Style */
     .gform_wrapper .gform_footer .gform_button {
@@ -18,40 +14,11 @@
     <div>
 
 
-        <!-- Hero Section -->
-
-        <!-- <div class="container ">
-            <div class="hero-section  bg-holder">
-                <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
-                </div>
-                <div class="hero-content text-center w-100">
-                    <?php get_template_part('components/breadcrumb') ?>
-                    <div class="row  ">
-                        <div class="col-12  col-lg-6 offset-lg-3 col-md-8 offset-md-2
-                            
-                             align-self-center d-flex flex-column justify-content-center align-items-center">
-                            <h1 class="werkwijze-hero-title text-center  " data-aos="fade-up" data-aos-offset="100"
-                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                                <span class="d-block">
-                                    <?= get_field("herotitle") ?>
-                                </span>
-                            </h1>
-
-                            <div class="werkwijze-hero-text ">
-                                <span class="d-block">
-                                    <?= get_field("herotext") ?>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+        
         <div>
             <?= get_template_part("components/hero") ?>
         </div>
-        <!-- End of Hero Section -->
+       
 
         <div class="blue-block ">
             <div class="container ">
