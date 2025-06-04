@@ -63,7 +63,7 @@ add_action('admin_menu', 'remove_menus');
 // Add thumbnail support
 function thumbnails()
 {
-    add_theme_support('post-thumbnails', array('post', 'page'));
+    add_theme_support('post-thumbnails', array('post', 'page','werken_voor','onze_expertises'));
 }
 add_action('init', 'thumbnails');
 
