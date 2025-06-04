@@ -27,11 +27,14 @@
   background-color: #f29401 !important;
   color: #fff !important;
   border: none !important;
-  // display: inline-flex !important;
-  // align-items: center !important;
-  background: url("<?= get_field('white_arrow')['url'] ?> ");
+  font-size: 16px;
+  font-style: normal;
+  line-height: 22px;
+  font-weight: 500;
+  font-family: "ff-scala-sans-pro", sans-serif;
+  letter-spacing: 0px;
+   background-image: url("../images/whitenextarrow.svg") !important;
   background-size: 9px 8px !important;
-  // background-position: right 3px center !important;
   background-position: right 13px center !important;
   background-repeat: no-repeat !important;
 }
