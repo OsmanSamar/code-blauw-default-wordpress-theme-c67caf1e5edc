@@ -1,3 +1,52 @@
-.project-en-programmamanagement{
-    
+.project-en-programmamanagement {
+  .testimonial-container {
+    margin: 0 auto;
+    background: #f7f6f4 0% 0% no-repeat padding-box;
+    opacity: 1;
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+
+  .white-contianer::before {
+    content: "";
+    position: absolute;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    left: 0;
+    height: 100%;
+    min-height: 550px;
+    background: #ffffff;
+     opacity: 1;
+  }
+
+  .inside-container {
+      padding: 80px 0px;
+    }
+
+      b,
+    strong {
+        color: #132030;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        line-height: inherit;
+        font-weight: 800;
+    }
+    .testi-text {
+        line-height: 30px;
+    }
+
+    // .swiper-container .swiper-button-prev {
+    //     position: absolute;
+     
+    //     top: -12px !important;
+    // }
+
+    // .swiper-container .swiper-button-next {
+    //     position: absolute;
+       
+    //     top: -12px !important;
+    // }
+
 }

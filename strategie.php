@@ -3,279 +3,75 @@ $fields = get_fields();
 //Template Name: strategie  ?>
 
 <main class="strategie">
-    <style>
-    /* .hero-section {
-        height: 550px;
-    }
-
-    .hero-content {
-        position: relative;
-    }
-
-    .breadcrumb-wrap {
-        position: absolute;
-   
-        top: -12px;
-    } */
-
-    .strategie-hero-title {
-        font-size: 50px;
-        line-height: 85px;
-        font-weight: 500;
-        font-family: "richmond-display", serif;
-        text-align: center;
-        letter-spacing: 0px;
-        color: #feffff;
-    }
-
-    .strategie-hero-text {
-        text-align: center;
-        font-size: 14px;
-        line-height: 24px;
-        font-weight: 300;
-        font-family: "Libre Franklin", sans-serif;
-        letter-spacing: 1px;
-        color: #ffffff;
-        opacity: 1;
-        margin-bottom: 10px;
-    }
-
-
-
-    .button-container {
-        border: 1px solid #f29401;
-        border-radius: 5px;
-        width: 250px;
-        height: 51px;
-        padding: 10px;
-        background-color: #f29401;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        margin-top: 30px;
-    }
-
-    .button-text {
-        text-align: center;
-        font-size: 14px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #FFFFFF;
-    }
-
-    .werk-blauwijs-title {
-        text-align: left;
-        font-size: 36px;
-        line-height: 50px;
-        font-weight: 300;
-        font-family: "richmond-display", serif;
-        letter-spacing: 0px;
-        color: #1E73BE;
-        opacity: 1;
-    }
-
-
-    .waaromkiezenvoorblauw {
-        text-align: left;
-        font-size: 36px;
-        line-height: 50px;
-        font-weight: 300;
-        font-family: "richmond-display", serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-        margin-bottom: 1.5rem;
-
-    }
-
-    .right-text-bold,
-    .right-text-notbold {
-        text-align: left;
-        font-size: 17px;
-        line-height: 32px;
-        font-weight: 300;
-        font-family: 'ff-scala-sans-pro', sans-serif;
-        letter-spacing: 0px;
-        color: #132030;
-        opacity: 1;
-    }
-
-
-
-    .right-text-bold {
-        font-weight: bolder;
-
-    }
-
-    .blue-block {
-        width: 100%;
-        margin: 0 auto;
-        background-color: #CCE1F4;
-        padding-top: 84px;
-        padding-bottom: 65px;
-    }
-
-    .str-left-col {
-        margin-top: unset;
-        margin-bottom: 3rem;
-    }
-
-    @media (min-width: 768px) {
-
-        .right-text,
-        .right-text-bold {
-            text-align: left;
-        }
-    }
-/* 
-    .hero-section {
-        height: 500px;
-    } */
-
-    .whi-container {
-
-        margin-top: 5rem !important;
-    }
-
-    @media (min-width: 992px) {
-
-        .strategie-hero-title {
-
-            text-align: left;
-
-        }
-
-
-        .strategie-hero-text {
-            font-size: 16px;
-        }
-
-        .right-text,
-        .right-text-bold {
-            text-align: left;
-        }
-
-
-        .whi-container {
-            /* height: 131px; */
-            /* margin-top: 5rem !important; */
-        }
-
-        .organ-title {
-            font-size: 40px;
-            line-height: 50px;
-            text-align: left;
-            padding-left: 27px;
-            margin-bottom: -9px;
-        }
-
-        /* .hero-content {
-            margin-top: 23px;
-        } */
-
-        .str-left-col {
-            margin-top: 5rem;
-        }
-
-        .strategie-hero-title {
-            margin-top: -24px;
-        }
-
-
-    }
-    </style>
-    <div>
+  
+    <div class="container">
         <!-- Hero Section -->
-        
-
-
         <div>
             <?= get_template_part("components/hero") ?>
         </div>
 
-      
 
-
-
-
-
-        <!-- Hoe werkt Blauw IJs? Block -->
-        <div class="container mb-5">
-            <div class="row" style="margin-top:5rem; margin-bottom: 5rem;">
+        <!-- Werkt Block -->
+        <div class="werk-container ">
+            <div class=" row" >
                 <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <span class="werk-blauwijs-title"><?= get_field("voorwieisblauwijs") ?></span>
-
+                    <h2 ><?= get_field("voorwieisblauwijs") ?></h2>
                 </div>
                 <div class="col-12 col-lg-6 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="d-flex flex-column ">
                         <span class=" pt-2 ">
-                            <span class="right-text-bold " style="font-weight: bolder;">
+                            <span class="regular font-bold " style="font-weight: bolder;">
                                 <?= get_field("righttext") ?>
                             </span>
-                            <span class="right-text-notbold pt-2 "><?= get_field("secrighttext") ?></span>
+                            <span class="regular pt-2 "><?= get_field("secrighttext") ?></span>
                         </span>
-
-
-
-
-                        <div class=" mt-5">
-                            <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="button btn-custom-container"
-                                style="">
+                            <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="button btn-yellow-line mt-5">
                                 <?= get_field("onzeklantcasesbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                     alt="go onze execttises" class="go-arrow" />
                             </a>
-
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
-        <!--End of Hoe werkt Blauw IJs? Block -->
+     
+
+
 
         <!--first-blue-block  -->
-        <div class="blue-block ">
-            <div class="container ">
+        <div class="blue-block  position-relative">
+            <div class="inside-block ">
 
-                <div class="row  mb-3">
-                    <div class="col-12 col-lg-5 str-left-col  my-auto py-4" data-aos="fade-right" data-aos-offset="100"
+                <div class="row">
+                    <div class="col-12 col-lg-5   my-auto py-4" data-aos="fade-right" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="col-lg-8 d-flex ">
-                            <span class="waaromkiezenvoorblauw"><?= get_field("waaromkiezenvoorblauw") ?></span>
+                            <span class="h2"><?= get_field("waaromkiezenvoorblauw") ?></span>
                         </div>
                         <div class="d-flex flex-column  ">
-                            <!-- <span class="waaromkiezenvoorblauw"><?= get_field("waaromkiezenvoorblauw") ?></span> -->
-                            <span class="right-text-bold"><?= get_field("righttextbold") ?></span>
-                            <span class="right-text-notbold"><?= get_field("righttextnotbold") ?></span>
+                            <span class="regular bold" ><?= get_field("righttextbold") ?></span>
+                            <span class="regular"><?= get_field("righttextnotbold") ?></span>
                         </div>
                     </div>
-                    <div class="col-lg-1"></div>
-                    <!-- offset-lg-1 -->
-                    <div class="col-12 col-lg-6 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                   
+                    <div class="col-12 col-lg-6 offset-lg-1 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <img src="<?= get_field("businesswomen")['url'] ?>"
                             alt="<?= get_field("businesswomen")['alt'] ?>"
-                            style="border-radius: 5px 0px 0px 5px; object-fit: cover;" />
+                            class="img-block"
+                            />
                     </div>
                 </div>
 
-
-
-
-
-                <div class="whi-container  " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                <div class="white-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
-                        <span class="organ-title">
+                        <span class="title">
                             <?= get_field("organisatietext") ?>
                         </span>
-                        <div class="d-inline-flex" style="margin-right: 27px;">
+                        <div class="d-inline-flex btn-wrap">
                             <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="button btn-primary">
                                 <?= get_field("vraagaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
@@ -285,15 +81,8 @@ $fields = get_fields();
 
                     </div>
                 </div>
-
-                <!--End of wshite-containe-->
             </div>
         </div>
-        <!--first-blue-block  -->
-
-
-
-
 
     </div>
 </main>
