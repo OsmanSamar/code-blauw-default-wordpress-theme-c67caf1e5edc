@@ -4,15 +4,7 @@ $fields = get_fields();
 
 <main class="project-en-programmamanagement">
     <style>
-    .hero-content {
-        position: relative;
-    }
-
-    .breadcrumb-wrap {
-        position: absolute;
-        top: -83px;
-        /* top: 28px; */
-    }
+   
 
     .blauw-left-text {
         text-align: left;
@@ -291,43 +283,12 @@ $fields = get_fields();
     </style>
 
 
-    <div>
+    <div class="container">
         <!-- Hero Section -->
-        <div class="container">
-            <div class=" hero-section bg-holder">
-                <div class="bg" style="background-image:url('<?= get_field('heroimage')['url'] ?> ')">
-                </div>
 
-                <div class="hero-content text-center w-100">
-                    <?php get_template_part('components/breadcrumb') ?>
-                    <div class="row">
-                        <div class="col-12 col-lg-12   d-flex flex-column justify-content-center align-items-center">
-                            <h1 class=" pro-hero-title text-center" data-aos="fade-up" data-aos-offset="100"
-                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                                <span class="">
-                                    <?= get_field("herotitle") ?>
-                                </span>
-                            </h1>
-                            <div class="pro-hero-text" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                                data-aos-duration="1000" data-aos-easing="ease-in-out">
-                                <span class="d-block">
-                                    <?= get_field("herotext") ?>
-                                </span>
-                            </div>
-                            <div class="button btn-primary mt-4">
-                                <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="">
-                                    <?= get_field("meerwetenbtn")['title'] ?>
-                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                        alt="go kennismaken" class="go-arrow" />
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div>
+            <?= get_template_part("components/hero") ?>
         </div>
-
 
 
         <!-- End of Hero Section -->

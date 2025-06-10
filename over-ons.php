@@ -90,11 +90,6 @@ $fields = get_fields();
                 </div>
             </div>
         </div>
-      
-
-
-
-      
 
         <!--werken-swiper block  -->
         <div >
