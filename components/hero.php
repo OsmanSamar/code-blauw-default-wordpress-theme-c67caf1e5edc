@@ -15,7 +15,7 @@ $bgImg = get_the_post_thumbnail_url();
                         py-5 mt-4
                         d-flex flex-column justify-content-center align-items-center align-self-center
                          my-auto ">
-                    <h1 data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
+                    <h1 class="text-center" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
                         data-aos-easing="ease-in-out">
                         <?php if (get_field("herotitle")): ?>
                             <?= get_field("herotitle", $id) ?>
@@ -26,21 +26,26 @@ $bgImg = get_the_post_thumbnail_url();
                     </h1>
                     <span class="col-lg-8 offset-lg- hero-text"> <?= get_field("herotext") ?> </span>
 
-                    <div class=" mt-5">
+                    <!-- Btns -->
+                   
                         <?php
                         $btns = get_field("btns");
                         if (!empty($btns) && isset($btns['url']) && isset($btns['title'])): ?>
-                            <a href="<?= esc_url($btns['url']) ?>" class="button btn-primary ">
+                          <div class=" mt-5">
+                              <a href="<?= esc_url($btns['url']) ?>" class="button btn-primary ">
                                 <?= esc_html($btns['title']) ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
                                     class="go-arrow" />
                             </a>
+                          </div>
                         <?php endif; ?>
-                    </div>
+                   
 
+
+                    <!-- Lees tijd -->
                     <?php if (is_singular('werken_voor')): ?>
-                        <div class="d-flex flex-row justify-content-between">
-                            <div class="datum-container ">
+                        <div class=" d-flex flex-row justify-content-between  w-100" >
+                            <div class=" datum-container  ">
                                 <span class="datum-title">
                                     Datum
                                 </span>
@@ -48,7 +53,7 @@ $bgImg = get_the_post_thumbnail_url();
                                     <?= get_the_date() ?>
                                 </span>
                             </div>
-                            <div class="less-container ">
+                            <div class=" less-container ">
                                 <span class="less-title">
                                     Leestijd
                                 </span>
