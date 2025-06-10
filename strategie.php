@@ -71,7 +71,7 @@ $fields = get_fields();
                         <span class="title">
                             <?= get_field("organisatietext") ?>
                         </span>
-                        <div class="d-inline-flex btn-wrap">
+                        <div class="d-inline-flex btn-wrap mt-3 mt-lg-0">
                             <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="button btn-primary">
                                 <?= get_field("vraagaanbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
