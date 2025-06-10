@@ -36,21 +36,31 @@ h2 {
   }
 }
 
-h3{
+h3 {
   color: #132030;
   font-size: 26px;
-   font-weight: 300;
+  font-weight: 300;
   font-style: normal;
   line-height: 50px;
   font-family: "richmond-display", serif;
   letter-spacing: 0px;
   opacity: 1;
- @media (min-width: 992px) {
-   font-size: 36px;
+  @media (min-width: 992px) {
+    font-size: 36px;
   }
-  
-   
+}
 
+.hero-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 24px;
+  font-family: "Libre Franklin", sans-serif;
+  letter-spacing: 0px;
+  opacity: 1;
+  @media (min-width: 992px) {
+  }
 }
 
 .regular {

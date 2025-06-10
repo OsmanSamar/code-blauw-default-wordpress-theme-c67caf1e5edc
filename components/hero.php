@@ -25,6 +25,7 @@ $bgImg = get_the_post_thumbnail_url();
                             <?php
                         endif; ?>
                     </h1>
+                    <span class="hero-text">  <?= get_field("herotext") ?> </span>
 
                     <?php if(is_singular( 'werken_voor' )): ?>
                         <div class="d-flex flex-row justify-content-between">

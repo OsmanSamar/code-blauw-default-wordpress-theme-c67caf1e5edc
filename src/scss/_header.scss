@@ -104,7 +104,7 @@ li {
   content: "";
   position: absolute;
   bottom: 0;
-  height: 2px;
+  height: 1px;
   width: 0%;
   background-color: #f29401;
   transition: width 0.3s ease;
@@ -118,8 +118,7 @@ li {
     hue-rotate(10deg) brightness(100%) contrast(100%);
 }
 .nav-link-ltr:hover::before {
-  // width: 100%;
-  width: 70%;
+ width: calc(100% - 3rem);
 }
 
 // Hamburger-menu
@@ -181,7 +180,7 @@ li {
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 2px;
+        height: 1px;
         width: 100% !important;
         background-color: white;
         transition: background-color 0.3s ease;
@@ -201,7 +200,8 @@ li {
   .navbar-nav .dropdown {
     padding: 0;
     width: 100%;
-    background: #fff !important;
+    background:#f29401 !important;
+    border: 1px solid #FFFFFF;
   }
   .dropdown-item {
     color: #132030;
