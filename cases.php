@@ -4,7 +4,7 @@ $fields = get_fields();
 ?>
 
 <main class="cases">
-   
+
 
     <div class=" container">
 
@@ -12,9 +12,6 @@ $fields = get_fields();
         <div>
             <?= get_template_part("components/hero") ?>
         </div>
-
-     
-
 
 
         <!--first-blue-block  -->
@@ -49,12 +46,12 @@ $fields = get_fields();
                                         class="testimonial-img" />
 
                                     <div class="card-body mt-1 mb-0 pb-4 pt-2">
-                                       
+
                                         <div class="d-flex justify-content-between align-items-center">
                                             <span class="testimonial-title"><?= $post->post_title ?></span>
                                             <span class="d-flex justify-content-center align-items-center arrow">
                                                 <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                    alt=" <?= $testimonial['white_arrow']['alt'] ?>" class="go-arrow"/>
+                                                    alt=" <?= $testimonial['white_arrow']['alt'] ?>" class="go-arrow" />
                                             </span>
                                         </div>
                                         <span class="testimonial-text mt-auto">
@@ -72,13 +69,11 @@ $fields = get_fields();
                 </div>
             </div>
 
-
-
         </div>
-       
+
         <!--White-containe-->
-        <div class="white-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-            data-aos-easing="ease-in-out">
+        <div class="white-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+            data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
                 <h3>
                     <?= get_field("organisatietext") ?>
@@ -94,9 +89,6 @@ $fields = get_fields();
         </div>
 
     </div>
-
-
-
 
 
 </main>

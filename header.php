@@ -98,8 +98,7 @@ unset($menu_items);
 
                                                 <?php foreach ($item->children as $child): ?>
                                                     <li>
-                                                        <a class="dropdown-item  d-flex "
-                                                            href="<?= $child->url; ?>">
+                                                        <a class="dropdown-item  d-flex " href="<?= $child->url; ?>">
                                                             <?= $child->title ?>
 
                                                         </a>
@@ -119,9 +118,8 @@ unset($menu_items);
                             </ul>
                         </div>
                         <!-- Button on the Right side (visible only on large screens) -->
-                         <a href="<?= esc_url(get_permalink(get_page_by_path('kennismaken'))) ?>"
-                            class="button btn-primary d-none d-lg-inline-flex justify-content-center align-items-center" style="width: 149px;height: 55px;    margin-right: -1px;     margin-bottom: -1px;" >
-                           kennismaken
+                        <a href="<?= get_field("btn",'option')['url'] ?>"  class="button btn-primary d-none d-lg-inline-flex justify-content-center align-items-center nav-bar-btn">
+                            <?= get_field("btn",'option')['title'] ?>
                              <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
                                 class="go-arrow" />
                         </a>
