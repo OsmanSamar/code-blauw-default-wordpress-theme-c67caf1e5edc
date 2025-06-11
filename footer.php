@@ -173,12 +173,12 @@ $footer_menu = $menu;
                         </a>
 
 
-                        <div class=" mb-5">
+                        <div class="mb-5 btn-wrap">
                             <a href=" <?= get_field("contactbtn", 'option')['url'] ?>"
                                 class=" d-flex align-items-center gap-3  button btn-white-line">
                                 <?= get_field("contactbtn", 'option')['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                    alt="go contact page" class="go-arrow" />
+                                    alt="Go to contact page" class="go-arrow" />
                             </a>
                         </div>
                     </div>
