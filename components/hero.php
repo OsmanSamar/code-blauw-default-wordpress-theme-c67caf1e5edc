@@ -14,7 +14,7 @@ $bgImg = get_the_post_thumbnail_url();
                 <div class="col-12 col-lg-8 offest-lg-2  col-md-8 offset-md-2 
                         py-5 mt-4
                         d-flex flex-column justify-content-center align-items-center align-self-center
-                         my-auto ">
+                         my-auto text-center ">
                     <h1 class="text-center" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
                         data-aos-easing="ease-in-out">
                         <?php if (get_field("herotitle")): ?>
