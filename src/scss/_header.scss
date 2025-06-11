@@ -1,13 +1,12 @@
-
-  .go-arrow {
-    width: 10px;
-    height: 9px;
-    object-fit: cover;
-    pointer-events: auto;
-    z-index: 1000;
-    display: inline-block;
-    vertical-align: middle;
-  }
+.go-arrow {
+  width: 10px;
+  height: 9px;
+  object-fit: cover;
+  pointer-events: auto;
+  z-index: 1000;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 #breadcrumbs,
 #breadcrumbs a,
@@ -26,12 +25,40 @@
   margin-top: 100px;
 }
 
-
 .header {
   width: 100vw;
   z-index: 2;
 }
+
 /* NavBar Links */
+
+// Styling on Scroll
+.logo{
+  width: 137px;
+   height: 36px; 
+   object-fit: cover;
+}
+.navbar {
+  max-width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #fff !important;
+}
+
+.navbar.scrolled .nav-link {
+  color: #000 !important;
+}
+
+.navbar.scrolled .dropdownarrow {
+  filter: invert(1); 
+}
+
 .navbar {
   height: unset;
   border: 1px solid #ffffff;
@@ -83,7 +110,7 @@
   //Removed the defualt icon of dropdown
 }
 li {
-    margin-bottom: unset !important;
+  margin-bottom: unset !important;
 }
 .dropdownarrow {
   width: 12px;
@@ -96,10 +123,7 @@ li {
   color: #f29401 !important;
   font-weight: 900 !important;
 }
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
-  color: unset !important;
-}
+
 .nav-link-ltr::before {
   content: "";
   position: absolute;
@@ -118,7 +142,7 @@ li {
     hue-rotate(10deg) brightness(100%) contrast(100%);
 }
 .nav-link-ltr:hover::before {
- width: calc(100% - 3rem);
+  width: calc(100% - 3rem);
 }
 
 // Hamburger-menu
@@ -200,8 +224,8 @@ li {
   .navbar-nav .dropdown {
     padding: 0;
     width: 100%;
-    background:#f29401 !important;
-    border: 1px solid #FFFFFF;
+    background: #f29401 !important;
+    border: 1px solid #ffffff;
   }
   .dropdown-item {
     color: #132030;
@@ -242,7 +266,7 @@ li {
 // On md to above screen
 @media (min-width: 1200px) {
   .navbar {
-    height: 55px;
+    height: 53px;
   }
   .dropdown-item {
     color: #132030;
@@ -286,9 +310,11 @@ li {
   }
 }
 
-
-.nav-bar-btn{
-  width: 149px;height: 55px;    margin-right: -1px;     margin-bottom: -1px;
+.nav-bar-btn {
+  width: 149px;
+  height: 55px;
+  margin-right: -1px;
+  margin-bottom: -1px;
 }
 
 ///////HEADER
@@ -339,16 +365,9 @@ strong:nth-of-type(2) {
   color: #f29401;
 }
 
-
-
-
 .color-w {
   color: #132030;
 }
-
-
-
-
 
 .logos-container {
   flex-wrap: wrap !important;
@@ -375,8 +394,6 @@ strong:nth-of-type(2) {
 //   margin-top: -96px;
 //   margin: 0 auto;
 // }
-
-
 
 .arrow {
   background-color: #1e73be;
@@ -486,24 +503,9 @@ strong:nth-of-type(2) {
 
 // Over-ons page Style
 
-
 .right-text {
   margin-top: 8px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .whitecontainertext {
   text-align: left;
@@ -538,13 +540,6 @@ strong:nth-of-type(2) {
 //   // margin-top: 58px;
 // }
 
-
-
-
-
-
-
-
 // Contact Page Style
 .kennis-hero-title {
   font-size: 50px;
@@ -568,12 +563,6 @@ strong:nth-of-type(2) {
   margin-bottom: 10px;
 }
 
-
-
-
-
-
-
 .contact-info {
   text-align: left;
   font-size: 16px;
@@ -584,8 +573,6 @@ strong:nth-of-type(2) {
   color: #132030;
   opacity: 1;
 }
-
-
 
 .werkwijze-hero-title {
   font-size: 50px;
@@ -608,11 +595,6 @@ strong:nth-of-type(2) {
   opacity: 1;
   margin-bottom: 10px;
 }
-
-
-
-
-
 
 .werk-logo-container {
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -639,7 +621,6 @@ strong:nth-of-type(2) {
   color: #1e73be;
   opacity: 1;
 }
-
 
 // Footer Styling
 .footer {
@@ -904,7 +885,6 @@ strong:nth-of-type(2) {
     border-bottom: unset;
   }
 
- 
   .navbar-brand {
     margin-left: 1rem;
   }
@@ -936,13 +916,10 @@ strong:nth-of-type(2) {
     height: 13px;
   }
 
-  
-
   .verhaal-container {
     width: 1000px;
     height: 378px;
   }
-
 
   .left-container {
     padding: 0 70px;
@@ -956,12 +933,6 @@ strong:nth-of-type(2) {
     text-align: left;
     line-height: 80px;
   }
-
-
- 
-
-
-
 
   .bottom-padding {
     margin-bottom: unset;
@@ -1014,7 +985,3 @@ strong:nth-of-type(2) {
     margin-left: unset;
   }
 }
-
-
-
-

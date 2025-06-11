@@ -102,4 +102,20 @@ document.querySelectorAll(".partner-slider").forEach((x) => {
 
 
 
+//Navbar on Scroll 
+
+window.addEventListener("scroll", function () {
+  let navbar = document.querySelector(".navbar");
+  let logo = document.querySelector(".navbar-brand img"); // Select the logo image
+
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+    logo.src = logo.getAttribute("data-scrolled-logo"); // Set new logo when scrolled
+  } else {
+    navbar.classList.remove("scrolled");
+    logo.src = logo.getAttribute("data-default-logo");// Revert to original logo
+  }
+});
+
+
 
