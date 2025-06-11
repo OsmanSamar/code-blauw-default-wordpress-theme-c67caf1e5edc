@@ -59,7 +59,7 @@ $fields = get_fields();
                 <div class="row">
                     <div class="col-12 col-lg-6 my-auto py-4" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <div class="d-flex flex-column  text-left gap-4 mb-4">
+                        <div class="d-flex flex-column  text-left gap-4 mb-4 mb-lg-0">
                             <span class="regular text-bold">
                                 <?= get_field("bold_text") ?>
                             </span>
