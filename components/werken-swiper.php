@@ -15,7 +15,7 @@ if ($werkenVoor->have_posts()): ?>
         <div class="container swiper-container">
             <div class="row">
                 <div class=" col-lg-12 ">
-                    <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap ">
+                    <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap pb ">
                         <h3>
                             <?= get_field("werkentitle") ?>
                         </h3>
@@ -46,7 +46,7 @@ if ($werkenVoor->have_posts()): ?>
                                             <img src="<?= $testimonial["logo"]['url'] ?>"
                                                 alt="<?= $testimonial['logog']['alt'] ?>" class="testimonial-img"
                                                 />
-                                            <div class="card-body  mt-1 mb-0 pb-4 pt-2">
+                                            <div class="card-body  mt-1 mb-0 pb-4 pt-2 d-flex flex-column">
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     <div class="testimonial-title">
                                                         <?= $post->post_title ?>

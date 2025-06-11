@@ -1,4 +1,15 @@
 .front-page {
+
+  .pb{
+    padding-bottom: 62px;
+  }
+  .button-group {
+    margin-top: 40px;
+  }
+
+  .lead {
+    line-height: 24px;
+  }
   .left-col {
     margin-bottom: -38px;
   }
@@ -58,7 +69,8 @@
       position: relative;
       width: 100%;
       z-index: 3;
-      min-height: 400px;
+      // min-height: 400px;
+      min-height: 676px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -74,7 +86,7 @@
     .hero-section {
       .hero-content {
         // min-height: 45vh ;
-        min-height: 400px;
+        // min-height: 400px;
       }
     }
   }
@@ -82,11 +94,11 @@
     .left-col {
       margin-bottom: unset;
     }
-    .hero-section {
-      .hero-content {
-        min-height: 600px;
-      }
-    }
+    // .hero-section {
+    //   .hero-content {
+    //     min-height: 600px;
+    //   }
+    // }
   }
 
   // Added For blauw container
@@ -127,8 +139,11 @@
     margin: 0 auto;
     overflow-y: visible;
   }
-  .logo-img{
-    width: 72px; height: 64px; border-radius: 5px; object-fit: contain;
+  .logo-img {
+    width: 72px;
+    height: 64px;
+    border-radius: 5px;
+    object-fit: contain;
   }
 
   .swiper-button-prev,

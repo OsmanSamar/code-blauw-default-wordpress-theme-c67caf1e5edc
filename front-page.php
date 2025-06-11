@@ -4,35 +4,13 @@ $fields = get_fields();
 
 <main class="front-page">
 
-    <style>
-       
-
-        /* .swiper-title {
-          
-            position: absolute;
-            top: -84px;
-            width: 100%;
-
-        } */
-
-
-
-
+    <!-- <style>
         @media (min-width: 992px) {
-           
-
-
-          
-
             .pe-lg {
                 padding-right: 30rem !important;
             }
-
-            
-
-
         }
-    </style>
+    </style> -->
 
 
     <div class="container">
@@ -45,7 +23,7 @@ $fields = get_fields();
             <div class="hero-content ">
                 <div class="row">
                     <div class="col-12 col-lg-8  offset-lg-1 pe-0 text-start ">
-                        <h1 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                        <h1 class="mb-3" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
                             data-aos-easing="ease-in-out">
                             <?= get_field("herotitlegekleuredtext") ?>
                         </h1>
@@ -54,22 +32,19 @@ $fields = get_fields();
                             <?= get_field("herotext") ?>
                         </span>
 
-                        <div class="button-group d-flex justify-content-start flex-wrap  mt-4 gap-2">
-
+                        <div class="button-group d-flex justify-content-start flex-wrap gap-2">
                             <a href="<?= get_field("meerwetenbtn")['url'] ?>" class="button btn-primary">
                                 <?= get_field("meerwetenbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go contact page" class="go-arrow" />
                             </a>
-
                             <a href="<?= get_field("overonsbtn")['url'] ?>" class="button btn-custom">
                                 <?= get_field("overonsbtn")['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go over ons page" class="go-arrow" />
                             </a>
-
-
                         </div>
+
                     </div>
                 </div>
             </div>
