@@ -13,27 +13,35 @@
 .gform-theme--foundation .gfield input,
 .gform-theme--foundation .gfield textarea,
 .gform-theme--foundation .gfield select {
+  color: #cce1f4 !important;
   inline-size: 100% !important;
   box-sizing: border-box !important;
   border-radius: 5px !important;
-  margin-bottom: 5px !important;
+  // margin-bottom: 5px !important;
   border: 1px solid #cce1f4 !important;
+  opacity: 1 !important;
 }
 
 .gform_wrapper .gform_footer .gform_button {
-  padding-left: 13px !important;
-  padding-right: 34px !important;
+  width: fit-content !important;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  padding: 13px 38px 13px 18px !important;
   border-radius: 5px !important;
   background-color: #f29401 !important;
   color: #fff !important;
-  border: none !important;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 22px;
-  font-weight: 500;
+  border: 1px solid #f29401 !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  line-height: 22px !important;
+  font-weight: 500 !important;
   font-family: "ff-scala-sans-pro", sans-serif;
   letter-spacing: 0px;
-   background-image: url("../images/whitenextarrow.svg") !important;
+  background-image: url("../images/whitenextarrow.svg") !important;
   background-size: 9px 8px !important;
   background-position: right 13px center !important;
   background-repeat: no-repeat !important;
@@ -52,7 +60,6 @@
   letter-spacing: 0px !important;
   font-size: 16px !important;
   font-weight: bold !important;
-  // line-height: 30px !important;
 }
 
 .gform-theme--foundation .gform_fields {

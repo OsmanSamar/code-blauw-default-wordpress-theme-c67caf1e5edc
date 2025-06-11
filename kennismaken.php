@@ -11,11 +11,11 @@
                 <div class="row container-form">
                     <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <div class="d-flex flex-column text-align-flex-start gap-3 contact-left-col" style="   ">
+                        <div class=" d-flex flex-column text-align-flex-start gap-3 left-container" >
                             <h3 >
                                 <?= get_field("waarkunnenwemeehelpen") ?>
                             </h3>
-                            <span class="regular">
+                            <span class="col-lg-11 regular ">
                                 <?= get_field("text") ?>
                             </span>
                             <div class="d-flex flex-column text-align-flex-start gap-2 mt-3 ">
@@ -41,7 +41,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                    <div class="col-12 col-lg-6 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column contact-form form-1">
                             <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="1" title="false" description="false"   cssClass="form-1"]')) ?>
