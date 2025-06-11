@@ -37,8 +37,8 @@ $fields = get_fields();
                 </h2>
 
                 <div class=" d-flex flex-wrap gap-2">
-                    <a href="<?= get_field("neemcontactopbtn")['url'] ?>" class="button btn-yellow-line">
-                        <?= get_field("neemcontactopbtn")['title'] ?>
+                    <a href="<?= get_field("strategiebtn")['url'] ?>" class="button btn-yellow-line">
+                        <?= get_field("strategiebtn")['title'] ?>
                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg" alt="go onze expertises"
                             class="go-arrow" />
                     </a>

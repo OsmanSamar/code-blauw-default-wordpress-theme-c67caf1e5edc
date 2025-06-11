@@ -44,20 +44,19 @@ if ($werkenVoor->have_posts()): ?>
                                     <a href="<?= get_permalink($post) ?>">
                                         <div class="testimonial-slide d-flex flex-column ">
                                             <img src="<?= $testimonial["logo"]['url'] ?>"
-                                                alt="<?= $testimonial['logog']['alt'] ?>" class="testimonial-img"
-                                                />
+                                                alt="<?= $testimonial['logog']['alt'] ?>" class="testimonial-img" />
                                             <div class="card-body  mt-1 mb-0 pb-4 pt-2 d-flex flex-column">
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     <div class="testimonial-title">
                                                         <?= $post->post_title ?>
                                                     </div>
                                                     <span class="d-flex justify-content-center align-items-center arrow">
-                                                        <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                            alt=" <?= $testimonial['white_arrow']['alt'] ?>" class="go-arrow" />
+                                                        <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                                            alt="go Contact page" class="go-arrow" />
                                                     </span>
                                                 </div>
                                                 <span class="testimonial-text mt-auto">
-                                                   <?= $testimonial["text"] ?>
+                                                    <?= $testimonial["text"] ?>
                                                 </span>
                                             </div>
                                         </div>

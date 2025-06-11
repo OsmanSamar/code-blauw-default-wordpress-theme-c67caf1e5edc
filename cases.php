@@ -50,8 +50,8 @@ $fields = get_fields();
                                         <div class="d-flex justify-content-between align-items-center">
                                             <span class="testimonial-title"><?= $post->post_title ?></span>
                                             <span class="d-flex justify-content-center align-items-center arrow">
-                                                <img src="<?= $testimonial["white_arrow"]['url'] ?>"
-                                                    alt=" <?= $testimonial['white_arrow']['alt'] ?>" class="go-arrow" />
+                                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                                    alt="go Contact page" class="go-arrow" />
                                             </span>
                                         </div>
                                         <span class="testimonial-text mt-auto">

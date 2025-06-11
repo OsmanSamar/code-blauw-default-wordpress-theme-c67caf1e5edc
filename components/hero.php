@@ -44,7 +44,7 @@ $bgImg = get_the_post_thumbnail_url();
 
                     <!-- Lees tijd -->
                     <?php if (is_singular('werken_voor')): ?>
-                        <div class=" d-flex flex-row justify-content-between  w-100" >
+                        <div class=" d-flex flex-row justify-content-between datum-time-container" >
                             <div class=" datum-container  ">
                                 <span class="datum-title">
                                     Datum
