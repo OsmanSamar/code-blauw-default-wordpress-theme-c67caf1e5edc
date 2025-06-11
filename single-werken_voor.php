@@ -58,9 +58,10 @@ $fields = get_fields();
             <div class="whi-container " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
-                    <h3 class="ml">
+                       <h3 class="ml">
                         <?= get_field("organisatietext") ?>
                     </h3>
+                
                     <a href="<?= get_field("vraagaanbtn")['url'] ?>" class="btn-wrap button btn-primary">
                         <?= get_field("vraagaanbtn")['title'] ?>
                         <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go Contact page"
