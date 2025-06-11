@@ -86,10 +86,10 @@ $footer_menu = $menu;
                                                             <?php foreach ($item->children as $child): ?>
                                                                 <li class="footer-nav-item footer-adres">
                                                                     <a class="footer-nav-link dropdown-toggle" href="<?= $child->url; ?>"
-                                                                        style="color: #132030;">
+                                                                       >
                                                                         <?= $child->title ?>
                                                                         <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
-                                                                            alt="Dropdown Icon" style="" class="dropdownarrow">
+                                                                            alt="Dropdown Icon"  class="dropdownarrow">
                                                                     </a>
                                                                 </li>
                                                             <?php endforeach; ?>
@@ -98,7 +98,7 @@ $footer_menu = $menu;
                                                     elseif ($item->menu_item_parent == 0):
                                                         ?>
                                                         <a class="footer-nav-link <?= get_permalink() == $item->url ? 'active' : '' ?>"
-                                                            href="<?= $item->url; ?>" style="color: #132030;">
+                                                            href="<?= $item->url; ?>" >
                                                             <?= $item->title ?>
                                                         </a>
                                                         <?php
@@ -173,9 +173,9 @@ $footer_menu = $menu;
                         </a>
 
 
-                        <div class=" mb-5 footer-contact-btn">
+                        <div class=" mb-5">
                             <a href=" <?= get_field("contactbtn", 'option')['url'] ?>"
-                                class=" d-flex align-items-center gap-3 text-white">
+                                class=" d-flex align-items-center gap-3  button btn-white-line">
                                 <?= get_field("contactbtn", 'option')['title'] ?>
                                 <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                     alt="go contact page" class="go-arrow" />

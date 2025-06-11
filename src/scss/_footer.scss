@@ -26,7 +26,15 @@
     margin-top: 49px;
   }
 
-  //
+
+  .footer-nav-link{
+   color: #132030;
+   opacity: 0.5;
+   &:hover{
+    opacity: 1;
+   }
+  }
+  
 
 .left-cont,
 .right-cont {
@@ -146,20 +154,8 @@
   opacity: 0.5;
 }
 
-.footer-contact-btn {
-  width: fit-content;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  padding: 19px 14px 16px 14px;
-  height: 51px;
-  display: flex;
-  align-items: center;
-  margin-top: 33px;
-  font-family: "ff-scala-sans-pro", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
-}
+
+
 
 .footer-codeblauw {
   padding: 30px 0;

@@ -25,7 +25,7 @@
 
 .btn-custom {
   background: transparent;
-   color: #ffffff;
+  
   &:hover {
     color: #ffffff;
     background: linear-gradient(
@@ -51,10 +51,23 @@
   }
 }
 
+.btn-white-line {
+  background: transparent;
+  border: 1px solid #ffffff;
+  &:hover {
+     color: #f29401 !important;
+   background: #ffffff;
+   .go-arrow{
+    filter: brightness(0);
+   }
+   
+  }
+}
+
 
 .btn-primary {
   background: #f29401;
-  color: #ffffff;
+
   &:hover {
      color: #ffffff;
     box-shadow: 0px 4px 15px rgba(242, 148, 1, 0.5) !important;
