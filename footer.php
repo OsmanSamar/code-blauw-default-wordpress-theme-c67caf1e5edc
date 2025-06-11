@@ -1,35 +1,33 @@
+<?php
+
+
+$menu_id = get_nav_menu_locations()['footer-menu'];
+$items = wp_get_nav_menu_items($menu_id);
+$menu_items = array();
+foreach ((array) $items as $key => $menu_item) {
+    $menu_items[$menu_item->menu_item_parent][] = $menu_item;
+}
+$menu = [];
+foreach ($items as $item) {
+    if ($item->menu_item_parent == 0) {
+        $menu[] = $item;
+    }
+    if (isset($menu_items[$item->ID])) {
+        $item->children = $menu_items[$item->ID];
+    }
+}
+unset($menu_items);
+$footer_menu = $menu;
+?>
+
+
+
+
 <footer class="footer">
-    <style>
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    li {
-        margin-bottom: 0.25rem;
-
-    }
-
-    @media (min-width: 992px) {
-
-
-        .navbar-nav .custom-nav-link {
-            text-align: left;
-            font-size: 16px;
-        }
-    }
-
-    .footer-text {
-        margin-top: 49px;
-    }
-    </style>
-
-
 
     <div class="footer-section">
         <div class="container">
-            <!-- container -->
+
             <div class="row g-0">
 
                 <div class="col-lg-6 left-cont under-bottom">
@@ -50,74 +48,76 @@
                                         class="footer-linked-img" />
                                 </a>
                             </div>
-                            <!-- Footer text in 5 cols -->
+
                             <div class="col-lg-10  d-flex align-items-center footer-text">
                                 <?= get_field("footertext", 'option') ?>
                             </div>
                         </div>
 
 
-                        <div class="row row-cols-auto mt-3 align-items-center  bottom-padding">
-                            <div class="col col-md-5 col-lg-5 d-flex flex-column flex-md-row">
+                        <div class="row row-cols-auto mt-5 align-items-center bottom-padding">
+                            <!-- Information col -->
+                            <div class="col col-md-5 col-lg-3 d-flex flex-column flex-md-row">
                                 <div class="d-flex flex-column gap-2">
                                     <span class="footer-adres"><?= get_field("footercity", 'option') ?></span>
                                     <span class="footer-adres"><?= get_field("footeradres", 'option') ?></span>
-                                    <!-- <span class="footer-adres"><?= get_field("footerkvk", 'option') ?></span> -->
                                     <div class="d-flex gap-1">
-                                        <span class="footer-adres "
+                                        <span class="footer-adres"
                                             style="font-weight:bold"><?= get_field("footerkvk", 'option') ?></span>
                                         <span class="footer-adres"><?= get_field("footernumber", 'option') ?></span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col col-md-2 col-lg-2 d-flex flex-column gap-2">
-                                <ul class="footer-nav">
-                                    <li class="footer-nav-item footer-adres">
-                                        <a class="footer-nav-link" style=" color: #132030;"
-                                            href="<?= esc_url(home_url('/sample-page')); ?>">Home</a>
-                                    </li>
-                                    <li class="footer-nav-item dropdown footer-adres">
-                                        <a class="footer-nav-link dropdown-toggle" href="#" id="footerDropdown"
-                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false" style=" color: #132030;">
-                                            Diensten
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="footerDropdown">
-                                            <li><a class="dropdown-item footer-adres"
-                                                    href="<?= esc_url(home_url('/')); ?>">X</a></li>
-                                            <li><a class="dropdown-item footer-adres"
-                                                    href="<?= esc_url(home_url('/')); ?>">e</a></li>
-                                            <li><a class="dropdown-item footer-adres"
-                                                    href="<?= esc_url(home_url('/')); ?>">g</a></li>
-                                            <li><a class="dropdown-item footer-adres"
-                                                    href="<?= esc_url(home_url('/')); ?>">T</a></li>
-                                            <li><a class="dropdown-item footer-adres"
-                                                    href="<?= esc_url(home_url('/')); ?>">A</a></li>
+
+                            <!-- Links col -->
+
+                            <div class="row">
+                                <?php
+                                $footer_cols = array_chunk($footer_menu, ceil(count($footer_menu) / 2));
+                                foreach ($footer_cols as $footer_menu): ?>
+                                    <div class=" col-md-3 col-lg-6">
+                                        <ul class="footer-nav">
+                                            <?php
+                                            foreach ($footer_menu as $item): ?>
+                                                <li class="footer-nav-item footer-adres">
+                                                    <?php if (!empty($item->children)): ?>
+
+                                                        <ul class="footer-submenu">
+                                                            <?php foreach ($item->children as $child): ?>
+                                                                <li class="footer-nav-item footer-adres">
+                                                                    <a class="footer-nav-link dropdown-toggle" href="<?= $child->url; ?>"
+                                                                        style="color: #132030;">
+                                                                        <?= $child->title ?>
+                                                                        <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
+                                                                            alt="Dropdown Icon" style="" class="dropdownarrow">
+                                                                    </a>
+                                                                </li>
+                                                            <?php endforeach; ?>
+                                                        </ul>
+                                                    <?php
+                                                    elseif ($item->menu_item_parent == 0):
+                                                        ?>
+                                                        <a class="footer-nav-link <?= get_permalink() == $item->url ? 'active' : '' ?>"
+                                                            href="<?= $item->url; ?>" style="color: #132030;">
+                                                            <?= $item->title ?>
+                                                        </a>
+                                                        <?php
+
+                                                    endif; ?>
+                                                </li>
+                                            <?php endforeach; ?>
                                         </ul>
-                                    </li>
-                                    <li class="footer-nav-item footer-adres">
-                                        <a class="footer-nav-link" href="<?= esc_url(home_url('/cases')); ?>"
-                                            style=" color: #132030;">Cases</a>
-                                    </li>
-                                </ul>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
-                            <div class="col col-md-4 col-lg-4 d-flex flex-column gap-2">
-                                <ul class="footer-nav">
-                                    <li class="footer-nav-item footer-adres">
-                                        <a class="nav-link custom-nav-link"
-                                            href="<?= esc_url(home_url('/over-ons')); ?>">Over ons</a>
-                                    </li>
-                                    <li class="footer-nav-item footer-adres">
-                                        <a class="nav-link custom-nav-link"
-                                            href="<?= esc_url(home_url('/werkwijze')); ?>">Werkwijze</a>
-                                    </li>
-                                    <li class="footer-nav-item footer-adres">
-                                        <a class="nav-link custom-nav-link"
-                                            href="<?= esc_url(home_url('/kennismaken')); ?>">Veelgestelde vragen</a>
-                                    </li>
-                                </ul>
-                            </div>
+
+                        
+
+
                         </div>
+
+
+
                     </div>
                 </div>
 
