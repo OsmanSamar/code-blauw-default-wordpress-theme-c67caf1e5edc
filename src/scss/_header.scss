@@ -55,6 +55,10 @@
 
 .navbar.scrolled .nav-link {
   color: #000 !important;
+
+  &.nav-link-ltr:hover {
+    color: #f29401 !important;
+}
 }
 
 .navbar.scrolled .dropdownarrow {

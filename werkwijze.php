@@ -21,7 +21,7 @@ $fields = get_fields();
                 </div>
                 <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <div class="regular text-bold pt-2"> <?= get_field("righttext") ?></div>
+                    <div class="text-bold regular  pt-2"> <?= get_field("righttext") ?></div>
                     <div class="regular  pt-2 mt-3"> <?= get_field("secrighttext") ?></div>
 
                     <div class="d-flex flex-wrap mt-5 gap-2">
@@ -91,7 +91,7 @@ $fields = get_fields();
         <div class="container-img partner-slider   w-100  position-relative ">
             <div class="bg" style="background-image:url('<?= get_template_directory_uri() ?>/images/mask-group.png') ">
             </div>
-            <div class="swiper-title " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+            <div class="h2" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <?= get_field("titleoflogos") ?>
             </div>
