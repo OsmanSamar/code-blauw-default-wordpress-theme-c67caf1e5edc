@@ -59,12 +59,14 @@ $footer_menu = $menu;
                             <!-- Information col -->
                             <div class="col col-md-5 col-lg-3 d-flex flex-column flex-md-row">
                                 <div class="d-flex flex-column gap-2">
-                                    <span class="footer-adres"><?= get_field("footercity", 'option') ?></span>
-                                    <span class="footer-adres"><?= get_field("footeradres", 'option') ?></span>
+                                    <a class="regular " href="https://www.google.com/maps/search/?q=<?= urlencode(get_field('footercity', 'option') . ' ' . get_field('footeradres', 'option')) ?>" target="_blank">
+                                               <span><?= get_field('footercity', 'option') ?></span>
+                                              <span><?= get_field('footeradres', 'option') ?></span>
+                                      </a>
                                     <div class="d-flex gap-1">
-                                        <span class="footer-adres"
-                                            style="font-weight:bold"><?= get_field("footerkvk", 'option') ?></span>
-                                        <span class="footer-adres"><?= get_field("footernumber", 'option') ?></span>
+                                        <span class="bold regular "
+                                            ><?= get_field("footerkvk", 'option') ?></span>
+                                        <span class="regular"><?= get_field("footernumber", 'option') ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -79,12 +81,12 @@ $footer_menu = $menu;
                                         <ul class="footer-nav">
                                             <?php
                                             foreach ($footer_menu as $item): ?>
-                                                <li class="footer-nav-item footer-adres">
+                                                <li class="footer-nav-item regular">
                                                     <?php if (!empty($item->children)): ?>
 
                                                         <ul class="footer-submenu">
                                                             <?php foreach ($item->children as $child): ?>
-                                                                <li class="footer-nav-item footer-adres">
+                                                                <li class="footer-nav-item regular">
                                                                     <a class="footer-nav-link dropdown-toggle" href="<?= $child->url; ?>"
                                                                        >
                                                                         <?= $child->title ?>
@@ -111,12 +113,7 @@ $footer_menu = $menu;
                                 <?php endforeach; ?>
                             </div>
 
-                        
-
-
                         </div>
-
-
 
                     </div>
                 </div>

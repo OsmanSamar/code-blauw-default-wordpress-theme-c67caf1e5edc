@@ -184,13 +184,18 @@
   font-family: "ff-scala-sans-pro", sans-serif;
 }
 
-.footer-adres {
-  color: #132030;
-  font-family: "ff-scala-sans-pro", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
+.regular {
   line-height: 24px;
-  letter-spacing: 0px;
+  opacity: 0.7;
+  cursor: pointer;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.bold{
+  font-weight: bold;
+  opacity: 1;
 }
 .navbar-nav .custom-nav-link {
   text-align: left;
