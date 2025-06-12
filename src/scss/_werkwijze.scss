@@ -1,11 +1,8 @@
 .werkwijze {
-
-  .inner-wrap{
+  .inner-wrap {
     padding: 80px 0px;
   }
-  .btn-left {
-    margin-right: 27px;
-  }
+
   .white-wraper {
     background: #ffffff 0% 0% no-repeat padding-box;
     width: 1000px;
@@ -13,7 +10,7 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1700px;
-    padding: 23px;
+    padding: 40px 40px 32px 40px;
     margin-bottom: 1rem;
   }
 
@@ -22,6 +19,38 @@
   }
   h2 {
     line-height: 50px;
+     z-index: 1;
+  }
+  // h3 {
+  //   z-index: 1;
+  // }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: relative !important;
+    width: 41px;
+    height: 41px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .swiper-button-next::after,
+  .swiper-rtl .swiper-button-prev::after {
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after,
+  .swiper-button-next::after,
+  .swiper-rtl .swiper-button-prev::after {
+    font-size: 11px;
+    font-weight: 900;
   }
 
   .text-bold {
@@ -45,14 +74,9 @@
     height: 100%;
     //TODO Frank Vragen
     // min-height: 1059px;
-    background: #ffffff ;
+    background: #ffffff;
     opacity: 1;
   }
-
-  h3 {
-    font-size: 36px;
-  }
-
 
   .sub-title {
     color: #f29401;
@@ -98,6 +122,9 @@
       no-repeat padding-box;
   }
 
+  .text-wrap{
+    margin-bottom: 32px;
+  }
   .h2 {
     font-size: 24px;
     width: 100%;
@@ -106,7 +133,6 @@
     color: #ffffff;
     z-index: 1;
     position: relative;
-    margin-bottom: 40px;
     @media (min-width: 768px) {
       font-size: 36px;
     }
@@ -149,7 +175,7 @@
     padding: 171px 0px 80px !important;
   }
 
-    .pb{
+  .pb {
     padding-bottom: 22px !important;
   }
 
@@ -161,9 +187,27 @@
   }
 
   .button-wrap {
-    bottom: 31px !important;
+    // bottom: 31px !important;
+    bottom: 371px !important;
+    z-index: 1;
+
     @media (min-width: 768px) {
       bottom: unset !important;
+    }
+  }
+
+  .swiper-button-wrap {
+    position: absolute;
+    bottom: -75px;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: 768px) {
+      position: relative;
+      bottom: unset !important;
+      transform: unset !important;
+       left: unset !important;
     }
   }
 
