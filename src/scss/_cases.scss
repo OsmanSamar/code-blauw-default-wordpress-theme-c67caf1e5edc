@@ -1,13 +1,9 @@
 .cases {
   h3 {
     z-index: 1;
-    font-size: 36px;
-    line-height: 46px;
+    font-size: 32px;
   }
 
-  .btn-left {
-    margin-right: 27px;
-  }
   .testimonial-slide {
     background: #ffffff 0% 0% no-repeat padding-box;
     padding: 18px;
@@ -45,12 +41,13 @@
 
   .white-container {
     background: #ffffff 0% 0% no-repeat padding-box;
-    width: 1000px;
+    // width: 1000px;
     border-radius: 5px;
     margin: 0 auto;
     width: 100%;
-    max-width: 1289px;
-    padding: 23px;
+    // max-width: 1289px;
+    max-width: 1700px;
+    padding: 40px 40px 32px 40px;
   }
 
   @media (min-width: 992px) {

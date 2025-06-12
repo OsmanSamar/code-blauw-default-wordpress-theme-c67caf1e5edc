@@ -74,8 +74,8 @@ $fields = get_fields();
         <!--White-containe-->
         <div class="white-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
             data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
-                <h3>
+            <div class="d-flex align-items-center gap-3  justify-content-between flex-column flex-lg-row">
+                <h3 class="text-center text-lg-start">
                     <?= get_field("organisatietext") ?>
                 </h3>
                 <div class="btn-left">

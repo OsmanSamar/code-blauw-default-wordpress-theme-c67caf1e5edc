@@ -54,7 +54,6 @@
 
 .navbar.scrolled .nav-link {
   color: #000 !important;
-
   &.nav-link-ltr:hover {
     color: #f29401 !important;
   }
@@ -129,7 +128,7 @@ li {
 }
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
-  color: #f29401 !important;
+  color: #fff !important;
   font-weight: 900 !important;
 }
 
@@ -203,6 +202,7 @@ li {
 }
 // Hamburger Menu on SM and MD Screen
 @media (max-width: 1199.98px) {
+
   .nav-link-ltr {
     position: relative;
     width: fit-content;
@@ -247,7 +247,6 @@ li {
     gap: 20px;
     align-self: stretch;
     border-bottom: 1px solid #6b6b6b !important;
-    // margin: 0 10px;
     font-family: "ff-scala-sans-pro", sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -272,8 +271,6 @@ li {
     border-top: 1px solid #6b6b6b;
   }
 }
-
-
 
 // On md to above screen
 @media (min-width: 1200px) {
@@ -322,9 +319,6 @@ li {
   }
 }
 
-
-
-
 .nav-bar-btn {
   width: 149px;
   height: 55px;
@@ -332,20 +326,6 @@ li {
   margin-bottom: -1px;
 }
 
-// b,
-// strong:first-of-type {
-//   color: #1e73be;
-
-//   font-family: inherit;
-//   font-size: inherit;
-//   font-style: inherit;
-//   line-height: inherit;
-// }
-
-// b,
-// strong:nth-of-type(2) {
-//   color: #f29401;
-// }
 
 b,
 strong {
@@ -375,17 +355,6 @@ strong:nth-of-type(2) {
   color: #132030;
 }
 
-.logos-container {
-  flex-wrap: wrap !important;
-  gap: 17px;
-}
-
-.logos-container .col-auto {
-  flex: 1 1 calc(20% - 20px);
-  display: flex;
-  justify-content: center;
-}
-
 .arrow {
   background-color: #1e73be;
   border-radius: 50%;
@@ -400,53 +369,17 @@ strong:nth-of-type(2) {
   padding: 27px;
 }
 
-.whitecontainertext {
-  text-align: left;
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 300;
-  font-family: "ff-scala-sans-pro", sans-serif;
-  letter-spacing: 0px;
-  color: #132030;
-  opacity: 1;
-}
-
-.contact-info {
-  text-align: left;
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 300;
-  font-family: "ff-scala-sans-pro", sans-serif;
-  letter-spacing: 0px;
-  color: #132030;
-  opacity: 1;
-}
-
-.werkwijze-hero-title {
-  font-size: 50px;
-  line-height: 85px;
-  font-weight: 500;
-  font-family: "richmond-display", serif;
-  text-align: center;
-  letter-spacing: 0px;
-  color: #feffff;
-}
-
-.werk-logo-container {
-  background: #ffffff 0% 0% no-repeat padding-box;
-  border-radius: 5px;
-  width: 150px;
-  height: 93px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-}
 
 @media (min-width: 768px) {
 }
 
 @media (min-width: 992px) {
+ .navbar-nav .show > .nav-link,
+.navbar-nav .nav-link.active {
+  color: #f29401 !important;
+  font-weight: 900 !important;
+}
+
   b,
   strong {
     font-size: inherit;
@@ -459,28 +392,6 @@ strong:nth-of-type(2) {
 
   .navbar-brand {
     margin-left: 1rem;
-  }
-
-  .flexible-title {
-    font-size: 40px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .flexible-left-text,
-  .flexible-right-text {
-    min-height: 5em;
-  }
-
-  .logos-container {
-    flex-wrap: nowrap !important;
-    justify-content: center;
-    gap: 40px;
-  }
-
-  .logos-container .col-auto {
-    flex: 0 0 auto;
   }
 
   .icon {

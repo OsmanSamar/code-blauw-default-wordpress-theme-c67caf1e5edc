@@ -21,11 +21,11 @@
     padding: 45px 0px;
   }
 
-  .regular{
+  .regular {
     opacity: 0.5;
   }
   .text-bold {
-      opacity: 1;
+    opacity: 1;
     font-weight: bold;
   }
 
@@ -35,10 +35,6 @@
     opacity: 1;
     object-fit: cover;
   }
-
-.btn-left{
-  margin-right: 27px;
-}
 
   .container-block {
     width: 100%;
@@ -53,7 +49,7 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1700px;
-    padding: 23px;
+    padding: 40px 40px 32px 40px;
     margin-bottom: 1rem;
   }
 
@@ -85,14 +81,14 @@
 
   .button-wrap {
     position: absolute;
-    bottom: 300px ;
-    z-index: 1000 ;
+    bottom: 387px;
+    z-index: 1000;
     left: 50%;
     transform: translateX(-50%);
   }
 
   @media (min-width: 768px) {
-     .button-wrap {
+    .button-wrap {
       position: relative;
       bottom: unset;
       left: unset;
@@ -111,7 +107,6 @@
       transform: unset;
     }
     h2 {
-  
       font-size: 46px;
       line-height: 50px;
       font-weight: 100;
@@ -132,10 +127,6 @@
     .first-blue-block {
       height: 725px;
       margin-top: unset;
-    }
-
-    .werkwijze-hero-title {
-      margin-top: -29px;
     }
   }
 }
