@@ -13,7 +13,7 @@ $fields = get_fields();
 
         <!-- Onze Visie block -->
         <div class="row mt-lg-5">
-            <div class="d-flex my-4" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+            <div class="d-flex mt-5 mb-2" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <h3><?= get_field("title") ?></h3>
             </div>
