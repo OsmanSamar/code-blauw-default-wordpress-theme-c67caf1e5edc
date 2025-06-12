@@ -37,12 +37,14 @@
     padding: 80px 0px;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
+ 
   }
 
   .white-container {
+     position: relative;
+     top: -41px;
     background: #ffffff 0% 0% no-repeat padding-box;
-    // width: 1000px;
     border-radius: 5px;
     margin: 0 auto;
     width: 100%;
@@ -53,7 +55,6 @@
 
   @media (min-width: 992px) {
     .white-container {
-      position: relative;
       top: -64px;
     }
   }
