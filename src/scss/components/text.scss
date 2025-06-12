@@ -1,3 +1,11 @@
 .text{
     margin-top: 100px;
+
+    .bold{
+        font-weight: 700;
+        opacity: 1;
+    }
+    .light{
+        opacity: 0.5;
+    }
 }

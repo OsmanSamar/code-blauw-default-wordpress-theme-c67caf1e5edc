@@ -374,9 +374,6 @@ strong:nth-of-type(2) {
   flex-shrink: 0;
 }
 
-.left-container {
-  padding: 27px;
-}
 
 
 @media (min-width: 768px) {
@@ -427,7 +424,7 @@ strong:nth-of-type(2) {
     height: 13px;
   }
 
-  .left-container {
-    padding: 0 70px;
-  }
+  // .left-container {
+  //   padding: 0 70px;
+  // }
 }

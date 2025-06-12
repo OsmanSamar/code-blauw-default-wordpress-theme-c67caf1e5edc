@@ -16,17 +16,19 @@ $fields = $args['fields'];
     <div class="row g-lg-5 mt-1">
         <div class="col-lg-6 text-start " data-aos="fade-right" data-aos-offset="100"
             data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <span class="regular">
-                <span style="font-weight: 700;">
+           
+                <span class="regular bold" >
                     <?= $fields['lefttextbold']; ?>
                 </span>
-                <?= $fields['lefttext']; ?>
-            </span>
+                <span class="regular light">
+                    <?= $fields['lefttext']; ?>
+                </span>
+           
         </div>
 
         <div class="col-lg-6 text-start   " data-aos="fade-left" data-aos-offset="100"
             data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <span class="regular"><?= $fields['righttext']; ?></span>
+            <span class="regular light"><?= $fields['righttext']; ?></span>
         </div>
     </div>
 

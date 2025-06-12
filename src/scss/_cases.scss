@@ -1,8 +1,12 @@
 .cases {
   h3 {
     z-index: 1;
-    font-size: 36px;
+    font-size: 26px;
+    line-height: 35px;
+    @media(min-width:678px){
+       font-size: 36px;
     line-height: 46px;
+    }
   }
 
   .testimonial-slide {

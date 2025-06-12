@@ -23,8 +23,8 @@ $fields = get_fields();
             <div class="hero-content ">
                 <div class="row">
                     <div class="col-12 col-lg-8  offset-lg-1 pe-0 text-start ">
-                        <h1 class="mb-3" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-                            data-aos-easing="ease-in-out">
+                        <h1 class="mb-3" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                            data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <?= get_field("herotitlegekleuredtext") ?>
                         </h1>
                         <span class="lead" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
@@ -100,68 +100,67 @@ $fields = get_fields();
                         class="w-100 right-img">
                 </div>
                 <div class="left-container col-12 col-md-6 col-lg-6 d-flex align-items-center ">
-                      <div class="row">
-                        <div class="col-lg-10 offset-lg-1" >
-                              <h3><?= get_field("onsverhaaltitle") ?></h3>
-                        <span class="regular"><?= get_field("verhaaltext") ?> </span>
-                        <div class="d-flex flex-wrap mt-4 gap-2">
-                                <a href="<?= get_field("overonsbtn")['url'] ?>" class="button btn-yellow-line" >
+                    <div class="row">
+                        <div class="col-lg-10 offset-lg-1">
+                            <h3><?= get_field("onsverhaaltitle") ?></h3>
+                            <span class="regular"><?= get_field("verhaaltext") ?> </span>
+                            <div class="d-flex flex-wrap mt-4 gap-2">
+                                <a href="<?= get_field("overonsbtn")['url'] ?>" class="button btn-yellow-line">
                                     <?= get_field("overonsbtn")['title'] ?>
                                     <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                         alt="go onze expertises" class="go-arrow" />
                                 </a>
-                                <a href="<?= get_field("werkwijzebtn")['url'] ?>"class="button btn-yellow-line" >
+                                <a href="<?= get_field("werkwijzebtn")['url'] ?>" class="button btn-yellow-line">
                                     <?= get_field("werkwijzebtn")['title'] ?>
                                     <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                         alt="go onze expertises" class="go-arrow" />
                                 </a>
+                            </div>
                         </div>
-                        </div>
-                      </div>
+                    </div>
                 </div>
             </div>
 
             <div class="w-100 partner-slider  position-relative">
-                    <div class="d-flex align-items-center justify-content-between ">
-                        <h3 class="text-white" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                            data-aos-duration="1000" data-aos-easing="ease-in-out" >
-                            <?= get_field("titleoflogos") ?>
-                        </h3>
-                        <div class="d-flex  align-items-center gap-4 swiper-button-wrap">
-                            <div class="swiper-button-prev "></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
+                <div class="d-flex align-items-center justify-content-between pb">
+                    <h3 class="text-white" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
+                        <?= get_field("titleoflogos") ?>
+                    </h3>
+                    <div class="d-flex  align-items-center gap-4 swiper-button-wrap">
+                        <div class="swiper-button-prev "></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class=" position-relative">
-                        <div class="row">
-                            <div class="col-12 col-lg-12">
+                </div>
+                <div class=" position-relative">
+                    <div class="row">
+                        <div class="col-12 col-lg-12">
 
-                                <div class="logoswiper partner-swiper">
-                                    <div class="swiper-wrapper">
-                                        <?php
-                                        $testemonials = get_field("partnerslogotestemonials");
-                                        if ($testemonials) {
-                                            foreach ($testemonials as $testemonial) { ?>
-                                                <div class="swiper-slide">
-                                                    <div class="logo-container">
-                                                        <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>"
-                                                            target="_blank">
-                                                            <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
-                                                                alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
-                                                                class="logo-img"
-                                                                 />
-                                                        </a>
-                                                    </div>
+                            <div class="logoswiper partner-swiper">
+                                <div class="swiper-wrapper">
+                                    <?php
+                                    $testemonials = get_field("partnerslogotestemonials");
+                                    if ($testemonials) {
+                                        foreach ($testemonials as $testemonial) { ?>
+                                            <div class="swiper-slide">
+                                                <div class="logo-container">
+                                                    <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>"
+                                                        target="_blank">
+                                                        <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
+                                                            alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
+                                                            class="logo-img" />
+                                                    </a>
                                                 </div>
-                                            <?php }
-                                        } ?>
-                                    </div>
+                                            </div>
+                                        <?php }
+                                    } ?>
                                 </div>
                             </div>
                         </div>
-
-                         
                     </div>
+
+
+                </div>
             </div>
         </div>
 

@@ -18,11 +18,21 @@
     margin: 80px 0px;
   }
   h2 {
+    font-size: 26px;
     line-height: 50px;
      z-index: 1;
+     @media(min-width:768px){
+      font-size: 36px;
+     }
   }
-  // h3 {
+  //  h3 {
   //   z-index: 1;
+  //   font-size: 26px;
+  //   line-height: 35px;
+  //   @media(min-width:678px){
+  //      font-size: 36px;
+  //   line-height: 46px;
+  //   }
   // }
 
   .swiper-button-prev,
@@ -191,7 +201,7 @@
 
   .button-wrap {
     // bottom: 31px !important;
-    bottom: 371px !important;
+    bottom: 423px !important;
     z-index: 1;
 
     @media (min-width: 768px) {

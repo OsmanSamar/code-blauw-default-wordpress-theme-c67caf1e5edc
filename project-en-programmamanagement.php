@@ -19,7 +19,7 @@ $fields = get_fields();
                     <?php
                     $delay = 0;
                     foreach (get_field("testimonials") as $testimonial) { ?>
-                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
                         data-aos-duration=" 800">
 
                         <div class="d-flex flex-column text-left gap-3">
@@ -27,8 +27,6 @@ $fields = get_fields();
                                 <span class="d-flex justify-content-center align-items-center ">
                                     <img src="<?= get_template_directory_uri() ?>/images/check.svg"
                                         alt="go to article" />
-
-
                                 </span>
                             </div>
 
