@@ -23,7 +23,6 @@ jQuery(document).ready(function ($) {
   }
 });
 
-
 document.querySelectorAll(".werken-slider").forEach((x) => {
   let swiper = new Swiper(x.querySelector(".werk-swiper"), {
     slidesPerView: 1,
@@ -50,24 +49,17 @@ document.querySelectorAll(".werken-slider").forEach((x) => {
       },
     },
     on: {
-      init: function () {
-        
-      },
-      slideChangeTransitionEnd: function () {
-        
-      },
+      init: function () {},
+      slideChangeTransitionEnd: function () {},
     },
   });
 });
-
-
-
 
 document.querySelectorAll(".partner-slider").forEach((x) => {
   let swiper = new Swiper(x.querySelector(".partner-swiper"), {
     slidesPerView: 2,
     grabCursor: true,
-     centeredSlides: true,
+    centeredSlides: true,
     spaceBetween: 20,
     loop: true,
     navigation: {
@@ -90,32 +82,37 @@ document.querySelectorAll(".partner-slider").forEach((x) => {
       },
     },
     on: {
-      init: function () {
-       
-      },
-      slideChangeTransitionEnd: function () {
-        
-      },
+      init: function () {},
+      slideChangeTransitionEnd: function () {},
     },
   });
 });
 
-
-
-//Navbar on Scroll 
+//Navbar on Scroll
 
 window.addEventListener("scroll", function () {
   let navbar = document.querySelector(".navbar");
   let logo = document.querySelector(".navbar-brand img"); // Select the logo image
+  let hamburgerSpans = document.querySelectorAll(".hamburger span");
 
   if (window.scrollY > 50) {
     navbar.classList.add("scrolled");
     logo.src = logo.getAttribute("data-scrolled-logo"); // Set new logo when scrolled
+
+    // Change the hamburger span color on scroll
+    hamburgerSpans.forEach((span) => {
+      span.style.backgroundColor = "#f29401";
+    });
   } else {
     navbar.classList.remove("scrolled");
-    logo.src = logo.getAttribute("data-default-logo");// Revert to original logo
+    logo.src = logo.getAttribute("data-default-logo"); // Revert to original logo
+
+     // Revert the hamburger span color
+    hamburgerSpans.forEach((span) => {
+      span.style.backgroundColor = ""; // Reset to default
+    });
+
   }
 });
-
 
 
