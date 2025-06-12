@@ -57,7 +57,7 @@ unset($menu_items);
     <header class="header position-fixed d-flex justify-content-center">
         <nav class="w-100">
             <div class="container">
-                <div class="navbar navbar-expand-lg navbar-light sans-serif w-100 ">
+                <div class="navbar navbar-expand-xl navbar-light sans-serif w-100 ">
                     <div class="container p-lg-0 m-0">
                        
                         <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand">
@@ -66,6 +66,7 @@ unset($menu_items);
                                 data-scrolled-logo="<?= get_template_directory_uri() ?>/images/blauwIjs-blauwlogo.svg"
                                 alt="Blauw Ijs Logo" class="logo" />
                         </a>
+
                         <!-- Hamburger button for mobile -->
                         <div class="d-xl-none wrapper">
                             <button id="box" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
@@ -78,6 +79,7 @@ unset($menu_items);
                                 </div>
                             </button>
                         </div>
+
                         <!-- Navigation Menu -->
                         <div class="collapse navbar-collapse ul-bg " id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto justify-content-center  flex-grow-1">
@@ -119,14 +121,18 @@ unset($menu_items);
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
-                        </div>
-                        <!-- Button on the Right side (visible only on large screens) -->
+
+                             <!-- Button on the Right side (visible only on large screens) -->
                         <a href="<?= get_field("btn", 'option')['url'] ?>"
-                            class="button btn-primary d-none d-lg-inline-flex justify-content-center align-items-center nav-bar-btn">
+                            class="button btn-primary d-none d-xl-inline-flex justify-content-center align-items-center nav-bar-btn">
                             <?= get_field("btn", 'option')['title'] ?>
                             <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
                                 class="go-arrow" />
                         </a>
+
+                        </div>
+                      
+                       
                     </div>
                 </div>
             </div>

@@ -201,6 +201,7 @@ li {
 .navbar-nav .dropdown-menu {
   padding: 0;
 }
+// Hamburger Menu on SM and MD Screen
 @media (max-width: 1199.98px) {
   .nav-link-ltr {
     position: relative;
@@ -271,6 +272,8 @@ li {
     border-top: 1px solid #6b6b6b;
   }
 }
+
+
 
 // On md to above screen
 @media (min-width: 1200px) {
