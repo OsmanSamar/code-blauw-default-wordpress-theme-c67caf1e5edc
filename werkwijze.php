@@ -95,7 +95,7 @@ $fields = get_fields();
 
 
                 <div class="d-flex align-items-center justify-content-between text-wrap ">
-                        <h2 class="text-white" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                        <h2  data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000" data-aos-easing="ease-in-out" >
                            <?= get_field("titleoflogos") ?>
                         </h2>

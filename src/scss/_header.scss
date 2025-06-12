@@ -52,20 +52,21 @@
   background-color: #fff !important;
 }
 
-.navbar.scrolled .nav-link {
-  color: #000 !important;
-  &.nav-link-ltr:hover {
-    color: #f29401 !important;
-  }
-}
+//1
+// .navbar.scrolled .nav-link {
+//   color: #000 !important;
+//   &.nav-link-ltr:hover {
+//     color: #f29401 !important;
+//   }
+// }
 
 .navbar.scrolled .hamburger span {
   background-color: #f29401 !important;
 }
 
-.navbar.scrolled .dropdownarrow {
-  filter: invert(1);
-}
+// .navbar.scrolled .dropdownarrow {
+//   filter: invert(1);
+// }
 
 .navbar {
   height: unset;
@@ -83,6 +84,9 @@
   padding: 8px 20px;
   border-bottom: 1px solid #132030;
   background: #f29401;
+  border-radius: 5px;
+    border: 1px solid #fff;
+
 }
 .navbar-nav .dropdown-menu li:last-child .dropdown-item,
 .nav-item.dropdown a:not(.dropdown-item),
@@ -113,11 +117,7 @@
   box-shadow: none;
   border: 0;
 }
-//Dropdown-menu Style
-.navbar-nav .dropdown-toggle::after {
-  display: none !important;
-  //Removed the defualt icon of dropdown
-}
+
 li {
   margin-bottom: unset !important;
 }
@@ -143,13 +143,31 @@ li {
   transition: width 0.3s ease;
 }
 .nav-link-ltr:hover {
-  color: #f29401 !important;
+  color: #fff !important;
 }
-// the arrow should turn Yellow  on hover on navbar
-.nav-link-ltr:hover .dropdownarrow {
-  filter: brightness(0) saturate(100%) invert(55%) sepia(86%) saturate(746%)
-    hue-rotate(10deg) brightness(100%) contrast(100%);
+
+
+// // the arrow should turn Yellow  on hover on navbar
+// .nav-link-ltr:hover .dropdownarrow {
+//   filter: brightness(0) saturate(100%) invert(55%) sepia(86%) saturate(746%)
+//     hue-rotate(10deg) brightness(100%) contrast(100%);
+// }
+
+
+  // // To rotate the arrow once menu open
+  .dropdown-toggle .dropdownarrow {
+    transition: transform 0.3s ease-in-out;
+  }
+  .dropdown-toggle[aria-expanded="true"] .dropdownarrow {
+    transform: rotate(180deg);
+  }
+
+// To remove dropdown-toggle
+  .dropdown-toggle::after {
+    display: none !important;
+   
 }
+
 .nav-link-ltr:hover::before {
   width: calc(100% - 3rem);
 }
@@ -226,9 +244,7 @@ li {
     }
   }
 
-  .dropdownarrow {
-    filter: invert(1);
-  }
+ 
   .navbar-nav .nav-link {
     color: #132030;
   }
@@ -257,9 +273,15 @@ li {
     text-decoration: none;
     border-radius: unset !important;
     border: unset !important;
-    &:hover {
-      background: #6b6b6b !important;
-    }
+    // --bs-dropdown-border-width: unset;
+    // &:hover {
+    //   background: #6b6b6b !important;
+    // }
+  }
+
+  .dropdown-menu {
+    
+    --bs-dropdown-border-color: unset;
   }
 
   .navbar-collapse {
@@ -278,25 +300,23 @@ li {
   .navbar {
     height: 53px;
   }
-  .dropdown-item {
-    color: #132030;
-    display: flex;
-    padding: 20px;
-    flex-direction: column;
-    gap: 20px;
-    align-self: stretch;
-    border-bottom: 1px solid #6b6b6b !important;
-    // background: #ffffff;
-    &:hover {
-      background: #6b6b6b !important;
-    }
-  }
+  // .dropdown-item {
+  //   color: #132030;
+  //   display: flex;
+  //   padding: 20px;
+  //   flex-direction: column;
+  //   gap: 20px;
+  //   align-self: stretch;
+  //   border-bottom: 1px solid #6b6b6b !important;
+  //   &:hover {
+  //     background: #6b6b6b !important;
+  //   }
+  // }
 
   .navbar-nav .dropdown-menu {
     position: absolute !important;
     top: 46px !important;
     left: 18px !important;
-    background: #ffffff;
   }
   .navbar-nav .dropdown-menu li:last-child .dropdown-item,
   .nav-item.dropdown a:not(.dropdown-item),
@@ -308,16 +328,15 @@ li {
   }
   .dropdown-item:hover,
   .dropdown-item:focus {
-    background-color: #6b6b6b !important;
-    color: #fff !important;
+    background-color: #ffffff !important;
+    color: #f29401 !important;
   }
-  // To rotate the arrow once menu open
-  .dropdown-toggle .dropdownarrow {
-    transition: transform 0.3s ease-in-out;
-  }
-  .dropdown-toggle[aria-expanded="true"] .dropdownarrow {
-    transform: rotate(180deg);
-  }
+
+
+
+
+
+
 }
 
 .nav-bar-btn {
@@ -375,6 +394,25 @@ strong:nth-of-type(2) {
 }
 
 @media (min-width: 992px) {
+
+  .nav-link-ltr:hover {
+  color: #f29401 !important;
+}
+  // To change navbar color on scroll
+.navbar.scrolled .nav-link {
+  color: #000 !important;
+  &.nav-link-ltr:hover {
+    color: #f29401 !important;
+  }
+}
+.navbar.scrolled .dropdownarrow {
+  filter: invert(1);
+}
+// the arrow should turn Yellow  on hover on navbar
+.nav-link-ltr:hover .dropdownarrow {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(86%) saturate(746%)
+    hue-rotate(10deg) brightness(100%) contrast(100%);
+}
  .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
   color: #f29401 !important;

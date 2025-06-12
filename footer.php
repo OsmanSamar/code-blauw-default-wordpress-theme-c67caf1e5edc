@@ -55,52 +55,58 @@ $footer_menu = $menu;
                         </div>
 
 
-                        <div class="row row-cols-auto mt-5 align-items-center bottom-padding">
-                            <!-- Information col -->
-                            <div class="col col-md-5 col-lg-3 d-flex flex-column flex-md-row">
+                        <div class="row  mt-5 align-items-center bottom-padding w-100">
+                            <!-- row-cols-auto -->
+                           <div class="d-flex">
+                                 <!-- Information col -->
+                            <div class="col-4 col-md-3 col-lg-3 d-flex flex-column flex-md-row">
                                 <div class="d-flex flex-column gap-2">
-                                    <a class="regular " href="https://www.google.com/maps/search/?q=<?= urlencode(get_field('footercity', 'option') . ' ' . get_field('footeradres', 'option')) ?>" target="_blank">
-                                               <span><?= get_field('footercity', 'option') ?></span>
-                                              <span><?= get_field('footeradres', 'option') ?></span>
-                                      </a>
+                                    <a class="regular "
+                                        href="https://www.google.com/maps/search/?q=<?= urlencode(get_field('footercity', 'option') . ' ' . get_field('footeradres', 'option')) ?>"
+                                        target="_blank">
+                                        <span><?= get_field('footercity', 'option') ?></span>
+                                        <span><?= get_field('footeradres', 'option') ?></span>
+                                    </a>
                                     <div class="d-flex gap-1">
-                                        <span class="bold regular "
-                                            ><?= get_field("footerkvk", 'option') ?></span>
+                                        <span class="bold regular "><?= get_field("footerkvk", 'option') ?></span>
                                         <span class="regular"><?= get_field("footernumber", 'option') ?></span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Links col -->
-
-                            <div class="row">
+                            <div class="row w-100">
                                 <?php
                                 $footer_cols = array_chunk($footer_menu, ceil(count($footer_menu) / 2));
                                 foreach ($footer_cols as $footer_menu): ?>
-                                    <div class=" col-md-3 col-lg-6">
+                                    <div class="col-5 offset-1 col-md-5 offset-md-1 col-lg-4 offset-lg-2">
                                         <ul class="footer-nav">
                                             <?php
                                             foreach ($footer_menu as $item): ?>
-                                                <li class="footer-nav-item regular">
+                                                <li class="footer-nav-item regular dropup">
                                                     <?php if (!empty($item->children)): ?>
+                                                       
+                                                        <a class="footer-nav-link  d-flex align-items-center <?= get_permalink() == $item->url ? 'active' : '' ?>"
+                                                            role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                                            <?= $item->title ?>
+                                                            <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
+                                                                alt="Dropdown Icon" style="" class="dropdownarrow">
+                                                        </a>
 
-                                                        <ul class="footer-submenu">
+                                                        <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
                                                             <?php foreach ($item->children as $child): ?>
                                                                 <li class="footer-nav-item regular">
-                                                                    <a class="footer-nav-link dropdown-toggle" href="<?= $child->url; ?>"
-                                                                       >
+                                                                    <a class=" dropdown-item  d-flex" href="<?= $child->url; ?>">
                                                                         <?= $child->title ?>
-                                                                        <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
-                                                                            alt="Dropdown Icon"  class="dropdownarrow">
                                                                     </a>
                                                                 </li>
                                                             <?php endforeach; ?>
                                                         </ul>
-                                                    <?php
+                                                        <?php
                                                     elseif ($item->menu_item_parent == 0):
                                                         ?>
                                                         <a class="footer-nav-link <?= get_permalink() == $item->url ? 'active' : '' ?>"
-                                                            href="<?= $item->url; ?>" >
+                                                            href="<?= $item->url; ?>">
                                                             <?= $item->title ?>
                                                         </a>
                                                         <?php
@@ -112,6 +118,12 @@ $footer_menu = $menu;
                                     </div>
                                 <?php endforeach; ?>
                             </div>
+
+
+                           </div>
+
+
+
 
                         </div>
 

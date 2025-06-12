@@ -88,7 +88,18 @@ unset($menu_items);
                                     if (is_archive()) {
                                         $post_type = get_post_type();
                                         $active = $item->url == get_post_type_archive_link($post_type);
-                                    }
+                                    } 
+                                    foreach ($item->children as $child):
+                                        if($active){
+                                            return;
+                                        }
+
+                                        $post_type = get_post_type();
+                                        $active = get_permalink() == $child->url;
+                                        
+                                        $active =$active?: $child->url == get_post_type_archive_link($post_type);
+                                        
+                                    endforeach; 
                                     ?>
                                     <li class="nav-item dropdown">
 

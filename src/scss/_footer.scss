@@ -1,4 +1,12 @@
 .footer {
+  .dropdownarrow{
+    filter: brightness(0);
+  }
+
+  a {
+   
+    text-decoration: unset !important;
+}
   .footer-section {
     max-width: min(1700px, 100vw);
     overflow: clip;
@@ -34,6 +42,14 @@
     opacity: 1;
    }
   }
+
+ 
+.footer-nav-link.show > .footer-nav-link,
+.footer-nav-link.footer-nav-link.active {
+    color: #f29401 !important;
+    font-weight: 900 !important;
+    opacity: 1;
+}
   
 
 .left-cont,
