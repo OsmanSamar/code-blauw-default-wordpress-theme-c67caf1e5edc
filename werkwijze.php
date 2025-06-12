@@ -45,22 +45,22 @@ $fields = get_fields();
 
         <!--Onze werkwijze Block  -->
         <div class="werkwijze-block">
-            <div data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+            <div class="inner-wrap" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
                 <div class="row ">
                     <div
-                        class="col-12 col-lg-4 offset-lg-4  d-flex flex-column align-items-center justify-content-center mt-5 mb-lg-5">
+                        class="col-12 col-lg-4 offset-lg-4  d-flex flex-column align-items-flex-start align-items-md-center justify-content-center  mb-lg-5">
                         <h3>
                             <?= get_field("onzewerkwijzetitle") ?>
                         </h3>
                     </div>
                 </div>
-                <div class="row mt-5 ">
+                <div class="row  ">
                     <?php
                     $delay = 0;
                     foreach (get_field("onzewerkwijzetestemonials") as $testimonails) {
                         ?>
-                        <div class="col-12 col-md-4 col-lg-3 d-flex  justify-content-center col-mb" data-aos="fade-up"
+                        <div class="col-12 col-md-4 col-lg-3  mb-5 d-flex  justify-content-center " data-aos="fade-up"
                             data-aos-delay="<?= $delay ?>" data-aos-duration=" 800">
                             <div>
 
