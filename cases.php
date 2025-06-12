@@ -18,16 +18,16 @@ $fields = get_fields();
         <div class="blue-container position-relative">
             <div class="inside-block">
                 <div class="row">
-                    <div class="col-12 col-md-6 offset-md-3">
-                        <div class="d-flex align-items-center justify-content-center ">
-                            <h3>
+                    <div class="col-12 col-md-12 col-lg-6 offset-lg-3">
+                        <div class="d-flex align-items-center justify-content-center  text-center">
+                            <h3 >
                                 <?= get_field("klantcases") ?>
                             </h3>
                         </div>
                     </div>
                 </div>
 
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-3 mb-5">
+                <div class="row  g-4 mt-3 mb-5">
                     <?php
                     $posts = get_posts([
                         'post_type' => 'werken_voor',
@@ -39,13 +39,13 @@ $fields = get_fields();
                         $fields = get_fields($post->ID);
                         $testimonial = get_field("testimonialwerkvoor");
                         ?>
-                        <div class="col-lg-3 col-md-4 col-12 d-flex">
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3   d-flex">
                             <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column ">
                                 <div class=" card border-0 testimonial-slide d-flex flex-column ">
                                     <img src=" <?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
                                         class="testimonial-img" />
 
-                                    <div class="card-body mt-1 mb-0 pb-4 pt-2">
+                                    <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2">
 
                                         <div class="d-flex justify-content-between align-items-center">
                                             <span class="testimonial-title"><?= $post->post_title ?></span>
