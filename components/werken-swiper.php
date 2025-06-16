@@ -39,26 +39,7 @@ if ($werkenVoor->have_posts()): ?>
                                 echo ' data-aos="fade-up" data-aos-delay="' . (100 + $i * 50) . '"';
                             }
                             ?>>
-                                <!-- <a href="<?= get_permalink($post) ?>">
-                                    <div class="testimonial-slide d-flex flex-column ">
-                                        <img src="<?= $testimonial["logo"]['url'] ?>" alt="<?= $testimonial['logog']['alt'] ?>"
-                                            class="testimonial-img" />
-                                        <div class="card-body  mt-1 mb-0 pb-4 pt-2 d-flex flex-column">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="testimonial-title">
-                                                    <?= $post->post_title ?>
-                                                </div>
-                                                <span class="d-flex justify-content-center align-items-center arrow">
-                                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                                        alt="go Contact page" class="go-arrow" />
-                                                </span>
-                                            </div>
-                                            <span class="testimonial-text mt-auto">
-                                                <?= $testimonial["text"] ?>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a> -->
+                             
                                     <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column ">
                                 <div class=" card border-0 testimonial-slide d-flex flex-column ">
                                     <img src=" <?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
