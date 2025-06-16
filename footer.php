@@ -67,7 +67,7 @@ $footer_menu = $menu;
                                         <span><?= get_field('footercity', 'option') ?></span>
                                         <span><?= get_field('footeradres', 'option') ?></span>
                                     </a>
-                                    <div class="d-flex gap-1">
+                                    <div class="d-flex gap-2">
                                         <span class="bold regular "><?= get_field("footerkvk", 'option') ?></span>
                                         <span class="regular"><?= get_field("footernumber", 'option') ?></span>
                                     </div>
