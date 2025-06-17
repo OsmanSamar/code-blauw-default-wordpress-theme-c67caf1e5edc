@@ -4,14 +4,7 @@ $fields = get_fields();
 
 <main class="front-page">
 
-    <!-- <style>
-        @media (min-width: 992px) {
-            .pe-lg {
-                padding-right: 30rem !important;
-            }
-        }
-    </style> -->
-
+  
 
     <div class="container">
 
