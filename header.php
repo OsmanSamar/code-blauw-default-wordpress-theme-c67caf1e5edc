@@ -59,8 +59,8 @@ unset($menu_items);
             <div class="container">
                 <div class="navbar navbar-expand-xl navbar-light sans-serif w-100 ">
                     <div class="container p-xl-0 m-0">
-                       
-                        <a href="<?= site_url( ) ?>" class="navbar-brand">
+
+                        <a href="<?= site_url() ?>" class="navbar-brand">
                             <img src="<?= get_template_directory_uri() ?>/images/logo-blauwijs.svg"
                                 data-default-logo="<?= get_template_directory_uri() ?>/images/logo-blauwijs.svg"
                                 data-scrolled-logo="<?= get_template_directory_uri() ?>/images/blauwIjs-blauwlogo.svg"
@@ -88,19 +88,22 @@ unset($menu_items);
                                     if (is_archive()) {
                                         $post_type = get_post_type();
                                         $active = $item->url == get_post_type_archive_link($post_type);
-                                    } 
-                                    foreach ($item->children as $child):
-                                        if($active){
-                                            return;
-                                        }
-
-                                        $post_type = get_post_type();
-                                        $active = get_permalink() == $child->url;
-                                        
-                                        $active =$active?: $child->url == get_post_type_archive_link($post_type);
-                                        
-                                    endforeach; 
-                                    ?>
+                                    }
+                                    if($item->children){
+                                        foreach ($item->children as $child):
+                                            if ($active) {
+                                                break;
+                                            }
+    
+                                            $post_type = get_post_type();
+                                            $active = get_permalink() == $child->url;
+    
+                                            $active = $active ?: $child->url == get_post_type_archive_link($post_type);
+    
+                                        endforeach;
+                                    }
+                                    
+                                ?>
                                     <li class="nav-item dropdown">
 
                                         <?php if ($item->children): ?>
@@ -121,29 +124,29 @@ unset($menu_items);
                                                     </li>
                                                 <?php endforeach; ?>
                                             </ul>
-                                            <?php
+                                        <?php
                                         else:
-                                            ?>
+                                        ?>
                                             <a class="nav-link  nav-link-ltr  d-flex align-items-center <?= $active ? "active" : "" ?>"
                                                 href="<?= $item->url; ?>" role="button">
                                                 <?= $item->title ?> </a>
-                                            <?php
+                                        <?php
                                         endif; ?>
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
 
-                             <!-- Button on the Right side (visible only on large screens) -->
-                        <a href="<?= get_field("btn", 'option')['url'] ?>"
-                            class="button btn-primary d-none d-xl-inline-flex justify-content-center align-items-center nav-bar-btn">
-                            <?= get_field("btn", 'option')['title'] ?>
-                            <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
-                                class="go-arrow" />
-                        </a>
+                            <!-- Button on the Right side (visible only on large screens) -->
+                            <a href="<?= get_field("btn", 'option')['url'] ?>"
+                                class="button btn-primary d-none d-xl-inline-flex justify-content-center align-items-center nav-bar-btn">
+                                <?= get_field("btn", 'option')['title'] ?>
+                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
+                                    class="go-arrow" />
+                            </a>
 
                         </div>
-                      
-                       
+
+
                     </div>
                 </div>
             </div>
