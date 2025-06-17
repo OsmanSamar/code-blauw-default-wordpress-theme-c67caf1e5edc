@@ -80,7 +80,7 @@ function create_onze_expertises_post_type()
                 'singular_name' => __('Onze_Expertises')
             ),
             'public' => true,
-            'has_archive' => true,
+            'has_archive' => false,
             'rewrite' => array('slug' => 'onze_expertises'),
             'show_in_rest' => true,
 
@@ -99,18 +99,18 @@ function create_werken_voor_post_type()
         // CPT Options
         array(
             'labels' => array(
-                'name' => __('Werken voor'),
-                'singular_name' => __('Werken voor'),
-                'menu_name' => __('Werken voor'),
-                'all_items' => __('Werken voor'),
+                'name' => __('cases'),
+                'singular_name' => __('cases'),
+                'menu_name' => __('cases'),
+                'all_items' => __('cases'),
                 'add_new' => __('Add New'),
-                'add_new_item' => __('Add New Werken voor'),
-                'edit_item' => __('Edit Werken voor'),
-                'new_item' => __('New Werken voor'),
-                'view_item' => __('View Werken voor'),
-                'search_items' => __('Search Werken voor'),
-                'not_found' => __('No Werken voor found'),
-                'not_found_in_trash' => __('No Werken voor found in Trash'),
+                'add_new_item' => __('Add New cases'),
+                'edit_item' => __('Edit cases'),
+                'new_item' => __('New cases'),
+                'view_item' => __('View cases'),
+                'search_items' => __('Search cases'),
+                'not_found' => __('No cases found'),
+                'not_found_in_trash' => __('No cases found in Trash'),
             ),
             'public' => true,
             'has_archive' => true,
