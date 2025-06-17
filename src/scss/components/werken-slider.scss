@@ -180,10 +180,10 @@
   margin: auto;
   transition: 0.5s ease;
   cursor: pointer;
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 50px 0px rgba(36, 44, 48, 0.4);
-  }
+  // &:hover {
+  //   transform: scale(1.05);
+  //   box-shadow: 0px 0px 50px 0px rgba(36, 44, 48, 0.4);
+  // }
 }
 
 .testimonial-naam {
@@ -195,20 +195,4 @@
   letter-spacing: 0px;
 }
 
-// @media (min-width: 768px) {
-//   .button-wrap {
-//     position: relative;
-//     bottom: unset;
-//     left: unset;
-//     transform: unset;
-//   }
-// }
 
-// @media (min-width: 992px) {
-//   .button-wrap {
-//     position: relative;
-//     bottom: unset;
-//     left: unset;
-//     transform: unset;
-//   }
-// }
