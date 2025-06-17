@@ -1,5 +1,7 @@
 <?php get_header();
-$fields = get_fields();
+$pageid = get_page_by_title( 'Cases');
+$fields = get_fields($pageid);
+
 //Template Name: cases
 ?>
 
@@ -10,7 +12,7 @@ $fields = get_fields();
 
         <!-- Hero Section -->
         <div>
-            <?= get_template_part("components/hero") ?>
+            <?= get_template_part("components/hero",null,['postid'=>$pageid]) ?>
         </div>
 
 
@@ -21,7 +23,7 @@ $fields = get_fields();
                     <div class="col-12 col-md-12 col-lg-6 offset-lg-3">
                         <div class="d-flex align-items-center justify-content-center  text-center">
                             <h3 >
-                                <?= get_field("klantcases") ?>
+                                <?= get_field("klantcases",$pageid) ?>
                             </h3>
                         </div>
                     </div>
@@ -76,11 +78,11 @@ $fields = get_fields();
             data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="d-flex align-items-center gap-3  justify-content-between flex-column flex-lg-row">
                 <h3 class="text-center text-lg-start">
-                    <?= get_field("organisatietext") ?>
+                    <?= get_field("organisatietext",$pageid) ?>
                 </h3>
                 <div class="btn-left">
-                    <a href="<?= get_field("vraageenbtn")['url'] ?>" class="button btn-primary">
-                        <?= get_field("vraageenbtn")['title'] ?>
+                    <a href="<?= get_field("vraageenbtn",$pageid)['url'] ?>" class="button btn-primary">
+                        <?= get_field("vraageenbtn",$pageid)['title'] ?>
                         <img src="<?= get_template_directory_uri() ?>/images/whitenextarrow.svg" alt="go Contact page"
                             class="go-arrow" />
                     </a>

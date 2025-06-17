@@ -114,7 +114,7 @@ function create_werken_voor_post_type()
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'werken_voor'),
+            'rewrite' => array('slug' => 'cases'),
             'show_in_rest' => true,
 
             'supports' => ['title', 'editor', 'thumbnail']

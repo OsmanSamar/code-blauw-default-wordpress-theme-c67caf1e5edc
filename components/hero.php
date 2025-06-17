@@ -1,5 +1,6 @@
 <?php
-$bgImg = get_the_post_thumbnail_url();
+$postid= $args['postid']??null;
+$bgImg = get_the_post_thumbnail_url($postid);
 ?>
 
 <div class="hero">
@@ -15,21 +16,30 @@ $bgImg = get_the_post_thumbnail_url();
                         py-5 mt-4
                         d-flex flex-column justify-content-center align-items-center align-self-center
                          my-auto text-center ">
+                         <?php 
+                         if(is_singular( "werken_voor" )){
+                           ?>
+                           <a href="<?=  get_post_type_archive_link( "werken_voor" ) ?>" class="text-white">Terug naar cases</a>
+                           <?php
+                         }
+                         
+                         
+                         ?>
                     <h1 class="text-center" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
                         data-aos-easing="ease-in-out">
-                        <?php if (get_field("herotitle")): ?>
-                            <?= get_field("herotitle", $id) ?>
+                        <?php if (get_field("herotitle",$postid)): ?>
+                            <?= get_field("herotitle", $postid) ?>
                         <?php else: ?>
-                            <?= get_the_title($id); ?>
+                            <?= get_the_title($postid); ?>
                             <?php
                         endif; ?>
                     </h1>
-                    <span class="col-lg-8 offset-lg- hero-text"> <?= get_field("herotext") ?> </span>
+                    <span class="col-lg-8 offset-lg- hero-text"> <?= get_field("herotext",$postid) ?> </span>
 
                     <!-- Btns -->
                    
                         <?php
-                        $btns = get_field("btns");
+                        $btns = get_field("btns",$postid);
                         if (!empty($btns) && isset($btns['url']) && isset($btns['title'])): ?>
                           <div class=" mt-5">
                               <a href="<?= esc_url($btns['url']) ?>" class="button btn-primary ">
