@@ -64,6 +64,8 @@
     object-fit: cover;
      left: 50%;
     transform: translateX(-50%);
+     background-size: cover;
+    background-repeat: no-repeat;
 
     &::before {
       content: "";

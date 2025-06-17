@@ -24,12 +24,9 @@ $footer_menu = $menu;
 
 
 <footer class="footer">
-
     <div class="footer-section">
         <div class="container">
-
             <div class="row g-0">
-
                 <div class="col-lg-6 left-cont under-bottom">
                     <div class="bg-left"></div>
                     <div class="footer-sm-screen" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
@@ -48,90 +45,79 @@ $footer_menu = $menu;
                                         class="footer-linked-img" />
                                 </a>
                             </div>
-
                             <div class="col-lg-10  d-flex align-items-center footer-text">
                                 <?= get_field("footertext", 'option') ?>
                             </div>
                         </div>
 
-
                         <div class="row  mt-5 align-items-center bottom-padding w-100">
                             <!-- row-cols-auto -->
-                           <div class="d-flex">
-                                 <!-- Information col -->
-                            <div class="col-4 col-md-3 col-lg-3 d-flex flex-column flex-md-row">
-                                <div class="d-flex flex-column gap-2">
-                                    <a class="regular "
-                                        href="https://www.google.com/maps/search/?q=<?= urlencode(get_field('footercity', 'option') . ' ' . get_field('footeradres', 'option')) ?>"
-                                        target="_blank">
-                                        <span><?= get_field('footercity', 'option') ?></span>
-                                        <span><?= get_field('footeradres', 'option') ?></span>
-                                    </a>
-                                    <div class="d-flex gap-2">
-                                        <span class="bold regular "><?= get_field("footerkvk", 'option') ?></span>
-                                        <span class="regular"><?= get_field("footernumber", 'option') ?></span>
+                            <div class="d-flex">
+                                <!-- Information col -->
+                                <div class="col-4 col-md-3 col-lg-3 d-flex flex-column flex-md-row">
+                                    <div class="d-flex flex-column gap-2">
+                                        <a class="regular "
+                                            href="https://www.google.com/maps/search/?q=<?= urlencode(get_field('footercity', 'option') . ' ' . get_field('footeradres', 'option')) ?>"
+                                            target="_blank">
+                                            <span><?= get_field('footercity', 'option') ?></span>
+                                            <span><?= get_field('footeradres', 'option') ?></span>
+                                        </a>
+                                        <div class="d-flex gap-2">
+                                            <span class="bold regular "><?= get_field("footerkvk", 'option') ?></span>
+                                            <span class="regular"><?= get_field("footernumber", 'option') ?></span>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!-- Links col -->
+                                <div class="row w-100">
+                                    <?php
+                                    $footer_cols = array_chunk($footer_menu, ceil(count($footer_menu) / 2));
+                                    foreach ($footer_cols as $footer_menu): ?>
+                                        <div class="col-5 offset-1 col-md-5 offset-md-1 col-lg-4 offset-lg-2">
+                                            <ul class="footer-nav">
+                                                <?php
+                                                foreach ($footer_menu as $item): ?>
+                                                    <li class="footer-nav-item regular dropup">
+                                                        <?php if (!empty($item->children)): ?>
+
+                                                            <a class="footer-nav-link  d-flex align-items-center <?= get_permalink() == $item->url ? 'active' : '' ?>"
+                                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <?= $item->title ?>
+                                                                <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
+                                                                    alt="Dropdown Icon" style="" class="dropdownarrow">
+                                                            </a>
+
+                                                            <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                <?php foreach ($item->children as $child): ?>
+                                                                    <li class="footer-nav-item regular">
+                                                                        <a class=" dropdown-item  d-flex" href="<?= $child->url; ?>">
+                                                                            <?= $child->title ?>
+                                                                        </a>
+                                                                    </li>
+                                                                <?php endforeach; ?>
+                                                            </ul>
+                                                            <?php
+                                                        elseif ($item->menu_item_parent == 0):
+                                                            ?>
+                                                            <a class="footer-nav-link <?= get_permalink() == $item->url ? 'active' : '' ?>"
+                                                                href="<?= $item->url; ?>">
+                                                                <?= $item->title ?>
+                                                            </a>
+                                                            <?php
+
+                                                        endif; ?>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
                             </div>
-
-                            <!-- Links col -->
-                            <div class="row w-100">
-                                <?php
-                                $footer_cols = array_chunk($footer_menu, ceil(count($footer_menu) / 2));
-                                foreach ($footer_cols as $footer_menu): ?>
-                                    <div class="col-5 offset-1 col-md-5 offset-md-1 col-lg-4 offset-lg-2">
-                                        <ul class="footer-nav">
-                                            <?php
-                                            foreach ($footer_menu as $item): ?>
-                                                <li class="footer-nav-item regular dropup">
-                                                    <?php if (!empty($item->children)): ?>
-                                                       
-                                                        <a class="footer-nav-link  d-flex align-items-center <?= get_permalink() == $item->url ? 'active' : '' ?>"
-                                                            role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                                                            <?= $item->title ?>
-                                                            <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
-                                                                alt="Dropdown Icon" style="" class="dropdownarrow">
-                                                        </a>
-
-                                                        <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-                                                            <?php foreach ($item->children as $child): ?>
-                                                                <li class="footer-nav-item regular">
-                                                                    <a class=" dropdown-item  d-flex" href="<?= $child->url; ?>">
-                                                                        <?= $child->title ?>
-                                                                    </a>
-                                                                </li>
-                                                            <?php endforeach; ?>
-                                                        </ul>
-                                                        <?php
-                                                    elseif ($item->menu_item_parent == 0):
-                                                        ?>
-                                                        <a class="footer-nav-link <?= get_permalink() == $item->url ? 'active' : '' ?>"
-                                                            href="<?= $item->url; ?>">
-                                                            <?= $item->title ?>
-                                                        </a>
-                                                        <?php
-
-                                                    endif; ?>
-                                                </li>
-                                            <?php endforeach; ?>
-                                        </ul>
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-
-
-                           </div>
-
-
-
-
                         </div>
 
                     </div>
                 </div>
-
-
-
 
                 <div class="col-12 col-lg-6 right-cont ">
                     <div class="bg-right "></div>
@@ -146,7 +132,7 @@ $footer_menu = $menu;
                                 <span class="footer-vraag d-none d-md-block d-lg-block">
                                     <?= get_field("footervraag", 'option') ?>
                                 </span>
-                                <!-- md -->
+                              
                                 <span class="footer-text2 d-md-none">
                                     <?= get_field("footertekst", 'option') ?>
                                 </span>
@@ -195,41 +181,26 @@ $footer_menu = $menu;
             </div>
         </div>
 
-
-
-
-
-
-        <!--  -->
         <div class="container">
-            <div class="row">
-                <div class="bottom-under">
-                    <div
-                        class="d-flex flex-row align-items-center justify-content-between flex-sm-row gap-3 gap-md-5 text-lg-start gap-lg-custom">
-                        <span class="footer-privacy"><?= get_field("blauwijstext", 'option') ?></span>
-                        <span class="footer-privacy"><?= get_field("algemenevoorwaarden", 'option') ?></span>
-                        <span class="footer-privacy"><?= get_field("privacyverklaring", 'option') ?></span>
-                        <span class="footer-privacy  d-none d-lg-block d-md-block">
-                            <!-- <?= get_field("door:codeblauw", 'option') ?> -->
-                            <a target="_blank" href="https://code-blauw.nl/" style="  color: #132030;">
-                                <?= get_field("door:codeblauw", 'option') ?>
-                            </a>
-                        </span>
-
-
-                    </div>
+            <div class="row bottom-under justify-content-between text-start gap-lg-custom ">
+                <div class="col-6 col-lg-auto mb-2">
+                    <span class="footer-privacy"><?= get_field("blauwijstext", 'option') ?></span>
                 </div>
-
-                <div class="footer-codeblauw text-center d-flex justify-content-center d-md-none d-lg-none">
-                    <span class="door-code-blauw">
-                        <a target="_blank" href="https://code-blauw.nl/" style="  color: #132030;">
+                <div class="col-6 col-lg-auto mb-2">
+                    <span class="footer-privacy"><?= get_field("algemenevoorwaarden", 'option') ?></span>
+                </div>
+                <div class="col-6 col-lg-auto mb-2">
+                    <span class="footer-privacy"><?= get_field("privacyverklaring", 'option') ?></span>
+                </div>
+                <div class="col-6 col-lg-auto mb-2">
+                    <span class="footer-privacy">
+                        <a target="_blank" href="https://code-blauw.nl/" style="color: #132030;">
                             <?= get_field("door:codeblauw", 'option') ?>
                         </a>
                     </span>
                 </div>
             </div>
         </div>
-
 
     </div>
     </div>

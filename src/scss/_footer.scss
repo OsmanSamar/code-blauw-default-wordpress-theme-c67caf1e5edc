@@ -1,8 +1,10 @@
 .footer {
   .dropdown-menu {
-    background: #f29401 !important;
+    background: #ffffff !important;
+    // background: #f7f6f4 !important;
     border-radius: 5px;
     border: 1px solid #ffffff;
+    opacity: 1;
   }
   .dropdownarrow {
     filter: brightness(0);
@@ -13,6 +15,8 @@
   }
   .footer-section {
     max-width: min(1700px, 100vw);
+    // if i removed the margin it will expanded 
+    margin: 0 auto;
     overflow: clip;
     padding-bottom: 20px;
   }
@@ -227,6 +231,21 @@
     border-bottom: 1px solid rgba(19, 32, 48, 0.25);
   }
 
+  @media (max-width: 1199.98px) {
+    .dropdown-item {
+      padding: unset !important;
+    }
+    .dropdown-item:focus,
+    .dropdown-item:hover {
+      background-color: unset !important;
+    }
+
+    .dropdown-item.active,
+    .dropdown-item:active {
+      color: unset !important;
+    }
+  }
+
   @media (min-width: 768px) {
     .footer-text {
       font-size: 16px;
@@ -277,8 +296,6 @@
       padding-left: 15px;
       padding-top: 20px;
     }
-
-  
 
     .footer-sm-screen {
       margin-left: unset;
