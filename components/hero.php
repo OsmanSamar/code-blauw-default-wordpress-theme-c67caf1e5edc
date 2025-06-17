@@ -16,15 +16,20 @@ $bgImg = get_the_post_thumbnail_url($postid);
                         py-5 mt-4
                         d-flex flex-column justify-content-center align-items-center align-self-center
                          my-auto text-center ">
+
                          <?php 
                          if(is_singular( "werken_voor" )){
                            ?>
-                           <a href="<?=  get_post_type_archive_link( "werken_voor" ) ?>" class="text-white">Terug naar cases</a>
+                           <div class="d-flex flex-row align-items-center gap-2">
+                             <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
+                                                    alt="Dropdown Icon" style="" class="terugarrow">
+                           <a href="<?=  get_post_type_archive_link( "werken_voor" ) ?>" class="datum-title">Terug naar cases</a>
+                           </div>
                            <?php
                          }
-                         
-                         
                          ?>
+
+
                     <h1 class="text-center" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
                         data-aos-easing="ease-in-out">
                         <?php if (get_field("herotitle",$postid)): ?>
