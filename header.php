@@ -60,7 +60,7 @@ unset($menu_items);
                 <div class="navbar navbar-expand-xl navbar-light sans-serif w-100 ">
                     <div class="container p-xl-0 m-0">
                        
-                        <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>" class="navbar-brand">
+                        <a href="<?= site_url( ) ?>" class="navbar-brand">
                             <img src="<?= get_template_directory_uri() ?>/images/logo-blauwijs.svg"
                                 data-default-logo="<?= get_template_directory_uri() ?>/images/logo-blauwijs.svg"
                                 data-scrolled-logo="<?= get_template_directory_uri() ?>/images/blauwIjs-blauwlogo.svg"
