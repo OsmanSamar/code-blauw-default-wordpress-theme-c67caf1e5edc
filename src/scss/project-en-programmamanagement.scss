@@ -23,7 +23,14 @@
   .inside-container {
     padding: 80px 0px;
   }
-
+  
+  .font-bold{
+    font-weight: bold;
+    opacity: 1;
+  }
+  .font-thin{
+    opacity: 0.5;
+  }
   b,
   strong {
     color: #132030;
@@ -31,33 +38,33 @@
     font-size: inherit;
     font-style: inherit;
     line-height: inherit;
-    font-weight: 800;
+    font-weight: bold;
   }
   .testi-text {
     line-height: 30px;
+    opacity: 0.5;
   }
 
   .pb {
     padding-bottom: 22px;
   }
 
-  h1{
+  h1 {
     font-size: 29px;
     line-height: 50px;
-   @media (min-width: 768px){
-        font-size: 50px;
-         line-height: 85px;
+    @media (min-width: 768px) {
+      font-size: 50px;
+      line-height: 85px;
     }
     @media (min-width: 992px) {
       font-size: 50px;
-       line-height: 85px;
+      line-height: 85px;
     }
-     
   }
   .swiper-container {
     padding: 40px 0px 30px !important;
-     @media (min-width: 768px){
-        padding: 60px 0px 30px !important;
+    @media (min-width: 768px) {
+      padding: 60px 0px 30px !important;
     }
     @media (min-width: 992px) {
       padding: 80px 0px 30px !important;
@@ -65,8 +72,8 @@
   }
   .button-wrap {
     bottom: 19px !important;
-    @media (min-width: 768px){
-       bottom: unset !important;
+    @media (min-width: 768px) {
+      bottom: unset !important;
     }
   }
 }

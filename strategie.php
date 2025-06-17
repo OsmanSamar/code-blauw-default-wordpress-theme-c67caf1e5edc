@@ -21,11 +21,11 @@ $fields = get_fields();
                 <div class="col-12 col-lg-6 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="d-flex flex-column ">
-                        <span class=" pt-2 ">
-                            <span class="regular font-bold " style="font-weight: bolder;">
+                        <span class="pt-2 regular ">
+                            <span class="font-bold " style="font-weight: bolder;">
                                 <?= get_field("righttext") ?>
                             </span>
-                            <span class="regular pt-2 "><?= get_field("secrighttext") ?></span>
+                            <span class="pt-2 font-thin"><?= get_field("secrighttext") ?></span>
                         </span>
                             <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="button btn-yellow-line mt-5">
                                 <?= get_field("onzeklantcasesbtn")['title'] ?>
@@ -50,9 +50,9 @@ $fields = get_fields();
                         <div class="col-lg-8 d-flex ">
                             <span class="h2"><?= get_field("waaromkiezenvoorblauw") ?></span>
                         </div>
-                        <div class="d-flex flex-column  ">
-                            <span class="regular bold" ><?= get_field("righttextbold") ?></span>
-                            <span class="regular"><?= get_field("righttextnotbold") ?></span>
+                        <div class="d-flex flex-column regular ">
+                            <span class=" font-bold" ><?= get_field("righttextbold") ?></span>
+                            <span class=" font-thin"><?= get_field("righttextnotbold") ?></span>
                         </div>
                     </div>
                    

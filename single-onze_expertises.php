@@ -58,9 +58,14 @@ $fields = get_fields();
                     <div class="col-12 col-lg-6 col-md-6  regular  " data-aos="fade-left" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column">
-                            <span>
+                            <div class="regular">
+                                <span class="font-bold">
                                 <?= get_field("righttextbold") ?>
                             </span>
+                              <span class="font-thin">
+                                <?= get_field("righttexthin") ?>
+                            </span>
+                            </div>
 
                          <!-- To Check if the button filled or not if not it will ignore it -->
                             <div class="button-group d-flex flex-wrap justify-content-start mt-5 gap-2">
