@@ -5,32 +5,32 @@
 .testimonial-title {
   font-size: 18px;
   line-height: 24px;
-    font-style: normal;
-    font-weight: 300;
-    font-family: "ff-scala-sans-pro", sans-serif;
-    letter-spacing: 0px;
-    color: #132030;
-    opacity: 1;
+  font-style: normal;
+  font-weight: 300;
+  font-family: "ff-scala-sans-pro", sans-serif;
+  letter-spacing: 0px;
+  color: #132030;
+  opacity: 1;
 }
 
 .testimonial-text {
   font-size: 16px;
   font-weight: 300;
-   margin-bottom: 8px;
+  margin-bottom: 8px;
   font-family: "ff-scala-sans-pro", sans-serif;
   line-height: 20px;
   letter-spacing: 0px;
   color: #132030;
   opacity: 1;
   width: 91%;
-    margin-right: auto;
+  margin-right: auto;
 }
 
-
-
-
-.testimonial-img{
-height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;
+.testimonial-img {
+  height: 101px;
+  border-radius: 5px;
+  background: #f7f6f4;
+  object-fit: scale-down;
 }
 .werken-slider::before {
   content: "";
@@ -50,7 +50,9 @@ height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;
   overflow: clip;
   overflow-y: visible;
   display: flex;
-  padding: 120px 0px 80px;
+  // padding: 120px 0px 80px;
+   padding: 120px 0px 37px;
+
   flex-direction: column;
   gap: 10px;
 
@@ -155,6 +157,12 @@ height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  @media (min-width: 768px) {
+    position: relative;
+    bottom: unset;
+    left: unset;
+    transform: unset;
+  }
 }
 
 .testimonial-slide {
@@ -187,20 +195,20 @@ height: 101px; border-radius: 5px; background: #F7F6F4; object-fit: scale-down;
   letter-spacing: 0px;
 }
 
-@media (min-width: 768px) {
-  .button-wrap {
-    position: relative;
-    bottom: unset;
-    left: unset;
-    transform: unset;
-  }
-}
+// @media (min-width: 768px) {
+//   .button-wrap {
+//     position: relative;
+//     bottom: unset;
+//     left: unset;
+//     transform: unset;
+//   }
+// }
 
-@media (min-width: 992px) {
-  .button-wrap {
-    position: relative;
-    bottom: unset;
-    left: unset;
-    transform: unset;
-  }
-}
+// @media (min-width: 992px) {
+//   .button-wrap {
+//     position: relative;
+//     bottom: unset;
+//     left: unset;
+//     transform: unset;
+//   }
+// }

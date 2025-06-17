@@ -230,9 +230,15 @@
 
   .swiper-button-wrap {
     position: absolute;
-    bottom: 0;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
+    @media (min-width: 768px) {
+      position: relative;
+      bottom: unset;
+      left: unset;
+      transform: unset;
+    }
   }
 
   @media (max-width: 768px) {
