@@ -13,9 +13,9 @@ $bgImg = get_the_post_thumbnail_url($postid);
 
             <div class="row my-auto">
                 <div class="col-12 col-lg-8 offest-lg-2  col-md-8 offset-md-2 
-                        py-5 mt-4
+                       py-lg-5 pt-3 pb-4 mt-lg-4 my-auto
                         d-flex flex-column justify-content-center align-items-center align-self-center
-                         my-auto text-center ">
+                          text-center ">
 
                          <?php 
                          if(is_singular( "werken_voor" )){

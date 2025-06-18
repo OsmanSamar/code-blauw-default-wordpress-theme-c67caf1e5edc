@@ -188,16 +188,16 @@ $footer_menu = $menu;
                 </div>
                 <div class="col-6 col-lg-auto mb-2">
                     <span class="footer-privacy">
-                        <a target="_blank" href="https://blauwijs.develop.code-blauw.nl/privacy-verklaring/"
+                        <a target="_blank" href=" <?= get_field("privacyverklaring", 'option')['url'] ?>"
                             style="color: #132030;">
-                            <?= get_field("privacyverklaring", 'option') ?>
+                            <?= get_field("privacyverklaring" , 'option')['title']?>
                         </a>
                     </span>
                 </div>
                 <div class="col-6 col-lg-auto mb-2">
                     <span class="footer-privacy">
                         <a target="_blank" href="https://code-blauw.nl/" style="color: #132030;">
-                            <?= get_field("door:codeblauw", 'option') ?>
+                             door:Code Blauw
                         </a>
                     </span>
                 </div>

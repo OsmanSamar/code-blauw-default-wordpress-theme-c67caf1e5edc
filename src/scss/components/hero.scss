@@ -66,6 +66,7 @@
     transform: translateX(-50%);
      background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
     &::before {
       content: "";

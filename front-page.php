@@ -84,11 +84,10 @@ $fields = get_fields();
 
 
         <div class="img-container position-relative bg-holder">
-            <div class="bg" style="background-image:url('<?= get_template_directory_uri() ?>/images/mask-group.png') ">
-            </div>
+           
 
             <div class="text-img-container row g-0  position-relative">
-                <div class="col-12 col-md-6 col-lg-6">
+                <div class="col-12 col-md-6 col-lg-6 position-relative">
                     <img src="<?= get_template_directory_uri() ?>/images/senior-leadership.png" alt="manager-leading "
                         class=" right-img">
 
@@ -96,7 +95,7 @@ $fields = get_fields();
                 <div
                     class="left-container col-12 col-md-6 col-lg-6 d-flex align-items-center justify-content-center my-0 ">
                     <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
+                        <div class="col-lg-8 offset-lg-2 inside-padding">
                             <h3><?= get_field("onsverhaaltitle") ?></h3>
                             <span class="text-muted regular"><?= get_field("verhaaltext") ?> </span>
                             <div class="d-flex flex-wrap mt-4 gap-2">
@@ -116,7 +115,9 @@ $fields = get_fields();
                 </div>
             </div>
 
-            <div class="w-100 partner-slider  position-relative">
+            <div class="w-100 partner-slider  ">
+                 <div class="bg" style="background-image:url('<?= get_template_directory_uri() ?>/images/mask-group.png') ">
+            </div>
                 <div class="d-flex align-items-center justify-content-between pb">
                     <h3 class="text-white" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
