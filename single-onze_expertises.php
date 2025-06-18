@@ -15,11 +15,11 @@ $fields = get_fields();
         <div class="testimonial-container">
             <div class="container  pb-5 " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="row gy-2">
+                <div class="row row-gap-5">
                     <?php
                     $delay = 0;
                     foreach (get_field("testimonials") as $testimonial) { ?>
-                        <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                        <div class="col-12 col-md-6 col-lg-4 " data-aos="fade-up" data-aos-delay="<?= $delay ?>"
                             data-aos-duration=" 800">
 
                             <div class="d-flex flex-column text-left gap-3">
