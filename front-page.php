@@ -4,7 +4,7 @@ $fields = get_fields();
 
 <main class="front-page">
 
-  
+
 
     <div class="container">
 
@@ -89,12 +89,14 @@ $fields = get_fields();
 
             <div class="text-img-container row g-0  position-relative">
                 <div class="col-12 col-md-6 col-lg-6">
-                    <img src="<?= get_template_directory_uri() ?>/images/senior-leadership.png" alt="manager-leading"
-                        class="w-100 right-img">
+                    <img src="<?= get_template_directory_uri() ?>/images/senior-leadership.png" alt="manager-leading "
+                        class=" right-img">
+
                 </div>
-                <div class="left-container col-12 col-md-6 col-lg-6 d-flex align-items-center ">
+                <div
+                    class="left-container col-12 col-md-6 col-lg-6 d-flex align-items-center justify-content-center my-0 ">
                     <div class="row">
-                        <div class="col-lg-10 offset-lg-1">
+                        <div class="col-lg-8 offset-lg-2">
                             <h3><?= get_field("onsverhaaltitle") ?></h3>
                             <span class="text-muted regular"><?= get_field("verhaaltext") ?> </span>
                             <div class="d-flex flex-wrap mt-4 gap-2">
