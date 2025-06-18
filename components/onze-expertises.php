@@ -9,7 +9,8 @@ $onzeExpertises = new WP_Query($args);
 
 if ($onzeExpertises->have_posts()): ?>
 
-    <div class="onze-expertises mt-5">
+    <div class="onze-expertises ">
+        <!-- mt-5 -->
         <div class="expertises-container  position-relative" id="testimonials" style=" z-index: 2;">
 
             <div class="row mb-4">

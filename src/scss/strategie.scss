@@ -19,7 +19,10 @@
     opacity: 1;
   }
   .inside-block {
-    padding: 84px 0px 65px 0px;
+    padding: 50px 0px ;
+    @media(min-width:768px){
+      padding: 84px 0px 65px 0px;
+    }
   }
 
   .text-muted{
@@ -37,7 +40,7 @@
     object-fit: cover;
   }
   .white-container {
-   margin-top: 75px !important;
+   margin-top: 45px !important;
     background: #ffffff 0% 0% no-repeat padding-box;
     width: 1000px;
     border-radius: 5px;
@@ -45,6 +48,9 @@
     width: 100%;
     max-width: 1700px;
     padding: 40px 40px 32px 40px;
+    @media(min-width:768px){
+       margin-top: 75px !important;
+    }
   }
 
   

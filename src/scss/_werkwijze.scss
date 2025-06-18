@@ -1,6 +1,9 @@
 .werkwijze {
   .inner-wrap {
-    padding: 80px 0px;
+    padding: 50px 0px;
+    @media(min-width:768px){
+       padding: 80px 0px;
+    }
   }
 
   .white-wraper {
@@ -15,7 +18,10 @@
   }
 
   .text-block {
-    margin: 80px 0px;
+    margin: 50px 0px;
+    @media(min-width:786px){
+       margin: 80px 0px;
+    }
   }
   h2 {
     font-size: 26px;
@@ -82,7 +88,8 @@
 
   .sub-title {
     color: #f29401;
-    font-family: "ff-scala-sans-pro", sans-serif;
+    // font-family: "ff-scala-sans-pro", sans-serif;
+     font-family: "Libre Franklin", sans-serif;
     font-size: 18px;
     font-style: normal;
     line-height: 32px;
@@ -93,6 +100,7 @@
   .container-img {
     padding-top: 64px;
     overflow: visible;
+    padding-bottom: 64px;
   }
 
   .bg {
@@ -175,7 +183,11 @@
   }
 
   .swiper-container {
-    padding: 171px 0px 80px !important;
+    position: relative;
+ padding: 50px 0px 90px  !important;
+   @media(min-width:768px){
+     padding: 80px 0px  !important;
+   }
   }
 
   .pb {
@@ -183,7 +195,7 @@
   }
 
   .werken-slider {
-    padding-bottom: 94px !important;
+    // padding-bottom: 94px !important;
     @media (min-width: 768px) {
       padding-bottom: 64px !important;
     }
@@ -191,7 +203,7 @@
 
   .button-wrap {
     // bottom: 31px !important;
-    bottom: 423px !important;
+    bottom: 23px !important;
     z-index: 1;
 
     @media (min-width: 768px) {

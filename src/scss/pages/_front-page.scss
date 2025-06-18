@@ -66,7 +66,6 @@
       position: relative;
       width: 100%;
       z-index: 3;
-      // min-height: 400px;
       min-height: 676px;
       display: flex;
       flex-direction: column;
@@ -82,8 +81,7 @@
     }
     .hero-section {
       .hero-content {
-        // min-height: 45vh ;
-        // min-height: 400px;
+       
       }
     }
   }
@@ -91,11 +89,7 @@
     .left-col {
       margin-bottom: unset;
     }
-    // .hero-section {
-    //   .hero-content {
-    //     min-height: 600px;
-    //   }
-    // }
+   
   }
 
   // Added For blauw container

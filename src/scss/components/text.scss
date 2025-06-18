@@ -1,5 +1,8 @@
 .text{
-    margin-top: 100px;
+    margin-top: 70px;
+    @media(min-width:768px){
+         margin-top: 100px;
+    }
 
     .text-visible{
         font-weight: 700;

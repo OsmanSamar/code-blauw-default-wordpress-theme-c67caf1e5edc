@@ -13,7 +13,7 @@ $fields = get_fields();
 
             <div class="medium-container">
                     <div class="row">
-                        <div class="col-12 col-lg-5  my-auto py-4" data-aos="fade-right" data-aos-offset="100"
+                        <div class="col-12 col-lg-5  my-auto py-lg-4" data-aos="fade-right" data-aos-offset="100"
                             data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <div class="d-flex flex-wrap flex-column">
                                 <h3 >
@@ -28,7 +28,7 @@ $fields = get_fields();
                                 </span>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6 offset-lg-1" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                        <div class="col-12 col-lg-6 offset-lg-1 mt-4 mt-lg-0" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <img src="<?= get_field("mediumimg")['url'] ?>" alt="<?= get_field("")['alt'] ?>"
                                 class="medium-img" />
@@ -58,8 +58,8 @@ $fields = get_fields();
 
             <div class="whi-container " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row">
-                       <h3 class="ml">
+                <div class="d-flex align-items-center gap-3 py-3 justify-content-between flex-column flex-lg-row text-center">
+                       <h3 class="ml ">
                         <?= get_field("organisatietext") ?>
                     </h3>
                 

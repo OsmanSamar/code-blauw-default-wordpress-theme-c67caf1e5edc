@@ -41,7 +41,7 @@ $fields = get_fields($pageid);
                         $fields = get_fields($post->ID);
                         $testimonial = get_field("testimonialwerkvoor");
                         ?>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3   d-flex">
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3   d-flex justify-content-center">
                             <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column ">
                                 <div class=" card border-0 testimonial-slide d-flex flex-column ">
                                     <img src=" <?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"

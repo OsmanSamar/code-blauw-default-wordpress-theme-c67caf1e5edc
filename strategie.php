@@ -45,7 +45,7 @@ $fields = get_fields();
             <div class="inside-block ">
 
                 <div class="row">
-                    <div class="col-12 col-lg-5   my-auto py-4" data-aos="fade-right" data-aos-offset="100"
+                    <div class="col-12 col-lg-5   my-auto py-lg-4" data-aos="fade-right" data-aos-offset="100"
                         data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="col-lg-8 d-flex ">
                             <span class="h2"><?= get_field("waaromkiezenvoorblauw") ?></span>

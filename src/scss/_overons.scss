@@ -78,7 +78,7 @@ z-index: 1;
   }
 
   .swiper-container {
-   
+    position: relative;
     margin: 0 auto;
     overflow: clip;
     overflow-y: visible;
@@ -88,9 +88,10 @@ z-index: 1;
     gap: 10px;
   }
 
+
   .button-wrap {
     position: absolute;
-    bottom: 354px;
+    bottom: 20px;
     z-index: 1000;
     left: 50%;
     transform: translateX(-50%);

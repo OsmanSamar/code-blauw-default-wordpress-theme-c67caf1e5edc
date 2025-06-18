@@ -184,7 +184,13 @@ $footer_menu = $menu;
                     <span class="footer-privacy"><?= get_field("blauwijstext", 'option') ?></span>
                 </div>
                 <div class="col-6 col-lg-auto mb-2">
-                    <span class="footer-privacy"><?= get_field("algemenevoorwaarden", 'option') ?></span>
+                    <span class="footer-privacy">
+                      <a target="_blank" href=" <?= get_field("algemenevoorwaarden", 'option')['url'] ?>"
+                            style="color: #132030;">
+                            <?= get_field("algemenevoorwaarden" , 'option')['title']?>
+                        </a>
+                    
+                    </span>
                 </div>
                 <div class="col-6 col-lg-auto mb-2">
                     <span class="footer-privacy">
