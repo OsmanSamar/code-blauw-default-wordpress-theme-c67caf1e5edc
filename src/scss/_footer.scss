@@ -15,7 +15,7 @@
   }
   .footer-section {
     max-width: min(1700px, 100vw);
-    // if i removed the margin it will expanded 
+    // if i removed the margin it will expanded
     margin: 0 auto;
     overflow: clip;
     padding-bottom: 20px;
@@ -108,7 +108,6 @@
   }
 
   .footer-logo {
-    // width: 136px;
     height: 36px;
     object-fit: cover;
   }
@@ -231,10 +230,20 @@
     border-bottom: 1px solid rgba(19, 32, 48, 0.25);
   }
 
+  .dropdown-item {
+    border-bottom: 1px solid #132030 !important;
+  }
+
+.dropdown-menu li:last-child 
+.dropdown-item {
+    border-bottom: none !important;
+}
+
   @media (max-width: 1199.98px) {
     .dropdown-item {
       padding: unset !important;
     }
+
     .dropdown-item:focus,
     .dropdown-item:hover {
       background-color: unset !important;
