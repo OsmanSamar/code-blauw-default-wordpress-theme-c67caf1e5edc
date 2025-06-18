@@ -30,7 +30,7 @@ $fields = get_fields();
                         </div>
                         <div class="col-12 col-lg-6 offset-lg-1 mt-4 mt-lg-0" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <img src="<?= get_field("mediumimg")['url'] ?>" alt="<?= get_field("")['alt'] ?>"
+                            <img loading="lazy" src="<?= get_field("mediumimg")['url'] ?>" alt="<?= get_field("")['alt'] ?>"
                                 class="medium-img" />
                         </div>
                     </div>

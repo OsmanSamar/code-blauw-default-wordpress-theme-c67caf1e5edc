@@ -44,7 +44,7 @@ $fields = get_fields($pageid);
                         <div class="col-12 col-md-6 col-lg-4 col-xl-3   d-flex justify-content-center">
                             <a href="<?= get_permalink($post) ?>" class=" d-flex flex-column ">
                                 <div class=" card border-0 testimonial-slide d-flex flex-column ">
-                                    <img src=" <?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
+                                    <img  src=" <?= $testimonial["logo"]['url'] ?>" alt=" <?= $testimonial['logo']['alt'] ?>"
                                         class="testimonial-img" />
 
                                     <div class="card-body d-flex flex-column  mt-1 mb-0 pb-4 pt-2">

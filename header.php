@@ -1,3 +1,23 @@
+<!-- 
+ 
+
+   _____          _        _     _                      
+  / ____|        | |      | |   | |                     
+ | |     ___   __| | ___  | |__ | | __ _ _   ___      __
+ | |    / _ \ / _` |/ _ \ | '_ \| |/ _` | | | \ \ /\ / /
+ | |___| (_) | (_| |  __/ | |_) | | (_| | |_| |\ V  V / 
+  \_____\___/ \__,_|\___| |_.__/|_|\__,_|\__,_| \_/\_/  
+                                                        
+                                                        
+Copyright © Code Blauw
+code-blauw.nl
+
+
+
+-->
+
+
+
 <!DOCTYPE html>
 
 <html>
@@ -140,7 +160,7 @@ unset($menu_items);
                             <a href="<?= get_field("btn", 'option')['url'] ?>"
                                 class="button btn-primary d-none d-xl-inline-flex justify-content-center align-items-center nav-bar-btn">
                                 <?= get_field("btn", 'option')['title'] ?>
-                                <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
+                                <img   src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
                                     class="go-arrow" />
                             </a>
 

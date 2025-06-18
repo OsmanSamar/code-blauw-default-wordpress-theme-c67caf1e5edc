@@ -58,7 +58,7 @@ $fields = get_fields();
                    
                     <div class="col-12 col-lg-6 offset-lg-1 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
-                        <img src="<?= get_field("businesswomen")['url'] ?>"
+                        <img loading="lazy" src="<?= get_field("businesswomen")['url'] ?>"
                             alt="<?= get_field("businesswomen")['alt'] ?>"
                             class="img-block"
                             />
