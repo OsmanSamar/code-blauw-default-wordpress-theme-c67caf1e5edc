@@ -21,8 +21,8 @@ $fields = get_fields();
                 </div>
                 <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <div class="text-bold regular  pt-2"> <?= get_field("righttext") ?></div>
-                    <div class="regular  pt-2 mt-3"> <?= get_field("secrighttext") ?></div>
+                    <div class="text-visible regular  pt-2"> <?= get_field("righttext") ?></div>
+                    <div class="text-muted regular  pt-2 mt-3"> <?= get_field("secrighttext") ?></div>
 
                     <div class="d-flex flex-wrap mt-5 gap-2">
                         <a href="<?= get_field("wetenbtn")['url'] ?>" class="button btn-primary">
@@ -72,7 +72,7 @@ $fields = get_fields();
                                         <?= $testimonails["staptitle"] ?>
                                     </span>
                                 </div>
-                                <div class="regular ">
+                                <div class="text-muted regular pt-2 ">
                                     <?= $testimonails["text"] ?>
                                 </div>
                             </div>

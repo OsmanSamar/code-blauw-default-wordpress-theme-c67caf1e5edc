@@ -22,10 +22,10 @@ $fields = get_fields();
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <div class="d-flex flex-column ">
                         <span class="pt-2 regular ">
-                            <span class="font-bold " style="font-weight: bolder;">
+                            <span class="text-visible " >
                                 <?= get_field("righttext") ?>
                             </span>
-                            <span class="pt-2 font-thin"><?= get_field("secrighttext") ?></span>
+                            <span class="pt-2 text-muted"><?= get_field("secrighttext") ?></span>
                         </span>
                             <a href="<?= get_field("onzeklantcasesbtn")['url'] ?>" class="button btn-yellow-line mt-5">
                                 <?= get_field("onzeklantcasesbtn")['title'] ?>
@@ -51,8 +51,8 @@ $fields = get_fields();
                             <span class="h2"><?= get_field("waaromkiezenvoorblauw") ?></span>
                         </div>
                         <div class="d-flex flex-column regular ">
-                            <span class=" font-bold" ><?= get_field("righttextbold") ?></span>
-                            <span class=" font-thin"><?= get_field("righttextnotbold") ?></span>
+                            <span class="text-visible" ><?= get_field("righttextbold") ?></span>
+                            <span class="text-muted"><?= get_field("righttextnotbold") ?></span>
                         </div>
                     </div>
                    

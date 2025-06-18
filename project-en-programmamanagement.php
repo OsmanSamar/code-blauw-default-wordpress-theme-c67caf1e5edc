@@ -68,20 +68,26 @@ $fields = get_fields();
                             </span>
                             </div>
                             
-
-                            <div class="button-group  d-flex flex-wrap  justify-content-start mt-5 gap-2">
+                             <!-- To Check if the button filled or not if not it will ignore it -->
+                            <div class="button-group d-flex flex-wrap justify-content-start mt-5 gap-2">
+                                <?php if (get_field("contactlink") && get_field("contactlink")['url'] && get_field("contactlink")['title']): ?>
                                     <a href="<?= get_field("contactlink")['url'] ?>" class="button btn-primary">
                                         <?= get_field("contactlink")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                             alt="go onze expertises" class="go-arrow" />
                                     </a>
+                                <?php endif; ?>
+
+                                <!-- <?php if (get_field("veelvragenlink") && get_field("veelvragenlink")['url'] && get_field("veelvragenlink")['title']): ?>
                                     <a href="<?= get_field("veelvragenlink")['url'] ?>" class="button btn-yellow-line"
                                         style="color: #132030;">
                                         <?= get_field("veelvragenlink")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                             alt="go onze expertises" class="go-arrow" />
                                     </a>
+                                <?php endif; ?> -->
                             </div>
+
                         </div>
                     </div>
                 </div>

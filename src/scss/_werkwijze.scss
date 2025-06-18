@@ -25,15 +25,7 @@
       font-size: 36px;
      }
   }
-  //  h3 {
-  //   z-index: 1;
-  //   font-size: 26px;
-  //   line-height: 35px;
-  //   @media(min-width:678px){
-  //      font-size: 36px;
-  //   line-height: 46px;
-  //   }
-  // }
+ 
 
   .swiper-button-prev,
   .swiper-button-next {
@@ -63,15 +55,13 @@
     font-weight: 900;
   }
 
-  .text-bold {
-    font-weight: bold !important;
-    opacity: 1 !important;
+  .text-visible {
+    font-weight: bold ;
+    opacity: 1 ;
   }
 
-  .regular {
+  .text-muted {
     opacity: 0.5;
-    font-size: 17px;
-    line-height: 32px;
   }
 
   .werkwijze-block::before {
@@ -93,7 +83,6 @@
     font-family: "ff-scala-sans-pro", sans-serif;
     font-size: 18px;
     font-style: normal;
-    font-weight: 600;
     line-height: 32px;
     font-weight: normal;
     opacity: 1;

@@ -96,7 +96,7 @@ $fields = get_fields();
                     <div class="row">
                         <div class="col-lg-10 offset-lg-1">
                             <h3><?= get_field("onsverhaaltitle") ?></h3>
-                            <span class="regular"><?= get_field("verhaaltext") ?> </span>
+                            <span class="text-muted regular"><?= get_field("verhaaltext") ?> </span>
                             <div class="d-flex flex-wrap mt-4 gap-2">
                                 <a href="<?= get_field("overonsbtn")['url'] ?>" class="button btn-yellow-line">
                                     <?= get_field("overonsbtn")['title'] ?>

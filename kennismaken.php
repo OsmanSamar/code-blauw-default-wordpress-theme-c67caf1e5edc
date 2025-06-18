@@ -15,7 +15,7 @@
                             <h3 >
                                 <?= get_field("waarkunnenwemeehelpen") ?>
                             </h3>
-                            <span class="col-lg-11 regular ">
+                            <span class="col-lg-11 regular text-muted ">
                                 <?= get_field("text") ?>
                             </span>
                             <div class="d-flex flex-column text-align-flex-start gap-2 mt-3 ">

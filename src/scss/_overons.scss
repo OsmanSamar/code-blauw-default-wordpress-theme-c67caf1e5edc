@@ -1,4 +1,7 @@
 .overons {
+  .pb{
+    padding-bottom: 21px;
+  }
   .text-wraper {
     padding-top: 80px;
     padding-bottom: 17px;
@@ -21,10 +24,10 @@
     padding: 45px 0px;
   }
 
-  .regular {
+  .text-muted{
     opacity: 0.5;
-  }
-  .text-bold {
+    }
+  .text-visible {
     opacity: 1;
     font-weight: bold;
   }

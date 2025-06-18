@@ -39,9 +39,16 @@
     margin: 0 auto;
     padding: 80px 0px;
   }
-  .bold {
+
+
+    .text-visible {
     font-weight: bold;
+    opacity: 1;
   }
+  .text-muted{
+    opacity: 0.5;
+  }
+
 
   .medium-img {
     border-radius: 0px 5px 5px 0px;

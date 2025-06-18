@@ -3,7 +3,7 @@ $fields = get_fields();
 //Template Name: overons  ?>
 
 <main class="overons">
-   
+
     <div class="container">
 
         <!-- Hero Section -->
@@ -20,11 +20,11 @@ $fields = get_fields();
 
             <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <span class="regular "> <?= get_field("lefttext") ?></span>
+                <span class="text-muted regular "> <?= get_field("lefttext") ?></span>
             </div>
             <div class="col-12 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <span class="regular  pt-2"> <?= get_field("righttext") ?></span>
+                <span class="text-muted regular  pt-2"> <?= get_field("righttext") ?></span>
             </div>
         </div>
 
@@ -57,13 +57,13 @@ $fields = get_fields();
         <div class="white-container">
             <div class="inside-wraper">
                 <div class="row">
-                    <div class="col-12 col-lg-6 my-auto py-4" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                        data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="col-12 col-lg-6 my-auto py-4" data-aos="fade-right" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="d-flex flex-column  text-left gap-4 mb-4 mb-lg-0">
-                            <span class="regular text-bold">
+                            <span class="text-visible regular ">
                                 <?= get_field("bold_text") ?>
                             </span>
-                            <span class="regular">
+                            <span class="text-muted regular">
                                 <?= get_field("light_text") ?>
                             </span>
                             <div class="d-flex flex-wrap gap-2 mt-3">
@@ -72,13 +72,15 @@ $fields = get_fields();
                                     <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
                                         alt="go onze contact" class="go-arrow" />
                                 </a>
-                                <a href="<?= get_field("veelgesteldevragenbtn")['url'] ?>"
+                                <!-- <a href="<?= get_field("vragenstellenbtn")['url'] ?>"
                                     class="button btn-yellow-line">
-                                    <?= get_field("veelgesteldevragenbtn")['title'] ?>
+                                    <?= get_field("vragenstellenbtn")['title'] ?>
                                     <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                         alt="go onze contact" class="go-arrow" />
-                                </a>
+                                </a> -->
+
                             </div>
+
                         </div>
                     </div>
 
@@ -92,8 +94,8 @@ $fields = get_fields();
         </div>
 
         <!--werken-swiper block  -->
-        <div >
-            <?php get_template_part('components/werken-swiper' ,null,['ctabar'=>true]); ?>
+        <div>
+            <?php get_template_part('components/werken-swiper', null, ['ctabar' => true]); ?>
         </div>
 
     </div>

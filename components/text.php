@@ -17,10 +17,10 @@ $fields = $args['fields'];
         <div class="col-lg-6 text-start " data-aos="fade-right" data-aos-offset="100"
             data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
            
-                <span class="regular bold" >
+                <span class="regular text-visible" >
                     <?= $fields['lefttextbold']; ?>
                 </span>
-                <span class="regular light">
+                <span class="regular text-muted">
                     <?= $fields['lefttext']; ?>
                 </span>
            
@@ -28,7 +28,7 @@ $fields = $args['fields'];
 
         <div class="col-lg-6 text-start   " data-aos="fade-left" data-aos-offset="100"
             data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <span class="regular light"><?= $fields['righttext']; ?></span>
+            <span class="regular text-muted"><?= $fields['righttext']; ?></span>
         </div>
     </div>
 

@@ -31,19 +31,13 @@
     }
   }
 
-  .content-container {
-    font: italic normal 300 14px/20px "ff-scala-sans-pro" !important;
-    letter-spacing: 0px;
-    color: #132030;
-    opacity: 1;
-  }
-
   h3 {
     font-size: 36px;
   }
-  .regular {
+  .text-muted {
     font-size: 17px;
     line-height: 32px;
+    opacity: 0.5;
   }
 
   .text-bold {

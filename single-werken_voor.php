@@ -20,10 +20,11 @@ $fields = get_fields();
                                     <?= get_field("lefttitle") ?>
                                 </h3>
                                 <span class="regular">
-                                    <span class="bold">
+                                    <span class="text-visible">
                                         <?= get_field("lefttext") ?>
                                     </span>
-                                    <?= get_field("lightlefttext") ?>
+                                    <span class="text-muted"><?= get_field("lightlefttext") ?>
+                                </span>
                                 </span>
                             </div>
                         </div>
@@ -41,13 +42,13 @@ $fields = get_fields();
                     <div class="row">
                         <div class="col-12 col-lg-6 col-md-6 mb-3" data-aos="fade-right" data-aos-offset="100"
                             data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="regular">
+                            <span class="text-muted regular">
                                 <?= get_field("seclefttext") ?>
                             </span>
                         </div>
                         <div class="col-12 col-lg-6 col-md-6" data-aos="fade-right" data-aos-offset="100"
                             data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                            <span class="regular">
+                            <span class="text-muted regular">
                                 <?= get_field("righttext") ?>
                             </span>
                         </div>
