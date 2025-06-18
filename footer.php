@@ -32,16 +32,14 @@ $footer_menu = $menu;
                     <div class="footer-sm-screen" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <div class="row align-items-center">
-                            <!-- Logo and LinkedIn in 5 cols  row align-items-center-->
                             <div class="col-lg-10 d-flex align-items-center justify-content-between"
-                                style="max-width:; margin-top:70px;">
+                                style=" margin-top:70px;">
                                 <a href="<?= esc_url(get_permalink(get_page_by_path('sample-page'))) ?>">
                                     <img src="<?= get_template_directory_uri() ?>/images/blauwijs.svg"
                                         class="footer-logo" alt="Blauw Ijs Logo" />
                                 </a>
                                 <a href="https://nl.linkedin.com" target="_blank">
-                                    <img src="<?= get_field("footerlinked", 'option')['url'] ?>"
-                                        alt="<?= get_field("footerlinked", 'option')['alt'] ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/images/linkedin.svg" alt="Linkedin"
                                         class="footer-linked-img" />
                                 </a>
                             </div>
@@ -51,7 +49,7 @@ $footer_menu = $menu;
                         </div>
 
                         <div class="row  mt-5 align-items-center bottom-padding w-100">
-                            <!-- row-cols-auto -->
+
                             <div class="d-flex">
                                 <!-- Information col -->
                                 <div class="col-4 col-md-3 col-lg-3 d-flex flex-column flex-md-row">
@@ -150,21 +148,20 @@ $footer_menu = $menu;
                         </div>
 
 
-                        <a href="tel:<?= get_field("contact_number", 'options') ?>" style=" "
+                        <a href="tel:<?= get_field("contact_number", 'options') ?>"
                             class="footer-icon d-flex flex-row align-items-center gap-3">
-                            <img src="<?= get_field("footertelicon", 'option')['url'] ?>"
-                                alt="<?= get_field("footertelicon", 'option')['alt'] ?>"
-                                style="width:15.4px; height:15.41px;" />
-                            <?= get_field("footertel", 'options') ?>
+
+                            <img src="<?= get_template_directory_uri() ?>/images/telefoon.svg" alt="Telephone-icon"
+                                class="footer-media" />
+                            <?= get_field("contact_number", 'options') ?>
                         </a>
 
 
-                        <a href="mailto:<?= get_field("footeremail", 'options') ?>"
+                        <a href="mailto:<?= get_field("contact_mail", 'options') ?>"
                             class="footer-icon d-flex flex-row align-items-center gap-3">
-                            <img src="<?= get_field("footeremailicon", 'option')['url'] ?>"
-                                alt="<?= get_field("footertelicon", 'option')['alt'] ?>"
-                                style="width:15.4px; height:15.41px;" />
-                            <?= get_field("footeremail", 'options') ?>
+                            <img src="<?= get_template_directory_uri() ?>/images/e-mail.svg" alt="E_mail-icon"
+                                class="footer-media" />
+                            <?= get_field("contact_mail", 'options') ?>
                         </a>
 
 
@@ -191,7 +188,8 @@ $footer_menu = $menu;
                 </div>
                 <div class="col-6 col-lg-auto mb-2">
                     <span class="footer-privacy">
-                        <a target="_blank" href="https://blauwijs.develop.code-blauw.nl/privacy-verklaring/" style="color: #132030;">
+                        <a target="_blank" href="https://blauwijs.develop.code-blauw.nl/privacy-verklaring/"
+                            style="color: #132030;">
                             <?= get_field("privacyverklaring", 'option') ?>
                         </a>
                     </span>
