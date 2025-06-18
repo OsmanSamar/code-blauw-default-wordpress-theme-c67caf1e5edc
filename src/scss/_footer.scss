@@ -203,6 +203,10 @@
     font-family: "ff-scala-sans-pro", sans-serif;
   }
 
+  .text-visible {
+    opacity: 1;
+  }
+  
   .regular {
     line-height: 24px;
     opacity: 0.7;
@@ -234,10 +238,9 @@
     border-bottom: 1px solid #132030 !important;
   }
 
-.dropdown-menu li:last-child 
-.dropdown-item {
+  .dropdown-menu li:last-child .dropdown-item {
     border-bottom: none !important;
-}
+  }
 
   @media (max-width: 1199.98px) {
     .dropdown-item {

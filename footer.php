@@ -90,7 +90,7 @@ $footer_menu = $menu;
 
                                                             <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
                                                                 <?php foreach ($item->children as $child): ?>
-                                                                    <li class="footer-nav-item regular">
+                                                                    <li class="footer-nav-item  text-visible">
                                                                         <a class=" dropdown-item  d-flex" href="<?= $child->url; ?>">
                                                                             <?= $child->title ?>
                                                                         </a>
@@ -132,7 +132,7 @@ $footer_menu = $menu;
                                 <span class="footer-vraag d-none d-md-block d-lg-block">
                                     <?= get_field("footervraag", 'option') ?>
                                 </span>
-                              
+
                                 <span class="footer-text2 d-md-none">
                                     <?= get_field("footertekst", 'option') ?>
                                 </span>
@@ -190,7 +190,11 @@ $footer_menu = $menu;
                     <span class="footer-privacy"><?= get_field("algemenevoorwaarden", 'option') ?></span>
                 </div>
                 <div class="col-6 col-lg-auto mb-2">
-                    <span class="footer-privacy"><?= get_field("privacyverklaring", 'option') ?></span>
+                    <span class="footer-privacy">
+                        <a target="_blank" href="https://blauwijs.develop.code-blauw.nl/privacy-verklaring/" style="color: #132030;">
+                            <?= get_field("privacyverklaring", 'option') ?>
+                        </a>
+                    </span>
                 </div>
                 <div class="col-6 col-lg-auto mb-2">
                     <span class="footer-privacy">
