@@ -3,12 +3,16 @@
     width: 15.4px;
     height: 15.41px;
   }
+
   .dropdown-menu {
+    padding: 11px;
+    margin: 0px -9px !important;
     background: #ffffff !important;
     border-radius: 5px;
     border: 1px solid #ffffff;
     opacity: 1;
   }
+
   .dropdownarrow {
     filter: brightness(0);
   }
