@@ -78,14 +78,14 @@ $fields = get_fields();
                                     </a>
                                 <?php endif; ?>
 
-                                <!-- <?php if (get_field("veelvragenlink") && get_field("veelvragenlink")['url'] && get_field("veelvragenlink")['title']): ?>
+                                <?php if (get_field("veelvragenlink") && get_field("veelvragenlink")['url'] && get_field("veelvragenlink")['title']): ?>
                                     <a href="<?= get_field("veelvragenlink")['url'] ?>" class="button btn-yellow-line"
                                         style="color: #132030;">
                                         <?= get_field("veelvragenlink")['title'] ?>
                                         <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
                                             alt="go onze expertises" class="go-arrow" />
                                     </a>
-                                <?php endif; ?> -->
+                                <?php endif; ?>
                             </div>
 
                         </div>
