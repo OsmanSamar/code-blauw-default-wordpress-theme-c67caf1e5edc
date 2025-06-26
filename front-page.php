@@ -84,11 +84,11 @@ $fields = get_fields();
 
 
         <div class="img-container position-relative bg-holder">
-           
+
 
             <div class="text-img-container row g-0  position-relative">
                 <div class="col-12 col-md-6 col-lg-6 position-relative">
-                    <img src="<?= get_template_directory_uri() ?>/images/senior-leadership.png" alt="manager-leading "
+                    <img  loading="lazy" src="<?= get_template_directory_uri() ?>/images/senior-leadership.png" alt="manager-leading "
                         class=" right-img">
 
                 </div>
@@ -98,26 +98,37 @@ $fields = get_fields();
                         <div class="col-lg-8 offset-lg-2 inside-padding">
                             <h3><?= get_field("onsverhaaltitle") ?></h3>
                             <span class="text-muted regular"><?= get_field("verhaaltext") ?> </span>
+
+                            <!-- To check if the btn not empty -->
                             <div class="d-flex flex-wrap mt-4 gap-2">
-                                <a href="<?= get_field("overonsbtn")['url'] ?>" class="button btn-yellow-line">
-                                    <?= get_field("overonsbtn")['title'] ?>
-                                    <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                        alt="go onze expertises" class="go-arrow" />
-                                </a>
-                                <a href="<?= get_field("werkwijzebtn")['url'] ?>" class="button btn-yellow-line">
-                                    <?= get_field("werkwijzebtn")['title'] ?>
-                                    <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                        alt="go onze expertises" class="go-arrow" />
-                                </a>
+                                <?php $naaroverons = get_field("naaroverons"); ?>
+                                <?php if (!empty($naaroverons['url']) && !empty($naaroverons['title'])): ?>
+                                    <a href="<?= esc_url($naaroverons['url']) ?>" class="button btn-yellow-line">
+                                        <?= esc_html($naaroverons['title']) ?>
+                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                            alt="go onze expertises" class="go-arrow" />
+                                    </a>
+                                <?php endif; ?>
+
+                                <?php $werkwijzebtn = get_field("werkwijzebtn"); ?>
+                                <?php if (!empty($werkwijzebtn['url']) && !empty($werkwijzebtn['title'])): ?>
+                                    <a href="<?= esc_url($werkwijzebtn['url']) ?>" class="button btn-yellow-line">
+                                        <?= esc_html($werkwijzebtn['title']) ?>
+                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                            alt="go onze expertises" class="go-arrow" />
+                                    </a>
+                                <?php endif; ?>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="w-100 partner-slider  ">
-                 <div class="bg" style="background-image:url('<?= get_template_directory_uri() ?>/images/mask-group.png') ">
-            </div>
+                <div class="bg"
+                    style="background-image:url('<?= get_template_directory_uri() ?>/images/mask-group.png') ">
+                </div>
                 <div class="d-flex align-items-center justify-content-between pb">
                     <h3 class="text-white" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -139,14 +150,16 @@ $fields = get_fields();
                                     if ($testemonials) {
                                         foreach ($testemonials as $testemonial) { ?>
                                             <div class="swiper-slide">
-                                                <div class="logo-container">
+                                                
                                                     <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>"
                                                         target="_blank">
-                                                        <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
-                                                            alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
-                                                            class="logo-img" />
+                                                        <div class="logo-container">
+                                                            <img loading="lazy" src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
+                                                                alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
+                                                                class="logo-img" />
+                                                        </div>
                                                     </a>
-                                                </div>
+                                                
                                             </div>
                                         <?php }
                                     } ?>
