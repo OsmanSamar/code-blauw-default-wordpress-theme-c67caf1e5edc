@@ -45,8 +45,8 @@ $fields = get_fields();
 
         <!--Onze werkwijze Block  -->
         <div class="werkwijze-block">
-            <div class="inner-wrap" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-                data-aos-easing="ease-in-out">
+            <div class="inner-wrap" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="row ">
                     <div
                         class="col-12 col-lg-4 offset-lg-4  d-flex flex-column align-items-flex-start align-items-md-center justify-content-center  mb-lg-5">
@@ -91,19 +91,19 @@ $fields = get_fields();
         <div class="container-img partner-slider   w-100  position-relative ">
             <div class="bg" style="background-image:url('<?= get_template_directory_uri() ?>/images/mask-group.png') ">
             </div>
-          
 
 
-                <div class="d-flex align-items-center justify-content-between text-wrap ">
-                        <h2 class="text-white" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                            data-aos-duration="1000" data-aos-easing="ease-in-out" >
-                           <?= get_field("titleoflogos") ?>
-                        </h2>
-                        <div class="d-flex  align-items-center gap-4 swiper-button-wrap">
-                            <div class="swiper-button-prev "></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
-                    </div>
+
+            <div class="d-flex align-items-center justify-content-between text-wrap ">
+                <h2 class="text-white" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <?= get_field("titleoflogos") ?>
+                </h2>
+                <div class="d-flex  align-items-center gap-4 swiper-button-wrap">
+                    <div class="swiper-button-prev "></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
 
             <div class="position-relative  ">
                 <div class="row">
@@ -111,21 +111,23 @@ $fields = get_fields();
                         <div class="logoswiper partner-swiper  ">
                             <div class="swiper-wrapper">
                                 <?php
-                                $testemonials = get_field("partnerslogotestemonials");
+                                $testemonials = get_field("partnerslogotestemonials", 'option');
                                 if ($testemonials) {
-                                    foreach ($testemonials as $testemonial) { ?>
-                                        <div class="swiper-slide">
-                                            <div class="logo-container">
-                                                <a href="<?= esc_url($testemonial['partnerslogolink']['url']) ?>"
-                                                    target="_blank">
-                                                    <img src="<?= esc_url($testemonial['partnerslogoimg']['url']) ?>"
-                                                        alt="<?= esc_attr($testemonial['partnerslogoimg']['alt']) ?>"
-                                                        class="logo-img"
-                                                         />
+                                    foreach ($testemonials as $testemonial) {
+                                        $link = $testemonial['partnerslogolink']['url'] ?? '';
+                                        $img = $testemonial['partnerslogoimg']['url'] ?? '';
+                                        $alt = $testemonial['partnerslogoimg']['alt'] ?? '';
+                                        if ($link && $img): ?>
+                                            <div class="swiper-slide">
+                                                <a href="<?= esc_url($link) ?>" target="_blank">
+                                                    <div class="logo-container">
+                                                        <img loading="lazy" src="<?= esc_url($img) ?>" alt="<?= esc_attr($alt) ?>"
+                                                            class="logo-img" />
+                                                    </div>
                                                 </a>
                                             </div>
-                                        </div>
-                                    <?php }
+                                        <?php endif;
+                                    }
                                 } ?>
                             </div>
                         </div>
@@ -147,11 +149,11 @@ $fields = get_fields();
 
     </div>
 
-   
 
 
 
-  
+
+
 
 </main>
 

@@ -80,7 +80,7 @@ if ($werkenVoor->have_posts()): ?>
                 data-aos-easing="ease-in-out">
                 <div class="d-flex align-items-center gap-3  justify-content-between flex-column flex-lg-row">
                     <h3 class="text-center text-lg-start">
-                        <?= get_field("organisatietext") ?>
+                        <?= get_field("organisatietext",'option') ?>
                     </h3>
                     <div class="">
                         <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="button btn-primary">
