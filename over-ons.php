@@ -66,19 +66,27 @@ $fields = get_fields();
                             <span class="text-muted regular">
                                 <?= get_field("light_text") ?>
                             </span>
-                            <div class="d-flex flex-wrap gap-2 mt-3">
-                                <a href="<?= get_field("contactbtn")['url'] ?>" class="button btn-primary">
-                                    <?= get_field("contactbtn")['title'] ?>
-                                    <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
-                                        alt="go onze contact" class="go-arrow" />
-                                </a>
-                                <!-- <a href="<?= get_field("vragenstellenbtn")['url'] ?>"
-                                    class="button btn-yellow-line">
-                                    <?= get_field("vragenstellenbtn")['title'] ?>
-                                    <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                        alt="go onze contact" class="go-arrow" />
-                                </a> -->
 
+
+                            <!-- To check if the btn not empty -->
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <?php $contactbtn = get_field("contactbtn"); ?>
+                                <?php if (!empty($contactbtn['url']) && !empty($contactbtn['title'])): ?>
+                                    <a href="<?= esc_url($contactbtn['url']) ?>" class="button btn-primary">
+                                        <?= esc_html($contactbtn['title']) ?>
+                                        <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg"
+                                            alt="go onze contact" class="go-arrow" />
+                                    </a>
+                                <?php endif; ?>
+
+                                 <?php $vragenstellenbtn = get_field("vragenstellenbtn"); ?>
+                                <?php if (!empty($vragenstellenbtn['url']) && !empty($vragenstellenbtn['title'])): ?>
+                                    <a href="<?= esc_url($vragenstellenbtn['url']) ?>" class="button btn-yellow-line">
+                                        <?= esc_html($vragenstellenbtn['title']) ?>
+                                        <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                            alt="go onze contact" class="go-arrow" />
+                                    </a>
+                                <?php endif; ?>
                             </div>
 
                         </div>

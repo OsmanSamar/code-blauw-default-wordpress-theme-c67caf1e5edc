@@ -83,8 +83,8 @@ if ($werkenVoor->have_posts()): ?>
                         <?= get_field("organisatietext",'option') ?>
                     </h3>
                     <div class="">
-                        <a href="<?= get_field("vragenaanbtn")['url'] ?>" class="button btn-primary">
-                            <?= get_field("vragenaanbtn")['title'] ?>
+                        <a href="<?= get_field("vragenaanbtn",'option')['url'] ?>" class="button btn-primary">
+                            <?= get_field("vragenaanbtn",'option')['title'] ?>
                             <img src="<?= get_template_directory_uri() ?>/images/white-arrow.svg" alt="go Contact page"
                                 class="go-arrow" />
                         </a>
